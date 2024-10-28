@@ -1,0 +1,7 @@
+trailingComma: none
+semi: true
+singleQuote: false
+bracketSameLine: false
+htmlWhitespaceSensitivity: ignore
+proseWrap: always
+printWidth: 64
