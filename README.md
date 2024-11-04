@@ -37,7 +37,7 @@
 
 ## Sources
 <ul>
-  <li><a href="https://www.kaggle.com/datasets/kaggle/recipe-ingredients-dataset"> Kaggle Regipe Ingredients Dataset </a></li>
+  <li><a href="https://www.kaggle.com/datasets/kaggle/recipe-ingredients-dataset"> Kaggle Recipe Ingredients Dataset </a></li>
 </ul>
   
 </ol>
