@@ -34,5 +34,10 @@
   <li> npm install </li>
   <li> npm run dev </li>
 </ol>
+
+## Sources
+<ul>
+  <li><a href="https://www.kaggle.com/datasets/kaggle/recipe-ingredients-dataset"> Kaggle Regipe Ingredients Dataset </a></li>
+</ul>
   
 </ol>
