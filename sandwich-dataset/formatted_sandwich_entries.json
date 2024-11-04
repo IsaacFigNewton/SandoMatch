@@ -1,6 +1,6 @@
 [
     {
-        "id": 33687,
+        "id_": 33687,
         "cuisine": null,
         "ingredients": {
             "breads": {},
@@ -30,10 +30,13 @@
         },
         "cost": 2.3,
         "calories": 265,
-        "rating": 3
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 9720,
+        "id_": 9720,
         "cuisine": null,
         "ingredients": {
             "breads": {},
@@ -64,10 +67,11 @@
         },
         "cost": 3.9,
         "calories": 425,
-        "rating": 3
+        "rating": 1,
+        "dietary_tags": []
     },
     {
-        "id": 23540,
+        "id_": 23540,
         "cuisine": null,
         "ingredients": {
             "breads": {},
@@ -94,10 +98,13 @@
         },
         "cost": 3.2,
         "calories": 175,
-        "rating": 2
+        "rating": 5,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 13816,
+        "id_": 13816,
         "cuisine": "cajun_creole",
         "ingredients": {
             "breads": {
@@ -147,10 +154,11 @@
         },
         "cost": 9.8,
         "calories": 635,
-        "rating": 2
+        "rating": 4,
+        "dietary_tags": []
     },
     {
-        "id": 24965,
+        "id_": 24965,
         "cuisine": "spanish",
         "ingredients": {
             "breads": {},
@@ -178,10 +186,11 @@
         },
         "cost": 4.8,
         "calories": 295,
-        "rating": 5
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 26788,
+        "id_": 26788,
         "cuisine": "mexican",
         "ingredients": {
             "breads": {},
@@ -208,10 +217,11 @@
         },
         "cost": 5.0,
         "calories": 345,
-        "rating": 5
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 28279,
+        "id_": 28279,
         "cuisine": "cajun_creole",
         "ingredients": {
             "breads": {},
@@ -244,10 +254,11 @@
         },
         "cost": 9.5,
         "calories": 590,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 4357,
+        "id_": 4357,
         "cuisine": "italian",
         "ingredients": {
             "breads": {},
@@ -279,10 +290,11 @@
         },
         "cost": 4.7,
         "calories": 290,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 35077,
+        "id_": 35077,
         "cuisine": "italian",
         "ingredients": {
             "breads": {},
@@ -306,10 +318,11 @@
         },
         "cost": 3.5,
         "calories": 285,
-        "rating": 4
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50001,
+        "id_": 50001,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -337,10 +350,11 @@
         },
         "cost": 7.2,
         "calories": 650,
-        "rating": 1
+        "rating": 1,
+        "dietary_tags": []
     },
     {
-        "id": 50002,
+        "id_": 50002,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -364,10 +378,11 @@
         },
         "cost": 5.5,
         "calories": 415,
-        "rating": 1
+        "rating": 1,
+        "dietary_tags": []
     },
     {
-        "id": 50003,
+        "id_": 50003,
         "cuisine": "mediterranean",
         "ingredients": {
             "breads": {
@@ -397,10 +412,13 @@
         },
         "cost": 4.7,
         "calories": 330,
-        "rating": 2
+        "rating": 3,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50004,
+        "id_": 50004,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -432,10 +450,13 @@
         },
         "cost": 5.4,
         "calories": 435,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50005,
+        "id_": 50005,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -463,10 +484,11 @@
         },
         "cost": 5.7,
         "calories": 500,
-        "rating": 1
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50006,
+        "id_": 50006,
         "cuisine": "scandinavian",
         "ingredients": {
             "breads": {
@@ -494,10 +516,13 @@
         },
         "cost": 3.5,
         "calories": 285,
-        "rating": 3
+        "rating": 2,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50007,
+        "id_": 50007,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -521,10 +546,11 @@
         },
         "cost": 5.5,
         "calories": 570,
-        "rating": 3
+        "rating": 1,
+        "dietary_tags": []
     },
     {
-        "id": 50008,
+        "id_": 50008,
         "cuisine": "middle_eastern",
         "ingredients": {
             "breads": {
@@ -554,10 +580,13 @@
         },
         "cost": 3.0,
         "calories": 290,
-        "rating": 5
+        "rating": 2,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50009,
+        "id_": 50009,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -581,10 +610,13 @@
         },
         "cost": 4.7,
         "calories": 390,
-        "rating": 4
+        "rating": 4,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50010,
+        "id_": 50010,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -612,10 +644,11 @@
         },
         "cost": 5.5,
         "calories": 545,
-        "rating": 4
+        "rating": 4,
+        "dietary_tags": []
     },
     {
-        "id": 50011,
+        "id_": 50011,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -649,10 +682,11 @@
         },
         "cost": 6.8,
         "calories": 640,
-        "rating": 1
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 50012,
+        "id_": 50012,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -680,10 +714,11 @@
         },
         "cost": 4.6,
         "calories": 440,
-        "rating": 5
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50013,
+        "id_": 50013,
         "cuisine": "german",
         "ingredients": {
             "breads": {
@@ -707,10 +742,11 @@
         },
         "cost": 3.0,
         "calories": 375,
-        "rating": 2
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50014,
+        "id_": 50014,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -734,10 +770,11 @@
         },
         "cost": 2.3,
         "calories": 250,
-        "rating": 3
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50015,
+        "id_": 50015,
         "cuisine": "indian",
         "ingredients": {
             "breads": {
@@ -768,10 +805,11 @@
         },
         "cost": 4.5,
         "calories": 600,
-        "rating": 4
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50016,
+        "id_": 50016,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -799,10 +837,11 @@
         },
         "cost": 5.6,
         "calories": 570,
-        "rating": 5
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50017,
+        "id_": 50017,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -826,10 +865,11 @@
         },
         "cost": 4.5,
         "calories": 450,
-        "rating": 3
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50018,
+        "id_": 50018,
         "cuisine": "chinese",
         "ingredients": {
             "breads": {
@@ -860,10 +900,11 @@
         },
         "cost": 4.4,
         "calories": 405,
-        "rating": 2
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 50019,
+        "id_": 50019,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -898,10 +939,13 @@
         },
         "cost": 6.5,
         "calories": 455,
-        "rating": 1
+        "rating": 4,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50020,
+        "id_": 50020,
         "cuisine": "greek",
         "ingredients": {
             "breads": {
@@ -935,10 +979,11 @@
         },
         "cost": 5.7,
         "calories": 520,
-        "rating": 1
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50021,
+        "id_": 50021,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -962,10 +1007,13 @@
         },
         "cost": 3.7,
         "calories": 405,
-        "rating": 2
+        "rating": 1,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50022,
+        "id_": 50022,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -989,10 +1037,11 @@
         },
         "cost": 5.0,
         "calories": 460,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 50023,
+        "id_": 50023,
         "cuisine": "california",
         "ingredients": {
             "breads": {
@@ -1015,10 +1064,13 @@
         },
         "cost": 4.1,
         "calories": 390,
-        "rating": 2
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50024,
+        "id_": 50024,
         "cuisine": "jewish",
         "ingredients": {
             "breads": {
@@ -1046,10 +1098,13 @@
         },
         "cost": 2.7,
         "calories": 345,
-        "rating": 5
+        "rating": 1,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50025,
+        "id_": 50025,
         "cuisine": "southern_us",
         "ingredients": {
             "breads": {
@@ -1080,10 +1135,11 @@
         },
         "cost": 6.2,
         "calories": 665,
-        "rating": 3
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50026,
+        "id_": 50026,
         "cuisine": "middle_eastern",
         "ingredients": {
             "breads": {
@@ -1107,10 +1163,13 @@
         },
         "cost": 3.6,
         "calories": 365,
-        "rating": 1
+        "rating": 1,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50027,
+        "id_": 50027,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -1144,10 +1203,11 @@
         },
         "cost": 9.2,
         "calories": 580,
-        "rating": 2
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50028,
+        "id_": 50028,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -1178,10 +1238,11 @@
         },
         "cost": 5.6,
         "calories": 270,
-        "rating": 5
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50029,
+        "id_": 50029,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -1205,10 +1266,11 @@
         },
         "cost": 4.0,
         "calories": 500,
-        "rating": 1
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50030,
+        "id_": 50030,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -1235,10 +1297,13 @@
         },
         "cost": 2.8,
         "calories": 350,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50031,
+        "id_": 50031,
         "cuisine": "mexican",
         "ingredients": {
             "breads": {
@@ -1265,10 +1330,13 @@
         },
         "cost": 3.5,
         "calories": 335,
-        "rating": 2
+        "rating": 5,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50032,
+        "id_": 50032,
         "cuisine": "german",
         "ingredients": {
             "breads": {
@@ -1292,10 +1360,13 @@
         },
         "cost": 2.7,
         "calories": 235,
-        "rating": 1
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50033,
+        "id_": 50033,
         "cuisine": "korean",
         "ingredients": {
             "breads": {
@@ -1322,10 +1393,11 @@
         },
         "cost": 6.6,
         "calories": 500,
-        "rating": 1
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50034,
+        "id_": 50034,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -1352,10 +1424,11 @@
         },
         "cost": 3.2,
         "calories": 370,
-        "rating": 2
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 50035,
+        "id_": 50035,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -1383,10 +1456,11 @@
         },
         "cost": 7.0,
         "calories": 480,
-        "rating": 2
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50036,
+        "id_": 50036,
         "cuisine": "middle_eastern",
         "ingredients": {
             "breads": {
@@ -1421,10 +1495,11 @@
         },
         "cost": 5.1,
         "calories": 480,
-        "rating": 4
+        "rating": 4,
+        "dietary_tags": []
     },
     {
-        "id": 50037,
+        "id_": 50037,
         "cuisine": "vegetarian",
         "ingredients": {
             "breads": {
@@ -1450,10 +1525,13 @@
         },
         "cost": 4.1,
         "calories": 400,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50038,
+        "id_": 50038,
         "cuisine": "southern_us",
         "ingredients": {
             "breads": {
@@ -1480,10 +1558,11 @@
         },
         "cost": 3.1,
         "calories": 260,
-        "rating": 4
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50039,
+        "id_": 50039,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -1507,10 +1586,11 @@
         },
         "cost": 7.0,
         "calories": 695,
-        "rating": 2
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50040,
+        "id_": 50040,
         "cuisine": "indian",
         "ingredients": {
             "breads": {
@@ -1541,10 +1621,11 @@
         },
         "cost": 5.0,
         "calories": 600,
-        "rating": 4
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50041,
+        "id_": 50041,
         "cuisine": "vegetarian",
         "ingredients": {
             "breads": {
@@ -1571,10 +1652,13 @@
         },
         "cost": 4.7,
         "calories": 355,
-        "rating": 5
+        "rating": 2,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50042,
+        "id_": 50042,
         "cuisine": "german",
         "ingredients": {
             "breads": {
@@ -1594,10 +1678,13 @@
         },
         "cost": 1.0,
         "calories": 125,
-        "rating": 2
+        "rating": 4,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50043,
+        "id_": 50043,
         "cuisine": "new_england",
         "ingredients": {
             "breads": {
@@ -1625,10 +1712,11 @@
         },
         "cost": 8.8,
         "calories": 495,
-        "rating": 5
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50044,
+        "id_": 50044,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -1656,10 +1744,11 @@
         },
         "cost": 7.0,
         "calories": 510,
-        "rating": 3
+        "rating": 1,
+        "dietary_tags": []
     },
     {
-        "id": 50045,
+        "id_": 50045,
         "cuisine": "middle_eastern",
         "ingredients": {
             "breads": {
@@ -1683,10 +1772,13 @@
         },
         "cost": 2.0,
         "calories": 235,
-        "rating": 2
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50046,
+        "id_": 50046,
         "cuisine": "scandinavian",
         "ingredients": {
             "breads": {
@@ -1714,10 +1806,13 @@
         },
         "cost": 3.3,
         "calories": 220,
-        "rating": 2
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50047,
+        "id_": 50047,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -1737,10 +1832,13 @@
         },
         "cost": 2.6,
         "calories": 265,
-        "rating": 2
+        "rating": 4,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50048,
+        "id_": 50048,
         "cuisine": "japanese",
         "ingredients": {
             "breads": {
@@ -1768,10 +1866,11 @@
         },
         "cost": 4.9,
         "calories": 495,
-        "rating": 4
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50049,
+        "id_": 50049,
         "cuisine": "british",
         "ingredients": {
             "breads": {
@@ -1799,10 +1898,11 @@
         },
         "cost": 6.4,
         "calories": 640,
-        "rating": 5
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50050,
+        "id_": 50050,
         "cuisine": "mediterranean",
         "ingredients": {
             "breads": {
@@ -1833,10 +1933,11 @@
         },
         "cost": 6.1,
         "calories": 515,
-        "rating": 3
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 50051,
+        "id_": 50051,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -1864,10 +1965,13 @@
         },
         "cost": 3.2,
         "calories": 345,
-        "rating": 4
+        "rating": 4,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50052,
+        "id_": 50052,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -1883,10 +1987,13 @@
         },
         "cost": 1.0,
         "calories": 160,
-        "rating": 1
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50053,
+        "id_": 50053,
         "cuisine": "venezuelan",
         "ingredients": {
             "breads": {},
@@ -1906,10 +2013,13 @@
         },
         "cost": 2.5,
         "calories": 210,
-        "rating": 5
+        "rating": 4,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50054,
+        "id_": 50054,
         "cuisine": "vegan",
         "ingredients": {
             "breads": {
@@ -1932,10 +2042,13 @@
         },
         "cost": 3.6,
         "calories": 390,
-        "rating": 1
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50055,
+        "id_": 50055,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -1958,10 +2071,13 @@
         },
         "cost": 2.5,
         "calories": 355,
-        "rating": 1
+        "rating": 2,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50056,
+        "id_": 50056,
         "cuisine": "british",
         "ingredients": {
             "breads": {
@@ -1981,10 +2097,13 @@
         },
         "cost": 1.4,
         "calories": 190,
-        "rating": 5
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50057,
+        "id_": 50057,
         "cuisine": "mexican",
         "ingredients": {
             "breads": {
@@ -2008,10 +2127,13 @@
         },
         "cost": 3.3,
         "calories": 260,
-        "rating": 1
+        "rating": 4,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50058,
+        "id_": 50058,
         "cuisine": "scandinavian",
         "ingredients": {
             "breads": {
@@ -2039,10 +2161,13 @@
         },
         "cost": 3.2,
         "calories": 240,
-        "rating": 1
+        "rating": 5,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50059,
+        "id_": 50059,
         "cuisine": "southern_us",
         "ingredients": {
             "breads": {
@@ -2073,10 +2198,11 @@
         },
         "cost": 7.6,
         "calories": 450,
-        "rating": 2
+        "rating": 1,
+        "dietary_tags": []
     },
     {
-        "id": 50060,
+        "id_": 50060,
         "cuisine": "mediterranean",
         "ingredients": {
             "breads": {
@@ -2104,10 +2230,13 @@
         },
         "cost": 5.0,
         "calories": 385,
-        "rating": 4
+        "rating": 1,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50061,
+        "id_": 50061,
         "cuisine": "italian_american",
         "ingredients": {
             "breads": {
@@ -2131,10 +2260,13 @@
         },
         "cost": 3.5,
         "calories": 360,
-        "rating": 5
+        "rating": 4,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50062,
+        "id_": 50062,
         "cuisine": "greek",
         "ingredients": {
             "breads": {
@@ -2169,10 +2301,11 @@
         },
         "cost": 6.2,
         "calories": 600,
-        "rating": 2
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50063,
+        "id_": 50063,
         "cuisine": "indian",
         "ingredients": {
             "breads": {
@@ -2203,10 +2336,11 @@
         },
         "cost": 4.9,
         "calories": 570,
-        "rating": 4
+        "rating": 4,
+        "dietary_tags": []
     },
     {
-        "id": 50064,
+        "id_": 50064,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -2233,10 +2367,13 @@
         },
         "cost": 3.3,
         "calories": 450,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50065,
+        "id_": 50065,
         "cuisine": "vegan",
         "ingredients": {
             "breads": {
@@ -2266,10 +2403,11 @@
         },
         "cost": 4.6,
         "calories": 410,
-        "rating": 4
+        "rating": 1,
+        "dietary_tags": []
     },
     {
-        "id": 50066,
+        "id_": 50066,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -2297,10 +2435,11 @@
         },
         "cost": 6.7,
         "calories": 630,
-        "rating": 3
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 50067,
+        "id_": 50067,
         "cuisine": "chinese",
         "ingredients": {
             "breads": {
@@ -2331,10 +2470,11 @@
         },
         "cost": 4.4,
         "calories": 405,
-        "rating": 4
+        "rating": 4,
+        "dietary_tags": []
     },
     {
-        "id": 50068,
+        "id_": 50068,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -2361,10 +2501,13 @@
         },
         "cost": 4.8,
         "calories": 375,
-        "rating": 1
+        "rating": 2,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50069,
+        "id_": 50069,
         "cuisine": "mexican",
         "ingredients": {
             "breads": {
@@ -2391,10 +2534,13 @@
         },
         "cost": 3.5,
         "calories": 335,
-        "rating": 5
+        "rating": 2,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50070,
+        "id_": 50070,
         "cuisine": "american",
         "ingredients": {
             "breads": {},
@@ -2418,10 +2564,11 @@
         },
         "cost": 4.5,
         "calories": 325,
-        "rating": 2
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 50071,
+        "id_": 50071,
         "cuisine": "spanish",
         "ingredients": {
             "breads": {
@@ -2441,10 +2588,13 @@
         },
         "cost": 2.3,
         "calories": 370,
-        "rating": 1
+        "rating": 4,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50072,
+        "id_": 50072,
         "cuisine": "indian",
         "ingredients": {
             "breads": {
@@ -2468,10 +2618,13 @@
         },
         "cost": 2.6,
         "calories": 390,
-        "rating": 3
+        "rating": 2,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50073,
+        "id_": 50073,
         "cuisine": "vegan",
         "ingredients": {
             "breads": {
@@ -2495,10 +2648,13 @@
         },
         "cost": 1.5,
         "calories": 175,
-        "rating": 5
+        "rating": 5,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50074,
+        "id_": 50074,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -2530,10 +2686,13 @@
         },
         "cost": 5.6,
         "calories": 435,
-        "rating": 5
+        "rating": 5,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50075,
+        "id_": 50075,
         "cuisine": "scandinavian",
         "ingredients": {
             "breads": {
@@ -2561,10 +2720,13 @@
         },
         "cost": 3.7,
         "calories": 285,
-        "rating": 3
+        "rating": 1,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50076,
+        "id_": 50076,
         "cuisine": "southern_us",
         "ingredients": {
             "breads": {
@@ -2592,10 +2754,11 @@
         },
         "cost": 6.0,
         "calories": 585,
-        "rating": 4
+        "rating": 4,
+        "dietary_tags": []
     },
     {
-        "id": 50077,
+        "id_": 50077,
         "cuisine": "german",
         "ingredients": {
             "breads": {
@@ -2623,10 +2786,11 @@
         },
         "cost": 3.4,
         "calories": 415,
-        "rating": 4
+        "rating": 2,
+        "dietary_tags": []
     },
     {
-        "id": 50078,
+        "id_": 50078,
         "cuisine": "israeli",
         "ingredients": {
             "breads": {
@@ -2653,10 +2817,13 @@
         },
         "cost": 3.3,
         "calories": 390,
-        "rating": 4
+        "rating": 5,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50079,
+        "id_": 50079,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -2680,10 +2847,11 @@
         },
         "cost": 5.0,
         "calories": 505,
-        "rating": 3
+        "rating": 4,
+        "dietary_tags": []
     },
     {
-        "id": 50080,
+        "id_": 50080,
         "cuisine": "japanese",
         "ingredients": {
             "breads": {
@@ -2703,10 +2871,13 @@
         },
         "cost": 2.2,
         "calories": 230,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50081,
+        "id_": 50081,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -2734,10 +2905,11 @@
         },
         "cost": 7.1,
         "calories": 550,
-        "rating": 5
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50082,
+        "id_": 50082,
         "cuisine": "british",
         "ingredients": {
             "breads": {},
@@ -2760,10 +2932,13 @@
         },
         "cost": 1.9,
         "calories": 70,
-        "rating": 2
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50083,
+        "id_": 50083,
         "cuisine": "mexican",
         "ingredients": {
             "breads": {
@@ -2790,10 +2965,13 @@
         },
         "cost": 3.2,
         "calories": 325,
-        "rating": 2
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50084,
+        "id_": 50084,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -2821,10 +2999,13 @@
         },
         "cost": 4.3,
         "calories": 455,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50085,
+        "id_": 50085,
         "cuisine": "vegan",
         "ingredients": {
             "breads": {
@@ -2851,10 +3032,13 @@
         },
         "cost": 4.2,
         "calories": 335,
-        "rating": 5
+        "rating": 5,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50086,
+        "id_": 50086,
         "cuisine": "southern_us",
         "ingredients": {
             "breads": {
@@ -2874,10 +3058,13 @@
         },
         "cost": 1.6,
         "calories": 200,
-        "rating": 3
+        "rating": 5,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50087,
+        "id_": 50087,
         "cuisine": "chinese",
         "ingredients": {
             "breads": {
@@ -2908,10 +3095,11 @@
         },
         "cost": 5.9,
         "calories": 535,
-        "rating": 4
+        "rating": 4,
+        "dietary_tags": []
     },
     {
-        "id": 50088,
+        "id_": 50088,
         "cuisine": "vegan",
         "ingredients": {
             "breads": {
@@ -2935,10 +3123,13 @@
         },
         "cost": 4.2,
         "calories": 400,
-        "rating": 1
+        "rating": 4,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50089,
+        "id_": 50089,
         "cuisine": "north_african",
         "ingredients": {
             "breads": {
@@ -2966,10 +3157,11 @@
         },
         "cost": 4.2,
         "calories": 455,
-        "rating": 5
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50090,
+        "id_": 50090,
         "cuisine": "japanese",
         "ingredients": {
             "breads": {
@@ -2993,10 +3185,13 @@
         },
         "cost": 2.9,
         "calories": 295,
-        "rating": 1
+        "rating": 5,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50091,
+        "id_": 50091,
         "cuisine": "middle_eastern",
         "ingredients": {
             "breads": {
@@ -3028,10 +3223,11 @@
         },
         "cost": 5.0,
         "calories": 480,
-        "rating": 4
+        "rating": 1,
+        "dietary_tags": []
     },
     {
-        "id": 50092,
+        "id_": 50092,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -3047,10 +3243,13 @@
         },
         "cost": 1.8,
         "calories": 250,
-        "rating": 4
+        "rating": 4,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50093,
+        "id_": 50093,
         "cuisine": "german",
         "ingredients": {
             "breads": {
@@ -3074,10 +3273,13 @@
         },
         "cost": 1.4,
         "calories": 165,
-        "rating": 3
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50094,
+        "id_": 50094,
         "cuisine": "american",
         "ingredients": {
             "breads": {
@@ -3101,10 +3303,11 @@
         },
         "cost": 5.5,
         "calories": 570,
-        "rating": 3
+        "rating": 5,
+        "dietary_tags": []
     },
     {
-        "id": 50095,
+        "id_": 50095,
         "cuisine": "levantine",
         "ingredients": {
             "breads": {
@@ -3135,10 +3338,13 @@
         },
         "cost": 4.7,
         "calories": 335,
-        "rating": 2
+        "rating": 4,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50096,
+        "id_": 50096,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -3158,10 +3364,13 @@
         },
         "cost": 2.0,
         "calories": 255,
-        "rating": 1
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50097,
+        "id_": 50097,
         "cuisine": "indian",
         "ingredients": {
             "breads": {
@@ -3190,10 +3399,13 @@
         },
         "cost": 3.6,
         "calories": 490,
-        "rating": 3
+        "rating": 1,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50098,
+        "id_": 50098,
         "cuisine": "middle_eastern",
         "ingredients": {
             "breads": {
@@ -3217,10 +3429,13 @@
         },
         "cost": 2.7,
         "calories": 245,
-        "rating": 2
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50099,
+        "id_": 50099,
         "cuisine": "mexican",
         "ingredients": {
             "breads": {
@@ -3240,10 +3455,13 @@
         },
         "cost": 1.2,
         "calories": 190,
-        "rating": 4
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50100,
+        "id_": 50100,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -3271,10 +3489,11 @@
         },
         "cost": 4.0,
         "calories": 440,
-        "rating": 1
+        "rating": 1,
+        "dietary_tags": []
     },
     {
-        "id": 50101,
+        "id_": 50101,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -3302,10 +3521,13 @@
         },
         "cost": 4.6,
         "calories": 365,
-        "rating": 1
+        "rating": 1,
+        "dietary_tags": [
+            "vegetarian"
+        ]
     },
     {
-        "id": 50102,
+        "id_": 50102,
         "cuisine": "korean",
         "ingredients": {
             "breads": {
@@ -3329,10 +3551,11 @@
         },
         "cost": 4.7,
         "calories": 390,
-        "rating": 1
+        "rating": 3,
+        "dietary_tags": []
     },
     {
-        "id": 50103,
+        "id_": 50103,
         "cuisine": "scandinavian",
         "ingredients": {
             "breads": {
@@ -3359,10 +3582,13 @@
         },
         "cost": 2.9,
         "calories": 250,
-        "rating": 2
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50104,
+        "id_": 50104,
         "cuisine": "french",
         "ingredients": {
             "breads": {
@@ -3382,10 +3608,13 @@
         },
         "cost": 2.0,
         "calories": 350,
-        "rating": 3
+        "rating": 5,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50105,
+        "id_": 50105,
         "cuisine": "british",
         "ingredients": {
             "breads": {
@@ -3413,10 +3642,11 @@
         },
         "cost": 4.5,
         "calories": 420,
-        "rating": 1
+        "rating": 4,
+        "dietary_tags": []
     },
     {
-        "id": 50106,
+        "id_": 50106,
         "cuisine": "baltic",
         "ingredients": {
             "breads": {},
@@ -3440,10 +3670,13 @@
         },
         "cost": 1.7,
         "calories": 165,
-        "rating": 1
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ]
     },
     {
-        "id": 50107,
+        "id_": 50107,
         "cuisine": "italian",
         "ingredients": {
             "breads": {
@@ -3467,6 +3700,9 @@
         },
         "cost": 3.8,
         "calories": 285,
-        "rating": 2
+        "rating": 5,
+        "dietary_tags": [
+            "vegan"
+        ]
     }
 ]
