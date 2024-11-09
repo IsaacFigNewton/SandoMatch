@@ -27,41 +27,77 @@ const findSandwichByCost = (cost) => {
   );
 };
 
-//Get sandwich by rating
+const findSandwichByRatingCalories = (rating, calories) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => (sandwich["rating"] === rating && 
+      sandwich["calories"] == calories)
+  );
+};
+
+const findSandwichByCaloriesCost = (calories, cost) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => (sandwich["calories"] == calories && 
+      sandwich["cost"] === cost)
+  );
+};
+
+const findSandwichByRatingCost = (rating, cost) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => (sandwich["rating"] == rating && 
+      sandwich["cost"] === cost)
+  );
+};
+
+const findSandwichByRatingCaloriesCost = (rating, calories, cost) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => (sandwich["rating"] === rating && 
+      sandwich["calories"] === calories && sandwich["cost"] === cost)
+  );
+};
+
 app.get("/sandwiches", (req, res) => {
   const rating = req.query.rating;
-  if (rating != undefined) {
+  const calories = parseInt(req.query.calories);
+  const cost = parseInt(req.query.cost);
+  if (rating != undefined && calories != undefined && cost != undefined) {
+    let result = findSandwichByRatingCaloriesCost(rating, calories, cost);
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating != undefined && calories != undefined && 
+    cost == undefined){
+    let result = findSandwichByRatingCalories(rating, calories);
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating == undefined && calories != undefined &&
+    cost != undefined) {
+    let result = findSandwichByCaloriesCost(calories, cost);
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating != undefined && calories == undefined &&
+    cost != undefined) {
+    let result = findSandwichByRatingCost(rating, cost);
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating != undefined && calories == undefined &&
+    cost == undefined) {
     let result = findSandwichByRating(rating);
-    result = //ask about this part;
+    result = { sandwiches_list: result };
     res.send(result);
-  } else {
-    res.send(sandwiches);
-  }
-});
-
-//Get sandwich by calories
-app.get("/sandwiches", (req, res) => {
-  const calories = req.query.calories;
-  if (calories != undefined) {
+  } else if (rating == undefined && calories != undefined &&
+    cost == undefined) {
     let result = findSandwichByCalories(calories);
-    result = //ask about this part;
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating == undefined && calories == undefined &&
+    cost != undefined) {
+    let result = findSandwichByCost(cost);
+    result = { sandwiches_list: result };
     res.send(result);
   } else {
     res.send(sandwiches);
   }
 });
 
-//Get sandwich by cost
-app.get("/sandwiches", (req, res) => {
-  const cost = req.query.cost;
-  if (cost != undefined) {
-    let result = findSandwichByCost(cost);
-    result = //ask about this part;
-    res.send(result);
-  } else {
-    res.send(sandwiches);
-  }
-});
 
 const sandwiches = {
   sandwiches_list: [
