@@ -57,40 +57,44 @@ const findSandwichByRatingCaloriesCost = (rating, calories, cost) => {
 
 app.get("/sandwiches", (req, res) => {
   const rating = req.query.rating;
-  const calories = parseInt(req.query.calories);
-  const cost = parseInt(req.query.cost);
+  const calories = req.query.calories;
+  const cost = req.query.cost;
   if (rating != undefined && calories != undefined && cost != undefined) {
-    let result = findSandwichByRatingCaloriesCost(rating, calories, cost);
+    let result = findSandwichByRatingCaloriesCost(parseInt(rating), 
+      parseInt(calories), parseFloat(cost));
     result = { sandwiches_list: result };
     res.send(result);
   } else if (rating != undefined && calories != undefined && 
     cost == undefined){
-    let result = findSandwichByRatingCalories(rating, calories);
+    let result = findSandwichByRatingCalories(parseInt(rating), 
+      parseInt(calories));
     result = { sandwiches_list: result };
     res.send(result);
   } else if (rating == undefined && calories != undefined &&
     cost != undefined) {
-    let result = findSandwichByCaloriesCost(calories, cost);
+    let result = findSandwichByCaloriesCost(parseInt(calories), 
+      parseFloat(cost));
     result = { sandwiches_list: result };
     res.send(result);
   } else if (rating != undefined && calories == undefined &&
     cost != undefined) {
-    let result = findSandwichByRatingCost(rating, cost);
+    let result = findSandwichByRatingCost(parseInt(rating), 
+      parseFloat(cost));
     result = { sandwiches_list: result };
     res.send(result);
   } else if (rating != undefined && calories == undefined &&
     cost == undefined) {
-    let result = findSandwichByRating(rating);
+    let result = findSandwichByRating(parseInt(rating));
     result = { sandwiches_list: result };
     res.send(result);
   } else if (rating == undefined && calories != undefined &&
     cost == undefined) {
-    let result = findSandwichByCalories(calories);
+    let result = findSandwichByCalories(parseInt(calories));
     result = { sandwiches_list: result };
     res.send(result);
   } else if (rating == undefined && calories == undefined &&
     cost != undefined) {
-    let result = findSandwichByCost(cost);
+    let result = findSandwichByCost(parseFloat(cost));
     result = { sandwiches_list: result };
     res.send(result);
   } else {
