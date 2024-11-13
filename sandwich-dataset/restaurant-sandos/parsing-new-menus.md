@@ -38,7 +38,9 @@
                 "extra-virgin olive oil",
                 "reduced fat mayonnaise"
                 ],
-                "cuisine": null
+                "cuisine": null,
+                "cost": 9.50,
+                "calories": 400
             }"
             </li>
         </ol>
