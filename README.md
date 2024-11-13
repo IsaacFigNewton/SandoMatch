@@ -10,9 +10,9 @@
 
 ### Setup
 <ol>
-  <li> Run **npm install** in root directory </li>
-  <li> Run **npm run start** in packages/expess-backend </li>
-  <li> Run **npm run dev** in packages/react-frontend </li>
+  <li> Run <b>npm install</b> in root directory </li>
+  <li> Run <b>npm run start</b> in packages/expess-backend </li>
+  <li> Run <b>npm run dev</b> in packages/react-frontend </li>
 </ol>
 
 ## Sources
