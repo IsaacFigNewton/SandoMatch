@@ -2,6 +2,7 @@
     {
         "id_": 0,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "The Mr. Pickle",
         "ingredients": {
             "breads": {},
@@ -53,7 +54,7 @@
         },
         "cost": 14.69,
         "calories": 740,
-        "rating": 3,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -61,6 +62,7 @@
     {
         "id_": 1,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "G.O.A.T.",
         "ingredients": {
             "breads": {},
@@ -117,6 +119,7 @@
     {
         "id_": 2,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Kickin' Chicken",
         "ingredients": {
             "breads": {},
@@ -164,7 +167,7 @@
         },
         "cost": 14.39,
         "calories": 540,
-        "rating": 3,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -172,6 +175,7 @@
     {
         "id_": 3,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Reuben",
         "ingredients": {
             "breads": {
@@ -191,7 +195,7 @@
         },
         "cost": 14.69,
         "calories": 320,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -199,6 +203,7 @@
     {
         "id_": 4,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Mrs. Pickle",
         "ingredients": {
             "breads": {},
@@ -258,6 +263,7 @@
     {
         "id_": 5,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Hot \"T\"",
         "ingredients": {
             "breads": {},
@@ -305,7 +311,7 @@
         },
         "cost": 14.39,
         "calories": 520,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -313,6 +319,7 @@
     {
         "id_": 6,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Rachel",
         "ingredients": {
             "breads": {
@@ -332,7 +339,7 @@
         },
         "cost": 14.69,
         "calories": 380,
-        "rating": 3,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -340,6 +347,7 @@
     {
         "id_": 7,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "CJ's Pastrami",
         "ingredients": {
             "breads": {},
@@ -363,7 +371,7 @@
         },
         "cost": 14.69,
         "calories": 130,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -371,6 +379,7 @@
     {
         "id_": 8,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Hang Loose",
         "ingredients": {
             "breads": {},
@@ -422,7 +431,7 @@
         },
         "cost": 14.99,
         "calories": 620,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -430,6 +439,7 @@
     {
         "id_": 9,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "BBQ Melt",
         "ingredients": {
             "breads": {},
@@ -476,7 +486,7 @@
         },
         "cost": 14.39,
         "calories": 560,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -484,6 +494,7 @@
     {
         "id_": 10,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Mama Mia!",
         "ingredients": {
             "breads": {},
@@ -514,7 +525,7 @@
         },
         "cost": 14.99,
         "calories": 460,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -522,6 +533,7 @@
     {
         "id_": 11,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Meatball",
         "ingredients": {
             "breads": {},
@@ -546,7 +558,7 @@
         },
         "cost": 14.69,
         "calories": 290,
-        "rating": 3,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -554,6 +566,7 @@
     {
         "id_": 12,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Got Beef",
         "ingredients": {
             "breads": {},
@@ -602,7 +615,7 @@
         },
         "cost": 14.99,
         "calories": 710,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -610,6 +623,7 @@
     {
         "id_": 13,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "French Dip",
         "ingredients": {
             "breads": {},
@@ -632,7 +646,7 @@
         },
         "cost": 14.99,
         "calories": 310,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -640,6 +654,7 @@
     {
         "id_": 14,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Baja Cheesesteak",
         "ingredients": {
             "breads": {},
@@ -679,6 +694,7 @@
     {
         "id_": 15,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Santa Maria Tri-Tip",
         "ingredients": {
             "breads": {},
@@ -716,7 +732,7 @@
         },
         "cost": 15.99,
         "calories": 250,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
         ],
@@ -726,6 +742,7 @@
     {
         "id_": 16,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Goomba",
         "ingredients": {
             "breads": {},
@@ -774,7 +791,7 @@
         },
         "cost": 14.39,
         "calories": 625,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -782,6 +799,7 @@
     {
         "id_": 17,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Listen Linda",
         "ingredients": {
             "breads": {},
@@ -829,7 +847,7 @@
         },
         "cost": 14.69,
         "calories": 630,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -837,6 +855,7 @@
     {
         "id_": 18,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Big Jake",
         "ingredients": {
             "breads": {},
@@ -885,7 +904,7 @@
         },
         "cost": 14.69,
         "calories": 630,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -893,6 +912,7 @@
     {
         "id_": 19,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Italian",
         "ingredients": {
             "breads": {},
@@ -955,6 +975,7 @@
     {
         "id_": 20,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Tom Turkey",
         "ingredients": {
             "breads": {},
@@ -1007,6 +1028,7 @@
     {
         "id_": 21,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Della's Deli",
         "ingredients": {
             "breads": {},
@@ -1066,6 +1088,7 @@
     {
         "id_": 22,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Big Easy",
         "ingredients": {
             "breads": {},
@@ -1110,7 +1133,7 @@
         },
         "cost": 14.39,
         "calories": 600,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1118,6 +1141,7 @@
     {
         "id_": 23,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Cali Tuna",
         "ingredients": {
             "breads": {},
@@ -1165,7 +1189,7 @@
         },
         "cost": 15.39,
         "calories": 560,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1173,6 +1197,7 @@
     {
         "id_": 24,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "The Hero",
         "ingredients": {
             "breads": {},
@@ -1224,7 +1249,7 @@
         },
         "cost": 15.99,
         "calories": 940,
-        "rating": 4,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1232,6 +1257,7 @@
     {
         "id_": 25,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Veggie Pestoli",
         "ingredients": {
             "breads": {},
@@ -1284,6 +1310,7 @@
     {
         "id_": 26,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Truly Vegan",
         "ingredients": {
             "breads": {},
@@ -1326,7 +1353,7 @@
         },
         "cost": 13.99,
         "calories": 310,
-        "rating": 3,
+        "rating": 1,
         "dietary_tags": [
             "vegan"
         ],
@@ -1336,6 +1363,7 @@
     {
         "id_": 27,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Summer Love Wrap",
         "ingredients": {
             "breads": {
@@ -1386,7 +1414,7 @@
         },
         "cost": 14.39,
         "calories": 730,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1394,6 +1422,7 @@
     {
         "id_": 28,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "Club",
         "ingredients": {
             "breads": {},
@@ -1426,7 +1455,7 @@
         },
         "cost": 14.69,
         "calories": 520,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1434,6 +1463,7 @@
     {
         "id_": 29,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "BLAT",
         "ingredients": {
             "breads": {},
@@ -1467,6 +1497,7 @@
     {
         "id_": 30,
         "cuisine": null,
+        "restaurant": "mr_pickles",
         "name": "BLT",
         "ingredients": {
             "breads": {},
@@ -1489,7 +1520,7 @@
         },
         "cost": 14.39,
         "calories": 80,
-        "rating": 5,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []

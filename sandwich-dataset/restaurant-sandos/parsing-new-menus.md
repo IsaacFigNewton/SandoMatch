@@ -38,7 +38,9 @@
         }"</li>
     </ol>
     <li>Save the JSON output to a new file</li>
-    <li>Open and run the Reformatting_Generated_Sandwiches.ipynb notebook's first cell</li>
+    <li>Open the Restructuring Sandwich Data.ipynb notebook</li>
+    <li>In the first cell, set the originating_restaurant variable as appropriate</li>
+    <li>Run the first cell</li>
     <li>When prompted, upload the previously mentioned JSON file</li>
     <li>Run the remaining cells</li>
     <li>The restructured JSON entries file will automatically download</li>

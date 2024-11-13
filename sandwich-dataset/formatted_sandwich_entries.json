@@ -2,6 +2,7 @@
     {
         "id_": 0,
         "cuisine": null,
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -34,7 +35,7 @@
         },
         "cost": 2.8,
         "calories": 343,
-        "rating": 3,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -44,6 +45,7 @@
     {
         "id_": 1,
         "cuisine": null,
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -84,6 +86,7 @@
     {
         "id_": 2,
         "cuisine": null,
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {},
@@ -109,7 +112,7 @@
         },
         "cost": 3.2,
         "calories": 175,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -119,6 +122,7 @@
     {
         "id_": 3,
         "cuisine": "cajun_creole",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -175,6 +179,7 @@
     {
         "id_": 4,
         "cuisine": "spanish",
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -201,7 +206,7 @@
         },
         "cost": 4.8,
         "calories": 295,
-        "rating": 2,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -209,6 +214,7 @@
     {
         "id_": 5,
         "cuisine": "mexican",
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -234,7 +240,7 @@
         },
         "cost": 5.0,
         "calories": 345,
-        "rating": 5,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -242,6 +248,7 @@
     {
         "id_": 6,
         "cuisine": "cajun_creole",
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -273,7 +280,7 @@
         },
         "cost": 9.5,
         "calories": 590,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -281,6 +288,7 @@
     {
         "id_": 7,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -311,7 +319,7 @@
         },
         "cost": 4.7,
         "calories": 290,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -319,6 +327,7 @@
     {
         "id_": 8,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -341,7 +350,7 @@
         },
         "cost": 3.5,
         "calories": 285,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -349,6 +358,7 @@
     {
         "id_": 9,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "sourdough": [
@@ -375,7 +385,7 @@
         },
         "cost": 7.2,
         "calories": 650,
-        "rating": 5,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -383,6 +393,7 @@
     {
         "id_": 10,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -405,7 +416,7 @@
         },
         "cost": 5.5,
         "calories": 415,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -413,6 +424,7 @@
     {
         "id_": 11,
         "cuisine": "mediterranean",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "whole wheat": [
@@ -441,7 +453,7 @@
         },
         "cost": 4.7,
         "calories": 330,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -451,6 +463,7 @@
     {
         "id_": 12,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "ciabatta": [
@@ -481,7 +494,7 @@
         },
         "cost": 5.4,
         "calories": 435,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -491,6 +504,7 @@
     {
         "id_": 13,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "rye": [
@@ -525,6 +539,7 @@
     {
         "id_": 14,
         "cuisine": "scandinavian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "pumpernickel": [
@@ -561,6 +576,7 @@
     {
         "id_": 15,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "brioche": [
@@ -583,7 +599,7 @@
         },
         "cost": 5.5,
         "calories": 570,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -591,6 +607,7 @@
     {
         "id_": 16,
         "cuisine": "middle_eastern",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "pita": [
@@ -619,7 +636,7 @@
         },
         "cost": 3.0,
         "calories": 290,
-        "rating": 3,
+        "rating": 1,
         "dietary_tags": [
             "vegan"
         ],
@@ -629,6 +646,7 @@
     {
         "id_": 17,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "focaccia": [
@@ -651,7 +669,7 @@
         },
         "cost": 4.7,
         "calories": 390,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -661,6 +679,7 @@
     {
         "id_": 18,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "croissant": [
@@ -687,7 +706,7 @@
         },
         "cost": 5.5,
         "calories": 545,
-        "rating": 4,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -695,6 +714,7 @@
     {
         "id_": 19,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "tortilla": [
@@ -727,7 +747,7 @@
         },
         "cost": 6.8,
         "calories": 640,
-        "rating": 5,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -735,6 +755,7 @@
     {
         "id_": 20,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "white bread": [
@@ -761,7 +782,7 @@
         },
         "cost": 4.6,
         "calories": 440,
-        "rating": 4,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -769,6 +790,7 @@
     {
         "id_": 21,
         "cuisine": "german",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "bun": [
@@ -791,7 +813,7 @@
         },
         "cost": 3.0,
         "calories": 375,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -799,6 +821,7 @@
     {
         "id_": 22,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "english muffin": [
@@ -824,7 +847,7 @@
         },
         "cost": 2.8,
         "calories": 328,
-        "rating": 5,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -832,6 +855,7 @@
     {
         "id_": 23,
         "cuisine": "indian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "naan": [
@@ -861,7 +885,7 @@
         },
         "cost": 4.5,
         "calories": 600,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -869,6 +893,7 @@
     {
         "id_": 24,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -895,7 +920,7 @@
         },
         "cost": 5.6,
         "calories": 570,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -903,6 +928,7 @@
     {
         "id_": 25,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "multigrain": [
@@ -925,7 +951,7 @@
         },
         "cost": 4.5,
         "calories": 450,
-        "rating": 3,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -933,6 +959,7 @@
     {
         "id_": 26,
         "cuisine": "chinese",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "bun": [
@@ -970,6 +997,7 @@
     {
         "id_": 27,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "ciabatta": [
@@ -1007,7 +1035,7 @@
         },
         "cost": 7.0,
         "calories": 533,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -1017,6 +1045,7 @@
     {
         "id_": 28,
         "cuisine": "greek",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "whole wheat": [
@@ -1049,7 +1078,7 @@
         },
         "cost": 5.7,
         "calories": 520,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1057,6 +1086,7 @@
     {
         "id_": 29,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -1079,7 +1109,7 @@
         },
         "cost": 3.7,
         "calories": 405,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -1089,6 +1119,7 @@
     {
         "id_": 30,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "rye": [
@@ -1119,6 +1150,7 @@
     {
         "id_": 31,
         "cuisine": "california",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "sourdough": [
@@ -1144,7 +1176,7 @@
         },
         "cost": 4.6,
         "calories": 468,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -1154,6 +1186,7 @@
     {
         "id_": 32,
         "cuisine": "jewish",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "bagel": [
@@ -1180,7 +1213,7 @@
         },
         "cost": 2.7,
         "calories": 345,
-        "rating": 3,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -1190,6 +1223,7 @@
     {
         "id_": 33,
         "cuisine": "southern_us",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "brioche": [
@@ -1219,7 +1253,7 @@
         },
         "cost": 6.2,
         "calories": 665,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1227,6 +1261,7 @@
     {
         "id_": 34,
         "cuisine": "middle_eastern",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -1249,7 +1284,7 @@
         },
         "cost": 3.6,
         "calories": 365,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -1259,6 +1294,7 @@
     {
         "id_": 35,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "panini": [
@@ -1291,7 +1327,7 @@
         },
         "cost": 9.2,
         "calories": 580,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1299,6 +1335,7 @@
     {
         "id_": 36,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "roll": [
@@ -1328,7 +1365,7 @@
         },
         "cost": 5.6,
         "calories": 270,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1336,6 +1373,7 @@
     {
         "id_": 37,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -1358,7 +1396,7 @@
         },
         "cost": 4.0,
         "calories": 500,
-        "rating": 4,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1366,6 +1404,7 @@
     {
         "id_": 38,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "whole wheat": [
@@ -1391,7 +1430,7 @@
         },
         "cost": 2.8,
         "calories": 350,
-        "rating": 5,
+        "rating": 3,
         "dietary_tags": [
             "vegan"
         ],
@@ -1401,6 +1440,7 @@
     {
         "id_": 39,
         "cuisine": "mexican",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "roll": [
@@ -1426,7 +1466,7 @@
         },
         "cost": 3.5,
         "calories": 335,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -1436,6 +1476,7 @@
     {
         "id_": 40,
         "cuisine": "german",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "pumpernickel": [
@@ -1458,7 +1499,7 @@
         },
         "cost": 2.7,
         "calories": 235,
-        "rating": 5,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
         ],
@@ -1468,6 +1509,7 @@
     {
         "id_": 41,
         "cuisine": "korean",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "sourdough": [
@@ -1493,7 +1535,7 @@
         },
         "cost": 6.6,
         "calories": 500,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1501,6 +1543,7 @@
     {
         "id_": 42,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "white bread": [
@@ -1526,7 +1569,7 @@
         },
         "cost": 3.2,
         "calories": 370,
-        "rating": 4,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1534,6 +1577,7 @@
     {
         "id_": 43,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "ciabatta": [
@@ -1560,7 +1604,7 @@
         },
         "cost": 7.0,
         "calories": 480,
-        "rating": 4,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1568,6 +1612,7 @@
     {
         "id_": 44,
         "cuisine": "middle_eastern",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "pita": [
@@ -1601,7 +1646,7 @@
         },
         "cost": 5.1,
         "calories": 480,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1609,6 +1654,7 @@
     {
         "id_": 45,
         "cuisine": "vegetarian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "multigrain": [
@@ -1633,7 +1679,7 @@
         },
         "cost": 4.1,
         "calories": 400,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
         ],
@@ -1643,6 +1689,7 @@
     {
         "id_": 46,
         "cuisine": "southern_us",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "potato bread": [
@@ -1668,7 +1715,7 @@
         },
         "cost": 3.1,
         "calories": 260,
-        "rating": 3,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1676,6 +1723,7 @@
     {
         "id_": 47,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -1698,7 +1746,7 @@
         },
         "cost": 7.0,
         "calories": 695,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1706,6 +1754,7 @@
     {
         "id_": 48,
         "cuisine": "indian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "naan": [
@@ -1735,7 +1784,7 @@
         },
         "cost": 5.0,
         "calories": 600,
-        "rating": 5,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1743,6 +1792,7 @@
     {
         "id_": 49,
         "cuisine": "vegetarian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "sourdough": [
@@ -1768,7 +1818,7 @@
         },
         "cost": 4.7,
         "calories": 355,
-        "rating": 5,
+        "rating": 2,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -1778,6 +1828,7 @@
     {
         "id_": 50,
         "cuisine": "german",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "roll": [
@@ -1796,7 +1847,7 @@
         },
         "cost": 1.0,
         "calories": 125,
-        "rating": 4,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
         ],
@@ -1806,6 +1857,7 @@
     {
         "id_": 51,
         "cuisine": "new_england",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "brioche": [
@@ -1832,7 +1884,7 @@
         },
         "cost": 8.8,
         "calories": 495,
-        "rating": 3,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -1840,6 +1892,7 @@
     {
         "id_": 52,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "focaccia": [
@@ -1874,6 +1927,7 @@
     {
         "id_": 53,
         "cuisine": "middle_eastern",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "whole wheat": [
@@ -1896,7 +1950,7 @@
         },
         "cost": 2.0,
         "calories": 235,
-        "rating": 2,
+        "rating": 5,
         "dietary_tags": [
             "vegan"
         ],
@@ -1906,6 +1960,7 @@
     {
         "id_": 54,
         "cuisine": "scandinavian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "rye": [
@@ -1932,7 +1987,7 @@
         },
         "cost": 3.3,
         "calories": 220,
-        "rating": 5,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
         ],
@@ -1942,6 +1997,7 @@
     {
         "id_": 55,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "ciabatta": [
@@ -1960,7 +2016,7 @@
         },
         "cost": 2.6,
         "calories": 265,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [
             "vegan"
         ],
@@ -1970,6 +2026,7 @@
     {
         "id_": 56,
         "cuisine": "japanese",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "milk bread": [
@@ -1996,7 +2053,7 @@
         },
         "cost": 4.9,
         "calories": 495,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2004,6 +2061,7 @@
     {
         "id_": 57,
         "cuisine": "british",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -2030,7 +2088,7 @@
         },
         "cost": 6.4,
         "calories": 640,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2038,6 +2096,7 @@
     {
         "id_": 58,
         "cuisine": "mediterranean",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "pita": [
@@ -2067,7 +2126,7 @@
         },
         "cost": 6.1,
         "calories": 515,
-        "rating": 5,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2075,6 +2134,7 @@
     {
         "id_": 59,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "croissant": [
@@ -2101,7 +2161,7 @@
         },
         "cost": 3.2,
         "calories": 345,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -2111,6 +2171,7 @@
     {
         "id_": 60,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "white bread": [
@@ -2125,7 +2186,7 @@
         },
         "cost": 1.0,
         "calories": 160,
-        "rating": 3,
+        "rating": 1,
         "dietary_tags": [
             "vegan"
         ],
@@ -2135,6 +2196,7 @@
     {
         "id_": 61,
         "cuisine": "venezuelan",
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {},
@@ -2163,6 +2225,7 @@
     {
         "id_": 62,
         "cuisine": "vegan",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "multigrain": [
@@ -2184,7 +2247,7 @@
         },
         "cost": 3.6,
         "calories": 390,
-        "rating": 5,
+        "rating": 3,
         "dietary_tags": [
             "vegan"
         ],
@@ -2194,6 +2257,7 @@
     {
         "id_": 63,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -2215,7 +2279,7 @@
         },
         "cost": 2.5,
         "calories": 355,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
         ],
@@ -2225,6 +2289,7 @@
     {
         "id_": 64,
         "cuisine": "british",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "whole wheat": [
@@ -2247,7 +2312,7 @@
         },
         "cost": 1.9,
         "calories": 268,
-        "rating": 2,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -2257,6 +2322,7 @@
     {
         "id_": 65,
         "cuisine": "mexican",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "tortilla": [
@@ -2279,7 +2345,7 @@
         },
         "cost": 3.3,
         "calories": 260,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -2289,6 +2355,7 @@
     {
         "id_": 66,
         "cuisine": "scandinavian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "pumpernickel": [
@@ -2315,7 +2382,7 @@
         },
         "cost": 3.2,
         "calories": 240,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
         ],
@@ -2325,6 +2392,7 @@
     {
         "id_": 67,
         "cuisine": "southern_us",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "brioche": [
@@ -2354,7 +2422,7 @@
         },
         "cost": 7.6,
         "calories": 450,
-        "rating": 5,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2362,6 +2430,7 @@
     {
         "id_": 68,
         "cuisine": "mediterranean",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -2388,7 +2457,7 @@
         },
         "cost": 5.0,
         "calories": 385,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -2398,6 +2467,7 @@
     {
         "id_": 69,
         "cuisine": "italian_american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "sourdough": [
@@ -2424,7 +2494,7 @@
         },
         "cost": 5.5,
         "calories": 510,
-        "rating": 5,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2432,6 +2502,7 @@
     {
         "id_": 70,
         "cuisine": "greek",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "pita": [
@@ -2465,7 +2536,7 @@
         },
         "cost": 6.2,
         "calories": 600,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2473,6 +2544,7 @@
     {
         "id_": 71,
         "cuisine": "indian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "flatbread": [
@@ -2502,7 +2574,7 @@
         },
         "cost": 4.9,
         "calories": 570,
-        "rating": 4,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2510,6 +2582,7 @@
     {
         "id_": 72,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "croissant": [
@@ -2535,7 +2608,7 @@
         },
         "cost": 3.3,
         "calories": 450,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
         ],
@@ -2545,6 +2618,7 @@
     {
         "id_": 73,
         "cuisine": "vegan",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "whole wheat": [
@@ -2581,6 +2655,7 @@
     {
         "id_": 74,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "rye": [
@@ -2607,7 +2682,7 @@
         },
         "cost": 6.7,
         "calories": 630,
-        "rating": 3,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2615,6 +2690,7 @@
     {
         "id_": 75,
         "cuisine": "chinese",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "bun": [
@@ -2644,7 +2720,7 @@
         },
         "cost": 4.4,
         "calories": 405,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2652,6 +2728,7 @@
     {
         "id_": 76,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "ciabatta": [
@@ -2687,6 +2764,7 @@
     {
         "id_": 77,
         "cuisine": "mexican",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "roll": [
@@ -2712,7 +2790,7 @@
         },
         "cost": 3.5,
         "calories": 335,
-        "rating": 4,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -2722,6 +2800,7 @@
     {
         "id_": 78,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -2744,7 +2823,7 @@
         },
         "cost": 4.5,
         "calories": 325,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2752,6 +2831,7 @@
     {
         "id_": 79,
         "cuisine": "spanish",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -2770,7 +2850,7 @@
         },
         "cost": 2.3,
         "calories": 370,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
         ],
@@ -2780,6 +2860,7 @@
     {
         "id_": 80,
         "cuisine": "indian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "naan": [
@@ -2802,7 +2883,7 @@
         },
         "cost": 2.6,
         "calories": 390,
-        "rating": 4,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
         ],
@@ -2812,6 +2893,7 @@
     {
         "id_": 81,
         "cuisine": "vegan",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "roll": [
@@ -2834,7 +2916,7 @@
         },
         "cost": 1.5,
         "calories": 175,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [
             "vegan"
         ],
@@ -2844,6 +2926,7 @@
     {
         "id_": 82,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "focaccia": [
@@ -2874,7 +2957,7 @@
         },
         "cost": 5.6,
         "calories": 435,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -2884,6 +2967,7 @@
     {
         "id_": 83,
         "cuisine": "scandinavian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "sourdough": [
@@ -2910,7 +2994,7 @@
         },
         "cost": 3.7,
         "calories": 285,
-        "rating": 1,
+        "rating": 3,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -2920,6 +3004,7 @@
     {
         "id_": 84,
         "cuisine": "southern_us",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "brioche": [
@@ -2946,7 +3031,7 @@
         },
         "cost": 6.0,
         "calories": 585,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -2954,6 +3039,7 @@
     {
         "id_": 85,
         "cuisine": "german",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "roll": [
@@ -2988,6 +3074,7 @@
     {
         "id_": 86,
         "cuisine": "israeli",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "pita": [
@@ -3018,7 +3105,7 @@
         },
         "cost": 3.8,
         "calories": 468,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -3028,6 +3115,7 @@
     {
         "id_": 87,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -3050,7 +3138,7 @@
         },
         "cost": 5.0,
         "calories": 505,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -3058,6 +3146,7 @@
     {
         "id_": 88,
         "cuisine": "japanese",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "milk bread": [
@@ -3076,7 +3165,7 @@
         },
         "cost": 2.2,
         "calories": 230,
-        "rating": 4,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
         ],
@@ -3086,6 +3175,7 @@
     {
         "id_": 89,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "ciabatta": [
@@ -3112,7 +3202,7 @@
         },
         "cost": 7.1,
         "calories": 550,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -3120,6 +3210,7 @@
     {
         "id_": 90,
         "cuisine": "british",
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -3145,7 +3236,7 @@
         },
         "cost": 2.4,
         "calories": 148,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -3155,6 +3246,7 @@
     {
         "id_": 91,
         "cuisine": "mexican",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "roll": [
@@ -3190,6 +3282,7 @@
     {
         "id_": 92,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -3216,7 +3309,7 @@
         },
         "cost": 4.3,
         "calories": 455,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -3226,6 +3319,7 @@
     {
         "id_": 93,
         "cuisine": "vegan",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "multigrain": [
@@ -3251,7 +3345,7 @@
         },
         "cost": 4.2,
         "calories": 335,
-        "rating": 5,
+        "rating": 3,
         "dietary_tags": [
             "vegan"
         ],
@@ -3261,6 +3355,7 @@
     {
         "id_": 94,
         "cuisine": "southern_us",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "potato bread": [
@@ -3279,7 +3374,7 @@
         },
         "cost": 1.6,
         "calories": 200,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [
             "vegan"
         ],
@@ -3289,6 +3384,7 @@
     {
         "id_": 95,
         "cuisine": "chinese",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "bun": [
@@ -3318,7 +3414,7 @@
         },
         "cost": 5.9,
         "calories": 535,
-        "rating": 4,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -3326,6 +3422,7 @@
     {
         "id_": 96,
         "cuisine": "vegan",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "sourdough": [
@@ -3348,7 +3445,7 @@
         },
         "cost": 4.2,
         "calories": 400,
-        "rating": 4,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -3358,6 +3455,7 @@
     {
         "id_": 97,
         "cuisine": "north_african",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -3384,7 +3482,7 @@
         },
         "cost": 4.2,
         "calories": 455,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -3392,6 +3490,7 @@
     {
         "id_": 98,
         "cuisine": "japanese",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "milk bread": [
@@ -3414,7 +3513,7 @@
         },
         "cost": 2.9,
         "calories": 295,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [
             "vegan"
         ],
@@ -3424,6 +3523,7 @@
     {
         "id_": 99,
         "cuisine": "middle_eastern",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "pita": [
@@ -3454,7 +3554,7 @@
         },
         "cost": 5.0,
         "calories": 480,
-        "rating": 5,
+        "rating": 3,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -3462,6 +3562,7 @@
     {
         "id_": 100,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "ciabatta": [
@@ -3486,6 +3587,7 @@
     {
         "id_": 101,
         "cuisine": "german",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "roll": [
@@ -3518,6 +3620,7 @@
     {
         "id_": 102,
         "cuisine": "american",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "brioche": [
@@ -3540,7 +3643,7 @@
         },
         "cost": 5.5,
         "calories": 570,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -3548,6 +3651,7 @@
     {
         "id_": 103,
         "cuisine": "levantine",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "whole wheat": [
@@ -3581,7 +3685,7 @@
         },
         "cost": 5.2,
         "calories": 413,
-        "rating": 4,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -3591,6 +3695,7 @@
     {
         "id_": 104,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -3613,7 +3718,7 @@
         },
         "cost": 2.5,
         "calories": 333,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -3623,6 +3728,7 @@
     {
         "id_": 105,
         "cuisine": "indian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "naan": [
@@ -3660,6 +3766,7 @@
     {
         "id_": 106,
         "cuisine": "middle_eastern",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "multigrain": [
@@ -3692,6 +3799,7 @@
     {
         "id_": 107,
         "cuisine": "mexican",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "tortilla": [
@@ -3720,6 +3828,7 @@
     {
         "id_": 108,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -3754,6 +3863,7 @@
     {
         "id_": 109,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "focaccia": [
@@ -3780,7 +3890,7 @@
         },
         "cost": 4.6,
         "calories": 365,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -3790,6 +3900,7 @@
     {
         "id_": 110,
         "cuisine": "korean",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "bun": [
@@ -3812,7 +3923,7 @@
         },
         "cost": 4.7,
         "calories": 390,
-        "rating": 3,
+        "rating": 1,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -3820,6 +3931,7 @@
     {
         "id_": 111,
         "cuisine": "scandinavian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "rye": [
@@ -3845,7 +3957,7 @@
         },
         "cost": 2.9,
         "calories": 250,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
         ],
@@ -3855,6 +3967,7 @@
     {
         "id_": 112,
         "cuisine": "french",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "baguette": [
@@ -3873,7 +3986,7 @@
         },
         "cost": 2.0,
         "calories": 350,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [
             "vegan"
         ],
@@ -3883,6 +3996,7 @@
     {
         "id_": 113,
         "cuisine": "british",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "white bread": [
@@ -3909,7 +4023,7 @@
         },
         "cost": 4.5,
         "calories": 420,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [],
         "review_count": 1,
         "reviews": []
@@ -3917,6 +4031,7 @@
     {
         "id_": 114,
         "cuisine": "baltic",
+        "restaurant": null,
         "ingredients": {
             "breads": {},
             "meats": {
@@ -3943,7 +4058,7 @@
         },
         "cost": 2.2,
         "calories": 243,
-        "rating": 5,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
         ],
@@ -3953,6 +4068,7 @@
     {
         "id_": 115,
         "cuisine": "italian",
+        "restaurant": null,
         "ingredients": {
             "breads": {
                 "ciabatta": [
@@ -3975,7 +4091,7 @@
         },
         "cost": 3.8,
         "calories": 285,
-        "rating": 4,
+        "rating": 5,
         "dietary_tags": [
             "vegan"
         ],
