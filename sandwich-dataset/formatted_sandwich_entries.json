@@ -4,7 +4,11 @@
         "cuisine": null,
         "ingredients": {
             "breads": {},
-            "meats": {},
+            "meats": {
+                "egg": [
+                    "egg"
+                ]
+            },
             "cheeses": {},
             "vegetables": {
                 "onion": [
@@ -28,12 +32,14 @@
                 ]
             }
         },
-        "cost": 2.3,
-        "calories": 265,
-        "rating": 1,
+        "cost": 2.8,
+        "calories": 343,
+        "rating": 3,
         "dietary_tags": [
-            "vegan"
-        ]
+            "vegetarian"
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 1,
@@ -41,6 +47,9 @@
         "ingredients": {
             "breads": {},
             "meats": {
+                "egg": [
+                    "large egg"
+                ],
                 "chicken": [
                     "boneless skinless chicken breast"
                 ]
@@ -65,10 +74,12 @@
                 ]
             }
         },
-        "cost": 3.9,
-        "calories": 425,
-        "rating": 2,
-        "dietary_tags": []
+        "cost": 4.4,
+        "calories": 503,
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 2,
@@ -101,7 +112,9 @@
         "rating": 1,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 3,
@@ -154,8 +167,10 @@
         },
         "cost": 9.8,
         "calories": 635,
-        "rating": 2,
-        "dietary_tags": []
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 4,
@@ -186,8 +201,10 @@
         },
         "cost": 4.8,
         "calories": 295,
-        "rating": 5,
-        "dietary_tags": []
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 5,
@@ -218,7 +235,9 @@
         "cost": 5.0,
         "calories": 345,
         "rating": 5,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 6,
@@ -254,8 +273,10 @@
         },
         "cost": 9.5,
         "calories": 590,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 7,
@@ -290,8 +311,10 @@
         },
         "cost": 4.7,
         "calories": 290,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 8,
@@ -318,8 +341,10 @@
         },
         "cost": 3.5,
         "calories": 285,
-        "rating": 2,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 9,
@@ -350,8 +375,10 @@
         },
         "cost": 7.2,
         "calories": 650,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 10,
@@ -378,8 +405,10 @@
         },
         "cost": 5.5,
         "calories": 415,
-        "rating": 5,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 11,
@@ -412,10 +441,12 @@
         },
         "cost": 4.7,
         "calories": 330,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 12,
@@ -450,10 +481,12 @@
         },
         "cost": 5.4,
         "calories": 435,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 13,
@@ -484,8 +517,10 @@
         },
         "cost": 5.7,
         "calories": 500,
-        "rating": 5,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 14,
@@ -516,10 +551,12 @@
         },
         "cost": 3.5,
         "calories": 285,
-        "rating": 5,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 15,
@@ -546,8 +583,10 @@
         },
         "cost": 5.5,
         "calories": 570,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 16,
@@ -580,10 +619,12 @@
         },
         "cost": 3.0,
         "calories": 290,
-        "rating": 1,
+        "rating": 3,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 17,
@@ -610,10 +651,12 @@
         },
         "cost": 4.7,
         "calories": 390,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 18,
@@ -644,8 +687,10 @@
         },
         "cost": 5.5,
         "calories": 545,
-        "rating": 5,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 19,
@@ -683,7 +728,9 @@
         "cost": 6.8,
         "calories": 640,
         "rating": 5,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 20,
@@ -714,8 +761,10 @@
         },
         "cost": 4.6,
         "calories": 440,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 21,
@@ -742,8 +791,10 @@
         },
         "cost": 3.0,
         "calories": 375,
-        "rating": 5,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 22,
@@ -755,6 +806,9 @@
                 ]
             },
             "meats": {
+                "egg": [
+                    "egg"
+                ],
                 "bacon": [
                     "canadian bacon"
                 ]
@@ -768,10 +822,12 @@
             },
             "spices": {}
         },
-        "cost": 2.3,
-        "calories": 250,
-        "rating": 1,
-        "dietary_tags": []
+        "cost": 2.8,
+        "calories": 328,
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 23,
@@ -805,8 +861,10 @@
         },
         "cost": 4.5,
         "calories": 600,
-        "rating": 4,
-        "dietary_tags": []
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 24,
@@ -838,7 +896,9 @@
         "cost": 5.6,
         "calories": 570,
         "rating": 1,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 25,
@@ -865,8 +925,10 @@
         },
         "cost": 4.5,
         "calories": 450,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 26,
@@ -900,8 +962,10 @@
         },
         "cost": 4.4,
         "calories": 405,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 27,
@@ -912,7 +976,11 @@
                     "ciabatta"
                 ]
             },
-            "meats": {},
+            "meats": {
+                "egg": [
+                    "grilled eggplant"
+                ]
+            },
             "cheeses": {
                 "mozzarella": [
                     "mozzarella"
@@ -937,12 +1005,14 @@
                 ]
             }
         },
-        "cost": 6.5,
-        "calories": 455,
-        "rating": 4,
+        "cost": 7.0,
+        "calories": 533,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 28,
@@ -980,7 +1050,9 @@
         "cost": 5.7,
         "calories": 520,
         "rating": 2,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 29,
@@ -1007,10 +1079,12 @@
         },
         "cost": 3.7,
         "calories": 405,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 30,
@@ -1037,8 +1111,10 @@
         },
         "cost": 5.0,
         "calories": 460,
-        "rating": 2,
-        "dietary_tags": []
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 31,
@@ -1049,7 +1125,11 @@
                     "sourdough bread"
                 ]
             },
-            "meats": {},
+            "meats": {
+                "egg": [
+                    "poached egg"
+                ]
+            },
             "cheeses": {},
             "vegetables": {
                 "avocado": [
@@ -1062,12 +1142,14 @@
             "condiments": {},
             "spices": {}
         },
-        "cost": 4.1,
-        "calories": 390,
+        "cost": 4.6,
+        "calories": 468,
         "rating": 2,
         "dietary_tags": [
-            "vegan"
-        ]
+            "vegetarian"
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 32,
@@ -1098,10 +1180,12 @@
         },
         "cost": 2.7,
         "calories": 345,
-        "rating": 1,
+        "rating": 3,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 33,
@@ -1136,7 +1220,9 @@
         "cost": 6.2,
         "calories": 665,
         "rating": 1,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 34,
@@ -1163,10 +1249,12 @@
         },
         "cost": 3.6,
         "calories": 365,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 35,
@@ -1203,8 +1291,10 @@
         },
         "cost": 9.2,
         "calories": 580,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 36,
@@ -1238,8 +1328,10 @@
         },
         "cost": 5.6,
         "calories": 270,
-        "rating": 5,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 37,
@@ -1266,8 +1358,10 @@
         },
         "cost": 4.0,
         "calories": 500,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 38,
@@ -1297,10 +1391,12 @@
         },
         "cost": 2.8,
         "calories": 350,
-        "rating": 1,
+        "rating": 5,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 39,
@@ -1333,7 +1429,9 @@
         "rating": 1,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 40,
@@ -1360,10 +1458,12 @@
         },
         "cost": 2.7,
         "calories": 235,
-        "rating": 2,
+        "rating": 5,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 41,
@@ -1393,8 +1493,10 @@
         },
         "cost": 6.6,
         "calories": 500,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 42,
@@ -1424,8 +1526,10 @@
         },
         "cost": 3.2,
         "calories": 370,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 43,
@@ -1457,7 +1561,9 @@
         "cost": 7.0,
         "calories": 480,
         "rating": 4,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 44,
@@ -1495,8 +1601,10 @@
         },
         "cost": 5.1,
         "calories": 480,
-        "rating": 2,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 45,
@@ -1528,7 +1636,9 @@
         "rating": 5,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 46,
@@ -1558,8 +1668,10 @@
         },
         "cost": 3.1,
         "calories": 260,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 47,
@@ -1587,7 +1699,9 @@
         "cost": 7.0,
         "calories": 695,
         "rating": 4,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 48,
@@ -1621,8 +1735,10 @@
         },
         "cost": 5.0,
         "calories": 600,
-        "rating": 2,
-        "dietary_tags": []
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 49,
@@ -1652,10 +1768,12 @@
         },
         "cost": 4.7,
         "calories": 355,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 50,
@@ -1678,10 +1796,12 @@
         },
         "cost": 1.0,
         "calories": 125,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 51,
@@ -1712,8 +1832,10 @@
         },
         "cost": 8.8,
         "calories": 495,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 52,
@@ -1745,7 +1867,9 @@
         "cost": 7.0,
         "calories": 510,
         "rating": 3,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 53,
@@ -1772,10 +1896,12 @@
         },
         "cost": 2.0,
         "calories": 235,
-        "rating": 4,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 54,
@@ -1809,7 +1935,9 @@
         "rating": 5,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 55,
@@ -1832,10 +1960,12 @@
         },
         "cost": 2.6,
         "calories": 265,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 56,
@@ -1866,8 +1996,10 @@
         },
         "cost": 4.9,
         "calories": 495,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 57,
@@ -1898,8 +2030,10 @@
         },
         "cost": 6.4,
         "calories": 640,
-        "rating": 4,
-        "dietary_tags": []
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 58,
@@ -1934,7 +2068,9 @@
         "cost": 6.1,
         "calories": 515,
         "rating": 5,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 59,
@@ -1965,10 +2101,12 @@
         },
         "cost": 3.2,
         "calories": 345,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 60,
@@ -1987,10 +2125,12 @@
         },
         "cost": 1.0,
         "calories": 160,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 61,
@@ -2013,10 +2153,12 @@
         },
         "cost": 2.5,
         "calories": 210,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 62,
@@ -2042,10 +2184,12 @@
         },
         "cost": 3.6,
         "calories": 390,
-        "rating": 2,
+        "rating": 5,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 63,
@@ -2074,7 +2218,9 @@
         "rating": 2,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 64,
@@ -2085,7 +2231,11 @@
                     "whole wheat bread"
                 ]
             },
-            "meats": {},
+            "meats": {
+                "egg": [
+                    "egg salad"
+                ]
+            },
             "cheeses": {},
             "vegetables": {
                 "radish": [
@@ -2095,12 +2245,14 @@
             "condiments": {},
             "spices": {}
         },
-        "cost": 1.4,
-        "calories": 190,
-        "rating": 3,
+        "cost": 1.9,
+        "calories": 268,
+        "rating": 2,
         "dietary_tags": [
-            "vegan"
-        ]
+            "vegetarian"
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 65,
@@ -2130,7 +2282,9 @@
         "rating": 2,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 66,
@@ -2161,10 +2315,12 @@
         },
         "cost": 3.2,
         "calories": 240,
-        "rating": 3,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 67,
@@ -2198,8 +2354,10 @@
         },
         "cost": 7.6,
         "calories": 450,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 68,
@@ -2230,10 +2388,12 @@
         },
         "cost": 5.0,
         "calories": 385,
-        "rating": 4,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 69,
@@ -2244,7 +2404,11 @@
                     "sourdough bread"
                 ]
             },
-            "meats": {},
+            "meats": {
+                "meatball": [
+                    "meatball"
+                ]
+            },
             "cheeses": {
                 "provolone": [
                     "provolone cheese"
@@ -2258,12 +2422,12 @@
             },
             "spices": {}
         },
-        "cost": 3.5,
-        "calories": 360,
-        "rating": 4,
-        "dietary_tags": [
-            "vegetarian"
-        ]
+        "cost": 5.5,
+        "calories": 510,
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 70,
@@ -2302,7 +2466,9 @@
         "cost": 6.2,
         "calories": 600,
         "rating": 2,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 71,
@@ -2336,8 +2502,10 @@
         },
         "cost": 4.9,
         "calories": 570,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 72,
@@ -2367,10 +2535,12 @@
         },
         "cost": 3.3,
         "calories": 450,
-        "rating": 3,
+        "rating": 1,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 73,
@@ -2403,8 +2573,10 @@
         },
         "cost": 4.6,
         "calories": 410,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 74,
@@ -2435,8 +2607,10 @@
         },
         "cost": 6.7,
         "calories": 630,
-        "rating": 2,
-        "dietary_tags": []
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 75,
@@ -2470,8 +2644,10 @@
         },
         "cost": 4.4,
         "calories": 405,
-        "rating": 2,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 76,
@@ -2501,10 +2677,12 @@
         },
         "cost": 4.8,
         "calories": 375,
-        "rating": 5,
+        "rating": 3,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 77,
@@ -2534,10 +2712,12 @@
         },
         "cost": 3.5,
         "calories": 335,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 78,
@@ -2564,8 +2744,10 @@
         },
         "cost": 4.5,
         "calories": 325,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 79,
@@ -2588,10 +2770,12 @@
         },
         "cost": 2.3,
         "calories": 370,
-        "rating": 5,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 80,
@@ -2618,10 +2802,12 @@
         },
         "cost": 2.6,
         "calories": 390,
-        "rating": 1,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 81,
@@ -2651,7 +2837,9 @@
         "rating": 4,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 82,
@@ -2686,10 +2874,12 @@
         },
         "cost": 5.6,
         "calories": 435,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 83,
@@ -2723,7 +2913,9 @@
         "rating": 1,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 84,
@@ -2754,8 +2946,10 @@
         },
         "cost": 6.0,
         "calories": 585,
-        "rating": 1,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 85,
@@ -2786,8 +2980,10 @@
         },
         "cost": 3.4,
         "calories": 415,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 86,
@@ -2798,7 +2994,12 @@
                     "pita bread"
                 ]
             },
-            "meats": {},
+            "meats": {
+                "egg": [
+                    "eggplant",
+                    "hard-boiled egg"
+                ]
+            },
             "cheeses": {},
             "vegetables": {
                 "eggplant": [
@@ -2815,12 +3016,14 @@
             },
             "spices": {}
         },
-        "cost": 3.3,
-        "calories": 390,
-        "rating": 2,
+        "cost": 3.8,
+        "calories": 468,
+        "rating": 1,
         "dietary_tags": [
-            "vegan"
-        ]
+            "vegetarian"
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 87,
@@ -2847,8 +3050,10 @@
         },
         "cost": 5.0,
         "calories": 505,
-        "rating": 5,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 88,
@@ -2871,10 +3076,12 @@
         },
         "cost": 2.2,
         "calories": 230,
-        "rating": 2,
+        "rating": 4,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 89,
@@ -2906,14 +3113,20 @@
         "cost": 7.1,
         "calories": 550,
         "rating": 3,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 90,
         "cuisine": "british",
         "ingredients": {
             "breads": {},
-            "meats": {},
+            "meats": {
+                "egg": [
+                    "curried egg salad"
+                ]
+            },
             "cheeses": {},
             "vegetables": {
                 "cucumber": [
@@ -2930,12 +3143,14 @@
             },
             "spices": {}
         },
-        "cost": 1.9,
-        "calories": 70,
-        "rating": 3,
+        "cost": 2.4,
+        "calories": 148,
+        "rating": 1,
         "dietary_tags": [
-            "vegan"
-        ]
+            "vegetarian"
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 91,
@@ -2965,10 +3180,12 @@
         },
         "cost": 3.2,
         "calories": 325,
-        "rating": 2,
+        "rating": 3,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 92,
@@ -2999,10 +3216,12 @@
         },
         "cost": 4.3,
         "calories": 455,
-        "rating": 4,
+        "rating": 2,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 93,
@@ -3032,10 +3251,12 @@
         },
         "cost": 4.2,
         "calories": 335,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 94,
@@ -3058,10 +3279,12 @@
         },
         "cost": 1.6,
         "calories": 200,
-        "rating": 5,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 95,
@@ -3095,8 +3318,10 @@
         },
         "cost": 5.9,
         "calories": 535,
-        "rating": 2,
-        "dietary_tags": []
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 96,
@@ -3123,10 +3348,12 @@
         },
         "cost": 4.2,
         "calories": 400,
-        "rating": 5,
+        "rating": 4,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 97,
@@ -3157,8 +3384,10 @@
         },
         "cost": 4.2,
         "calories": 455,
-        "rating": 4,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 98,
@@ -3185,10 +3414,12 @@
         },
         "cost": 2.9,
         "calories": 295,
-        "rating": 5,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 99,
@@ -3224,7 +3455,9 @@
         "cost": 5.0,
         "calories": 480,
         "rating": 5,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 100,
@@ -3243,10 +3476,12 @@
         },
         "cost": 1.8,
         "calories": 250,
-        "rating": 3,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 101,
@@ -3273,10 +3508,12 @@
         },
         "cost": 1.4,
         "calories": 165,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 102,
@@ -3304,7 +3541,9 @@
         "cost": 5.5,
         "calories": 570,
         "rating": 2,
-        "dietary_tags": []
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 103,
@@ -3315,7 +3554,11 @@
                     "whole wheat wrap"
                 ]
             },
-            "meats": {},
+            "meats": {
+                "egg": [
+                    "roasted eggplant"
+                ]
+            },
             "cheeses": {
                 "halloumi": [
                     "grilled halloumi"
@@ -3336,12 +3579,14 @@
                 ]
             }
         },
-        "cost": 4.7,
-        "calories": 335,
+        "cost": 5.2,
+        "calories": 413,
         "rating": 4,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 104,
@@ -3352,7 +3597,11 @@
                     "baguette"
                 ]
             },
-            "meats": {},
+            "meats": {
+                "egg": [
+                    "quail egg yolk"
+                ]
+            },
             "cheeses": {},
             "vegetables": {},
             "condiments": {
@@ -3362,12 +3611,14 @@
             },
             "spices": {}
         },
-        "cost": 2.0,
-        "calories": 255,
-        "rating": 5,
+        "cost": 2.5,
+        "calories": 333,
+        "rating": 2,
         "dietary_tags": [
-            "vegan"
-        ]
+            "vegetarian"
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 105,
@@ -3399,10 +3650,12 @@
         },
         "cost": 3.6,
         "calories": 490,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 106,
@@ -3429,10 +3682,12 @@
         },
         "cost": 2.7,
         "calories": 245,
-        "rating": 4,
+        "rating": 1,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 107,
@@ -3455,10 +3710,12 @@
         },
         "cost": 1.2,
         "calories": 190,
-        "rating": 3,
+        "rating": 5,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 108,
@@ -3489,8 +3746,10 @@
         },
         "cost": 4.0,
         "calories": 440,
-        "rating": 3,
-        "dietary_tags": []
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 109,
@@ -3521,10 +3780,12 @@
         },
         "cost": 4.6,
         "calories": 365,
-        "rating": 2,
+        "rating": 1,
         "dietary_tags": [
             "vegetarian"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 110,
@@ -3551,8 +3812,10 @@
         },
         "cost": 4.7,
         "calories": 390,
-        "rating": 5,
-        "dietary_tags": []
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 111,
@@ -3582,10 +3845,12 @@
         },
         "cost": 2.9,
         "calories": 250,
-        "rating": 1,
+        "rating": 2,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 112,
@@ -3608,10 +3873,12 @@
         },
         "cost": 2.0,
         "calories": 350,
-        "rating": 1,
+        "rating": 3,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 113,
@@ -3642,15 +3909,21 @@
         },
         "cost": 4.5,
         "calories": 420,
-        "rating": 2,
-        "dietary_tags": []
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 114,
         "cuisine": "baltic",
         "ingredients": {
             "breads": {},
-            "meats": {},
+            "meats": {
+                "egg": [
+                    "hard-boiled egg"
+                ]
+            },
             "cheeses": {},
             "vegetables": {
                 "onion": [
@@ -3668,12 +3941,14 @@
                 ]
             }
         },
-        "cost": 1.7,
-        "calories": 165,
-        "rating": 3,
+        "cost": 2.2,
+        "calories": 243,
+        "rating": 5,
         "dietary_tags": [
-            "vegan"
-        ]
+            "vegetarian"
+        ],
+        "review_count": 1,
+        "reviews": []
     },
     {
         "id_": 115,
@@ -3703,6 +3978,8 @@
         "rating": 4,
         "dietary_tags": [
             "vegan"
-        ]
+        ],
+        "review_count": 1,
+        "reviews": []
     }
 ]
