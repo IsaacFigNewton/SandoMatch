@@ -8,10 +8,11 @@
 ![Sign In Flow (1)](https://github.com/user-attachments/assets/185a49fc-6077-40f2-8bae-a51736075960)
 
 
-### Install dependencies
+### Setup
 <ol>
-  <li> rm package-lock.json </li>
-  <li> npm install </li>
+  <li> Run **npm install** in root directory </li>
+  <li> Run **npm run start** in packages/expess-backend </li>
+  <li> Run **npm run dev** in packages/react-frontend </li>
 </ol>
 
 ## Sources
