@@ -1,0 +1,184 @@
+{
+    "Bread": {
+        "Dutch Crunch": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Sourdough": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Wheat": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "French": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Marble Rye": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Gluten Free Wrap": {
+            "cost": 0.99,
+            "calories": null
+        },
+        "Multi-Grain Wheat": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Spinach Wrap": {
+            "cost": 0.0,
+            "calories": null
+        }
+    },
+    "Meat": {
+        "Turkey Breast": {
+            "cost": 13.99,
+            "calories": null
+        },
+        "Ham": {
+            "cost": 13.99,
+            "calories": null
+        },
+        "Chicken Salad": {
+            "cost": 13.99,
+            "calories": null
+        },
+        "Marinated Chicken": {
+            "cost": 14.39,
+            "calories": null
+        },
+        "Salami": {
+            "cost": 13.99,
+            "calories": null
+        },
+        "Roast Beef": {
+            "cost": 14.99,
+            "calories": null
+        },
+        "Tuna Salad": {
+            "cost": 14.99,
+            "calories": null
+        },
+        "Pastrami": {
+            "cost": 14.69,
+            "calories": null
+        },
+        "Bacon": {
+            "cost": 13.99,
+            "calories": null
+        },
+        "Veggie Patty": {
+            "cost": 11.99,
+            "calories": null
+        }
+    },
+    "Vegetable": {
+        "Red Peppers": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Cucumber": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Jalapenos": {
+            "cost": 0.69,
+            "calories": null
+        },
+        "Sauerkraut": {
+            "cost": 0.99,
+            "calories": null
+        },
+        "Tomato": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Onions": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Pickles": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Pepperoncinis": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Lettuce": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Avocado": {
+            "cost": 1.79,
+            "calories": null
+        }
+    },
+    "Cheese": {
+        "Swiss": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Cheddar Cheese": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Monterey Jack": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Provolone": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Pepper Jack": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "American": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Cream Cheese": {
+            "cost": 0.0,
+            "calories": null
+        }
+    },
+    "Condiment": {
+        "Mayonnaise": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Mustard": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Garlic Sauce": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Cranberry Sauce": {
+            "cost": 1.29,
+            "calories": null
+        },
+        "Hummus Roasted Red Pepper": {
+            "cost": 1.49,
+            "calories": null
+        },
+        "Salt": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Pepper": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Sauces": {
+            "cost": 0.0,
+            "calories": null
+        }
+    }
+}
