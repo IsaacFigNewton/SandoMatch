@@ -1,0 +1,332 @@
+{
+    "Breads": {
+        "White": {
+            "cost": 4.0,
+            "calories": "195"
+        },
+        "9-Grain Wheat": {
+            "cost": 4.0,
+            "calories": "195"
+        },
+        "Honey Oat": {
+            "cost": 4.0,
+            "calories": "210"
+        },
+        "Parmesan Oregano": {
+            "cost": 4.0,
+            "calories": "206"
+        },
+        "Flatbread, Artisan": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Gluten-Free Bread": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Hearty Italian Bread": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Italian Herbs & Cheese Bread": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Monterey Cheddar Bread": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Roasted Garlic Bread": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Slider Roll": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Sourdough": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Ultimate Cheesy Garlic Bread": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Tomato Basil Wrap": {
+            "cost": 4.0,
+            "calories": null
+        },
+        "Spinach Wrap": {
+            "cost": 4.0,
+            "calories": "196"
+        }
+    },
+    "Meats": {
+        "Black Forest Ham": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Honey-Smoked Ham": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Steak": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Turkey Breast": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Chicken Breast": {
+            "cost": 3.75,
+            "calories": "50"
+        },
+        "Chicken Teriyaki": {
+            "cost": 3.75,
+            "calories": "112"
+        },
+        "Chicken Strips": {
+            "cost": 3.75,
+            "calories": "74"
+        },
+        "Oven Roasted Chicken Breast": {
+            "cost": 3.75,
+            "calories": "81"
+        },
+        "Ham": {
+            "cost": 3.75,
+            "calories": "67"
+        },
+        "Bacon": {
+            "cost": 3.75,
+            "calories": "48"
+        },
+        "Italian Meatballs": {
+            "cost": 3.75,
+            "calories": "133"
+        },
+        "Roast Beef": {
+            "cost": 3.75,
+            "calories": "96"
+        },
+        "Taco Beef": {
+            "cost": 3.75,
+            "calories": "70"
+        },
+        "Genoa Salami": {
+            "cost": 3.75,
+            "calories": "72"
+        },
+        "Turkey Bologna": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Turkey Ham": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Turkey Salami": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Pepperoni": {
+            "cost": 3.75,
+            "calories": "54"
+        },
+        "Subway MeltTM": {
+            "cost": 3.75,
+            "calories": "71"
+        },
+        "Tuna": {
+            "cost": 3.75,
+            "calories": "257"
+        },
+        "Shrimp": {
+            "cost": 3.75,
+            "calories": "22"
+        },
+        "Egg Mayo": {
+            "cost": 3.75,
+            "calories": "171"
+        },
+        "Egg Patty": {
+            "cost": 3.75,
+            "calories": "41"
+        },
+        "Egg White Patty": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Veggie Patty": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Falafel": {
+            "cost": 3.75,
+            "calories": "175"
+        }
+    },
+    "Vegetables": {
+        "Avocado": {
+            "cost": 0.0,
+            "calories": "75"
+        },
+        "Lettuce": {
+            "cost": 0.0,
+            "calories": "3"
+        },
+        "Tomato": {
+            "cost": 0.0,
+            "calories": "6"
+        },
+        "Cucumber": {
+            "cost": 0.0,
+            "calories": "2"
+        },
+        "Onion": {
+            "cost": 0.0,
+            "calories": "3"
+        },
+        "Green Pepper": {
+            "cost": 0.0,
+            "calories": "1"
+        },
+        "Spinach": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Banulla Pepper": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Sweet Corn": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Pickle": {
+            "cost": 0.0,
+            "calories": "1"
+        },
+        "Black Olive": {
+            "cost": 0.0,
+            "calories": "4"
+        },
+        "Jalapeno": {
+            "cost": 0.0,
+            "calories": "2"
+        }
+    },
+    "Cheeses": {
+        "Smoked Cheddar": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Monterey Jack": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Mozzarella": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Provolone": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "Swiss": {
+            "cost": 3.75,
+            "calories": null
+        },
+        "American": {
+            "cost": 3.75,
+            "calories": "40"
+        },
+        "Parmesan": {
+            "cost": 3.75,
+            "calories": "54"
+        }
+    },
+    "Condiments": {
+        "Caesar Dressing": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Ranch Dressing": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Buffalo Sauce": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Vinaigrette Dressing": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Chipotle Southwest Sauce": {
+            "cost": 0.0,
+            "calories": "66"
+        },
+        "Yellow Mustard": {
+            "cost": 0.0,
+            "calories": "9"
+        },
+        "Marinara": {
+            "cost": 0.0,
+            "calories": "10"
+        },
+        "Sweet Onion Sauce": {
+            "cost": 0.0,
+            "calories": "33"
+        },
+        "Honey Mustard": {
+            "cost": 0.0,
+            "calories": "21"
+        },
+        "Mayonnaise": {
+            "cost": 0.0,
+            "calories": "100"
+        },
+        "Olive Oil": {
+            "cost": 0.0,
+            "calories": "44"
+        },
+        "Herb Garlic Oil": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Red Wine Vinegar": {
+            "cost": 0.0,
+            "calories": "0 .3"
+        },
+        "Italian Dressing": {
+            "cost": 0.0,
+            "calories": "62"
+        },
+        "Thousand Island Dressing": {
+            "cost": 0.0,
+            "calories": "62"
+        },
+        "Guacamole": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Brown Mustard": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Salt": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Pepper": {
+            "cost": 0.0,
+            "calories": null
+        },
+        "Sub Spice": {
+            "cost": 0.0,
+            "calories": null
+        }
+    }
+}
