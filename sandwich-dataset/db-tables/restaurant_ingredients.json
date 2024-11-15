@@ -1,5 +1,6 @@
-{
-    "default": {
+[
+    {
+        "_id": "default", 
         "breads": {
             "baguette": {"cost": 1.5, "calories": 250},
             "ciabatta": {"cost": 1.8, "calories": 250},
@@ -190,7 +191,8 @@
             "sumac": {"cost": 0.6, "calories": 5}
         }
     },
-    "mr_pickles": {
+    {
+        "_id": "mr_pickles", 
         "breads": {
             "dutch crunch": {
                 "cost": 0.0,
@@ -376,7 +378,8 @@
             }
         }
     },
-    "subway": {
+    {
+        "_id": "subway", 
         "breads": {
             "white": {
                 "cost": 4.0,
@@ -710,4 +713,4 @@
             }
         }
     }
-}
+]
