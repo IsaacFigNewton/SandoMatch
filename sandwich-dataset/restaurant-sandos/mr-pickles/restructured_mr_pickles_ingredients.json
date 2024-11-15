@@ -1,184 +1,185 @@
 {
-    "Breads": {
-        "Dutch Crunch": {
+    "breads": {
+        "dutch crunch": {
             "cost": 0.0,
             "calories": null
         },
-        "Sourdough": {
+        "sourdough": {
             "cost": 0.0,
             "calories": null
         },
-        "Wheat": {
+        "wheat": {
             "cost": 0.0,
             "calories": null
         },
-        "French": {
+        "french": {
             "cost": 0.0,
             "calories": null
         },
-        "Marble Rye": {
+        "marble rye": {
             "cost": 0.0,
             "calories": null
         },
-        "Gluten Free Wrap": {
+        "gluten free wrap": {
             "cost": 0.99,
             "calories": null
         },
-        "Multi-Grain Wheat": {
+        "multi-grain wheat": {
             "cost": 0.0,
             "calories": null
         },
-        "Spinach Wrap": {
+        "spinach wrap": {
             "cost": 0.0,
             "calories": null
         }
     },
-    "Meats": {
-        "Turkey Breast": {
+    "meats": {
+        "turkey breast": {
             "cost": 13.99,
             "calories": null
         },
-        "Ham": {
+        "ham": {
             "cost": 13.99,
             "calories": null
         },
-        "Chicken Salad": {
+        "chicken salad": {
             "cost": 13.99,
             "calories": null
         },
-        "Marinated Chicken": {
+        "marinated chicken": {
             "cost": 14.39,
             "calories": null
         },
-        "Salami": {
+        "salami": {
             "cost": 13.99,
             "calories": null
         },
-        "Roast Beef": {
+        "roast beef": {
             "cost": 14.99,
             "calories": null
         },
-        "Tuna Salad": {
+        "tuna salad": {
             "cost": 14.99,
             "calories": null
         },
-        "Pastrami": {
+        "pastrami": {
             "cost": 14.69,
             "calories": null
         },
-        "Bacon": {
+        "bacon": {
             "cost": 13.99,
             "calories": null
         },
-        "Veggie Patty": {
+        "veggie patty": {
             "cost": 11.99,
             "calories": null
         }
     },
-    "Vegetables": {
-        "Red Peppers": {
+    "vegetables": {
+        "red peppers": {
             "cost": 0.0,
             "calories": null
         },
-        "Cucumber": {
+        "cucumber": {
             "cost": 0.0,
             "calories": null
         },
-        "Jalapenos": {
+        "jalapenos": {
             "cost": 0.69,
             "calories": null
         },
-        "Sauerkraut": {
+        "sauerkraut": {
             "cost": 0.99,
             "calories": null
         },
-        "Tomato": {
+        "tomato": {
             "cost": 0.0,
             "calories": null
         },
-        "Onions": {
+        "onions": {
             "cost": 0.0,
             "calories": null
         },
-        "Pickles": {
+        "pickles": {
             "cost": 0.0,
             "calories": null
         },
-        "Pepperoncinis": {
+        "pepperoncinis": {
             "cost": 0.0,
             "calories": null
         },
-        "Lettuce": {
+        "lettuce": {
             "cost": 0.0,
             "calories": null
         },
-        "Avocado": {
+        "avocado": {
             "cost": 1.79,
             "calories": null
         }
     },
-    "Cheeses": {
-        "Swiss": {
+    "cheeses": {
+        "swiss": {
             "cost": 0.0,
             "calories": null
         },
-        "Cheddar Cheese": {
+        "cheddar cheese": {
             "cost": 0.0,
             "calories": null
         },
-        "Monterey Jack": {
+        "monterey jack": {
             "cost": 0.0,
             "calories": null
         },
-        "Provolone": {
+        "provolone": {
             "cost": 0.0,
             "calories": null
         },
-        "Pepper Jack": {
+        "pepper jack": {
             "cost": 0.0,
             "calories": null
         },
-        "American": {
+        "american": {
             "cost": 0.0,
             "calories": null
         },
-        "Cream Cheese": {
+        "cream cheese": {
             "cost": 0.0,
             "calories": null
         }
     },
-    "Condiments": {
-        "Mayonnaise": {
+    "condiments": {
+        "mayonnaise": {
             "cost": 0.0,
             "calories": null
         },
-        "Mustard": {
+        "mustard": {
             "cost": 0.0,
             "calories": null
         },
-        "Garlic Sauce": {
+        "garlic sauce": {
             "cost": 0.0,
             "calories": null
         },
-        "Cranberry Sauce": {
+        "cranberry sauce": {
             "cost": 1.29,
             "calories": null
         },
-        "Hummus Roasted Red Pepper": {
+        "hummus roasted red pepper": {
             "cost": 1.49,
             "calories": null
         },
-        "Salt": {
+        "salt": {
             "cost": 0.0,
             "calories": null
         },
-        "Pepper": {
+        "pepper": {
             "cost": 0.0,
             "calories": null
         },
-        "Sauces": {
+        "sauces": {
             "cost": 0.0,
             "calories": null
         }
-    }
+    },
+    "spices": {}
 }
