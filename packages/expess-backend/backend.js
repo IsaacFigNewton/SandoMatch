@@ -11,90 +11,102 @@ app.use(express.json());
 
 const findSandwichByRating = (rating) => {
   return sandwiches["sandwiches_list"].filter(
-    (sandwich) => sandwich["rating"] === rating
+    (sandwich) => sandwich["rating"] >= rating
   );
 };
 
-const findSandwichByCalories = (calories) => {
+const findSandwichByCalories = (minCalories, maxCalories) => {
   return sandwiches["sandwiches_list"].filter(
-    (sandwich) => sandwich["calories"] === calories
+    (sandwich) => (!minCalories || sandwich["calories"] >= minCalories) 
+    && (!maxCalories || sandwich["calories"] <= maxCalories)
   );
 };
 
-const findSandwichByCost = (cost) => {
+const findSandwichByCost = (maxCost) => {
   return sandwiches["sandwiches_list"].filter(
-    (sandwich) => sandwich["cost"] === cost
+    (sandwich) => sandwich["cost"] <= maxCost
   );
 };
 
-const findSandwichByRatingCalories = (rating, calories) => {
+const findSandwichByRatingCalories = 
+  (rating, minCalories, maxCalories) => {
   return sandwiches["sandwiches_list"].filter(
-    (sandwich) => (sandwich["rating"] === rating && 
-      sandwich["calories"] == calories)
+    (sandwich) => sandwich["rating"] >= rating 
+    && (!minCalories || sandwich["calories"] >= minCalories) 
+    && (!maxCalories || sandwich["calories"] <= maxCalories)
+    );
+};
+
+const findSandwichByCaloriesCost = 
+  (minCalories, maxCalories, maxCost) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => (!minCalories || sandwich["calories"] >= minCalories) 
+    && (!maxCalories || sandwich["calories"] <= maxCalories)
+    && sandwich["cost"] <= maxCost
   );
 };
 
-const findSandwichByCaloriesCost = (calories, cost) => {
+const findSandwichByRatingCost = (rating, maxCost) => {
   return sandwiches["sandwiches_list"].filter(
-    (sandwich) => (sandwich["calories"] == calories && 
-      sandwich["cost"] === cost)
+    (sandwich) => (sandwich["rating"] >= rating 
+    && sandwich["cost"] <= maxCost)
   );
 };
 
-const findSandwichByRatingCost = (rating, cost) => {
+const findSandwichByRatingCaloriesCost = 
+  (rating, minCalories, maxCalories, maxCost) => {
   return sandwiches["sandwiches_list"].filter(
-    (sandwich) => (sandwich["rating"] == rating && 
-      sandwich["cost"] === cost)
-  );
-};
-
-const findSandwichByRatingCaloriesCost = (rating, calories, cost) => {
-  return sandwiches["sandwiches_list"].filter(
-    (sandwich) => (sandwich["rating"] === rating && 
-      sandwich["calories"] === calories && sandwich["cost"] === cost)
+    (sandwich) => sandwich["rating"] >= rating 
+    && (!minCalories || sandwich["calories"] >= minCalories)
+    && (!maxCalories || sandwich["calories"] <= maxCalories)
+    && sandwich["cost"] <= maxCost
   );
 };
 
 app.get("/sandwiches", (req, res) => {
-  const rating = req.query.rating;
-  const calories = req.query.calories;
-  const cost = req.query.cost;
-  if (rating != undefined && calories != undefined && cost != undefined) {
+  res.send(sandwiches);
+});
+
+app.get("/sandwiches/filter", (req, res) => {
+  const { rating, minCalories, maxCalories, maxCost } = req.query;
+  if (rating != undefined && (minCalories != undefined 
+    || maxCalories != undefined) && maxCost != undefined) {
     let result = findSandwichByRatingCaloriesCost(parseInt(rating), 
-      parseInt(calories), parseFloat(cost));
+      parseInt(minCalories), parseInt(maxCalories), parseFloat(maxCost));
     result = { sandwiches_list: result };
     res.send(result);
-  } else if (rating != undefined && calories != undefined && 
-    cost == undefined){
+  } else if (rating != undefined && (minCalories != undefined 
+    || maxCalories != undefined) && maxCost == undefined){
     let result = findSandwichByRatingCalories(parseInt(rating), 
-      parseInt(calories));
+      parseInt(minCalories), parseInt(maxCalories));
     result = { sandwiches_list: result };
     res.send(result);
-  } else if (rating == undefined && calories != undefined &&
-    cost != undefined) {
-    let result = findSandwichByCaloriesCost(parseInt(calories), 
-      parseFloat(cost));
+  } else if (rating == undefined && (minCalories != undefined 
+    || maxCalories != undefined) && maxCost != undefined) {
+    let result = findSandwichByCaloriesCost(parseInt(minCalories), 
+      parseInt(maxCalories), parseFloat(maxCost));
     result = { sandwiches_list: result };
     res.send(result);
-  } else if (rating != undefined && calories == undefined &&
-    cost != undefined) {
+  } else if (rating != undefined && minCalories == undefined 
+    && maxCalories != undefined && maxCost != undefined) {
     let result = findSandwichByRatingCost(parseInt(rating), 
-      parseFloat(cost));
+      parseFloat(maxCost));
     result = { sandwiches_list: result };
     res.send(result);
-  } else if (rating != undefined && calories == undefined &&
-    cost == undefined) {
+  } else if (rating != undefined && minCalories == undefined 
+    && maxCalories != undefined && maxCost == undefined) {
     let result = findSandwichByRating(parseInt(rating));
     result = { sandwiches_list: result };
     res.send(result);
-  } else if (rating == undefined && calories != undefined &&
-    cost == undefined) {
-    let result = findSandwichByCalories(parseInt(calories));
+  } else if (rating == undefined && (minCalories != undefined 
+    || maxCalories != undefined) && maxCost == undefined) {
+    let result = findSandwichByCalories(parseInt(minCalories),
+      parseInt(maxCalories));
     result = { sandwiches_list: result };
     res.send(result);
-  } else if (rating == undefined && calories == undefined &&
-    cost != undefined) {
-    let result = findSandwichByCost(parseFloat(cost));
+  } else if (rating == undefined && minCalories == undefined 
+    && maxCalories == undefined && maxCost != undefined) {
+    let result = findSandwichByCost(parseFloat(maxCost));
     result = { sandwiches_list: result };
     res.send(result);
   } else {
