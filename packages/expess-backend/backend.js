@@ -1,6 +1,11 @@
 // backend.js
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import cors from "cors";
+import { registerUser, authenticateUser, loginUser } from "./auth.js";
+
 
 const app = express();
 const port = 8000;
