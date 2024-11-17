@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import sandwichData from "./sandwich-dataset/generated_sandwiches.json";
 import Login from "./Login";
+import UserPage from "./UserPage";
 import "./App.css";
 
 const API_PREFIX = "http://localhost:8000";
@@ -164,6 +165,21 @@ function App() {
         <div>
           <header className="app-header">
             <h1>SandoMatch</h1>
+            <div className="auth-buttons">
+              <button className="auth-button login" onClick={() => Navigate("/login")}>
+                Login
+              </button>
+              <button className="auth-button signup" onClick={() => Navigate("/signup")}>
+                Signup
+              </button>
+            </div>
+            <div className="user-button">
+              <button className="user-prof-button">
+                <img src="src/assets/user-icon-img.png" 
+                onClick={() => Navigate("/user")}
+                className="button-image"/>
+              </button>
+            </div>
           </header>
   
           <input
@@ -242,6 +258,10 @@ function App() {
             element={
               <Login handleSubmit={signupUser} buttonLabel="Sign Up" />
             }
+          />
+          <Route
+            path ="/user"
+            element={<UserPage />}
           />
         </Routes>
       </Router>

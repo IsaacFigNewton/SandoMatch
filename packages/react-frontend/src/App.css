@@ -71,6 +71,54 @@ h1 {
   padding-top: 3rem; 
 }
 
+.auth-buttons {
+  position: absolute;
+  top: 1rem;
+  right: 7rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-button:hover {
+  transform: scale(1.1);
+}
+
+.user-button {
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  display: flex;
+}
+
+.user-prof-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.button-image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.user-prof-button:hover .button-image {
+  transform: scale(1.1);
+}
+
 .random-button {
   display: block;
   margin: 1rem auto;
