@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import sandwichData from "./sandwich-dataset/generated_sandwiches.json";
 import FilterPage from "./FilterPage";
 import SandwichList from "./SandwichList"; 
 import Login from "./Login";
+import UserPage from "./UserPage";
 import "./App.css";
 
 const API_PREFIX = "http://localhost:8000";
 
 function App() {
-  const [sandwiches, setSandwiches] = useState([]);
+  const [sandwiches, setSandwiches] = useState(sandwichData);
   const [ratings, setRatings] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
   const [randomSandwich, setRandomSandwich] = useState(null);
@@ -182,11 +184,33 @@ function App() {
            <Link to="/" className="logo-link">
              <h1 className="app-logo">SandoMatch</h1>
            </Link>
+
+           {/* filtering */}
             <Link to="/filter" className="filter-button">
               Filter
             </Link>
+
+            {/* user buttons */}
+            <div className="auth-buttons">
+              <Link to="/login">
+                <button className="auth-button login">Login</button>
+              </Link>
+              <Link to="/signup">
+                <button className="auth-button signup">Signup</button>
+              </Link>
+            </div>
+            <div className="user-button">
+              <Link to="/user">
+                <button className="user-prof-button">
+                  <img src="src/assets/user-icon-img.png" className="button-image" />
+                    </button>
+              </Link>
+            </div>
           </header>
+
+
           <Routes>
+            {/* sandwich filtering routes */}
             <Route
               path="/"
               element={
@@ -236,6 +260,25 @@ function App() {
             />
           </Routes>
         </div>
+
+        {/* user authentication routes*/}
+        <Routes>
+          <Route
+            path="/login"
+            element={<Login handleSubmit={loginUser} buttonLabel="Log In"/>}
+          />
+          <Route
+            path="/signup"
+            element={
+              <Login handleSubmit={signupUser} buttonLabel="Sign Up" />
+            }
+          />
+          <Route
+            path ="/user"
+            element={<UserPage />}
+          />
+        </Routes>
+        
       </Router>
     );
   }
