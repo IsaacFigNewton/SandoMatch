@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const FilterPage = ({ filters, setFilters, applyFilters }) => {
   const ingredients = {
-    Bread: ["White", "Artisan", "Lettuce Wrap"],
-    Cheese: ["American", "Cheddar", "Provolone"],
-    Veggies: ["Tomato", "Onion", "Lettuce"],
-    Proteins: ["Pepperoni", "Ham", "Turkey"],
+    Bread: ["White", "Sourdough", "Tortilla Wrap"],
+    Cheese: ["Mozzarella", "Cheddar", "Provolone"],
+    Vegetables: ["Tomato", "Onion", "Lettuce"],
+    Proteins: ["Salami", "Ham", "Turkey"],
     Condiments: ["Mustard", "Mayonnaise", "Oil"],
   };
 
@@ -22,34 +22,42 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
 
   return (
     <div className="filter-page">
-      <header className="filter-header">
-        <Link to="/" className="back-button">
-          Back
-        </Link>
-        <h2>Preferences</h2>
-      </header>
-      <div className="filter-options">
-        {Object.entries(ingredients).map(([category, items]) => (
-          <div key={category} className="filter-category">
-            <h3>{category}</h3>
-            {items.map((item) => (
-              <div key={item} className="filter-item">
-                <span>{item}</span>
-                <input
-                  type="checkbox"
-                  onChange={() => handleCheckboxChange("include", item)}
-                  checked={filters.include.includes(item)}
-                /> Include
-                <input
-                  type="checkbox"
-                  onChange={() => handleCheckboxChange("exclude", item)}
-                  checked={filters.exclude.includes(item)}
-                /> Exclude
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+      <h2>Preferences</h2>
+      <table className="preference-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Ingredient</th>
+            <th>Include</th>
+            <th>Exclude</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Object.entries(ingredients).map(([category, items]) =>
+            items.map((item, index) => (
+              <tr key={item}>
+                {/* Show the category name only for the first row of each category */}
+                <td>{index === 0 ? category : ""}</td>
+                <td>{item}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    onChange={() => handleCheckboxChange("include", item)}
+                    checked={filters.include.includes(item)}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="checkbox"
+                    onChange={() => handleCheckboxChange("exclude", item)}
+                    checked={filters.exclude.includes(item)}
+                  />
+                </td>
+              </tr>
+            ))
+          )}
+        </tbody>
+      </table>
       <Link
         to="/"
         className="apply-button"
@@ -62,3 +70,5 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
 };
 
 export default FilterPage;
+
+
