@@ -1,6 +1,11 @@
 // backend.js
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import cors from "cors";
+import { registerUser, authenticateUser, loginUser } from "./auth.js";
+
 
 const app = express();
 const port = 8000;
@@ -9,7 +14,8 @@ app.use(cors());
 app.use(express.json());
 
 const findSandwichById = (id) =>
-  sandwiches["sandwiches_list"].find((sandwich) => sandwich["id_"] === Number(id));
+  sandwiches["sandwiches_list"].find((sandwich) => 
+    sandwich["id_"] === Number(id));
 
 app.get("/sandwiches/random", (req, res) => {
     const randomIndex = Math.floor(Math.random() * sandwiches.sandwiches_list.length);
@@ -35,7 +41,16 @@ app.get("/sandwiches/:id", (req, res) => {
   }
 });
   
-  
+app.post("/signup", registerUser);
+
+app.post("/users", authenticateUser, (req, res) => {
+  const userToAdd = req.body;
+  Users.addUser(userToAdd).then((result) =>
+    res.status(201).send(result)
+  );
+});
+
+app.post("/login", loginUser);
 
 const sandwiches = {
   sandwiches_list: [

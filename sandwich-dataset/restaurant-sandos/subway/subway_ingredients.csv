@@ -1,0 +1,81 @@
+category,ingredient,cost,calories
+Meats,Black Forest Ham,3.75,NA
+Meats,Honey-Smoked Ham,3.75,NA
+Meats,Steak,3.75,NA
+Meats,Turkey Breast,3.75,NA
+Meats,Chicken Breast,3.75,50
+Meats,Chicken Teriyaki,3.75,112
+Meats,Chicken Strips,3.75,74
+Meats,Oven Roasted Chicken Breast,3.75,81
+Meats,Ham,3.75,67
+Meats,Bacon,3.75,48
+Meats,Italian Meatballs,3.75,133
+Meats,Roast Beef,3.75,96
+Meats,Taco Beef,3.75,70
+Meats,Genoa Salami,3.75,72
+Meats,Turkey Bologna,3.75,NA
+Meats,Turkey Ham,3.75,NA
+Meats,Turkey Salami,3.75,NA
+Meats,Pepperoni,3.75,54
+Meats,Subway MeltTM,3.75,71
+Meats,Tuna,3.75,257
+Meats,Shrimp,3.75,22
+Meats,Egg Mayo,3.75,171
+Meats,Egg Patty,3.75,41
+Meats,Egg White Patty,3.75,NA
+Meats,Veggie Patty,3.75,NA
+Meats,Falafel,3.75,175
+Cheeses,Smoked Cheddar,3.75,NA
+Cheeses,Monterey Jack,3.75,NA
+Cheeses,Mozzarella,3.75,NA
+Cheeses,Provolone,3.75,NA
+Cheeses,Swiss,3.75,NA
+Cheeses,American,3.75,40
+Cheeses,Parmesan,3.75,54
+Breads,White,4,195
+Breads,9-Grain Wheat,4,195
+Breads,Honey Oat,4,210
+Breads,Parmesan Oregano,4,206
+Breads,"Flatbread, Artisan",4,NA
+Breads,Gluten-Free Bread,4,NA
+Breads,Hearty Italian Bread,4,NA
+Breads,Italian Herbs & Cheese Bread,4,NA
+Breads,Monterey Cheddar Bread,4,NA
+Breads,Roasted Garlic Bread,4,NA
+Breads,Slider Roll,4,NA
+Breads,Sourdough,4,NA
+Breads,Ultimate Cheesy Garlic Bread,4,NA
+Breads,Tomato Basil Wrap,4,NA
+Breads,Spinach Wrap,4,196
+Condiments,Caesar Dressing,0,NA
+Condiments,Ranch Dressing,0,NA
+Condiments,Buffalo Sauce,0,NA
+Condiments,Vinaigrette Dressing,0,NA
+Condiments,Chipotle Southwest Sauce,0,66
+Condiments,Yellow Mustard,0,9
+Condiments,Marinara,0,10
+Condiments,Sweet Onion Sauce,0,33
+Condiments,Honey Mustard,0,21
+Condiments,Mayonnaise,0,100
+Condiments,Olive Oil,0,44
+Condiments,Herb Garlic Oil,0,NA
+Condiments,Red Wine Vinegar,0,0 .3
+Condiments,Italian Dressing,0,62
+Condiments,Thousand Island Dressing,0,62
+Condiments,Guacamole,0,NA
+Condiments,Brown Mustard,0,NA
+Vegetables,Avocado,0,75
+Vegetables,Lettuce,0,3
+Vegetables,Tomato,0,6
+Vegetables,Cucumber,0,2
+Vegetables,Onion,0,3
+Vegetables,Green Pepper,0,1
+Vegetables,Spinach,0,NA
+Vegetables,Banana Pepper,0,NA
+Vegetables,Sweet Corn,0,NA
+Vegetables,Pickle,0,1
+Vegetables,Black Olive,0,4
+Vegetables,Jalapeno,0,2
+Condiments,Salt,0,NA
+Condiments,Pepper,0,NA
+Condiments,Sub Spice,0,NA
