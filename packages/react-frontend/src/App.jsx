@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import sandwichData from "./sandwich-dataset/generated_sandwiches.json";
 import Login from "./Login";
+import SignupPage from "./SignupPage";
 import UserPage from "./UserPage";
 import "./App.css";
 
@@ -36,6 +37,10 @@ function App() {
         console.log(error);
       });
   }, []);
+
+  function testSignup() {
+    signupUser({ username: "testuser", pwd: "testpassword" });
+  }
 
   function loginUser(creds) {
     const promise = fetch(`${API_PREFIX}/login`, {
@@ -166,19 +171,22 @@ function App() {
           <header className="app-header">
             <h1>SandoMatch</h1>
             <div className="auth-buttons">
-              <button className="auth-button login" onClick={() => Navigate("/login")}>
-                Login
-              </button>
-              <button className="auth-button signup" onClick={() => Navigate("/signup")}>
-                Signup
-              </button>
+
+              <Link to="/login">
+                <button className="auth-button login">Login</button>
+              </Link>
+
+              <Link to="/signup">
+                <button className="auth-button signup">Signup</button>
+              </Link>
+              <button onClick={testSignup}>Test Signup API</button>
             </div>
             <div className="user-button">
-              <button className="user-prof-button">
-                <img src="src/assets/user-icon-img.png" 
-                onClick={() => Navigate("/user")}
-                className="button-image"/>
-              </button>
+              <Link to="/user">
+                <button className="user-prof-button">
+                  <img src="src/assets/user-icon-img.png" className="button-image" />
+                    </button>
+              </Link>
             </div>
           </header>
   
@@ -251,7 +259,7 @@ function App() {
         <Routes>
           <Route
             path="/login"
-            element={<Login handleSubmit={loginUser} />}
+            element={<Login handleSubmit={loginUser} buttonLabel="Log In"/>}
           />
           <Route
             path="/signup"
