@@ -1,6 +1,7 @@
 //auth.js
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import UserModel from "./models/users.js";
 
 const creds = [];
 
@@ -9,21 +10,34 @@ export function registerUser(req, res) {
 
   if (!username || !pwd) {
     res.status(400).send("Bad request: Invalid input data.");
-  } else if (creds.find((c) => c.username === username)) {
-    res.status(409).send("Username already taken");
   } else {
-    bcrypt
-      .genSalt(10)
-      .then((salt) => bcrypt.hash(pwd, salt))
-      .then((hashedPassword) => {
-        generateAccessToken(username).then((token) => {
-          console.log("Token:", token);
-          res.status(201).send({ token: token });
-          creds.push({ username, hashedPassword });
-        });
-      });
+    UserModel.findById(username)
+      .then((existingUser) => {
+        if (existingUser) {
+          res.status(409).send("Username already taken");
+        } else {
+          bcrypt
+            .genSalt(10)
+            .then((salt) => bcrypt.hash(pwd, salt))
+            .then((hashedPassword) => {
+              const newUser = new UserModel({
+                _id: username,
+                password: hashedPassword,
+              });
+
+              return newUser.save().then(() => {
+                generateAccessToken(username).then((token) => {
+                  console.log("Token:", token);
+                  res.status(201).send({ token: token });
+                });
+              });
+            });
+        }
+      })
   }
 }
+
+
 
 function generateAccessToken(username) {
   return new Promise((resolve, reject) => {
@@ -44,7 +58,6 @@ function generateAccessToken(username) {
 
 export function authenticateUser(req, res, next) {
   const authHeader = req.headers["authorization"];
-  //Getting the 2nd part of the auth header (the token)
   const token = authHeader && authHeader.split(" ")[1];
 
   if (!token) {
@@ -52,8 +65,8 @@ export function authenticateUser(req, res, next) {
     res.status(401).end();
   } else {
     jwt.verify(
-      token,
-      process.env.TOKEN_SECRET,
+      token, 
+      process.env.TOKEN_SECRET, 
       (error, decoded) => {
         if (decoded) {
           next();
@@ -68,30 +81,26 @@ export function authenticateUser(req, res, next) {
 
 export function loginUser(req, res) {
   const { username, pwd } = req.body; // from form
-  const retrievedUser = creds.find(
-    (c) => c.username === username
-  );
 
-  if (!retrievedUser) {
-    // invalid username
-    res.status(401).send("Unauthorized");
-  } else {
-    bcrypt
-      .compare(pwd, retrievedUser.hashedPassword)
-      .then((matched) => {
-        if (matched) {
-          generateAccessToken(username).then((token) => {
-            res.status(200).send({ token: token });
-          });
-        } else {
-          // invalid password
-          res.status(401).send("Unauthorized");
-        }
-      })
-      .catch(() => {
+  UserModel.findById(username)
+    .then((retrievedUser) => {
+      if (!retrievedUser) {
         res.status(401).send("Unauthorized");
-      });
-  }
+      } else {
+        bcrypt
+          .compare(pwd, retrievedUser.password)
+          .then((matched) => {
+            if (matched) {
+              generateAccessToken(username).then((token) => {
+                res.status(200).send({ token: token });
+              });
+            } else {
+              res.status(401).send("Unauthorized");
+            }
+          })
+          .catch(() => {
+            res.status(401).send("Unauthorized");
+          });
+      }
+    })
 }
-
-
