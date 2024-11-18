@@ -4,11 +4,20 @@ dotenv.config();
 
 import express from "express";
 import cors from "cors";
+import mongoose from "mongoose"
 import { registerUser, authenticateUser, loginUser } from "./auth.js";
+import { MongoTopologyClosedError } from "mongodb";
 
 
 const app = express();
 const port = 8000;
+
+const { MONGO_CONNECTION_STRING } = process.env;
+
+mongoose.set("debug", true);
+mongoose
+    .connect(MONGO_CONNECTION_STRING)
+    .catch((error) => console.log(error));
 
 app.use(cors());
 app.use(express.json());

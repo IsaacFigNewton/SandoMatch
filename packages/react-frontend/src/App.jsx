@@ -3,9 +3,10 @@
 =======
 >>>>>>> b07c96adb6a2591a50f6bb802c3868d961f508a2
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import sandwichData from "./sandwich-dataset/generated_sandwiches.json";
 import Login from "./Login";
+import UserPage from "./UserPage";
 import "./App.css";
 
 const API_PREFIX = "http://localhost:8000";
@@ -168,6 +169,23 @@ function App() {
         <div>
           <header className="app-header">
             <h1>SandoMatch</h1>
+            <div className="auth-buttons">
+
+              <Link to="/login">
+                <button className="auth-button login">Login</button>
+              </Link>
+
+              <Link to="/signup">
+                <button className="auth-button signup">Signup</button>
+              </Link>
+            </div>
+            <div className="user-button">
+              <Link to="/user">
+                <button className="user-prof-button">
+                  <img src="src/assets/user-icon-img.png" className="button-image" />
+                    </button>
+              </Link>
+            </div>
           </header>
   
           <input
@@ -244,13 +262,17 @@ function App() {
         <Routes>
           <Route
             path="/login"
-            element={<Login handleSubmit={loginUser} />}
+            element={<Login handleSubmit={loginUser} buttonLabel="Log In"/>}
           />
           <Route
             path="/signup"
             element={
               <Login handleSubmit={signupUser} buttonLabel="Sign Up" />
             }
+          />
+          <Route
+            path ="/user"
+            element={<UserPage />}
           />
         </Routes>
       </Router>
