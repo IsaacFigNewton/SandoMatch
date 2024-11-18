@@ -31,6 +31,30 @@ app.get("/sandwiches", (req, res) => {
   res.send(sandwiches);
 });
 
+app.post("/sandwiches/filter", (req, res) => {
+    const { include = [], exclude = [] } = req.body;
+    console.log("Received filters:", { include, exclude });
+  
+    const filteredSandwiches = sandwiches.sandwiches_list.filter((sandwich) => {
+      const ingredients = Object.values(sandwich.ingredients || {})
+        .flatMap((category) => Object.values(category).flat());
+  
+      // Case-insensitive include and exclude logic
+      const includesAll = include.every((item) =>
+        ingredients.some((ingredient) => ingredient.toLowerCase() === item.toLowerCase())
+      );
+      const excludesAll = exclude.every((item) =>
+        ingredients.every((ingredient) => ingredient.toLowerCase() !== item.toLowerCase())
+      );
+  
+      return includesAll && excludesAll;
+    });
+  
+    console.log("Filtered sandwiches:", filteredSandwiches);
+    res.json(filteredSandwiches);
+  });
+  
+
 app.get("/sandwiches/:id", (req, res) => {
   const id = req.params["id"];
   const result = findSandwichById(id);
@@ -141,7 +165,7 @@ const sandwiches = {
             },
             "vegetables": {
                 "tomato": [
-                    "tomatoe"
+                    "tomato"
                 ]
             },
             "condiments": {},
@@ -175,7 +199,7 @@ const sandwiches = {
             "cheeses": {},
             "vegetables": {
                 "tomato": [
-                    "tomatoe"
+                    "tomato"
                 ],
                 "pepper": [
                     "yellow bell pepper"
@@ -1111,7 +1135,7 @@ const sandwiches = {
                     "avocado"
                 ],
                 "tomato": [
-                    "cherry tomatoe"
+                    "cherry tomato"
                 ]
             },
             "condiments": {},
@@ -1534,7 +1558,7 @@ const sandwiches = {
                     "pickled turnip"
                 ],
                 "tomato": [
-                    "tomatoe"
+                    "tomato"
                 ]
             },
             "condiments": {
@@ -1602,7 +1626,7 @@ const sandwiches = {
             "cheeses": {},
             "vegetables": {
                 "tomato": [
-                    "fried green tomatoe"
+                    "fried green tomato"
                 ],
                 "lettuce": [
                     "lettuce"
@@ -2341,7 +2365,7 @@ const sandwiches = {
             },
             "vegetables": {
                 "tomato": [
-                    "tomatoe"
+                    "tomato"
                 ],
                 "onion": [
                     "onion"
@@ -2725,7 +2749,7 @@ const sandwiches = {
             },
             "vegetables": {
                 "tomato": [
-                    "sun-dried tomatoe"
+                    "sun-dried tomato"
                 ]
             },
             "condiments": {
@@ -3472,7 +3496,7 @@ const sandwiches = {
             "cheeses": {},
             "vegetables": {
                 "tomato": [
-                    "roasted cherry tomatoe"
+                    "roasted cherry tomato"
                 ]
             },
             "condiments": {},
@@ -3564,7 +3588,7 @@ const sandwiches = {
             },
             "vegetables": {
                 "tomato": [
-                    "roasted cherry tomatoe"
+                    "roasted cherry tomato"
                 ]
             },
             "condiments": {},
