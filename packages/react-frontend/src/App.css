@@ -25,26 +25,34 @@ h1 {
 
 
 .app-header {
-  background-color: #e0e0e0;       
-  padding: 4rem 3rem;              
-  border-radius: 0;               
+  background-color: #e0e0e0;
+  padding: 4rem 3rem;
+  border-radius: 0;
   text-align: center;
-  margin: 0;                       
-  width: 100vw;                    
-  position: relative;              
-  left: 50%;                       
-  transform: translateX(-50%);    
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  margin: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .app-header h1 {
-  font-family: 'Pacifico', cursive; 
+  font-family: 'Pacifico', cursive;
   font-size: 3.5rem;
   color: #333;
   font-weight: bold;
   margin: 0;
+  cursor: pointer;
 }
 
+.logo-link {
+  text-decoration: none; 
+}
+
+.logo-link:hover h1 {
+  color: #555; 
+}
 
 .search-bar {
   display: block;
@@ -191,14 +199,58 @@ h1 {
   transition: color 0.2s;
 }
 
-/* Highlight stars on selection */
 .rating input[type="radio"]:checked ~ .star,
 .rating input[type="radio"]:checked ~ label .star {
   color: #ffd700;
 }
 
-/* Highlight stars on hover */
 .rating label:hover ~ label .star,
 .rating label:hover .star {
   color: #ffc107;
 }
+
+.filter-page {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.preference-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.preference-table th,
+.preference-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.preference-table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.apply-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.apply-button:hover {
+  background-color: #0056b3;
+}
+
