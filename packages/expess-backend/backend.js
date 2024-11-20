@@ -9,7 +9,7 @@ const port = 8000;
 app.use(cors());
 app.use(express.json());
 
-//Filters
+//Find by
 
 const findSandwichByRating = (rating) => {
   return sandwiches["sandwiches_list"].filter(
@@ -66,10 +66,12 @@ const findSandwichByRatingCaloriesCost =
 };
 
 
+//Sandwiches
 app.get("/sandwiches", (req, res) => {
   res.send(sandwiches);
 });
 
+//Filters
 app.get("/sandwiches/filter", (req, res) => {
   const { rating, minCalories, maxCalories, maxCost } = req.query;
   if (rating != undefined && (minCalories != undefined 
@@ -121,12 +123,52 @@ app.get("/sandwiches/filter", (req, res) => {
 //Sorting
 
 app.get("/sandwiches/sort", (req, res) => {
-  const sortBy = req.query;
-  const sortByNameAscending = ["sandwiches_list"].toSorted(
-    (a, b) => a.name - b.name
+  const { sortBy } = req.query;
+
+  //Ascending
+  const sortByNameAscending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => a.name.localeCompare(b.name)
   );
+  const sortByRatingAscending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => a.rating - b.rating
+  );
+  const sortByCaloriesAscending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => a.calories - b.calories
+  );
+  const sortByCostAscending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => a.cost - b.cost
+  );
+  //Descending
+  const sortByNameDescending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => b.name.localeCompare(a.name)
+  );
+  const sortByRatingDescending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => b.rating - a.rating
+  );
+  const sortByCaloriesDescending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => b.calories - a.calories
+  );
+  const sortByCostDescending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => b.cost - a.cost
+  );
+
+
   if (sortBy === "nameAscending") {
-    res.send(sortByNameAscending);
+    res.send({ sandwiches_list: sortByNameAscending });
+  } else if (sortBy === "ratingAscending"){
+    res.send({ sandwiches_list: sortByRatingAscending });
+  } else if (sortBy === "caloriesAscending") {
+    res.send({ sandwiches_list: sortByCaloriesAscending });
+  } else if (sortBy === "costAscending") { 
+    res.send({ sandwiches_list: sortByCostAscending });
+  } else if (sortBy === "nameDescending") {
+    res.send({ sandwiches_list: sortByNameDescending });
+  } else if (sortBy === "ratingDescending") {
+    res.send({ sandwiches_list: sortByRatingDescending });
+  } else if (sortBy === "caloriesDescending") {
+    res.send({ sandwiches_list: sortByCaloriesDescending });
+  } else if (sortBy === "costDescending") {
+    res.send({ sandwiches_list: sortByCostDescending });
   } else {
     res.send(sandwiches);
   }
