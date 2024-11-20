@@ -1,0 +1,835 @@
+[
+    {
+        "id_": 0,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Elite Chicken & Bacon Ranch",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "chicken": [
+                    "chicken breast"
+                ],
+                "bacon": [
+                    "bacon"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {
+                "dressing": [
+                    "ranch dressing"
+                ]
+            },
+            "spices": {}
+        },
+        "cost": 15.28,
+        "calories": 580,
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 1,
+        "cuisine": "American",
+        "restaurant": "subway",
+        "name": "The Philly",
+        "ingredients": {
+            "breads": {},
+            "meats": {},
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 13.78,
+        "calories": 505,
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 2,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Subway Club",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "turkey": [
+                    "turkey breast"
+                ],
+                "ham": [
+                    "black forest ham"
+                ],
+                "beef": [
+                    "roast beef"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 14.78,
+        "calories": 500,
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 3,
+        "cuisine": "American",
+        "restaurant": "subway",
+        "name": "All-American Club",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "turkey": [
+                    "turkey breast"
+                ],
+                "ham": [
+                    "black forest ham"
+                ],
+                "bacon": [
+                    "bacon"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 14.28,
+        "calories": 540,
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 4,
+        "cuisine": "Italian",
+        "restaurant": "subway",
+        "name": "The Hotshot Italiano",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "salami": [
+                    "genoa salami"
+                ],
+                "pepperoni": [
+                    "pepperoni"
+                ],
+                "ham": [
+                    "ham"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 12.28,
+        "calories": 630,
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 5,
+        "cuisine": "Italian",
+        "restaurant": "subway",
+        "name": "The Ultimate B.M.T.",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "ham": [
+                    "ham"
+                ],
+                "salami": [
+                    "genoa salami"
+                ],
+                "pepperoni": [
+                    "pepperoni"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 12.78,
+        "calories": 560,
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 6,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Titan Turkey",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "turkey": [
+                    "turkey breast"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 12.68,
+        "calories": 490,
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 7,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Home Run Ham",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "ham": [
+                    "ham"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 12.18,
+        "calories": 510,
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 8,
+        "cuisine": "BBQ",
+        "restaurant": "subway",
+        "name": "Honey Mustard BBQ Chicken",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "chicken": [
+                    "chicken breast"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {
+                "mustard": [
+                    "honey mustard"
+                ]
+            },
+            "spices": {}
+        },
+        "cost": 13.78,
+        "calories": 510,
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 9,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "The Boss",
+        "ingredients": {
+            "breads": {},
+            "meats": {},
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 14.58,
+        "calories": 690,
+        "rating": 2,
+        "dietary_tags": [
+            "vegan"
+        ],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 10,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Spicy Nacho Chicken",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "chicken": [
+                    "chicken breast"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 13.78,
+        "calories": 440,
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 11,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Cheesy Garlic Steak",
+        "ingredients": {
+            "breads": {},
+            "meats": {},
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {
+                "oil": [
+                    "herb garlic oil"
+                ]
+            },
+            "spices": {}
+        },
+        "cost": 13.78,
+        "calories": 510,
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 12,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Garlic Roast Beef",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "beef": [
+                    "roast beef"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {
+                "oil": [
+                    "herb garlic oil"
+                ]
+            },
+            "spices": {}
+        },
+        "cost": 10.69,
+        "calories": 490,
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 13,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "The Beast",
+        "ingredients": {
+            "breads": {},
+            "meats": {},
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 11.19,
+        "calories": 740,
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 14,
+        "cuisine": "Japanese",
+        "restaurant": "subway",
+        "name": "Teriyaki Blitz",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "chicken": [
+                    "chicken teriyaki"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 9.49,
+        "calories": 460,
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 15,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "The Outlaw",
+        "ingredients": {
+            "breads": {},
+            "meats": {},
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 9.49,
+        "calories": 590,
+        "rating": 3,
+        "dietary_tags": [
+            "vegan"
+        ],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 16,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "The Monster",
+        "ingredients": {
+            "breads": {},
+            "meats": {},
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 10.99,
+        "calories": 590,
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 17,
+        "cuisine": "Japanese",
+        "restaurant": "subway",
+        "name": "Sweet Onion Chicken Teriyaki",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "chicken": [
+                    "chicken teriyaki"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {
+                "sauce": [
+                    "sweet onion sauce"
+                ]
+            },
+            "spices": {}
+        },
+        "cost": 6.99,
+        "calories": 430,
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 18,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Pickleball Club",
+        "ingredients": {
+            "breads": {},
+            "meats": {},
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 6.99,
+        "calories": 500,
+        "rating": 5,
+        "dietary_tags": [
+            "vegan"
+        ],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 19,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Black Forest Ham",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "ham": [
+                    "black forest ham"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 5.99,
+        "calories": 320,
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 20,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "B.L.T.",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "bacon": [
+                    "bacon"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {
+                "lettuce": [
+                    "lettuce"
+                ],
+                "tomato": [
+                    "tomato"
+                ]
+            },
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 5.99,
+        "calories": 370,
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 21,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Cold Cut Combo",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "turkey": [
+                    "turkey ham",
+                    "turkey salami",
+                    "turkey bologna"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 5.99,
+        "calories": 370,
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 22,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Grilled Chicken",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "chicken": [
+                    "chicken breast"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 6.99,
+        "calories": 330,
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 23,
+        "cuisine": "Italian",
+        "restaurant": "subway",
+        "name": "Meatball Marinara",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "meatball": [
+                    "italian meatball"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {
+                "sauce": [
+                    "marinara sauce"
+                ]
+            },
+            "spices": {}
+        },
+        "cost": 6.99,
+        "calories": 520,
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 24,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Oven-Roasted Turkey",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "turkey": [
+                    "turkey breast"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 5.99,
+        "calories": 310,
+        "rating": 4,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 25,
+        "cuisine": "Italian",
+        "restaurant": "subway",
+        "name": "Pizza Sub",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "pepperoni": [
+                    "pepperoni"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {
+                "sauce": [
+                    "marinara sauce"
+                ]
+            },
+            "spices": {}
+        },
+        "cost": 4.99,
+        "calories": 490,
+        "rating": 2,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 26,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Oven-Roasted Turkey & Ham",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "turkey": [
+                    "turkey breast"
+                ],
+                "ham": [
+                    "ham"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 5.99,
+        "calories": 310,
+        "rating": 1,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 27,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Rotisserie-Style Chicken",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "chicken": [
+                    "chicken breast"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 6.99,
+        "calories": 350,
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 28,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Roast Beef",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "beef": [
+                    "roast beef"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 6.99,
+        "calories": 350,
+        "rating": 3,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 29,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Steak & Cheese",
+        "ingredients": {
+            "breads": {},
+            "meats": {},
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 6.99,
+        "calories": 370,
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 30,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Tuna",
+        "ingredients": {
+            "breads": {},
+            "meats": {
+                "tuna": [
+                    "tuna"
+                ]
+            },
+            "cheeses": {},
+            "vegetables": {},
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 5.99,
+        "calories": 510,
+        "rating": 5,
+        "dietary_tags": [],
+        "review_count": 1,
+        "reviews": []
+    },
+    {
+        "id_": 31,
+        "cuisine": null,
+        "restaurant": "subway",
+        "name": "Veggie Delite",
+        "ingredients": {
+            "breads": {},
+            "meats": {},
+            "cheeses": {},
+            "vegetables": {
+                "lettuce": [
+                    "lettuce"
+                ],
+                "tomato": [
+                    "tomato"
+                ],
+                "cucumber": [
+                    "cucumber"
+                ],
+                "pepper": [
+                    "green pepper"
+                ],
+                "onion": [
+                    "onion"
+                ]
+            },
+            "condiments": {},
+            "spices": {}
+        },
+        "cost": 5.99,
+        "calories": 220,
+        "rating": 1,
+        "dietary_tags": [
+            "vegan"
+        ],
+        "review_count": 1,
+        "reviews": []
+    }
+]
