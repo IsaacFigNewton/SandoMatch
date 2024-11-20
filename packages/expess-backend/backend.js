@@ -22,10 +22,67 @@ mongoose
 app.use(cors());
 app.use(express.json());
 
+//Find by
+const findSandwichByRating = (rating) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => sandwich["rating"] >= rating
+  );
+};
+
+const findSandwichByCalories = (minCalories, maxCalories) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => (!minCalories || sandwich["calories"] >= minCalories) 
+    && (!maxCalories || sandwich["calories"] <= maxCalories)
+  );
+};
+
+const findSandwichByCost = (maxCost) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => sandwich["cost"] <= maxCost
+  );
+};
+
+const findSandwichByRatingCalories = 
+  (rating, minCalories, maxCalories) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => sandwich["rating"] >= rating 
+    && (!minCalories || sandwich["calories"] >= minCalories) 
+    && (!maxCalories || sandwich["calories"] <= maxCalories)
+    );
+};
+
+const findSandwichByCaloriesCost = 
+  (minCalories, maxCalories, maxCost) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => (!minCalories || sandwich["calories"] >= minCalories) 
+    && (!maxCalories || sandwich["calories"] <= maxCalories)
+    && sandwich["cost"] <= maxCost
+  );
+};
+
+const findSandwichByRatingCost = (rating, maxCost) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => (sandwich["rating"] >= rating 
+    && sandwich["cost"] <= maxCost)
+  );
+};
+
+const findSandwichByRatingCaloriesCost = 
+  (rating, minCalories, maxCalories, maxCost) => {
+  return sandwiches["sandwiches_list"].filter(
+    (sandwich) => sandwich["rating"] >= rating 
+    && (!minCalories || sandwich["calories"] >= minCalories)
+    && (!maxCalories || sandwich["calories"] <= maxCalories)
+    && sandwich["cost"] <= maxCost
+  );
+};
+
 const findSandwichById = (id) =>
   sandwiches["sandwiches_list"].find((sandwich) => 
     sandwich["id_"] === Number(id));
 
+
+//Random
 app.get("/sandwiches/random", (req, res) => {
     const randomIndex = Math.floor(Math.random() * sandwiches.sandwiches_list.length);
     const randomSandwich = sandwiches.sandwiches_list[randomIndex];
@@ -36,11 +93,117 @@ app.get("/sandwiches/random", (req, res) => {
     }
 });
 
+
+//Sandwiches full list
 app.get("/sandwiches", (req, res) => {
   res.send(sandwiches);
 });
 
-app.post("/sandwiches/filter", (req, res) => {
+
+//Filter by rating, cost, and calories on Filtering Page
+app.get("/sandwiches/filter", (req, res) => {
+  const { rating, minCalories, maxCalories, maxCost } = req.query;
+  if (rating != undefined && (minCalories != undefined 
+    || maxCalories != undefined) && maxCost != undefined) {
+    let result = findSandwichByRatingCaloriesCost(parseInt(rating), 
+      parseInt(minCalories), parseInt(maxCalories), parseFloat(maxCost));
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating != undefined && (minCalories != undefined 
+    || maxCalories != undefined) && maxCost == undefined){
+    let result = findSandwichByRatingCalories(parseInt(rating), 
+      parseInt(minCalories), parseInt(maxCalories));
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating == undefined && (minCalories != undefined 
+    || maxCalories != undefined) && maxCost != undefined) {
+    let result = findSandwichByCaloriesCost(parseInt(minCalories), 
+      parseInt(maxCalories), parseFloat(maxCost));
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating != undefined && minCalories == undefined 
+    && maxCalories != undefined && maxCost != undefined) {
+    let result = findSandwichByRatingCost(parseInt(rating), 
+      parseFloat(maxCost));
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating != undefined && minCalories == undefined 
+    && maxCalories != undefined && maxCost == undefined) {
+    let result = findSandwichByRating(parseInt(rating));
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating == undefined && (minCalories != undefined 
+    || maxCalories != undefined) && maxCost == undefined) {
+    let result = findSandwichByCalories(parseInt(minCalories),
+      parseInt(maxCalories));
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else if (rating == undefined && minCalories == undefined 
+    && maxCalories == undefined && maxCost != undefined) {
+    let result = findSandwichByCost(parseFloat(maxCost));
+    result = { sandwiches_list: result };
+    res.send(result);
+  } else {
+    res.send(sandwiches);
+  }
+});
+
+
+//Sorting by name, rating, calories, and cost (ascending/descending)
+app.get("/sandwiches/sort", (req, res) => {
+  const { sortBy } = req.query;
+
+  //Ascending
+  const sortByNameAscending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => a.name.localeCompare(b.name)
+  );
+  const sortByRatingAscending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => a.rating - b.rating
+  );
+  const sortByCaloriesAscending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => a.calories - b.calories
+  );
+  const sortByCostAscending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => a.cost - b.cost
+  );
+  //Descending
+  const sortByNameDescending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => b.name.localeCompare(a.name)
+  );
+  const sortByRatingDescending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => b.rating - a.rating
+  );
+  const sortByCaloriesDescending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => b.calories - a.calories
+  );
+  const sortByCostDescending = sandwiches["sandwiches_list"].toSorted(
+    (a, b) => b.cost - a.cost
+  );
+
+
+  if (sortBy === "nameAscending") {
+    res.send({ sandwiches_list: sortByNameAscending });
+  } else if (sortBy === "ratingAscending"){
+    res.send({ sandwiches_list: sortByRatingAscending });
+  } else if (sortBy === "caloriesAscending") {
+    res.send({ sandwiches_list: sortByCaloriesAscending });
+  } else if (sortBy === "costAscending") { 
+    res.send({ sandwiches_list: sortByCostAscending });
+  } else if (sortBy === "nameDescending") {
+    res.send({ sandwiches_list: sortByNameDescending });
+  } else if (sortBy === "ratingDescending") {
+    res.send({ sandwiches_list: sortByRatingDescending });
+  } else if (sortBy === "caloriesDescending") {
+    res.send({ sandwiches_list: sortByCaloriesDescending });
+  } else if (sortBy === "costDescending") {
+    res.send({ sandwiches_list: sortByCostDescending });
+  } else {
+    res.send(sandwiches);
+  }
+});
+
+//Filtering by ingredients on Preference Page
+app.post("/sandwiches/preferences", (req, res) => {
     const { include = [], exclude = [] } = req.body;
     console.log("Received filters:", { include, exclude });
   
@@ -64,6 +227,7 @@ app.post("/sandwiches/filter", (req, res) => {
   });
   
 
+//ID
 app.get("/sandwiches/:id", (req, res) => {
   const id = req.params["id"];
   const result = findSandwichById(id);
@@ -74,8 +238,10 @@ app.get("/sandwiches/:id", (req, res) => {
   }
 });
   
+//Sign Up
 app.post("/signup", registerUser);
 
+//Authenticate
 app.post("/users", authenticateUser, (req, res) => {
   const userToAdd = req.body;
   Users.addUser(userToAdd).then((result) =>
@@ -83,6 +249,7 @@ app.post("/users", authenticateUser, (req, res) => {
   );
 });
 
+//Login
 app.post("/login", loginUser);
 
 const sandwiches = {
@@ -174,7 +341,7 @@ const sandwiches = {
             },
             "vegetables": {
                 "tomato": [
-                    "tomato"
+                    "tomatoe"
                 ]
             },
             "condiments": {},
@@ -208,7 +375,7 @@ const sandwiches = {
             "cheeses": {},
             "vegetables": {
                 "tomato": [
-                    "tomato"
+                    "tomatoe"
                 ],
                 "pepper": [
                     "yellow bell pepper"
@@ -1144,7 +1311,7 @@ const sandwiches = {
                     "avocado"
                 ],
                 "tomato": [
-                    "cherry tomato"
+                    "cherry tomatoe"
                 ]
             },
             "condiments": {},
@@ -1567,7 +1734,7 @@ const sandwiches = {
                     "pickled turnip"
                 ],
                 "tomato": [
-                    "tomato"
+                    "tomatoe"
                 ]
             },
             "condiments": {
@@ -1635,7 +1802,7 @@ const sandwiches = {
             "cheeses": {},
             "vegetables": {
                 "tomato": [
-                    "fried green tomato"
+                    "fried green tomatoe"
                 ],
                 "lettuce": [
                     "lettuce"
@@ -2374,7 +2541,7 @@ const sandwiches = {
             },
             "vegetables": {
                 "tomato": [
-                    "tomato"
+                    "tomatoe"
                 ],
                 "onion": [
                     "onion"
@@ -2758,7 +2925,7 @@ const sandwiches = {
             },
             "vegetables": {
                 "tomato": [
-                    "sun-dried tomato"
+                    "sun-dried tomatoe"
                 ]
             },
             "condiments": {
@@ -3505,7 +3672,7 @@ const sandwiches = {
             "cheeses": {},
             "vegetables": {
                 "tomato": [
-                    "roasted cherry tomato"
+                    "roasted cherry tomatoe"
                 ]
             },
             "condiments": {},
@@ -3597,7 +3764,7 @@ const sandwiches = {
             },
             "vegetables": {
                 "tomato": [
-                    "roasted cherry tomato"
+                    "roasted cherry tomatoe"
                 ]
             },
             "condiments": {},
@@ -3794,7 +3961,7 @@ const sandwiches = {
         ]
     }
 ]
-};
+
 
 // Start the server
 app.listen(port, () => {
