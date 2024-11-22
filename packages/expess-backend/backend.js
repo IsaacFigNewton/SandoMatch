@@ -3961,6 +3961,7 @@ const sandwiches = {
         ]
     }
 ]
+};
 
 
 // Start the server
