@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "npx nodemon backend.js",
     "start": "node backend.js",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\""
   },
   "author": "",
