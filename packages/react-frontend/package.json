@@ -7,7 +7,7 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "npx eslint . && npx prettier --check .",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\""
   },
