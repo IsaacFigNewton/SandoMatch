@@ -1,680 +1,501 @@
 [
-    {
-        "id_": 0,
-        "cuisine": null,
-        "restaurant": "urbane_cafe",
-        "name": "So Cal",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "chicken": [
-                    "roasted chicken"
-                ]
-            },
-            "cheeses": {
-                "pepper jack": [
-                    "pepper jack cheese"
-                ]
-            },
-            "vegetables": {
-                "avocado": [
-                    "avocado"
-                ],
-                "lettuce": [
-                    "green leaf lettuce"
-                ]
-            },
-            "condiments": {
-                "salsa": [
-                    "tomatillo salsa"
-                ],
-                "aioli": [
-                    "chipotle aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 11.5,
-        "calories": 555,
-        "rating": 1,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+  {
+    "id_": 0,
+    "cuisine": null,
+    "restaurant": "urbane_cafe",
+    "name": "So Cal",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "chicken": ["roasted chicken"]
+      },
+      "cheeses": {
+        "pepper jack": ["pepper jack cheese"]
+      },
+      "vegetables": {
+        "avocado": ["avocado"],
+        "lettuce": ["green leaf lettuce"]
+      },
+      "condiments": {
+        "salsa": ["tomatillo salsa"],
+        "aioli": ["chipotle aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 1,
-        "cuisine": "Southwestern",
-        "restaurant": "urbane_cafe",
-        "name": "Southwest",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "chicken": [
-                    "marinated southwest chicken"
-                ]
-            },
-            "cheeses": {
-                "pepper jack": [
-                    "pepper jack cheese"
-                ]
-            },
-            "vegetables": {
-                "avocado": [
-                    "avocado"
-                ]
-            },
-            "condiments": {
-                "salsa": [
-                    "corn & black bean salsa"
-                ],
-                "aioli": [
-                    "chipotle aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 11.5,
-        "calories": 545,
-        "rating": 3,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 555,
+    "rating": 1,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 1,
+    "cuisine": "Southwestern",
+    "restaurant": "urbane_cafe",
+    "name": "Southwest",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "chicken": ["marinated southwest chicken"]
+      },
+      "cheeses": {
+        "pepper jack": ["pepper jack cheese"]
+      },
+      "vegetables": {
+        "avocado": ["avocado"]
+      },
+      "condiments": {
+        "salsa": ["corn & black bean salsa"],
+        "aioli": ["chipotle aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 2,
-        "cuisine": "Vietnamese",
-        "restaurant": "urbane_cafe",
-        "name": "Uc Banh Mi",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "chicken": [
-                    "roasted chicken"
-                ]
-            },
-            "cheeses": {},
-            "vegetables": {
-                "cucumber": [
-                    "cucumber"
-                ],
-                "carrot": [
-                    "pickled carrot"
-                ],
-                "radish": [
-                    "pickled white radish"
-                ]
-            },
-            "condiments": {
-                "aioli": [
-                    "sweet chili aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 11.5,
-        "calories": 340,
-        "rating": 1,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 545,
+    "rating": 3,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 2,
+    "cuisine": "Vietnamese",
+    "restaurant": "urbane_cafe",
+    "name": "Uc Banh Mi",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "chicken": ["roasted chicken"]
+      },
+      "cheeses": {},
+      "vegetables": {
+        "cucumber": ["cucumber"],
+        "carrot": ["pickled carrot"],
+        "radish": ["pickled white radish"]
+      },
+      "condiments": {
+        "aioli": ["sweet chili aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 3,
-        "cuisine": "Italian",
-        "restaurant": "urbane_cafe",
-        "name": "Pesto & Sundried Tomato",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "chicken": [
-                    "roasted chicken"
-                ]
-            },
-            "cheeses": {
-                "mozzarella": [
-                    "mozzarella cheese"
-                ]
-            },
-            "vegetables": {
-                "tomato": [
-                    "sundried tomatoe"
-                ]
-            },
-            "condiments": {
-                "pesto": [
-                    "basil pesto"
-                ]
-            },
-            "spices": {
-                "basil": [
-                    "basil pesto"
-                ]
-            }
-        },
-        "cost": 11.5,
-        "calories": 385,
-        "rating": 4,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 340,
+    "rating": 1,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 3,
+    "cuisine": "Italian",
+    "restaurant": "urbane_cafe",
+    "name": "Pesto & Sundried Tomato",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "chicken": ["roasted chicken"]
+      },
+      "cheeses": {
+        "mozzarella": ["mozzarella cheese"]
+      },
+      "vegetables": {
+        "tomato": ["sundried tomatoe"]
+      },
+      "condiments": {
+        "pesto": ["basil pesto"]
+      },
+      "spices": {
+        "basil": ["basil pesto"]
+      }
     },
-    {
-        "id_": 4,
-        "cuisine": null,
-        "restaurant": "urbane_cafe",
-        "name": "Cilantro Torta",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "chicken": [
-                    "marinated cilantro chicken"
-                ]
-            },
-            "cheeses": {
-                "pepper jack": [
-                    "pepper jack cheese"
-                ]
-            },
-            "vegetables": {
-                "avocado": [
-                    "avocado"
-                ],
-                "onion": [
-                    "pickled onion"
-                ]
-            },
-            "condiments": {
-                "salsa": [
-                    "corn & black bean salsa",
-                    "tomatillo salsa"
-                ],
-                "aioli": [
-                    "chipotle aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 11.5,
-        "calories": 585,
-        "rating": 4,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 385,
+    "rating": 4,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 4,
+    "cuisine": null,
+    "restaurant": "urbane_cafe",
+    "name": "Cilantro Torta",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "chicken": ["marinated cilantro chicken"]
+      },
+      "cheeses": {
+        "pepper jack": ["pepper jack cheese"]
+      },
+      "vegetables": {
+        "avocado": ["avocado"],
+        "onion": ["pickled onion"]
+      },
+      "condiments": {
+        "salsa": ["corn & black bean salsa", "tomatillo salsa"],
+        "aioli": ["chipotle aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 5,
-        "cuisine": "Barbecue",
-        "restaurant": "urbane_cafe",
-        "name": "Santa Maria BBQ",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "chicken": [
-                    "marinated bbq chicken"
-                ],
-                "bacon": [
-                    "applewood-smoked bacon"
-                ]
-            },
-            "cheeses": {
-                "cheddar": [
-                    "cheddar cheese"
-                ]
-            },
-            "vegetables": {},
-            "condiments": {
-                "dressing": [
-                    "ranch dressing"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 11.5,
-        "calories": 440,
-        "rating": 5,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 585,
+    "rating": 4,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 5,
+    "cuisine": "Barbecue",
+    "restaurant": "urbane_cafe",
+    "name": "Santa Maria BBQ",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "chicken": ["marinated bbq chicken"],
+        "bacon": ["applewood-smoked bacon"]
+      },
+      "cheeses": {
+        "cheddar": ["cheddar cheese"]
+      },
+      "vegetables": {},
+      "condiments": {
+        "dressing": ["ranch dressing"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 6,
-        "cuisine": null,
-        "restaurant": "urbane_cafe",
-        "name": "Cranberry Brie",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "turkey": [
-                    "roasted turkey"
-                ]
-            },
-            "cheeses": {
-                "brie": [
-                    "french brie"
-                ]
-            },
-            "vegetables": {},
-            "condiments": {
-                "chutney": [
-                    "cranberry chutney"
-                ],
-                "aioli": [
-                    "herb aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 11.5,
-        "calories": 415,
-        "rating": 4,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 440,
+    "rating": 5,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 6,
+    "cuisine": null,
+    "restaurant": "urbane_cafe",
+    "name": "Cranberry Brie",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "turkey": ["roasted turkey"]
+      },
+      "cheeses": {
+        "brie": ["french brie"]
+      },
+      "vegetables": {},
+      "condiments": {
+        "chutney": ["cranberry chutney"],
+        "aioli": ["herb aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 7,
-        "cuisine": null,
-        "restaurant": "urbane_cafe",
-        "name": "Club",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "turkey": [
-                    "roasted turkey"
-                ],
-                "bacon": [
-                    "applewood-smoked bacon"
-                ]
-            },
-            "cheeses": {
-                "cheddar": [
-                    "cheddar cheese"
-                ]
-            },
-            "vegetables": {
-                "avocado": [
-                    "avocado"
-                ],
-                "tomato": [
-                    "tomato"
-                ],
-                "lettuce": [
-                    "green leaf lettuce"
-                ]
-            },
-            "condiments": {
-                "aioli": [
-                    "herb aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 11.5,
-        "calories": 610,
-        "rating": 5,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 415,
+    "rating": 4,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 7,
+    "cuisine": null,
+    "restaurant": "urbane_cafe",
+    "name": "Club",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "turkey": ["roasted turkey"],
+        "bacon": ["applewood-smoked bacon"]
+      },
+      "cheeses": {
+        "cheddar": ["cheddar cheese"]
+      },
+      "vegetables": {
+        "avocado": ["avocado"],
+        "tomato": ["tomato"],
+        "lettuce": ["green leaf lettuce"]
+      },
+      "condiments": {
+        "aioli": ["herb aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 8,
-        "cuisine": null,
-        "restaurant": "urbane_cafe",
-        "name": "The Californian",
-        "ingredients": {
-            "breads": {},
-            "meats": {},
-            "cheeses": {
-                "mozzarella": [
-                    "mozzarella cheese"
-                ]
-            },
-            "vegetables": {
-                "artichoke": [
-                    "house marinated artichoke heart"
-                ],
-                "avocado": [
-                    "avocado"
-                ],
-                "tomato": [
-                    "sundried tomatoe"
-                ],
-                "lettuce": [
-                    "green leaf lettuce"
-                ]
-            },
-            "condiments": {
-                "aioli": [
-                    "herb aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 11.5,
-        "calories": 410,
-        "rating": 5,
-        "dietary_tags": [
-            "vegetarian"
-        ],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 610,
+    "rating": 5,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 8,
+    "cuisine": null,
+    "restaurant": "urbane_cafe",
+    "name": "The Californian",
+    "ingredients": {
+      "breads": {},
+      "meats": {},
+      "cheeses": {
+        "mozzarella": ["mozzarella cheese"]
+      },
+      "vegetables": {
+        "artichoke": ["house marinated artichoke heart"],
+        "avocado": ["avocado"],
+        "tomato": ["sundried tomatoe"],
+        "lettuce": ["green leaf lettuce"]
+      },
+      "condiments": {
+        "aioli": ["herb aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 9,
-        "cuisine": null,
-        "restaurant": "urbane_cafe",
-        "name": "Bella Portobello",
-        "ingredients": {
-            "breads": {},
-            "meats": {},
-            "cheeses": {
-                "mozzarella": [
-                    "mozzarella cheese"
-                ]
-            },
-            "vegetables": {
-                "tomato": [
-                    "sundried tomatoe"
-                ]
-            },
-            "condiments": {
-                "pesto": [
-                    "basil pesto"
-                ],
-                "dressing": [
-                    "mixed greens with balsamic dressing"
-                ]
-            },
-            "spices": {
-                "basil": [
-                    "basil pesto"
-                ]
-            }
-        },
-        "cost": 11.5,
-        "calories": 265,
-        "rating": 1,
-        "dietary_tags": [
-            "vegetarian"
-        ],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 410,
+    "rating": 5,
+    "dietary_tags": ["vegetarian"],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 9,
+    "cuisine": null,
+    "restaurant": "urbane_cafe",
+    "name": "Bella Portobello",
+    "ingredients": {
+      "breads": {},
+      "meats": {},
+      "cheeses": {
+        "mozzarella": ["mozzarella cheese"]
+      },
+      "vegetables": {
+        "tomato": ["sundried tomatoe"]
+      },
+      "condiments": {
+        "pesto": ["basil pesto"],
+        "dressing": ["mixed greens with balsamic dressing"]
+      },
+      "spices": {
+        "basil": ["basil pesto"]
+      }
     },
-    {
-        "id_": 10,
-        "cuisine": "American",
-        "restaurant": "urbane_cafe",
-        "name": "Gourmet Grilled Cheese",
-        "ingredients": {
-            "breads": {},
-            "meats": {},
-            "cheeses": {
-                "cheddar": [
-                    "cheddar"
-                ],
-                "gorgonzola": [
-                    "gorgonzola"
-                ],
-                "pepper jack": [
-                    "pepper jack cheese"
-                ]
-            },
-            "vegetables": {
-                "avocado": [
-                    "avocado"
-                ]
-            },
-            "condiments": {
-                "salsa": [
-                    "tomatillo salsa"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 9.75,
-        "calories": 465,
-        "rating": 5,
-        "dietary_tags": [
-            "vegetarian"
-        ],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 265,
+    "rating": 1,
+    "dietary_tags": ["vegetarian"],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 10,
+    "cuisine": "American",
+    "restaurant": "urbane_cafe",
+    "name": "Gourmet Grilled Cheese",
+    "ingredients": {
+      "breads": {},
+      "meats": {},
+      "cheeses": {
+        "cheddar": ["cheddar"],
+        "gorgonzola": ["gorgonzola"],
+        "pepper jack": ["pepper jack cheese"]
+      },
+      "vegetables": {
+        "avocado": ["avocado"]
+      },
+      "condiments": {
+        "salsa": ["tomatillo salsa"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 11,
-        "cuisine": "Vietnamese",
-        "restaurant": "urbane_cafe",
-        "name": "Tofu Banh Mi",
-        "ingredients": {
-            "breads": {},
-            "meats": {},
-            "cheeses": {
-                "feta": [
-                    "fyh feta (v)"
-                ]
-            },
-            "vegetables": {
-                "cucumber": [
-                    "cucumber"
-                ],
-                "carrot": [
-                    "pickled carrot"
-                ],
-                "radish": [
-                    "pickled white radish"
-                ]
-            },
-            "condiments": {
-                "aioli": [
-                    "sweet chili aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 11.5,
-        "calories": 210,
-        "rating": 5,
-        "dietary_tags": [
-            "vegetarian"
-        ],
-        "review_count": 1,
-        "reviews": []
+    "cost": 9.75,
+    "calories": 465,
+    "rating": 5,
+    "dietary_tags": ["vegetarian"],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 11,
+    "cuisine": "Vietnamese",
+    "restaurant": "urbane_cafe",
+    "name": "Tofu Banh Mi",
+    "ingredients": {
+      "breads": {},
+      "meats": {},
+      "cheeses": {
+        "feta": ["fyh feta (v)"]
+      },
+      "vegetables": {
+        "cucumber": ["cucumber"],
+        "carrot": ["pickled carrot"],
+        "radish": ["pickled white radish"]
+      },
+      "condiments": {
+        "aioli": ["sweet chili aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 12,
-        "cuisine": null,
-        "restaurant": "urbane_cafe",
-        "name": "BBQ Tri Tip",
-        "ingredients": {
-            "breads": {},
-            "meats": {},
-            "cheeses": {
-                "pepper jack": [
-                    "pepper jack cheese"
-                ]
-            },
-            "vegetables": {},
-            "condiments": {
-                "aioli": [
-                    "chipotle aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 12.95,
-        "calories": 180,
-        "rating": 3,
-        "dietary_tags": [
-            "vegetarian"
-        ],
-        "review_count": 1,
-        "reviews": []
+    "cost": 11.5,
+    "calories": 210,
+    "rating": 5,
+    "dietary_tags": ["vegetarian"],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 12,
+    "cuisine": null,
+    "restaurant": "urbane_cafe",
+    "name": "BBQ Tri Tip",
+    "ingredients": {
+      "breads": {},
+      "meats": {},
+      "cheeses": {
+        "pepper jack": ["pepper jack cheese"]
+      },
+      "vegetables": {},
+      "condiments": {
+        "aioli": ["chipotle aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 13,
-        "cuisine": "Argentinian",
-        "restaurant": "urbane_cafe",
-        "name": "Chimichurri Steak",
-        "ingredients": {
-            "breads": {},
-            "meats": {},
-            "cheeses": {
-                "feta": [
-                    "feta"
-                ]
-            },
-            "vegetables": {},
-            "condiments": {
-                "sauce": [
-                    "housemade chimichurri sauce"
-                ],
-                "aioli": [
-                    "cranberry chutney aioli"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 12.95,
-        "calories": 210,
-        "rating": 3,
-        "dietary_tags": [
-            "vegetarian"
-        ],
-        "review_count": 1,
-        "reviews": []
+    "cost": 12.95,
+    "calories": 180,
+    "rating": 3,
+    "dietary_tags": ["vegetarian"],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 13,
+    "cuisine": "Argentinian",
+    "restaurant": "urbane_cafe",
+    "name": "Chimichurri Steak",
+    "ingredients": {
+      "breads": {},
+      "meats": {},
+      "cheeses": {
+        "feta": ["feta"]
+      },
+      "vegetables": {},
+      "condiments": {
+        "sauce": ["housemade chimichurri sauce"],
+        "aioli": ["cranberry chutney aioli"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 14,
-        "cuisine": null,
-        "restaurant": "urbane_cafe",
-        "name": "Pastrami Tri Tip",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "pastrami": [
-                    "pastrami tri tip"
-                ]
-            },
-            "cheeses": {
-                "swiss": [
-                    "swiss cheese"
-                ]
-            },
-            "vegetables": {},
-            "condiments": {
-                "aioli": [
-                    "remoulade aioli"
-                ],
-                "butter": [
-                    "bread and butter pickle"
-                ]
-            },
-            "spices": {}
-        },
-        "cost": 12.95,
-        "calories": 410,
-        "rating": 3,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 12.95,
+    "calories": 210,
+    "rating": 3,
+    "dietary_tags": ["vegetarian"],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 14,
+    "cuisine": null,
+    "restaurant": "urbane_cafe",
+    "name": "Pastrami Tri Tip",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "pastrami": ["pastrami tri tip"]
+      },
+      "cheeses": {
+        "swiss": ["swiss cheese"]
+      },
+      "vegetables": {},
+      "condiments": {
+        "aioli": ["remoulade aioli"],
+        "butter": ["bread and butter pickle"]
+      },
+      "spices": {}
     },
-    {
-        "id_": 15,
-        "cuisine": null,
-        "restaurant": "urbane_cafe",
-        "name": "BLAT",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "bacon": [
-                    "bacon"
-                ]
-            },
-            "cheeses": {},
-            "vegetables": {
-                "lettuce": [
-                    "lettuce"
-                ],
-                "avocado": [
-                    "avocado"
-                ],
-                "tomato": [
-                    "tomato"
-                ]
-            },
-            "condiments": {},
-            "spices": {}
-        },
-        "cost": 14.69,
-        "calories": 230,
-        "rating": 2,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 12.95,
+    "calories": 410,
+    "rating": 3,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 15,
+    "cuisine": null,
+    "restaurant": "urbane_cafe",
+    "name": "BLAT",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "bacon": ["bacon"]
+      },
+      "cheeses": {},
+      "vegetables": {
+        "lettuce": ["lettuce"],
+        "avocado": ["avocado"],
+        "tomato": ["tomato"]
+      },
+      "condiments": {},
+      "spices": {}
     },
-    {
-        "id_": 16,
-        "cuisine": "American",
-        "restaurant": "urbane_cafe",
-        "name": "BLT",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "bacon": [
-                    "bacon"
-                ]
-            },
-            "cheeses": {},
-            "vegetables": {
-                "lettuce": [
-                    "lettuce"
-                ],
-                "avocado": [
-                    "avocado"
-                ],
-                "tomato": [
-                    "tomato"
-                ]
-            },
-            "condiments": {},
-            "spices": {}
-        },
-        "cost": 14.39,
-        "calories": 230,
-        "rating": 4,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
+    "cost": 14.69,
+    "calories": 230,
+    "rating": 2,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 16,
+    "cuisine": "American",
+    "restaurant": "urbane_cafe",
+    "name": "BLT",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "bacon": ["bacon"]
+      },
+      "cheeses": {},
+      "vegetables": {
+        "lettuce": ["lettuce"],
+        "avocado": ["avocado"],
+        "tomato": ["tomato"]
+      },
+      "condiments": {},
+      "spices": {}
     },
-    {
-        "id_": 17,
-        "cuisine": "American",
-        "restaurant": "urbane_cafe",
-        "name": "BLT",
-        "ingredients": {
-            "breads": {},
-            "meats": {
-                "bacon": [
-                    "bacon"
-                ]
-            },
-            "cheeses": {},
-            "vegetables": {
-                "lettuce": [
-                    "lettuce"
-                ],
-                "tomato": [
-                    "tomato"
-                ]
-            },
-            "condiments": {},
-            "spices": {}
-        },
-        "cost": 14.39,
-        "calories": 80,
-        "rating": 1,
-        "dietary_tags": [],
-        "review_count": 1,
-        "reviews": []
-    }
+    "cost": 14.39,
+    "calories": 230,
+    "rating": 4,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  },
+  {
+    "id_": 17,
+    "cuisine": "American",
+    "restaurant": "urbane_cafe",
+    "name": "BLT",
+    "ingredients": {
+      "breads": {},
+      "meats": {
+        "bacon": ["bacon"]
+      },
+      "cheeses": {},
+      "vegetables": {
+        "lettuce": ["lettuce"],
+        "tomato": ["tomato"]
+      },
+      "condiments": {},
+      "spices": {}
+    },
+    "cost": 14.39,
+    "calories": 80,
+    "rating": 1,
+    "dietary_tags": [],
+    "review_count": 1,
+    "reviews": []
+  }
 ]

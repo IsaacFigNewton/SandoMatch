@@ -1,4 +1,5 @@
 # Steps
+
 <ol>
     <li>Locate the desired restaurant's list of available ingredients</li>
     <li>Scrape the list of ingredients, their categories, and their costs</li>

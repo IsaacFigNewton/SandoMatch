@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 #root {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,7 +23,6 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-
 .app-header {
   background-color: #e0e0e0;
   padding: 4rem 3rem;
@@ -38,7 +37,7 @@ h1 {
 }
 
 .app-header h1 {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 3.5rem;
   color: #333;
   font-weight: bold;
@@ -47,23 +46,23 @@ h1 {
 }
 
 .logo-link {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .logo-link:hover h1 {
-  color: #555; 
+  color: #555;
 }
 
 .search-bar {
   display: block;
   width: 100%;
   max-width: 600px;
-  margin: 2rem auto 1rem auto; 
+  margin: 2rem auto 1rem auto;
   padding: 0.75rem 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #fafafa; 
+  background-color: #fafafa;
   color: #333;
   outline: none;
   transition: box-shadow 0.2s;
@@ -74,9 +73,8 @@ h1 {
   border-color: #646cff;
 }
 
-
 .main-content {
-  padding-top: 3rem; 
+  padding-top: 3rem;
 }
 
 .auth-buttons {
@@ -145,12 +143,12 @@ h1 {
   background-color: #535bf2;
 }
 
-
 .sandwich-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+  resize: both;
 }
 
 .sandwich-card {
@@ -253,4 +251,3 @@ h2 {
 .apply-button:hover {
   background-color: #0056b3;
 }
-

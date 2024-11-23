@@ -2,13 +2,12 @@
 
 ## Find your perfect sandwich
 
-
 ![Sign Up Flow (1)](https://github.com/user-attachments/assets/6e817bb0-1504-4972-ba22-53ce04685c0b)
 
 ![Sign In Flow (1)](https://github.com/user-attachments/assets/185a49fc-6077-40f2-8bae-a51736075960)
 
-
 ### Setup
+
 <ol>
   <li> Run <b>npm install</b> in root directory </li>
   <li> Run <b>npm run start</b> in packages/expess-backend </li>
@@ -16,6 +15,7 @@
 </ol>
 
 ## Sources
+
 <ul>
   <li><a href="https://www.kaggle.com/datasets/kaggle/recipe-ingredients-dataset"> Kaggle Recipe Ingredients Dataset </a></li>
   <li> Local restaurant sandwich menu details

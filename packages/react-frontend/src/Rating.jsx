@@ -10,7 +10,9 @@ const Rating = ({ sandwichId, rating, handleRatingChange }) => {
             name={`rating-${sandwichId}`}
             value={star}
             checked={rating === star}
-            onChange={() => handleRatingChange(sandwichId, star)}
+            onChange={() =>
+              handleRatingChange(sandwichId, star)
+            }
           />
           <span className="star">&#9733;</span>
         </label>

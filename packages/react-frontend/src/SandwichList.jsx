@@ -1,7 +1,11 @@
 import React from "react";
-import Rating from "./Rating"; 
+import Rating from "./Rating";
 
-const SandwichList = ({ sandwiches, ratings, handleRatingChange }) => {
+const SandwichList = ({
+  sandwiches,
+  ratings,
+  handleRatingChange
+}) => {
   return (
     <div className="sandwich-list">
       {sandwiches.map((sandwich) => (
@@ -9,7 +13,9 @@ const SandwichList = ({ sandwiches, ratings, handleRatingChange }) => {
           <h3>Sandwich #{sandwich.id_}</h3>
           <ul>
             {Object.values(sandwich.ingredients || {})
-              .flatMap((category) => Object.values(category).flat())
+              .flatMap((category) =>
+                Object.values(category).flat()
+              )
               .map((ingredient, index) => (
                 <li key={index}>{ingredient}</li>
               ))}
@@ -31,4 +37,3 @@ const SandwichList = ({ sandwiches, ratings, handleRatingChange }) => {
 };
 
 export default SandwichList;
-

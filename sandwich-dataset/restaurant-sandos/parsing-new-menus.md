@@ -1,4 +1,5 @@
 # Steps
+
 <ol>
     <li>Locate the desired restaurant's menu</li>
     <li>Scrape the menu</li>

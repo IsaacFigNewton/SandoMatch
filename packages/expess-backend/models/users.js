@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema(
             ref: "Sandwich"
         }
     },
-    { collection: "users"}
+    { collection: "users" }
 );
 
 const UserModel = mongoose.model("User", userSchema);
