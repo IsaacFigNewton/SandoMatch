@@ -10,7 +10,7 @@ const SandwichList = ({
     <div className="sandwich-list">
       {sandwiches.map((sandwich) => (
         <div key={sandwich.id_} className="sandwich-card">
-          <h3>Sandwich #{sandwich.id_}</h3>
+          <h3>{sandwich.name}</h3>
           <ul>
             {Object.values(sandwich.ingredients || {})
               .flatMap((category) =>

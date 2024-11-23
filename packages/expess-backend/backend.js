@@ -47,13 +47,14 @@ const sandwichesPath = path.resolve(
   '../../sandwich-dataset/db-tables/sandwiches.json'
 )
 
-// load the cost and calorie estimates from the JSON file
+// load the default cost and calorie estimates from the JSON file
 try {
   const data = fs.readFileSync(restaurantIngredientsPath[0], "utf8");
   costCalEstimates = JSON.parse(data);
 } catch (err) {
   console.error("Error reading cost and calorie estimates file:", err);
 }
+
 // load sandwiches list from JSON file
 try {
   const fileData = fs.readFileSync(sandwichesPath, "utf8");
@@ -63,7 +64,7 @@ try {
   console.error("Error reading sandwiches list file:", err);
 }
 
-// load restaurant ingredients from JSON file
+// load restaurant cost and calorie estimates from JSON file
 try {
   const fileData = fs.readFileSync(restaurantIngredientsPath, "utf8");
   restaurantIngredientsList =  JSON.parse(fileData);
