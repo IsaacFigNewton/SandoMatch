@@ -7,7 +7,7 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
     Cheese: ["Mozzarella", "Cheddar", "Provolone"],
     Vegetables: ["Tomato", "Onion", "Lettuce"],
     Proteins: ["Salami", "Ham", "Turkey"],
-    Condiments: ["Mustard", "Mayonnaise", "Oil"],
+    Condiments: ["Mustard", "Mayonnaise", "Oil"]
   };
 
   const handleCheckboxChange = (action, value) => {
@@ -33,28 +33,33 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
           </tr>
         </thead>
         <tbody>
-          {Object.entries(ingredients).map(([category, items]) =>
-            items.map((item, index) => (
-              <tr key={item}>
-                {/* Show the category name only for the first row of each category */}
-                <td>{index === 0 ? category : ""}</td>
-                <td>{item}</td>
-                <td>
-                  <input
-                    type="checkbox"
-                    onChange={() => handleCheckboxChange("include", item)}
-                    checked={filters.include.includes(item)}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="checkbox"
-                    onChange={() => handleCheckboxChange("exclude", item)}
-                    checked={filters.exclude.includes(item)}
-                  />
-                </td>
-              </tr>
-            ))
+          {Object.entries(ingredients).map(
+            ([category, items]) =>
+              items.map((item, index) => (
+                <tr key={item}>
+                  {/* Show the category name only for the first row of each category */}
+                  <td>{index === 0 ? category : ""}</td>
+                  <td>{item}</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      onChange={() =>
+                        handleCheckboxChange("include", item)
+                      }
+                      checked={filters.include.includes(item)}
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      onChange={() =>
+                        handleCheckboxChange("exclude", item)
+                      }
+                      checked={filters.exclude.includes(item)}
+                    />
+                  </td>
+                </tr>
+              ))
           )}
         </tbody>
       </table>
@@ -70,5 +75,3 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
 };
 
 export default FilterPage;
-
-

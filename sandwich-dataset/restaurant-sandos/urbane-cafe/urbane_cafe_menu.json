@@ -1,252 +1,252 @@
 [
-    {
-        "id": 1,
-        "name": "So Cal",
-        "ingredients": [
-            "roasted chicken",
-            "avocado",
-            "pepper jack cheese",
-            "tomatillo salsa",
-            "green leaf lettuce",
-            "chipotle aioli"
-        ],
-        "cuisine": null,
-        "cost": 11.50
-    },
-    {
-        "id": 2,
-        "name": "Southwest",
-        "ingredients": [
-            "marinated southwest chicken",
-            "avocado",
-            "corn & black bean salsa",
-            "pepper jack cheese",
-            "chipotle aioli"
-        ],
-        "cuisine": "Southwestern",
-        "cost": 11.50
-    },
-    {
-        "id": 3,
-        "name": "Uc Banh Mi",
-        "ingredients": [
-            "roasted chicken",
-            "cilantro",
-            "cucumbers",
-            "pickled carrots",
-            "fresno chilis",
-            "pickled white radish",
-            "sweet chili aioli"
-        ],
-        "cuisine": "Vietnamese",
-        "cost": 11.50
-    },
-    {
-        "id": 4,
-        "name": "Pesto & Sundried Tomato",
-        "ingredients": [
-            "roasted chicken",
-            "basil pesto",
-            "sundried tomatoes",
-            "mozzarella cheese",
-            "arugula",
-            "vegenaise"
-        ],
-        "cuisine": "Italian",
-        "cost": 11.50
-    },
-    {
-        "id": 5,
-        "name": "Cilantro Torta",
-        "ingredients": [
-            "marinated cilantro chicken",
-            "avocado",
-            "corn & black bean salsa",
-            "tomatillo salsa",
-            "pepper jack cheese",
-            "fresno chilis",
-            "pickled onions",
-            "chipotle aioli"
-        ],
-        "cuisine": null,
-        "cost": 11.50
-    },
-    {
-        "id": 6,
-        "name": "Santa Maria BBQ",
-        "ingredients": [
-            "marinated BBQ chicken",
-            "Applewood-smoked bacon",
-            "cheddar cheese",
-            "housemade apple coleslaw",
-            "ranch dressing"
-        ],
-        "cuisine": "Barbecue",
-        "cost": 11.50
-    },
-    {
-        "id": 7,
-        "name": "Cranberry Brie",
-        "ingredients": [
-            "roasted turkey",
-            "French brie",
-            "cranberry chutney",
-            "arugula",
-            "herb aioli"
-        ],
-        "cuisine": null,
-        "cost": 11.50
-    },
-    {
-        "id": 8,
-        "name": "Club",
-        "ingredients": [
-            "roasted turkey",
-            "Applewood-smoked bacon",
-            "avocado",
-            "cheddar cheese",
-            "sliced tomato",
-            "green leaf lettuce",
-            "herb aioli",
-            "Toasted Multi-Grain"
-        ],
-        "cuisine": null,
-        "cost": 11.50
-    },
-    {
-        "id": 9,
-        "name": "The Californian",
-        "ingredients": [
-            "house marinated artichoke hearts",
-            "avocado",
-            "sundried tomatoes",
-            "mozzarella cheese",
-            "green leaf lettuce",
-            "herb aioli"
-        ],
-        "cuisine": null,
-        "cost": 11.50
-    },
-    {
-        "id": 10,
-        "name": "Bella Portobello",
-        "ingredients": [
-            "marinated portobello mushroom",
-            "mozzarella cheese",
-            "sundried tomatoes",
-            "basil pesto",
-            "vegenaise",
-            "mixed greens with balsamic dressing"
-        ],
-        "cuisine": null,
-        "cost": 11.50
-    },
-    {
-        "id": 11,
-        "name": "Gourmet Grilled Cheese",
-        "ingredients": [
-            "cheddar",
-            "gorgonzola",
-            "pepper jack cheeses",
-            "avocado",
-            "tomatillo salsa"
-        ],
-        "cuisine": "American",
-        "cost": 9.75
-    },
-    {
-        "id": 12,
-        "name": "Tofu Banh Mi",
-        "ingredients": [
-            "roasted tofu",
-            "cilantro",
-            "cucumbers",
-            "pickled carrots",
-            "fresno chilis",
-            "pickled white radish",
-            "sweet chili aioli",
-            "FYH feta (V)"
-        ],
-        "cuisine": "Vietnamese",
-        "cost": 11.50
-    },
-    {
-        "id": 13,
-        "name": "BBQ Tri Tip",
-        "ingredients": [
-            "marinated BBQ tri tip steak",
-            "pepper jack cheese",
-            "housemade apple coleslaw",
-            "chipotle aioli"
-        ],
-        "cuisine": null,
-        "cost": 12.95
-    },
-    {
-        "id": 14,
-        "name": "Chimichurri Steak",
-        "ingredients": [
-            "tri tip steak",
-            "housemade chimichurri sauce",
-            "feta",
-            "arugula",
-            "cranberry chutney aioli"
-        ],
-        "cuisine": "Argentinian",
-        "cost": 12.95
-    },
-    {
-        "id": 15,
-        "name": "Pastrami Tri Tip",
-        "ingredients": [
-            "pastrami tri tip",
-            "swiss cheese",
-            "remoulade aioli",
-            "housemade apple coleslaw",
-            "bread and butter pickles"
-        ],
-        "cuisine": null,
-        "cost": 12.95
-    },
-    {
-        "id": 16,
-        "name": "BLAT",
-        "ingredients": [
-            "Bacon",
-            "Lettuce",
-            "Avocado",
-            "Tomato",
-            "Mayo",
-            "Toasted Multi-Grain"
-        ],
-        "cuisine": null,
-        "cost": 14.69
-    },
-    {
-        "id": 17,
-        "name": "BLT",
-        "ingredients": [
-            "Bacon",
-            "Lettuce",
-            "Avocado",
-            "Tomato",
-            "Mayo",
-            "Toasted Multi-Grain"
-        ],
-        "cuisine": "American",
-        "cost": 14.39
-    },
-    {
-        "id": 18,
-        "name": "BLT",
-        "ingredients": [
-            "Bacon",
-            "Lettuce",
-            "Tomato",
-            "Mayo",
-            "Toasted Multi-Grain"
-        ],
-        "cuisine": "American",
-        "cost": 14.39
-    }
+  {
+    "id": 1,
+    "name": "So Cal",
+    "ingredients": [
+      "roasted chicken",
+      "avocado",
+      "pepper jack cheese",
+      "tomatillo salsa",
+      "green leaf lettuce",
+      "chipotle aioli"
+    ],
+    "cuisine": null,
+    "cost": 11.5
+  },
+  {
+    "id": 2,
+    "name": "Southwest",
+    "ingredients": [
+      "marinated southwest chicken",
+      "avocado",
+      "corn & black bean salsa",
+      "pepper jack cheese",
+      "chipotle aioli"
+    ],
+    "cuisine": "Southwestern",
+    "cost": 11.5
+  },
+  {
+    "id": 3,
+    "name": "Uc Banh Mi",
+    "ingredients": [
+      "roasted chicken",
+      "cilantro",
+      "cucumbers",
+      "pickled carrots",
+      "fresno chilis",
+      "pickled white radish",
+      "sweet chili aioli"
+    ],
+    "cuisine": "Vietnamese",
+    "cost": 11.5
+  },
+  {
+    "id": 4,
+    "name": "Pesto & Sundried Tomato",
+    "ingredients": [
+      "roasted chicken",
+      "basil pesto",
+      "sundried tomatoes",
+      "mozzarella cheese",
+      "arugula",
+      "vegenaise"
+    ],
+    "cuisine": "Italian",
+    "cost": 11.5
+  },
+  {
+    "id": 5,
+    "name": "Cilantro Torta",
+    "ingredients": [
+      "marinated cilantro chicken",
+      "avocado",
+      "corn & black bean salsa",
+      "tomatillo salsa",
+      "pepper jack cheese",
+      "fresno chilis",
+      "pickled onions",
+      "chipotle aioli"
+    ],
+    "cuisine": null,
+    "cost": 11.5
+  },
+  {
+    "id": 6,
+    "name": "Santa Maria BBQ",
+    "ingredients": [
+      "marinated BBQ chicken",
+      "Applewood-smoked bacon",
+      "cheddar cheese",
+      "housemade apple coleslaw",
+      "ranch dressing"
+    ],
+    "cuisine": "Barbecue",
+    "cost": 11.5
+  },
+  {
+    "id": 7,
+    "name": "Cranberry Brie",
+    "ingredients": [
+      "roasted turkey",
+      "French brie",
+      "cranberry chutney",
+      "arugula",
+      "herb aioli"
+    ],
+    "cuisine": null,
+    "cost": 11.5
+  },
+  {
+    "id": 8,
+    "name": "Club",
+    "ingredients": [
+      "roasted turkey",
+      "Applewood-smoked bacon",
+      "avocado",
+      "cheddar cheese",
+      "sliced tomato",
+      "green leaf lettuce",
+      "herb aioli",
+      "Toasted Multi-Grain"
+    ],
+    "cuisine": null,
+    "cost": 11.5
+  },
+  {
+    "id": 9,
+    "name": "The Californian",
+    "ingredients": [
+      "house marinated artichoke hearts",
+      "avocado",
+      "sundried tomatoes",
+      "mozzarella cheese",
+      "green leaf lettuce",
+      "herb aioli"
+    ],
+    "cuisine": null,
+    "cost": 11.5
+  },
+  {
+    "id": 10,
+    "name": "Bella Portobello",
+    "ingredients": [
+      "marinated portobello mushroom",
+      "mozzarella cheese",
+      "sundried tomatoes",
+      "basil pesto",
+      "vegenaise",
+      "mixed greens with balsamic dressing"
+    ],
+    "cuisine": null,
+    "cost": 11.5
+  },
+  {
+    "id": 11,
+    "name": "Gourmet Grilled Cheese",
+    "ingredients": [
+      "cheddar",
+      "gorgonzola",
+      "pepper jack cheeses",
+      "avocado",
+      "tomatillo salsa"
+    ],
+    "cuisine": "American",
+    "cost": 9.75
+  },
+  {
+    "id": 12,
+    "name": "Tofu Banh Mi",
+    "ingredients": [
+      "roasted tofu",
+      "cilantro",
+      "cucumbers",
+      "pickled carrots",
+      "fresno chilis",
+      "pickled white radish",
+      "sweet chili aioli",
+      "FYH feta (V)"
+    ],
+    "cuisine": "Vietnamese",
+    "cost": 11.5
+  },
+  {
+    "id": 13,
+    "name": "BBQ Tri Tip",
+    "ingredients": [
+      "marinated BBQ tri tip steak",
+      "pepper jack cheese",
+      "housemade apple coleslaw",
+      "chipotle aioli"
+    ],
+    "cuisine": null,
+    "cost": 12.95
+  },
+  {
+    "id": 14,
+    "name": "Chimichurri Steak",
+    "ingredients": [
+      "tri tip steak",
+      "housemade chimichurri sauce",
+      "feta",
+      "arugula",
+      "cranberry chutney aioli"
+    ],
+    "cuisine": "Argentinian",
+    "cost": 12.95
+  },
+  {
+    "id": 15,
+    "name": "Pastrami Tri Tip",
+    "ingredients": [
+      "pastrami tri tip",
+      "swiss cheese",
+      "remoulade aioli",
+      "housemade apple coleslaw",
+      "bread and butter pickles"
+    ],
+    "cuisine": null,
+    "cost": 12.95
+  },
+  {
+    "id": 16,
+    "name": "BLAT",
+    "ingredients": [
+      "Bacon",
+      "Lettuce",
+      "Avocado",
+      "Tomato",
+      "Mayo",
+      "Toasted Multi-Grain"
+    ],
+    "cuisine": null,
+    "cost": 14.69
+  },
+  {
+    "id": 17,
+    "name": "BLT",
+    "ingredients": [
+      "Bacon",
+      "Lettuce",
+      "Avocado",
+      "Tomato",
+      "Mayo",
+      "Toasted Multi-Grain"
+    ],
+    "cuisine": "American",
+    "cost": 14.39
+  },
+  {
+    "id": 18,
+    "name": "BLT",
+    "ingredients": [
+      "Bacon",
+      "Lettuce",
+      "Tomato",
+      "Mayo",
+      "Toasted Multi-Grain"
+    ],
+    "cuisine": "American",
+    "cost": 14.39
+  }
 ]

@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 import sandwichData from "./sandwich-dataset/generated_sandwiches.json";
 import FilterPage from "./FilterPage";
-import SandwichList from "./SandwichList"; 
+import SandwichList from "./SandwichList";
 import Login from "./Login";
 import UserPage from "./UserPage";
 import "./App.css";
@@ -19,7 +24,10 @@ function App() {
   const INVALID_TOKEN = "INVALID_TOKEN";
   const [token, setToken] = useState(INVALID_TOKEN);
   const [message, setMessage] = useState("");
-  const [filters, setFilters] = useState({ include: [], exclude: [] });
+  const [filters, setFilters] = useState({
+    include: [],
+    exclude: []
+  });
 
   // Fetch all sandwiches from the backend
   useEffect(() => {
@@ -41,22 +49,25 @@ function App() {
     fetch(`${API_PREFIX}/sandwiches/filter`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(filters), 
+      body: JSON.stringify(filters)
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Failed to fetch filtered sandwiches");
+          throw new Error(
+            "Failed to fetch filtered sandwiches"
+          );
         }
         return response.json();
       })
       .then((filteredSandwiches) => {
-        setSandwiches(filteredSandwiches); 
+        setSandwiches(filteredSandwiches);
       })
-      .catch((error) => console.error("Error applying filters:", error));
+      .catch((error) =>
+        console.error("Error applying filters:", error)
+      );
   };
-  
 
   function loginUser(creds) {
     const promise = fetch(`${API_PREFIX}/login`, {
@@ -127,7 +138,8 @@ function App() {
   }
 
   useEffect(() => {
-    const savedRatings = JSON.parse(localStorage.getItem("ratings")) || {};
+    const savedRatings =
+      JSON.parse(localStorage.getItem("ratings")) || {};
     setRatings(savedRatings);
   }, []);
 
@@ -138,7 +150,7 @@ function App() {
   const handleRatingChange = (id, rating) => {
     setRatings((prevRatings) => ({
       ...prevRatings,
-      [id]: rating,
+      [id]: rating
     }));
   };
 
@@ -152,7 +164,7 @@ function App() {
       })
       .then((sandwich) => {
         setRandomSandwich(sandwich);
-        setSearchTerm(""); 
+        setSearchTerm("");
       })
       .catch((error) => {
         console.error("Error fetching random sandwich:", error);
@@ -169,7 +181,9 @@ function App() {
     ? sandwiches.filter((sandwich) =>
         sandwich.ingredients
           ? Object.values(sandwich.ingredients)
-              .flatMap((category) => Object.values(category).flat())
+              .flatMap((category) =>
+                Object.values(category).flat()
+              )
               .some((ingredient) =>
                 ingredient.toLowerCase().includes(searchTerm)
               )
@@ -177,110 +191,130 @@ function App() {
       )
     : sandwiches;
 
-    return (
-      <Router>
-        <div>
+  return (
+    <Router>
+      <div>
         <header className="app-header">
-           <Link to="/" className="logo-link">
-             <h1 className="app-logo">SandoMatch</h1>
-           </Link>
+          <Link to="/" className="logo-link">
+            <h1 className="app-logo">SandoMatch</h1>
+          </Link>
 
-           {/* filtering */}
-            <Link to="/filter" className="filter-button">
-              Filter
+          {/* filtering */}
+          <Link to="/filter" className="filter-button">
+            Filter
+          </Link>
+
+          {/* user buttons */}
+          <div className="auth-buttons">
+            <Link to="/login">
+              <button className="auth-button login">
+                Login
+              </button>
             </Link>
-
-            {/* user buttons */}
-            <div className="auth-buttons">
-              <Link to="/login">
-                <button className="auth-button login">Login</button>
-              </Link>
-              <Link to="/signup">
-                <button className="auth-button signup">Signup</button>
-              </Link>
-            </div>
-            <div className="user-button">
-              <Link to="/user">
-                <button className="user-prof-button">
-                  <img src="src/assets/user-icon-img.png" className="button-image" />
-                    </button>
-              </Link>
-            </div>
-          </header>
-
-
-          <Routes>
-            {/* sandwich filtering routes */}
-            <Route
-              path="/"
-              element={
-                <main className="main-content">
-                  <input
-                    type="text"
-                    placeholder="Search for a sandwich..."
-                    className="search-bar"
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                  />
-                  <button className="random-button" onClick={getRandomSandwich}>
-                    Random
-                  </button>
-                  {randomSandwich ? (
-                    <SandwichList
-                      sandwiches={[randomSandwich]}
-                      ratings={ratings}
-                      handleRatingChange={handleRatingChange}
-                    />
-                  ) : (
-                    <SandwichList
-                      sandwiches={filteredSandwiches}
-                      ratings={ratings}
-                      handleRatingChange={handleRatingChange}
-                    />
-                  )}
-                </main>
-              }
-            />
-            <Route
-              path="/filter"
-              element={
-                <FilterPage
-                  filters={filters}
-                  setFilters={setFilters}
-                  applyFilters={applyFilters}
+            <Link to="/signup">
+              <button className="auth-button signup">
+                Signup
+              </button>
+            </Link>
+          </div>
+          <div className="user-button">
+            <Link to="/user">
+              <button className="user-prof-button">
+                <img
+                  src="src/assets/user-icon-img.png"
+                  className="button-image"
                 />
-              }
-            />
-            <Route
-              path="/login"
-              element={<Login handleSubmit={loginUser} />}
-            />
-            <Route
-              path="/signup"
-              element={<Login handleSubmit={signupUser} buttonLabel="Sign Up" />}
-            />
-          </Routes>
-        </div>
+              </button>
+            </Link>
+          </div>
+        </header>
 
-        {/* user authentication routes*/}
         <Routes>
+          {/* sandwich filtering routes */}
+          <Route
+            path="/"
+            element={
+              <main className="main-content">
+                <input
+                  type="text"
+                  placeholder="Search for a sandwich..."
+                  className="search-bar"
+                  onChange={(e) =>
+                    setSearchTerm(e.target.value)
+                  }
+                />
+                <button
+                  className="random-button"
+                  onClick={getRandomSandwich}
+                >
+                  Random
+                </button>
+                {randomSandwich ? (
+                  <SandwichList
+                    sandwiches={[randomSandwich]}
+                    ratings={ratings}
+                    handleRatingChange={handleRatingChange}
+                  />
+                ) : (
+                  <SandwichList
+                    sandwiches={filteredSandwiches}
+                    ratings={ratings}
+                    handleRatingChange={handleRatingChange}
+                  />
+                )}
+              </main>
+            }
+          />
+          <Route
+            path="/filter"
+            element={
+              <FilterPage
+                filters={filters}
+                setFilters={setFilters}
+                applyFilters={applyFilters}
+              />
+            }
+          />
           <Route
             path="/login"
-            element={<Login handleSubmit={loginUser} buttonLabel="Log In"/>}
+            element={<Login handleSubmit={loginUser} />}
           />
           <Route
             path="/signup"
             element={
-              <Login handleSubmit={signupUser} buttonLabel="Sign Up" />
+              <Login
+                handleSubmit={signupUser}
+                buttonLabel="Sign Up"
+              />
             }
           />
-          <Route
-            path ="/user"
-            element={<UserPage />}
-          />
         </Routes>
-        
-      </Router>
-    );
-  }
-  
-  export default App;
+      </div>
+
+      {/* user authentication routes*/}
+      <Routes>
+        <Route
+          path="/login"
+          element={
+            <Login
+              handleSubmit={loginUser}
+              buttonLabel="Log In"
+            />
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <Login
+              handleSubmit={signupUser}
+              buttonLabel="Sign Up"
+            />
+          }
+        />
+        <Route path="/user" element={<UserPage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
