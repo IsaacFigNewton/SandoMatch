@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import sandwichData from "./sandwich-dataset/generated_sandwiches.json";
+import sandwichData from "./sandwiches.json";
 import FilterPage from "./FilterPage";
 import SandwichList from "./SandwichList";
 import Login from "./Login";
