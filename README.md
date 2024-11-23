@@ -16,13 +16,13 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
 #### In packages/expess-backend:
 <ol>
 	<li><b>npm lint</b></li>
-	<li><b>npm run start</b></li>
+	<li><b>npm run dev</b></li>
 </ol>
 
 #### In packages/react-frontend:
 <ol>
 	<li><b>npm lint</b></li>
-	<li><b>npm run start</b></li>
+	<li><b>npm run dev</b></li>
 </ol>
 
 ## Sources
