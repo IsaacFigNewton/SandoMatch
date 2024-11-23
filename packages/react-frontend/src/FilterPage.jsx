@@ -1,7 +1,14 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
 
 const FilterPage = ({ filters, setFilters, applyFilters }) => {
+  // property validation
+  if (!filters || !setFilters || !applyFilters) {
+    throw new Error(
+      "Insufficient arguments provided to FilterPage function."
+    );
+  }
+
   const ingredients = {
     Bread: ["White", "Sourdough", "Tortilla Wrap"],
     Cheese: ["Mozzarella", "Cheddar", "Provolone"],

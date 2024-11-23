@@ -1,6 +1,13 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 function Login({ handleSubmit, buttonLabel = "Log In" }) {
+  // property validation
+  if (!handleSubmit || !buttonLabel) {
+    throw new Error(
+      "Insufficient arguments provided to Login function."
+    );
+  }
+
   const [creds, setCreds] = useState({ username: "", pwd: "" });
 
   const handleChange = (e) => {

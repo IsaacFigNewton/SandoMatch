@@ -96,16 +96,16 @@ function App() {
     return promise;
   }
 
-  function addAuthHeader(otherHeaders = {}) {
-    if (token === INVALID_TOKEN) {
-      return otherHeaders;
-    } else {
-      return {
-        ...otherHeaders,
-        Authorization: `Bearer ${token}`
-      };
-    }
-  }
+  // function addAuthHeader(otherHeaders = {}) {
+  //   if (token === INVALID_TOKEN) {
+  //     return otherHeaders;
+  //   } else {
+  //     return {
+  //       ...otherHeaders,
+  //       Authorization: `Bearer ${token}`
+  //     };
+  //   }
+  // }
 
   function signupUser(creds) {
     const promise = fetch(`${API_PREFIX}/signup`, {
@@ -172,10 +172,10 @@ function App() {
       });
   };
 
-  const handleSearch = (term) => {
-    setSearchTerm(term.toLowerCase());
-    setRandomSandwich(null); // Reset random sandwich
-  };
+  // const handleSearch = (term) => {
+  //   setSearchTerm(term.toLowerCase());
+  //   setRandomSandwich(null); // Reset random sandwich
+  // };
 
   const filteredSandwiches = searchTerm
     ? sandwiches.filter((sandwich) =>

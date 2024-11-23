@@ -7,25 +7,30 @@
 ![Sign In Flow (1)](https://github.com/user-attachments/assets/185a49fc-6077-40f2-8bae-a51736075960)
 
 ### Local Testing/Deployment Setup
+
 #### In the root directory:
+
 <ol>
 	<li><b>npm ci</b></li>
 </ol>
 Note: if the above gives you an error, try removing the <b>package-lock.json</b> file and running <b>npm install</b>
 
 #### In packages/expess-backend:
+
 <ol>
 	<li><b>npm lint</b></li>
 	<li><b>npm run dev</b></li>
 </ol>
 
 #### In packages/react-frontend:
+
 <ol>
 	<li><b>npm lint</b></li>
 	<li><b>npm run dev</b></li>
 </ol>
 
 ## Sources
+
 <ul>
   <li><a href="https://www.kaggle.com/datasets/kaggle/recipe-ingredients-dataset"> Kaggle Recipe Ingredients Dataset </a></li>
   <li> Local restaurant sandwich menu details

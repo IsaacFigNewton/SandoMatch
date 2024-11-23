@@ -39,20 +39,26 @@ let generatedSandwiches = [];
 // Get file paths
 const restaurantIngredientsPath = path.resolve(
   __dirname,
-  '../../sandwich-dataset/db-tables/restaurant_ingredients.json'
+  "../../sandwich-dataset/db-tables/restaurant_ingredients.json"
 );
 
 const sandwichesPath = path.resolve(
   __dirname,
-  '../../sandwich-dataset/db-tables/sandwiches.json'
-)
+  "../../sandwich-dataset/db-tables/sandwiches.json"
+);
 
 // load the default cost and calorie estimates from the JSON file
 try {
-  const data = fs.readFileSync(restaurantIngredientsPath[0], "utf8");
+  const data = fs.readFileSync(
+    restaurantIngredientsPath[0],
+    "utf8"
+  );
   costCalEstimates = JSON.parse(data);
 } catch (err) {
-  console.error("Error reading cost and calorie estimates file:", err);
+  console.error(
+    "Error reading cost and calorie estimates file:",
+    err
+  );
 }
 
 // load sandwiches list from JSON file
@@ -66,95 +72,133 @@ try {
 
 // load restaurant cost and calorie estimates from JSON file
 try {
-  const fileData = fs.readFileSync(restaurantIngredientsPath, "utf8");
-  restaurantIngredientsList =  JSON.parse(fileData);
-  console.log("Loaded Restaurant Ingredients:", restaurantIngredientsList);
+  const fileData = fs.readFileSync(
+    restaurantIngredientsPath,
+    "utf8"
+  );
+  restaurantIngredientsList = JSON.parse(fileData);
+  console.log(
+    "Loaded Restaurant Ingredients:",
+    restaurantIngredientsList
+  );
 } catch (err) {
-  console.error("Error reading restaurant ingredients file:", err);
-
+  console.error(
+    "Error reading restaurant ingredients file:",
+    err
+  );
 }
 console.log("Restaurants file is being read");
 
 // list of non-vegan ingredients for checking
-const  nonVeganIngredients = ["eggs", "cheese", "meat"];
+const nonVeganIngredients = ["eggs", "cheese", "meat"];
 
 const getVeganIngredients = () => {
-    const veganIngredients = {};
-    for (const category in costCalEstimates) {
-        veganIngredients[category] = Object.keys(costCalEstimates[category]).filter(
-            ingredient => !nonVeganIngredients.includes(ingredient)
-        );
-    }
-    return veganIngredients;
+  const veganIngredients = {};
+  for (const category in costCalEstimates) {
+    veganIngredients[category] = Object.keys(
+      costCalEstimates[category]
+    ).filter(
+      (ingredient) => !nonVeganIngredients.includes(ingredient)
+    );
+  }
+  return veganIngredients;
 };
 
 // make a function that selects from the list of ingredients ex: vegetables and check for duplicates
 const selectRandomIngredients = (veganIngredients) => {
-    return {
-        vegetables: veganIngredients.vegetables ? veganIngredients.vegetables.slice(0, 2) : [], // select 2 random vegetable
-        condiments: veganIngredients.condiments ? veganIngredients.condiments.slice(0, 1) : [], // select 1 random condiment
-        spices: veganIngredients.spices ? veganIngredients.spices.slice(0, 1) : [] // select 1 random spice
-    };
+  return {
+    vegetables: veganIngredients.vegetables
+      ? veganIngredients.vegetables.slice(0, 2)
+      : [], // select 2 random vegetable
+    condiments: veganIngredients.condiments
+      ? veganIngredients.condiments.slice(0, 1)
+      : [], // select 1 random condiment
+    spices: veganIngredients.spices
+      ? veganIngredients.spices.slice(0, 1)
+      : [] // select 1 random spice
+  };
 };
 
 // vegan route is still in a work in progress
 // route to generate vegan sandwich
 app.get("/sandwiches/vegan", (req, res) => {
-    const veganIngredients = getVeganIngredients();
-    const selectedIngredients = selectRandomIngredients(veganIngredients);
+  const veganIngredients = getVeganIngredients();
+  const selectedIngredients =
+    selectRandomIngredients(veganIngredients);
 
-    // calculate total cost and calories
-    const cost = Object.values(selectedIngredients).flatMap(category =>
-            category.map(ingredient => costCalEstimates[ingredient]?.cost || 0)
-        ).reduce((total, price) => total + price, 0);
+  // calculate total cost and calories
+  const cost = Object.values(selectedIngredients)
+    .flatMap((category) =>
+      category.map(
+        (ingredient) => costCalEstimates[ingredient]?.cost || 0
+      )
+    )
+    .reduce((total, price) => total + price, 0);
 
-        const calories = Object.values(selectedIngredients).flatMap(category =>
-            category.map(ingredient => costCalEstimates[ingredient]?.calories || 0)
-        ).reduce((total, cal) => total + cal, 0);
+  const calories = Object.values(selectedIngredients)
+    .flatMap((category) =>
+      category.map(
+        (ingredient) =>
+          costCalEstimates[ingredient]?.calories || 0
+      )
+    )
+    .reduce((total, cal) => total + cal, 0);
 
-    // create vegan sandwich object
-    const veganSandwich = {
-        id_: sandwichesList.length,
-        name:  `Vegan Sandwich ${sandwichesList.length + 1}`,
-        ingredients: selectedIngredients,
-        cost,
-        calories,
-        dietary_tags: ["vegan"]
-    };
+  // create vegan sandwich object
+  const veganSandwich = {
+    id_: sandwichesList.length,
+    name: `Vegan Sandwich ${sandwichesList.length + 1}`,
+    ingredients: selectedIngredients,
+    cost,
+    calories,
+    dietary_tags: ["vegan"]
+  };
 
-    sandwichesList.push(veganSandwich);
-    res.send(veganSandwich);
+  sandwichesList.push(veganSandwich);
+  res.send(veganSandwich);
 });
 
-
 app.get("/sandwiches/filter", (req, res) => {
-    const { ingredient, maxCost, minCalories, maxCalories, rating } = req.query;
-    let filteredSandwiches = sandwichesList;
+  const {
+    ingredient,
+    maxCost,
+    minCalories,
+    maxCalories,
+    rating
+  } = req.query;
+  let filteredSandwiches = sandwichesList;
 
-    // filter  by ingredient
-    if (ingredient) {
-        filteredSandwiches = filteredSandwiches.filter(sandwich => 
-            Object.values(sandwich.ingredients).some(category =>
-                Object.keys(category).includes(ingredient)
-            )
-         );
-    }
-    // filter by cost
-    if (maxCost) {
-        filteredSandwiches = filteredSandwiches.filter(sandwich => sandwich.cost <= Number(maxCost));
-    }
-    // filter by calories
-    if (minCalories || maxCalories) {
-        filteredSandwiches = filteredSandwiches.filter(sandwich =>
-        (!minCalories || sandwich.calories >= Number(minCalories)) && 
-        (!maxCalories || sandwich.calories <= Number(maxCalories))
-        );
-    }
-    // filter by rating
-    if (rating) {
-        filteredSandwiches = filteredSandwiches.filter(sandwich => sandwich.rating >= Number(rating));
-    }
-    res.send(filteredSandwiches);
+  // filter  by ingredient
+  if (ingredient) {
+    filteredSandwiches = filteredSandwiches.filter((sandwich) =>
+      Object.values(sandwich.ingredients).some((category) =>
+        Object.keys(category).includes(ingredient)
+      )
+    );
+  }
+  // filter by cost
+  if (maxCost) {
+    filteredSandwiches = filteredSandwiches.filter(
+      (sandwich) => sandwich.cost <= Number(maxCost)
+    );
+  }
+  // filter by calories
+  if (minCalories || maxCalories) {
+    filteredSandwiches = filteredSandwiches.filter(
+      (sandwich) =>
+        (!minCalories ||
+          sandwich.calories >= Number(minCalories)) &&
+        (!maxCalories ||
+          sandwich.calories <= Number(maxCalories))
+    );
+  }
+  // filter by rating
+  if (rating) {
+    filteredSandwiches = filteredSandwiches.filter(
+      (sandwich) => sandwich.rating >= Number(rating)
+    );
+  }
+  res.send(filteredSandwiches);
 });
 
 //Find by
@@ -241,14 +285,16 @@ const findSandwichById = (id) =>
 
 //Random
 app.get("/sandwiches/random", (req, res) => {
-  const randomIndex = Math.floor(Math.random() * sandwichesList.length);
+  const randomIndex = Math.floor(
+    Math.random() * sandwichesList.length
+  );
   const randomSandwich = sandwichesList[randomIndex];
-  
+
   if (randomSandwich) {
-    console.log(randomSandwich)
+    console.log(randomSandwich);
     res.send(randomSandwich);
   } else {
-    console.log("ERROR: Couldn't find random sandwich")
+    console.log("ERROR: Couldn't find random sandwich");
     res.status(404).send("No sandwich found.");
   }
 });
@@ -278,7 +324,6 @@ app.get("/sandwiches/filter", (req, res) => {
     );
     result = { sandwiches_list: result };
     res.send(result);
-
   } else if (
     rating != undefined &&
     (minCalories != undefined || maxCalories != undefined) &&
@@ -291,7 +336,6 @@ app.get("/sandwiches/filter", (req, res) => {
     );
     result = { sandwiches_list: result };
     res.send(result);
-
   } else if (
     rating == undefined &&
     (minCalories != undefined || maxCalories != undefined) &&
@@ -304,7 +348,6 @@ app.get("/sandwiches/filter", (req, res) => {
     );
     result = { sandwiches_list: result };
     res.send(result);
-
   } else if (
     rating != undefined &&
     minCalories == undefined &&
@@ -317,7 +360,6 @@ app.get("/sandwiches/filter", (req, res) => {
     );
     result = { sandwiches_list: result };
     res.send(result);
-
   } else if (
     rating != undefined &&
     minCalories == undefined &&
@@ -327,7 +369,6 @@ app.get("/sandwiches/filter", (req, res) => {
     let result = findSandwichByRating(parseInt(rating));
     result = { sandwiches_list: result };
     res.send(result);
-
   } else if (
     rating == undefined &&
     (minCalories != undefined || maxCalories != undefined) &&
@@ -339,7 +380,6 @@ app.get("/sandwiches/filter", (req, res) => {
     );
     result = { sandwiches_list: result };
     res.send(result);
-
   } else if (
     rating == undefined &&
     minCalories == undefined &&
@@ -349,7 +389,6 @@ app.get("/sandwiches/filter", (req, res) => {
     let result = findSandwichByCost(parseFloat(maxCost));
     result = { sandwiches_list: result };
     res.send(result);
-
   } else {
     res.send(sandwiches);
   }
@@ -360,15 +399,31 @@ app.get("/sandwiches/sort", (req, res) => {
   const { sortBy } = req.query;
 
   //Ascending
-  const sortByNameAscending = sandwichesList.toSorted((a, b) => a.name.localeCompare(b.name));
-  const sortByRatingAscending = sandwichesList.toSorted((a, b) => a.rating - b.rating);
-  const sortByCaloriesAscending = sandwichesList.toSorted((a, b) => a.calories - b.calories);
-  const sortByCostAscending = sandwichesList.toSorted((a, b) => a.cost - b.cost);
+  const sortByNameAscending = sandwichesList.toSorted((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+  const sortByRatingAscending = sandwichesList.toSorted(
+    (a, b) => a.rating - b.rating
+  );
+  const sortByCaloriesAscending = sandwichesList.toSorted(
+    (a, b) => a.calories - b.calories
+  );
+  const sortByCostAscending = sandwichesList.toSorted(
+    (a, b) => a.cost - b.cost
+  );
   //Descending
-  const sortByNameDescending = sandwichesList.toSorted((a, b) => b.name.localeCompare(a.name));
-  const sortByRatingDescending = sandwichesList.toSorted((a, b) => b.rating - a.rating);
-  const sortByCaloriesDescending = sandwichesList.toSorted((a, b) => b.calories - a.calories);
-  const sortByCostDescending = sandwichesList.toSorted((a, b) => b.cost - a.cost);
+  const sortByNameDescending = sandwichesList.toSorted((a, b) =>
+    b.name.localeCompare(a.name)
+  );
+  const sortByRatingDescending = sandwichesList.toSorted(
+    (a, b) => b.rating - a.rating
+  );
+  const sortByCaloriesDescending = sandwichesList.toSorted(
+    (a, b) => b.calories - a.calories
+  );
+  const sortByCostDescending = sandwichesList.toSorted(
+    (a, b) => b.cost - a.cost
+  );
 
   if (sortBy === "nameAscending") {
     res.send({ sandwiches_list: sortByNameAscending });
@@ -452,34 +507,46 @@ app.post("/login", loginUser);
 // get ingredients from Specific Restaurant
 const getIngredientsForRestaurant = (restaurantId) => {
   console.log("Parsed Data:", restaurantIngredientsList); // log the parse object
-  const restaurantEntry = restaurantIngredientsList.find((entry) => entry._id === restaurantId);
-  return restaurantEntry || restaurantIngredientsList.find(entry => entry._id === "default");
+  const restaurantEntry = restaurantIngredientsList.find(
+    (entry) => entry._id === restaurantId
+  );
+  return (
+    restaurantEntry ||
+    restaurantIngredientsList.find(
+      (entry) => entry._id === "default"
+    )
+  );
 };
 
-
 // calculate Cost and Calories
-const calculateCostAndCalories = (ingredients, restaurantData) => {
+const calculateCostAndCalories = (
+  ingredients,
+  restaurantData
+) => {
   let cost = 0;
   let calories = 0;
 
   for (const [category, items] of Object.entries(ingredients)) {
-      for (const item of items) {
-          const ingredientData = restaurantData[category]?.[item.toLowerCase()];
-          if (ingredientData) {
-              cost += parseFloat(ingredientData.cost) || 0;
-              calories += parseInt(ingredientData.calories) || 0;
-          }
+    for (const item of items) {
+      const ingredientData =
+        restaurantData[category]?.[item.toLowerCase()];
+      if (ingredientData) {
+        cost += parseFloat(ingredientData.cost) || 0;
+        calories += parseInt(ingredientData.calories) || 0;
       }
+    }
   }
   return { cost, calories };
-};  
+};
 
 // check for existing sandwich in database
 const findExistingSandwich = (ingredients, restaurantId) => {
-  return sandwichesList.find(sandwich => 
+  return sandwichesList.find(
+    (sandwich) =>
       sandwich.restaurant_id === restaurantId &&
-      JSON.stringify(sandwich.ingredients) === JSON.stringify(ingredients)
-  );       
+      JSON.stringify(sandwich.ingredients) ===
+        JSON.stringify(ingredients)
+  );
 };
 
 // generate Id for a new sandwich
@@ -491,7 +558,7 @@ app.post("/sandwiches/generate", (req, res) => {
   const { ingredients } = req.body; // expecting ingredients from request body
 
   if (!ingredients || typeof ingredients !== "object") {
-      return res.status(400).send("Invalid ingredients");
+    return res.status(400).send("Invalid ingredients");
   }
 
   const restaurants = ["mr_pickles", "subway"]; // list of restaurants IDs to check
@@ -499,63 +566,85 @@ app.post("/sandwiches/generate", (req, res) => {
 
   // step 1: generate sandwich using default restaurant data
   const defaultData = getIngredientsForRestaurant("default");
-  const defaultCalc = calculateCostAndCalories(ingredients, defaultData);
+  const defaultCalc = calculateCostAndCalories(
+    ingredients,
+    defaultData
+  );
 
   const defaultSandwich = {
-      id: generateUniqueId(),
-      name: "Generated Sandwich",
-      ingredients,
-      cost: defaultCalc.cost,
-      calories: defaultCalc.calories,
-      dietary_tags: determineDietaryTags(ingredients),
-      restaurant_id: null // no restaurant selected
+    id: generateUniqueId(),
+    name: "Generated Sandwich",
+    ingredients,
+    cost: defaultCalc.cost,
+    calories: defaultCalc.calories,
+    dietary_tags: determineDietaryTags(ingredients),
+    restaurant_id: null // no restaurant selected
   };
 
   sandwiches.push(defaultSandwich);
 
   // Step 2: Check restaurants for matching ingredient combinations
   for (const restaurant of restaurants) {
-      const restaurantData = getIngredientsForRestaurant(restaurant);
+    const restaurantData =
+      getIngredientsForRestaurant(restaurant);
 
-      // verfify all provided ingredients exist in the restaurants data
-      // if ingredients match, calculate for specific restaurant
-      const allIngredientsExist = Object.entries(ingredients).every(([category, items]) =>
-          items.every(item => restaurantData[category]?.[item.toLowerCase()])
+    // verfify all provided ingredients exist in the restaurants data
+    // if ingredients match, calculate for specific restaurant
+    const allIngredientsExist = Object.entries(
+      ingredients
+    ).every(([category, items]) =>
+      items.every(
+        (item) => restaurantData[category]?.[item.toLowerCase()]
+      )
+    );
+
+    if (!allIngredientsExist) {
+      console.log(
+        `Skipping ${restaurant} - Missing ingredients.`
       );
+      continue; // skip if ingredients don't match restaurant ingredients
+    }
 
-      if (!allIngredientsExist) {
-          console.log(`Skipping ${restaurant} - Missing ingredients.`);
-          continue; // skip if ingredients don't match restaurant ingredients
-      }
+    const existingSandwich = findExistingSandwich(
+      ingredients,
+      restaurant
+    );
+    if (existingSandwich) {
+      sandwiches.push(existingSandwich);
+      continue; // skip if existing sandwich found
+    }
 
-      const existingSandwich = findExistingSandwich(ingredients, restaurant);
-      if (existingSandwich) {
-          sandwiches.push(existingSandwich);
-          continue; // skip if existing sandwich found
-      }
+    // generate a new sandwich for the restaurant
+    const restaurantCalc = calculateCostAndCalories(
+      ingredients,
+      restaurantData
+    );
 
-      // generate a new sandwich for the restaurant
-      const restaurantCalc = calculateCostAndCalories(ingredients, restaurantData);
-
-      const newSandwich = {
-          id: generateUniqueId(),
-          name: `Generated Sandwich (${restaurant})`,
-          ingredients,
-          cost: restaurantCalc.cost,
-          calories: restaurantCalc.calories,
-          dietary_tags: determineDietaryTags(ingredients),
-          restaurant_id: restaurant
-      };
-      sandwiches.push(newSandwich);
+    const newSandwich = {
+      id: generateUniqueId(),
+      name: `Generated Sandwich (${restaurant})`,
+      ingredients,
+      cost: restaurantCalc.cost,
+      calories: restaurantCalc.calories,
+      dietary_tags: determineDietaryTags(ingredients),
+      restaurant_id: restaurant
+    };
+    sandwiches.push(newSandwich);
   }
 
   // save the new sandwiches in the sandwiches.json file
   sandwichesList.push(...sandwiches);
   try {
-      fs.writeFileSync(sandwichesPath, JSON.stringify(sandwichesList, null, 2));
-      console.log("Updated sandwiches.json file.");
+    fs.writeFileSync(
+      sandwichesPath,
+      JSON.stringify(sandwichesList, null, 2)
+    );
+    console.log("Updated sandwiches.json file.");
   } catch (err) {
-      console.error("Error writing to sandwiches.json file:", err);
+    console.error(
+      "Error writing to sandwiches.json file:",
+      err
+    );
   }
   res.json(sandwiches);
 });
@@ -565,20 +654,21 @@ const determineDietaryTags = (ingredients) => {
   const nonVegan = ["cheese", "eggs", "meat"];
   const nonVegetarian = ["meat"];
 
-  const allItems = Object.values(ingredients).flat().map(item => item.toLowerCase());
+  const allItems = Object.values(ingredients)
+    .flat()
+    .map((item) => item.toLowerCase());
   const tags = [];
 
-  if (allItems.every(item => !nonVegan.includes(item))) {
-      tags.push("vegan");
+  if (allItems.every((item) => !nonVegan.includes(item))) {
+    tags.push("vegan");
   }
 
-  if (allItems.every(item => !nonVegetarian.includes(item))) {
-      tags.push("vegetarian");
+  if (allItems.every((item) => !nonVegetarian.includes(item))) {
+    tags.push("vegetarian");
   }
 
   return tags;
 };
-
 
 // Start the server
 app.listen(port, () => {

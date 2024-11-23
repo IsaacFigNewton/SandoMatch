@@ -86,13 +86,16 @@ const SandwichSchema = new mongoose.Schema(
     },
     name: {
       type: String,
-      required: true
+      required: true,
       trim: true
     }
   },
   { collection: "sandwiches" }
 );
 
-const SandwichModel = mongoose.model("Sandwich", sandwichSchema);
+const SandwichModel = mongoose.model(
+  "Sandwich",
+  sandwichSchema
+);
 
 export default SandwichModel;
