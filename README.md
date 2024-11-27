@@ -16,19 +16,20 @@
 	</li>
 	<li>
 		After creating a new function, and before you export it to be integrated with the rest of the build, make sure you're validating the function properties similar to the following:
+		<br><br>
+		<i>
+		// Validate FilterPage props				<br>
+		FilterPage.propTypes = {					<br>
+		filters: PropTypes.shape({					<br>
+			include: PropTypes.array.isRequired,	<br>
+			exclude: PropTypes.array.isRequired		<br>
+		}).isRequired,								<br>
+		setFilters: PropTypes.func.isRequired,		<br>
+		applyFilters: PropTypes.func.isRequired,	<br>
+		};
+		</i>
 	</li>
 </ol>
-'''
-// Validate FilterPage props			
-FilterPage.propTypes = {				
-filters: PropTypes.shape({				
-	include: PropTypes.array.isRequired,
-	exclude: PropTypes.array.isRequired	
-}).isRequired,							
-setFilters: PropTypes.func.isRequired,	
-applyFilters: PropTypes.func.isRequired,
-};
-'''
 
 <hr>
 
