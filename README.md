@@ -6,7 +6,33 @@
 
 ![Sign In Flow (1)](https://github.com/user-attachments/assets/185a49fc-6077-40f2-8bae-a51736075960)
 
-### Local Testing/Deployment Setup
+<hr>
+
+## Making changes
+
+<ol>
+	<li>To add new functionality, we recommend starting by copying an existing one, renaming and then altering the contents of its respective function.</li>
+	<li> After creating a new function, and before you export it to be integrated with the rest of the build, make sure you're validating the function properties similar to the following:
+		```
+		// Validate FilterPage props
+		FilterPage.propTypes = {
+		filters: PropTypes.shape({
+			include: PropTypes.array.isRequired,
+			exclude: PropTypes.array.isRequired
+		}).isRequired,
+		setFilters: PropTypes.func.isRequired,
+		applyFilters: PropTypes.func.isRequired,
+		};
+		```
+	</li>
+</ol>
+
+<hr>
+
+## Local Testing/Deployment Setup
+
+Make sure that you test any changes to your local build prior to
+requesting your branch be merged into main.
 
 #### In the root directory:
 
@@ -28,6 +54,8 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
 	<li><b>npm lint</b></li>
 	<li><b>npm run dev</b></li>
 </ol>
+
+<hr>
 
 ## Sources
 

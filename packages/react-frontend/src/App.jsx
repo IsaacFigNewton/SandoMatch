@@ -19,11 +19,11 @@ function App() {
   const [ratings, setRatings] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
   const [randomSandwich, setRandomSandwich] = useState(null);
-  const [error, setError] = useState(null);
+  const [, setError] = useState(null);
 
   const INVALID_TOKEN = "INVALID_TOKEN";
-  const [token, setToken] = useState(INVALID_TOKEN);
-  const [message, setMessage] = useState("");
+  const [, setToken] = useState(INVALID_TOKEN);
+  const [, setMessage] = useState("");
   const [filters, setFilters] = useState({
     include: [],
     exclude: []
@@ -275,9 +275,16 @@ function App() {
               />
             }
           />
+
+          {/* user authentication routes*/}
           <Route
             path="/login"
-            element={<Login handleSubmit={loginUser} />}
+            element={
+              <Login
+                handleSubmit={loginUser}
+                buttonLabel="Log In"
+              />
+            }
           />
           <Route
             path="/signup"
@@ -288,31 +295,9 @@ function App() {
               />
             }
           />
+          <Route path="/user" element={<UserPage />} />
         </Routes>
       </div>
-
-      {/* user authentication routes*/}
-      <Routes>
-        <Route
-          path="/login"
-          element={
-            <Login
-              handleSubmit={loginUser}
-              buttonLabel="Log In"
-            />
-          }
-        />
-        <Route
-          path="/signup"
-          element={
-            <Login
-              handleSubmit={signupUser}
-              buttonLabel="Sign Up"
-            />
-          }
-        />
-        <Route path="/user" element={<UserPage />} />
-      </Routes>
     </Router>
   );
 }

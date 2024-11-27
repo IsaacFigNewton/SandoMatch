@@ -1,5 +1,7 @@
 // import React from "react";
 
+import PropTypes from "prop-types";
+
 const Rating = ({ sandwichId, rating, handleRatingChange }) => {
   return (
     <div className="rating">
@@ -20,6 +22,13 @@ const Rating = ({ sandwichId, rating, handleRatingChange }) => {
       <p>Your rating: {rating || "No rating yet"}</p>
     </div>
   );
+};
+
+// Validate Rating function props
+Rating.propTypes = {
+  sandwichId: PropTypes.number.isRequired,
+  rating: PropTypes.number.isRequired,
+  handleRatingChange: PropTypes.func.isRequired
 };
 
 export default Rating;

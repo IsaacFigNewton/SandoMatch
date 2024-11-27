@@ -1,4 +1,5 @@
-// import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { useState } from "react";
 
 function Login({ handleSubmit, buttonLabel = "Log In" }) {
   // property validation
@@ -48,5 +49,11 @@ function Login({ handleSubmit, buttonLabel = "Log In" }) {
     </form>
   );
 }
+
+// Validate Login page props
+Login.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  buttonLabel: PropTypes.string.isRequired
+};
 
 export default Login;

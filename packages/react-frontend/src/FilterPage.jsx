@@ -1,14 +1,8 @@
 // import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const FilterPage = ({ filters, setFilters, applyFilters }) => {
-  // property validation
-  if (!filters || !setFilters || !applyFilters) {
-    throw new Error(
-      "Insufficient arguments provided to FilterPage function."
-    );
-  }
-
   const ingredients = {
     Bread: ["White", "Sourdough", "Tortilla Wrap"],
     Cheese: ["Mozzarella", "Cheddar", "Provolone"],
@@ -79,6 +73,16 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
       </Link>
     </div>
   );
+};
+
+// Validate FilterPage props
+FilterPage.propTypes = {
+  filters: PropTypes.shape({
+    include: PropTypes.array.isRequired,
+    exclude: PropTypes.array.isRequired
+  }).isRequired,
+  setFilters: PropTypes.func.isRequired,
+  applyFilters: PropTypes.func.isRequired
 };
 
 export default FilterPage;

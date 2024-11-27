@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json,html}' --config ./.prettierrc",
     "test": "echo \"Error: no test specified\""
   },
   "author": "",

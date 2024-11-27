@@ -1,4 +1,5 @@
 // import React from "react";
+import PropTypes from "prop-types";
 import Rating from "./Rating";
 
 const SandwichList = ({
@@ -34,6 +35,13 @@ const SandwichList = ({
       ))}
     </div>
   );
+};
+
+// Validate Sandwich card props
+SandwichList.propTypes = {
+  sandwiches: PropTypes.arrayOf(PropTypes.object).isRequired,
+  ratings: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleRatingChange: PropTypes.func.isRequired
 };
 
 export default SandwichList;
