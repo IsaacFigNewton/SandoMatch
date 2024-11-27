@@ -672,5 +672,7 @@ const determineDietaryTags = (ingredients) => {
 
 // Start the server
 app.listen(process.env.PORT || port, () => {
-  console.log("REST API is listening.");
+  console.log(
+    "If this is a local deployment, then the REST API is listening at http://localhost:8000/, which means you'll have to update the backend URL in the frontend's App.jsx file."
+  );
 });
