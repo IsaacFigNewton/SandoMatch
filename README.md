@@ -1,10 +1,13 @@
-<a href="https://delightful-mushroom-05d6e7b1e.5.azurestaticapps.net/">
-<h1> SandoMatch </h1>
-<h2> Find your perfect sandwich </h2>
-</a>
+<h1><a href="https://delightful-mushroom-05d6e7b1e.5.azurestaticapps.net/"> SandoMatch </a></h1>
+<h3> Find your perfect sandwich </h3>
+<br>
+<br>
 
+## Diagrams
+### Signup Flow
 ![Sign Up Flow (1)](https://github.com/user-attachments/assets/6e817bb0-1504-4972-ba22-53ce04685c0b)
 
+### Login Flow
 ![Sign In Flow (1)](https://github.com/user-attachments/assets/185a49fc-6077-40f2-8bae-a51736075960)
 
 <hr>
