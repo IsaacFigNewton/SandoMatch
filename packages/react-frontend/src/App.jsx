@@ -12,7 +12,7 @@ import Login from "./Login";
 import UserPage from "./UserPage";
 import "./App.css";
 
-const API_PREFIX = "http://localhost:8000";
+const API_PREFIX = "http://sandomatch.azurewebsites.net";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);

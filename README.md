@@ -11,19 +11,22 @@
 ## Making changes
 
 <ol>
-	<li>To add new functionality, we recommend starting by copying an existing one, renaming and then altering the contents of its respective function.</li>
-	<li> After creating a new function, and before you export it to be integrated with the rest of the build, make sure you're validating the function properties similar to the following:
-		```
-		// Validate FilterPage props
-		FilterPage.propTypes = {
-		filters: PropTypes.shape({
-			include: PropTypes.array.isRequired,
-			exclude: PropTypes.array.isRequired
-		}).isRequired,
-		setFilters: PropTypes.func.isRequired,
-		applyFilters: PropTypes.func.isRequired,
+	<li>
+		To add new functionality, we recommend starting by copying an existing one, renaming and then altering the contents of its respective function.
+	</li>
+	<li>
+		After creating a new function, and before you export it to be integrated with the rest of the build, make sure you're validating the function properties similar to the following:
+		<b>
+		// Validate FilterPage props				<br>
+		FilterPage.propTypes = {					<br>
+		filters: PropTypes.shape({					<br>
+			include: PropTypes.array.isRequired,	<br>
+			exclude: PropTypes.array.isRequired		<br>
+		}).isRequired,								<br>
+		setFilters: PropTypes.func.isRequired,		<br>
+		applyFilters: PropTypes.func.isRequired,	<br>
 		};
-		```
+		<b>
 	</li>
 </ol>
 
