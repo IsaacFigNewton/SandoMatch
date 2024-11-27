@@ -1,6 +1,7 @@
-# SandoMatch
-
-## Find your perfect sandwich
+<a href="https://delightful-mushroom-05d6e7b1e.5.azurestaticapps.net/">
+<h1> SandoMatch </h1>
+<h2> Find your perfect sandwich </h2>
+</a>
 
 ![Sign Up Flow (1)](https://github.com/user-attachments/assets/6e817bb0-1504-4972-ba22-53ce04685c0b)
 
