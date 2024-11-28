@@ -9,6 +9,7 @@ import sandwichData from "./sandwiches.json";
 import FilterPage from "./FilterPage";
 import SandwichList from "./SandwichList";
 import Login from "./Login";
+import Signup from "./Signup";
 import UserPage from "./UserPage";
 import "./App.css";
 
@@ -289,7 +290,7 @@ function App() {
           <Route
             path="/signup"
             element={
-              <Login
+              <Signup
                 handleSubmit={signupUser}
                 buttonLabel="Sign Up"
               />

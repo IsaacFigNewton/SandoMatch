@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
-    id: {
+    _id: {
       type: String,
       required: true
     },
@@ -20,7 +20,13 @@ const userSchema = new mongoose.Schema(
     favoriteSando: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Sandwich"
-    }
+    },
+    bookmarkedSandos: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Sandwich"
+      }
+    ]
   },
   { collection: "users" }
 );

@@ -21,7 +21,10 @@ export function registerUser(req, res) {
           .then((hashedPassword) => {
             const newUser = new UserModel({
               _id: username,
-              password: hashedPassword
+              password: hashedPassword,
+              reviews: [],
+              favoriteSando: null,
+              bookmarkedSandos: []
             });
 
             return newUser.save().then(() => {
