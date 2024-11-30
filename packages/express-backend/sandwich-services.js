@@ -6,7 +6,7 @@ mongoose.set("debug", true);
 
 
 function findSandwichById(id) {
-  return userModel.findById(id);
+  return SandwichModel.findById(id);
 }
 
 function addSandwich(sandwich) {
@@ -15,9 +15,14 @@ function addSandwich(sandwich) {
   return promise;
 }
 
-function addReview(id, review) {
+function addReview(id, review, rating) {
+  const ratings = [db.sandwiches.findSandwichById(id).rating, rating];
   const reviewToAdd = db.sandwiches.updateOne({ _id: id }, 
-    { $push: { reviews: review }, $inc: { review_count: 1 } }
+    { 
+      $push: { reviews: review }, 
+      $inc: { review_count: 1 }, 
+      $set: { rating: ratings }
+    }
   );
   const promise = reviewToAdd.save();
   return promise;
