@@ -11,9 +11,16 @@ import SandwichList from "./SandwichList";
 import Login from "./Login";
 import Signup from "./Signup";
 import UserPage from "./UserPage";
+import MyBookmarkedSandos from "./MyBookmarkedSandos";
+import MyFavoriteSandos from "./MyFavoriteSando";
+import MyReviews from "./MyReviews";
+import MyTriedSandos from "./MyTriedSandos";
+
 import "./App.css";
 
-const API_PREFIX = "http://sandomatch.azurewebsites.net";
+//const API_PREFIX = "http://sandomatch.azurewebsites.net";
+const API_PREFIX = "http://localhost:8000";
+
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -24,6 +31,7 @@ function App() {
 
   const INVALID_TOKEN = "INVALID_TOKEN";
   const [, setToken] = useState(INVALID_TOKEN);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [, setMessage] = useState("");
   const [filters, setFilters] = useState({
     include: [],
@@ -45,6 +53,10 @@ function App() {
         console.error(error);
       });
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuVisible((prev) => !prev);
+  };
 
   const applyFilters = (filters) => {
     fetch(`${API_PREFIX}/sandwiches/filter`, {
@@ -196,6 +208,40 @@ function App() {
     <Router>
       <div>
         <header className="app-header">
+          <div className='menuPopoutButton'>
+            <button 
+              className='menu-button'
+              onClick={toggleMenu}  
+              aria-haspopup="true"
+              aria-expanded={isMenuVisible}
+            >
+              Menu
+            </button>
+
+            {isMenuVisible && (
+              <div className="menuPopout" role="menu">
+                <ul className="menu-list">
+                  <li role="menuitem">
+                    <Link to="/user">Profile</Link>
+                  </li>
+                  <li role="menuitem">
+                    <Link to="/reviews">My Reviews</Link>
+                  </li>
+                  <li role="menuitem">
+                    <Link to="/favorites">My Favorite Sando</Link>
+                  </li>
+                  <li role="menuitem">
+                    <Link to="/myBookmarked">Bookmarked Sandos</Link>
+                  </li>
+                  <li role="menuitem">
+                    <Link to="/tried">Sandos I've Tried</Link>
+                  </li>
+                </ul>
+
+              </div>
+            )}
+
+          </div>
           <Link to="/" className="logo-link">
             <h1 className="app-logo">SandoMatch</h1>
           </Link>
@@ -297,6 +343,22 @@ function App() {
             }
           />
           <Route path="/user" element={<UserPage />} />
+          <Route 
+            path="/myBookmarked"
+            element={<MyBookmarkedSandos />}
+          />
+          <Route 
+            path="/favorites"
+            element={<MyFavoriteSandos />}
+          />
+          <Route 
+            path="/reviews"
+            element={<MyReviews />}
+          />
+          <Route 
+            path="/tried"
+            element={<MyTriedSandos />}
+          />
         </Routes>
       </div>
     </Router>

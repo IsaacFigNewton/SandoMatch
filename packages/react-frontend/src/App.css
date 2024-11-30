@@ -77,6 +77,108 @@ h1 {
   padding-top: 3rem;
 }
 
+.menu-button {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  background-color: #333;
+  color: #fff;
+  border: darkviolet;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+  background-color: #007bff;
+}
+
+.menuPopout {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  background-color: #333;
+  border: 1px solid #ffc107;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 200px;
+  padding: 10px;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list li {
+  margin: 10px 0;
+}
+
+.menu-list li a {
+  text-decoration: aqua;
+  color: #fff;
+  display: block;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.menu-list li a:hover {
+  transform: scale(1.1);
+  background-color: #007bff;
+}
+
+.sando-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.favorite-button {
+  background: none;
+  color: crimson;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0px;
+  width: 28px;
+  height: 28px;
+}
+
+.favorite-button:hover {
+  transform: scale(1.1);
+}
+
+.bookmark-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0px;
+  width: 28px;
+  height: 28px;
+}
+
+.bookmark-button:hover {
+  transform: scale(1.1);
+}
+
+.tried-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0px;
+  width: 28px;
+  height: 28px;
+}
+
+.tried-button:hover {
+  transform: scale(1.1);
+}
+
 .auth-buttons {
   position: absolute;
   top: 1rem;
@@ -160,6 +262,13 @@ h1 {
   box-shadow: 0 4px 8px rgba(146, 132, 132, 0.1);
   text-align: left;
   transition: all 0.3s;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .sandwich-card h2 {
