@@ -7405,5 +7405,541 @@
       "vegetarian"
     ],
     "restaurant_id": null
+  },
+  {
+    "id": 1732821051166.8447,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "cheese": [
+        "monterey jack"
+      ],
+      "meats": [
+        "chicken breast"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 5,
+    "calories": 330,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732821309147.8728,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheese": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 6,
+    "calories": 380,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732821723573.423,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "breads": [
+        "dutch crunch"
+      ],
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheese": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 6,
+    "calories": 380,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732821811187.6782,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "breads": [
+        "dutch crunch"
+      ],
+      "vegetables": [
+        "lettuce",
+        "onion"
+      ],
+      "condiments": [
+        "mayo"
+      ],
+      "spices": [
+        "oregano"
+      ]
+    },
+    "cost": 1.3,
+    "calories": 55,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732822166898.5857,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "breads": [
+        "baguette"
+      ],
+      "vegetables": [
+        "lettuce",
+        "tomato"
+      ],
+      "condiments": [
+        "mustard"
+      ],
+      "spices": [
+        "black pepper"
+      ]
+    },
+    "cost": 3.6,
+    "calories": 290,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732822728965.3677,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "breads": [
+        "baguette"
+      ],
+      "vegetables": [
+        "lettuce",
+        "tomato"
+      ],
+      "condiments": [
+        "mustard"
+      ],
+      "spices": [
+        "black pepper"
+      ]
+    },
+    "cost": 3.6,
+    "calories": 290,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732827234782.8865,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheese": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 6,
+    "calories": 380,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732827470170.4282,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheese": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 6,
+    "calories": 380,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732827609997.1426,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheese": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 6,
+    "calories": 380,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732827759360.1196,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheese": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 6,
+    "calories": 380,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732827808817.1628,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheese": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 6,
+    "calories": 380,
+    "dietary_tags": [
+      "vegan",
+      "vegetarian"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732830483564.859,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheese": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 6,
+    "calories": 380,
+    "dietary_tags": [
+      "vegan"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732832389171.8926,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheeses": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 7,
+    "calories": 470,
+    "dietary_tags": [
+      "vegan"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732833359370.9692,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheeses": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 7,
+    "calories": 470,
+    "dietary_tags": [
+      "vegan"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732833503181.4995,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheeses": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 7,
+    "calories": 470,
+    "dietary_tags": [
+      "vegan"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1732834369520.4104,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheeses": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 7,
+    "calories": 470,
+    "dietary_tags": [
+      "vegan"
+    ],
+    "restaurant_id": null
+  },
+  {
+    "id": 1733002328041.3926,
+    "name": "Generated Sandwich",
+    "ingredients": {
+      "meats": [
+        "chicken breast",
+        "bacon"
+      ],
+      "cheeses": [
+        "monterey jack"
+      ],
+      "vegetables": [
+        "avocado",
+        "lettuce",
+        "pepperoncini",
+        "pickle",
+        "onion",
+        "tomato"
+      ],
+      "condiments": [
+        "mayonnaise",
+        "mustard",
+        "garlic sauce"
+      ]
+    },
+    "cost": 7,
+    "calories": 470,
+    "dietary_tags": [
+      "vegan"
+    ],
+    "restaurant_id": null
   }
 ]

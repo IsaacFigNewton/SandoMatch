@@ -70,7 +70,7 @@ try {
 try {
     const fileData = fs.readFileSync(sandwichesPath, "utf8");
     sandwichesList = JSON.parse(fileData);
-    console.log("Loaded Sandwiches list:", sandwichesList);
+    console.log("Loaded Sandwiches list:");
 } catch (err) {
     console.error("Error reading sandwiches list file:", err);
 }
@@ -79,7 +79,7 @@ try {
 try {
     const fileData = fs.readFileSync(restaurantIngredientsPath, "utf8");
     restaurantIngredientsList =  JSON.parse(fileData);
-    console.log("Loaded Restaurant Ingredients:", restaurantIngredientsList);
+    console.log("Loaded Restaurant Ingredients:");
 } catch (err) {
     console.error("Error reading restaurant ingredients file:", err);
     
@@ -257,11 +257,18 @@ const calculateCostAndCalories = (ingredients, restaurantData) => {
 
 // check for existing sandwich in database
 const findExistingSandwich = (ingredients, restaurantId) => {
-    return sandwichesList.find(sandwich => 
-        sandwich.restaurant_id === restaurantId &&
-        JSON.stringify(sandwich.ingredients) === JSON.stringify(ingredients)
-    );       
+    // normalize the request ingredients into a nested structure
+   
+
+    return sandwichesList.find(sandwich => {
+        console.log("Comparing with Existing Sandwich:", JSON.stringify(sandwich.ingredients, null, 2));
+        return sandwich.restaurant === restaurantId &&
+            JSON.stringify(sandwich.ingredients) === JSON.stringify(normalizedIngredients);
+    });       
 };
+
+
+
 
 // generate Id for a new sandwich
 const generateUniqueId = () => Date.now() + Math.random();
@@ -272,7 +279,7 @@ app.post("/sandwiches/generate", (req, res) => {
     const { ingredients } = req.body; // expecting ingredients from request body
 
     if (!ingredients || typeof ingredients !== "object") {
-        return res.status(400).send("Invalid ingredients");
+        return res.status(400).json({ error: "Invalid ingredients format." });
     }
 
     const restaurants = ["mr_pickles", "subway"]; // list of restaurants IDs to check
@@ -309,6 +316,7 @@ app.post("/sandwiches/generate", (req, res) => {
             continue; // skip if ingredients don't match restaurant ingredients
         }
 
+        // check if sandwich with same ingredients already exists
         const existingSandwich = findExistingSandwich(ingredients, restaurant);
         if (existingSandwich) {
             sandwiches.push(existingSandwich);
@@ -351,9 +359,7 @@ const determineDietaryTags = (ingredients) => {
 
     if (allItems.every(item => !nonVegan.includes(item))) {
         tags.push("vegan");
-    }
-
-    if (allItems.every(item => !nonVegetarian.includes(item))) {
+    } else if (allItems.every(item => !nonVegetarian.includes(item))) {
         tags.push("vegetarian");
     }
 
