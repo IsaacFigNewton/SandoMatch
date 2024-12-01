@@ -21,7 +21,6 @@ import "./App.css";
 const API_PREFIX = "http://sandomatch.azurewebsites.net";
 //const API_PREFIX = "http://localhost:8000";
 
-
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
   const [ratings, setRatings] = useState({});
@@ -208,10 +207,10 @@ function App() {
     <Router>
       <div>
         <header className="app-header">
-          <div className='menuPopoutButton'>
-            <button 
-              className='menu-button'
-              onClick={toggleMenu}  
+          <div className="menuPopoutButton">
+            <button
+              className="menu-button"
+              onClick={toggleMenu}
               aria-haspopup="true"
               aria-expanded={isMenuVisible}
             >
@@ -228,19 +227,21 @@ function App() {
                     <Link to="/reviews">My Reviews</Link>
                   </li>
                   <li role="menuitem">
-                    <Link to="/favorites">My Favorite Sando</Link>
+                    <Link to="/favorites">
+                      My Favorite Sando
+                    </Link>
                   </li>
                   <li role="menuitem">
-                    <Link to="/myBookmarked">Bookmarked Sandos</Link>
+                    <Link to="/myBookmarked">
+                      Bookmarked Sandos
+                    </Link>
                   </li>
                   <li role="menuitem">
                     <Link to="/tried">Sandos I've Tried</Link>
                   </li>
                 </ul>
-
               </div>
             )}
-
           </div>
           <Link to="/" className="logo-link">
             <h1 className="app-logo">SandoMatch</h1>
@@ -343,22 +344,16 @@ function App() {
             }
           />
           <Route path="/user" element={<UserPage />} />
-          <Route 
+          <Route
             path="/myBookmarked"
             element={<MyBookmarkedSandos />}
           />
-          <Route 
+          <Route
             path="/favorites"
             element={<MyFavoriteSandos />}
           />
-          <Route 
-            path="/reviews"
-            element={<MyReviews />}
-          />
-          <Route 
-            path="/tried"
-            element={<MyTriedSandos />}
-          />
+          <Route path="/reviews" element={<MyReviews />} />
+          <Route path="/tried" element={<MyTriedSandos />} />
         </Routes>
       </div>
     </Router>
