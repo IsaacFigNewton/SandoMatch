@@ -1,342 +1,281 @@
 [
-    {
-        "id": 1,
-        "name": "Elite Chicken & Bacon Ranch",
-        "ingredients": [
-            "Chicken Breast",
-            "Bacon",
-            "Ranch Dressing",
-            "Cheese"
-        ],
-        "cuisine": null,
-        "cost": 15.28,
-        "calories": 580
-    },
-    {
-        "id": 2,
-        "name": "The Philly",
-        "ingredients": [
-            "Steak",
-            "Cheese"
-        ],
-        "cuisine": "American",
-        "cost": 13.78,
-        "calories": 505
-    },
-    {
-        "id": 3,
-        "name": "Subway Club",
-        "ingredients": [
-            "Turkey Breast",
-            "Black Forest Ham",
-            "Roast Beef"
-        ],
-        "cuisine": null,
-        "cost": 14.78,
-        "calories": 500
-    },
-    {
-        "id": 4,
-        "name": "All-American Club",
-        "ingredients": [
-            "Turkey Breast",
-            "Black Forest Ham",
-            "Bacon"
-        ],
-        "cuisine": "American",
-        "cost": 14.28,
-        "calories": 540
-    },
-    {
-        "id": 5,
-        "name": "The Hotshot Italiano",
-        "ingredients": [
-            "Genoa Salami",
-            "Pepperoni",
-            "Ham"
-        ],
-        "cuisine": "Italian",
-        "cost": 12.28,
-        "calories": 630
-    },
-    {
-        "id": 6,
-        "name": "The Ultimate B.M.T.",
-        "ingredients": [
-            "Ham",
-            "Genoa Salami",
-            "Pepperoni"
-        ],
-        "cuisine": "Italian",
-        "cost": 12.78,
-        "calories": 560
-    },
-    {
-        "id": 7,
-        "name": "Titan Turkey",
-        "ingredients": [
-            "Turkey Breast"
-        ],
-        "cuisine": null,
-        "cost": 12.68,
-        "calories": 490
-    },
-    {
-        "id": 8,
-        "name": "Home Run Ham",
-        "ingredients": [
-            "Ham"
-        ],
-        "cuisine": null,
-        "cost": 12.18,
-        "calories": 510
-    },
-    {
-        "id": 9,
-        "name": "Honey Mustard BBQ Chicken",
-        "ingredients": [
-            "Chicken Breast",
-            "Honey Mustard"
-        ],
-        "cuisine": "BBQ",
-        "cost": 13.78,
-        "calories": 510
-    },
-    {
-        "id": 10,
-        "name": "The Boss",
-        "ingredients": [],
-        "cuisine": null,
-        "cost": 14.58,
-        "calories": 690
-    },
-    {
-        "id": 11,
-        "name": "Spicy Nacho Chicken",
-        "ingredients": [
-            "Chicken Breast"
-        ],
-        "cuisine": null,
-        "cost": 13.78,
-        "calories": 440
-    },
-    {
-        "id": 12,
-        "name": "Cheesy Garlic Steak",
-        "ingredients": [
-            "Steak",
-            "Cheese",
-            "Herb Garlic Oil"
-        ],
-        "cuisine": null,
-        "cost": 13.78,
-        "calories": 510
-    },
-    {
-        "id": 13,
-        "name": "Garlic Roast Beef",
-        "ingredients": [
-            "Roast Beef",
-            "Herb Garlic Oil"
-        ],
-        "cuisine": null,
-        "cost": 10.69,
-        "calories": 490
-    },
-    {
-        "id": 14,
-        "name": "The Beast",
-        "ingredients": [],
-        "cuisine": null,
-        "cost": 11.19,
-        "calories": 740
-    },
-    {
-        "id": 15,
-        "name": "Teriyaki Blitz",
-        "ingredients": [
-            "Chicken Teriyaki"
-        ],
-        "cuisine": "Japanese",
-        "cost": 9.49,
-        "calories": 460
-    },
-    {
-        "id": 16,
-        "name": "The Outlaw",
-        "ingredients": [],
-        "cuisine": null,
-        "cost": 9.49,
-        "calories": 590
-    },
-    {
-        "id": 17,
-        "name": "The Monster",
-        "ingredients": [],
-        "cuisine": null,
-        "cost": 10.99,
-        "calories": 590
-    },
-    {
-        "id": 18,
-        "name": "Sweet Onion Chicken Teriyaki",
-        "ingredients": [
-            "Chicken Teriyaki",
-            "Sweet Onion Sauce"
-        ],
-        "cuisine": "Japanese",
-        "cost": 6.99,
-        "calories": 430
-    },
-    {
-        "id": 19,
-        "name": "Pickleball Club",
-        "ingredients": [],
-        "cuisine": null,
-        "cost": 6.99,
-        "calories": 500
-    },
-    {
-        "id": 20,
-        "name": "Black Forest Ham",
-        "ingredients": [
-            "Black Forest Ham"
-        ],
-        "cuisine": null,
-        "cost": 5.99,
-        "calories": 320
-    },
-    {
-        "id": 21,
-        "name": "B.L.T.",
-        "ingredients": [
-            "Bacon",
-            "Lettuce",
-            "Tomato"
-        ],
-        "cuisine": null,
-        "cost": 5.99,
-        "calories": 370
-    },
-    {
-        "id": 22,
-        "name": "Cold Cut Combo",
-        "ingredients": [
-            "Turkey Ham",
-            "Turkey Salami",
-            "Turkey Bologna"
-        ],
-        "cuisine": null,
-        "cost": 5.99,
-        "calories": 370
-    },
-    {
-        "id": 23,
-        "name": "Grilled Chicken",
-        "ingredients": [
-            "Chicken Breast"
-        ],
-        "cuisine": null,
-        "cost": 6.99,
-        "calories": 330
-    },
-    {
-        "id": 24,
-        "name": "Meatball Marinara",
-        "ingredients": [
-            "Italian Meatballs",
-            "Marinara Sauce"
-        ],
-        "cuisine": "Italian",
-        "cost": 6.99,
-        "calories": 520
-    },
-    {
-        "id": 25,
-        "name": "Oven-Roasted Turkey",
-        "ingredients": [
-            "Turkey Breast"
-        ],
-        "cuisine": null,
-        "cost": 5.99,
-        "calories": 310
-    },
-    {
-        "id": 26,
-        "name": "Pizza Sub",
-        "ingredients": [
-            "Pepperoni",
-            "Marinara Sauce",
-            "Cheese"
-        ],
-        "cuisine": "Italian",
-        "cost": 4.99,
-        "calories": 490
-    },
-    {
-        "id": 27,
-        "name": "Oven-Roasted Turkey & Ham",
-        "ingredients": [
-            "Turkey Breast",
-            "Ham"
-        ],
-        "cuisine": null,
-        "cost": 5.99,
-        "calories": 310
-    },
-    {
-        "id": 28,
-        "name": "Rotisserie-Style Chicken",
-        "ingredients": [
-            "Chicken Breast"
-        ],
-        "cuisine": null,
-        "cost": 6.99,
-        "calories": 350
-    },
-    {
-        "id": 29,
-        "name": "Roast Beef",
-        "ingredients": [
-            "Roast Beef"
-        ],
-        "cuisine": null,
-        "cost": 6.99,
-        "calories": 350
-    },
-    {
-        "id": 30,
-        "name": "Steak & Cheese",
-        "ingredients": [
-            "Steak",
-            "Cheese"
-        ],
-        "cuisine": null,
-        "cost": 6.99,
-        "calories": 370
-    },
-    {
-        "id": 31,
-        "name": "Tuna",
-        "ingredients": [
-            "Tuna"
-        ],
-        "cuisine": null,
-        "cost": 5.99,
-        "calories": 510
-    },
-    {
-        "id": 32,
-        "name": "Veggie Delite",
-        "ingredients": [
-            "Lettuce",
-            "Tomato",
-            "Cucumber",
-            "Green Pepper",
-            "Onion"
-        ],
-        "cuisine": null,
-        "cost": 5.99,
-        "calories": 220
-    }
+  {
+    "id": 1,
+    "name": "Elite Chicken & Bacon Ranch",
+    "ingredients": [
+      "Chicken Breast",
+      "Bacon",
+      "Ranch Dressing",
+      "Cheese"
+    ],
+    "cuisine": null,
+    "cost": 15.28,
+    "calories": 580
+  },
+  {
+    "id": 2,
+    "name": "The Philly",
+    "ingredients": ["Steak", "Cheese"],
+    "cuisine": "American",
+    "cost": 13.78,
+    "calories": 505
+  },
+  {
+    "id": 3,
+    "name": "Subway Club",
+    "ingredients": [
+      "Turkey Breast",
+      "Black Forest Ham",
+      "Roast Beef"
+    ],
+    "cuisine": null,
+    "cost": 14.78,
+    "calories": 500
+  },
+  {
+    "id": 4,
+    "name": "All-American Club",
+    "ingredients": [
+      "Turkey Breast",
+      "Black Forest Ham",
+      "Bacon"
+    ],
+    "cuisine": "American",
+    "cost": 14.28,
+    "calories": 540
+  },
+  {
+    "id": 5,
+    "name": "The Hotshot Italiano",
+    "ingredients": ["Genoa Salami", "Pepperoni", "Ham"],
+    "cuisine": "Italian",
+    "cost": 12.28,
+    "calories": 630
+  },
+  {
+    "id": 6,
+    "name": "The Ultimate B.M.T.",
+    "ingredients": ["Ham", "Genoa Salami", "Pepperoni"],
+    "cuisine": "Italian",
+    "cost": 12.78,
+    "calories": 560
+  },
+  {
+    "id": 7,
+    "name": "Titan Turkey",
+    "ingredients": ["Turkey Breast"],
+    "cuisine": null,
+    "cost": 12.68,
+    "calories": 490
+  },
+  {
+    "id": 8,
+    "name": "Home Run Ham",
+    "ingredients": ["Ham"],
+    "cuisine": null,
+    "cost": 12.18,
+    "calories": 510
+  },
+  {
+    "id": 9,
+    "name": "Honey Mustard BBQ Chicken",
+    "ingredients": ["Chicken Breast", "Honey Mustard"],
+    "cuisine": "BBQ",
+    "cost": 13.78,
+    "calories": 510
+  },
+  {
+    "id": 10,
+    "name": "The Boss",
+    "ingredients": [],
+    "cuisine": null,
+    "cost": 14.58,
+    "calories": 690
+  },
+  {
+    "id": 11,
+    "name": "Spicy Nacho Chicken",
+    "ingredients": ["Chicken Breast"],
+    "cuisine": null,
+    "cost": 13.78,
+    "calories": 440
+  },
+  {
+    "id": 12,
+    "name": "Cheesy Garlic Steak",
+    "ingredients": ["Steak", "Cheese", "Herb Garlic Oil"],
+    "cuisine": null,
+    "cost": 13.78,
+    "calories": 510
+  },
+  {
+    "id": 13,
+    "name": "Garlic Roast Beef",
+    "ingredients": ["Roast Beef", "Herb Garlic Oil"],
+    "cuisine": null,
+    "cost": 10.69,
+    "calories": 490
+  },
+  {
+    "id": 14,
+    "name": "The Beast",
+    "ingredients": [],
+    "cuisine": null,
+    "cost": 11.19,
+    "calories": 740
+  },
+  {
+    "id": 15,
+    "name": "Teriyaki Blitz",
+    "ingredients": ["Chicken Teriyaki"],
+    "cuisine": "Japanese",
+    "cost": 9.49,
+    "calories": 460
+  },
+  {
+    "id": 16,
+    "name": "The Outlaw",
+    "ingredients": [],
+    "cuisine": null,
+    "cost": 9.49,
+    "calories": 590
+  },
+  {
+    "id": 17,
+    "name": "The Monster",
+    "ingredients": [],
+    "cuisine": null,
+    "cost": 10.99,
+    "calories": 590
+  },
+  {
+    "id": 18,
+    "name": "Sweet Onion Chicken Teriyaki",
+    "ingredients": ["Chicken Teriyaki", "Sweet Onion Sauce"],
+    "cuisine": "Japanese",
+    "cost": 6.99,
+    "calories": 430
+  },
+  {
+    "id": 19,
+    "name": "Pickleball Club",
+    "ingredients": [],
+    "cuisine": null,
+    "cost": 6.99,
+    "calories": 500
+  },
+  {
+    "id": 20,
+    "name": "Black Forest Ham",
+    "ingredients": ["Black Forest Ham"],
+    "cuisine": null,
+    "cost": 5.99,
+    "calories": 320
+  },
+  {
+    "id": 21,
+    "name": "B.L.T.",
+    "ingredients": ["Bacon", "Lettuce", "Tomato"],
+    "cuisine": null,
+    "cost": 5.99,
+    "calories": 370
+  },
+  {
+    "id": 22,
+    "name": "Cold Cut Combo",
+    "ingredients": [
+      "Turkey Ham",
+      "Turkey Salami",
+      "Turkey Bologna"
+    ],
+    "cuisine": null,
+    "cost": 5.99,
+    "calories": 370
+  },
+  {
+    "id": 23,
+    "name": "Grilled Chicken",
+    "ingredients": ["Chicken Breast"],
+    "cuisine": null,
+    "cost": 6.99,
+    "calories": 330
+  },
+  {
+    "id": 24,
+    "name": "Meatball Marinara",
+    "ingredients": ["Italian Meatballs", "Marinara Sauce"],
+    "cuisine": "Italian",
+    "cost": 6.99,
+    "calories": 520
+  },
+  {
+    "id": 25,
+    "name": "Oven-Roasted Turkey",
+    "ingredients": ["Turkey Breast"],
+    "cuisine": null,
+    "cost": 5.99,
+    "calories": 310
+  },
+  {
+    "id": 26,
+    "name": "Pizza Sub",
+    "ingredients": ["Pepperoni", "Marinara Sauce", "Cheese"],
+    "cuisine": "Italian",
+    "cost": 4.99,
+    "calories": 490
+  },
+  {
+    "id": 27,
+    "name": "Oven-Roasted Turkey & Ham",
+    "ingredients": ["Turkey Breast", "Ham"],
+    "cuisine": null,
+    "cost": 5.99,
+    "calories": 310
+  },
+  {
+    "id": 28,
+    "name": "Rotisserie-Style Chicken",
+    "ingredients": ["Chicken Breast"],
+    "cuisine": null,
+    "cost": 6.99,
+    "calories": 350
+  },
+  {
+    "id": 29,
+    "name": "Roast Beef",
+    "ingredients": ["Roast Beef"],
+    "cuisine": null,
+    "cost": 6.99,
+    "calories": 350
+  },
+  {
+    "id": 30,
+    "name": "Steak & Cheese",
+    "ingredients": ["Steak", "Cheese"],
+    "cuisine": null,
+    "cost": 6.99,
+    "calories": 370
+  },
+  {
+    "id": 31,
+    "name": "Tuna",
+    "ingredients": ["Tuna"],
+    "cuisine": null,
+    "cost": 5.99,
+    "calories": 510
+  },
+  {
+    "id": 32,
+    "name": "Veggie Delite",
+    "ingredients": [
+      "Lettuce",
+      "Tomato",
+      "Cucumber",
+      "Green Pepper",
+      "Onion"
+    ],
+    "cuisine": null,
+    "cost": 5.99,
+    "calories": 220
+  }
 ]

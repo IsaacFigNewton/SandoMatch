@@ -1,334 +1,334 @@
 {
-    "breads": {
-        "white": {
-            "cost": 4.0,
-            "calories": "195"
-        },
-        "9-grain wheat": {
-            "cost": 4.0,
-            "calories": "195"
-        },
-        "honey oat": {
-            "cost": 4.0,
-            "calories": "210"
-        },
-        "parmesan oregano": {
-            "cost": 4.0,
-            "calories": "206"
-        },
-        "flatbread, artisan": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "gluten-free bread": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "hearty italian bread": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "italian herbs & cheese bread": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "monterey cheddar bread": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "roasted garlic bread": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "slider roll": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "sourdough": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "ultimate cheesy garlic bread": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "tomato basil wrap": {
-            "cost": 4.0,
-            "calories": null
-        },
-        "spinach wrap": {
-            "cost": 4.0,
-            "calories": "196"
-        }
+  "breads": {
+    "white": {
+      "cost": 4.0,
+      "calories": "195"
     },
-    "meats": {
-        "black forest ham": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "honey-smoked ham": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "steak": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "turkey breast": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "chicken breast": {
-            "cost": 3.75,
-            "calories": "50"
-        },
-        "chicken teriyaki": {
-            "cost": 3.75,
-            "calories": "112"
-        },
-        "chicken strips": {
-            "cost": 3.75,
-            "calories": "74"
-        },
-        "oven roasted chicken breast": {
-            "cost": 3.75,
-            "calories": "81"
-        },
-        "ham": {
-            "cost": 3.75,
-            "calories": "67"
-        },
-        "bacon": {
-            "cost": 3.75,
-            "calories": "48"
-        },
-        "italian meatballs": {
-            "cost": 3.75,
-            "calories": "133"
-        },
-        "roast beef": {
-            "cost": 3.75,
-            "calories": "96"
-        },
-        "taco beef": {
-            "cost": 3.75,
-            "calories": "70"
-        },
-        "genoa salami": {
-            "cost": 3.75,
-            "calories": "72"
-        },
-        "turkey bologna": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "turkey ham": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "turkey salami": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "pepperoni": {
-            "cost": 3.75,
-            "calories": "54"
-        },
-        "subway melttm": {
-            "cost": 3.75,
-            "calories": "71"
-        },
-        "tuna": {
-            "cost": 3.75,
-            "calories": "257"
-        },
-        "shrimp": {
-            "cost": 3.75,
-            "calories": "22"
-        },
-        "egg mayo": {
-            "cost": 3.75,
-            "calories": "171"
-        },
-        "egg patty": {
-            "cost": 3.75,
-            "calories": "41"
-        },
-        "egg white patty": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "veggie patty": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "falafel": {
-            "cost": 3.75,
-            "calories": "175"
-        }
+    "9-grain wheat": {
+      "cost": 4.0,
+      "calories": "195"
     },
-    "vegetables": {
-        "avocado": {
-            "cost": 0.0,
-            "calories": "75"
-        },
-        "lettuce": {
-            "cost": 0.0,
-            "calories": "3"
-        },
-        "tomato": {
-            "cost": 0.0,
-            "calories": "6"
-        },
-        "cucumber": {
-            "cost": 0.0,
-            "calories": "2"
-        },
-        "onion": {
-            "cost": 0.0,
-            "calories": "3"
-        },
-        "green pepper": {
-            "cost": 0.0,
-            "calories": "1"
-        },
-        "spinach": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "banulla pepper": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "sweet corn": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "pickle": {
-            "cost": 0.0,
-            "calories": "1"
-        },
-        "black olive": {
-            "cost": 0.0,
-            "calories": "4"
-        },
-        "jalapeno": {
-            "cost": 0.0,
-            "calories": "2"
-        }
+    "honey oat": {
+      "cost": 4.0,
+      "calories": "210"
     },
-    "cheeses": {
-        "smoked cheddar": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "monterey jack": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "mozzarella": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "provolone": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "swiss": {
-            "cost": 3.75,
-            "calories": null
-        },
-        "american": {
-            "cost": 3.75,
-            "calories": "40"
-        },
-        "parmesan": {
-            "cost": 3.75,
-            "calories": "54"
-        }
+    "parmesan oregano": {
+      "cost": 4.0,
+      "calories": "206"
     },
-    "condiments": {
-        "caesar dressing": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "ranch dressing": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "buffalo sauce": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "vinaigrette dressing": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "chipotle southwest sauce": {
-            "cost": 0.0,
-            "calories": "66"
-        },
-        "yellow mustard": {
-            "cost": 0.0,
-            "calories": "9"
-        },
-        "marinara": {
-            "cost": 0.0,
-            "calories": "10"
-        },
-        "sweet onion sauce": {
-            "cost": 0.0,
-            "calories": "33"
-        },
-        "honey mustard": {
-            "cost": 0.0,
-            "calories": "21"
-        },
-        "mayonnaise": {
-            "cost": 0.0,
-            "calories": "100"
-        },
-        "olive oil": {
-            "cost": 0.0,
-            "calories": "44"
-        },
-        "herb garlic oil": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "red wine vinegar": {
-            "cost": 0.0,
-            "calories": "0 .3"
-        },
-        "italian dressing": {
-            "cost": 0.0,
-            "calories": "62"
-        },
-        "thousand island dressing": {
-            "cost": 0.0,
-            "calories": "62"
-        },
-        "guacamole": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "brown mustard": {
-            "cost": 0.0,
-            "calories": null
-        }
+    "flatbread, artisan": {
+      "cost": 4.0,
+      "calories": null
     },
-    "spices": {
-        "salt": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "pepper": {
-            "cost": 0.0,
-            "calories": null
-        },
-        "sub spice": {
-            "cost": 0.0,
-            "calories": null
-        }
+    "gluten-free bread": {
+      "cost": 4.0,
+      "calories": null
+    },
+    "hearty italian bread": {
+      "cost": 4.0,
+      "calories": null
+    },
+    "italian herbs & cheese bread": {
+      "cost": 4.0,
+      "calories": null
+    },
+    "monterey cheddar bread": {
+      "cost": 4.0,
+      "calories": null
+    },
+    "roasted garlic bread": {
+      "cost": 4.0,
+      "calories": null
+    },
+    "slider roll": {
+      "cost": 4.0,
+      "calories": null
+    },
+    "sourdough": {
+      "cost": 4.0,
+      "calories": null
+    },
+    "ultimate cheesy garlic bread": {
+      "cost": 4.0,
+      "calories": null
+    },
+    "tomato basil wrap": {
+      "cost": 4.0,
+      "calories": null
+    },
+    "spinach wrap": {
+      "cost": 4.0,
+      "calories": "196"
     }
+  },
+  "meats": {
+    "black forest ham": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "honey-smoked ham": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "steak": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "turkey breast": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "chicken breast": {
+      "cost": 3.75,
+      "calories": "50"
+    },
+    "chicken teriyaki": {
+      "cost": 3.75,
+      "calories": "112"
+    },
+    "chicken strips": {
+      "cost": 3.75,
+      "calories": "74"
+    },
+    "oven roasted chicken breast": {
+      "cost": 3.75,
+      "calories": "81"
+    },
+    "ham": {
+      "cost": 3.75,
+      "calories": "67"
+    },
+    "bacon": {
+      "cost": 3.75,
+      "calories": "48"
+    },
+    "italian meatballs": {
+      "cost": 3.75,
+      "calories": "133"
+    },
+    "roast beef": {
+      "cost": 3.75,
+      "calories": "96"
+    },
+    "taco beef": {
+      "cost": 3.75,
+      "calories": "70"
+    },
+    "genoa salami": {
+      "cost": 3.75,
+      "calories": "72"
+    },
+    "turkey bologna": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "turkey ham": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "turkey salami": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "pepperoni": {
+      "cost": 3.75,
+      "calories": "54"
+    },
+    "subway melttm": {
+      "cost": 3.75,
+      "calories": "71"
+    },
+    "tuna": {
+      "cost": 3.75,
+      "calories": "257"
+    },
+    "shrimp": {
+      "cost": 3.75,
+      "calories": "22"
+    },
+    "egg mayo": {
+      "cost": 3.75,
+      "calories": "171"
+    },
+    "egg patty": {
+      "cost": 3.75,
+      "calories": "41"
+    },
+    "egg white patty": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "veggie patty": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "falafel": {
+      "cost": 3.75,
+      "calories": "175"
+    }
+  },
+  "vegetables": {
+    "avocado": {
+      "cost": 0.0,
+      "calories": "75"
+    },
+    "lettuce": {
+      "cost": 0.0,
+      "calories": "3"
+    },
+    "tomato": {
+      "cost": 0.0,
+      "calories": "6"
+    },
+    "cucumber": {
+      "cost": 0.0,
+      "calories": "2"
+    },
+    "onion": {
+      "cost": 0.0,
+      "calories": "3"
+    },
+    "green pepper": {
+      "cost": 0.0,
+      "calories": "1"
+    },
+    "spinach": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "banulla pepper": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "sweet corn": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "pickle": {
+      "cost": 0.0,
+      "calories": "1"
+    },
+    "black olive": {
+      "cost": 0.0,
+      "calories": "4"
+    },
+    "jalapeno": {
+      "cost": 0.0,
+      "calories": "2"
+    }
+  },
+  "cheeses": {
+    "smoked cheddar": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "monterey jack": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "mozzarella": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "provolone": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "swiss": {
+      "cost": 3.75,
+      "calories": null
+    },
+    "american": {
+      "cost": 3.75,
+      "calories": "40"
+    },
+    "parmesan": {
+      "cost": 3.75,
+      "calories": "54"
+    }
+  },
+  "condiments": {
+    "caesar dressing": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "ranch dressing": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "buffalo sauce": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "vinaigrette dressing": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "chipotle southwest sauce": {
+      "cost": 0.0,
+      "calories": "66"
+    },
+    "yellow mustard": {
+      "cost": 0.0,
+      "calories": "9"
+    },
+    "marinara": {
+      "cost": 0.0,
+      "calories": "10"
+    },
+    "sweet onion sauce": {
+      "cost": 0.0,
+      "calories": "33"
+    },
+    "honey mustard": {
+      "cost": 0.0,
+      "calories": "21"
+    },
+    "mayonnaise": {
+      "cost": 0.0,
+      "calories": "100"
+    },
+    "olive oil": {
+      "cost": 0.0,
+      "calories": "44"
+    },
+    "herb garlic oil": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "red wine vinegar": {
+      "cost": 0.0,
+      "calories": "0 .3"
+    },
+    "italian dressing": {
+      "cost": 0.0,
+      "calories": "62"
+    },
+    "thousand island dressing": {
+      "cost": 0.0,
+      "calories": "62"
+    },
+    "guacamole": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "brown mustard": {
+      "cost": 0.0,
+      "calories": null
+    }
+  },
+  "spices": {
+    "salt": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "pepper": {
+      "cost": 0.0,
+      "calories": null
+    },
+    "sub spice": {
+      "cost": 0.0,
+      "calories": null
+    }
+  }
 }
