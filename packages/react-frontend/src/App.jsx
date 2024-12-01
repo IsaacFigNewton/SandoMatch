@@ -18,8 +18,8 @@ import MyTriedSandos from "./MyTriedSandos";
 
 import "./App.css";
 
-//const API_PREFIX = "http://sandomatch.azurewebsites.net";
-const API_PREFIX = "http://localhost:8000";
+const API_PREFIX = "http://sandomatch.azurewebsites.net";
+//const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
