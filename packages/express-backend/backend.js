@@ -92,7 +92,6 @@ try {
 }
 console.log("Restaurants file is being read");
 
-
 // list of non-vegan ingredients for checking
 const nonVeganIngredients = ["eggs", "cheese", "meat"];
 
@@ -516,7 +515,6 @@ app.post("/users", authenticateUser, (req, res) => {
 //Login
 app.post("/login", loginUser);
 
-
 // -------------------------------
 // get ingredients from Specific Restaurant
 const getIngredientsForRestaurant = (restaurantId) => {
@@ -676,13 +674,14 @@ const determineDietaryTags = (ingredients) => {
 
   if (allItems.every((item) => !nonVegan.includes(item))) {
     tags.push("vegan");
-  } else if (allItems.every((item) => !nonVegetarian.includes(item))) {
+  } else if (
+    allItems.every((item) => !nonVegetarian.includes(item))
+  ) {
     tags.push("vegetarian");
   }
 
   return tags;
 };
-
 
 //--------------------------------------------
 app.post("/signup", registerUser);
