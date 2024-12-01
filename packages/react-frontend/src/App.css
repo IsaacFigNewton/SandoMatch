@@ -179,6 +179,17 @@ h1 {
   transform: scale(1.1);
 }
 
+.logout-button {
+  position: absolute;
+  top: 1rem;
+  right: 7rem;
+  display: flex;
+}
+
+.logout-button:hover {
+  transform: scale(1.1);
+}
+
 .auth-buttons {
   position: absolute;
   top: 1rem;
