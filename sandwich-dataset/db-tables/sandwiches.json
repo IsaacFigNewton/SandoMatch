@@ -4197,16 +4197,25 @@
     "name": "The Philly",
     "ingredients": {
       "breads": {},
-      "meats": {},
-      "cheeses": {},
-      "vegetables": {},
-      "condiments": {},
+      "meats": {
+        "steak": ["steak"]
+      },
+      "cheeses": {
+        "american": ["american cheese"]
+      },
+      "vegetables": {
+        "green pepper": ["green peppers"],
+        "onion": ["red onions"]
+      },
+      "condiments": {
+        "mayonnaise": ["mayo"]
+      },
       "spices": {}
     },
     "cost": 13.78,
     "calories": 505,
     "rating": 3,
-    "dietary_tags": ["vegan"],
+    "dietary_tags": [],
     "review_count": 1,
     "reviews": []
   },
@@ -4381,16 +4390,23 @@
     "name": "The Boss",
     "ingredients": {
       "breads": {},
-      "meats": {},
-      "cheeses": {},
+      "meats": {
+        "meatballs": ["meatballs"],
+        "pepperoni": ["pepperoni"]
+      },
+      "cheeses": {
+        "mozzarella": ["mozzarella"]
+      },
       "vegetables": {},
-      "condiments": {},
+      "condiments": {
+        "marinara": ["marinara"]
+      },
       "spices": {}
     },
     "cost": 14.58,
     "calories": 690,
     "rating": 2,
-    "dietary_tags": ["vegan"],
+    "dietary_tags": [],
     "review_count": 1,
     "reviews": []
   },
@@ -4469,16 +4485,26 @@
     "name": "The Beast",
     "ingredients": {
       "breads": {},
-      "meats": {},
-      "cheeses": {},
+      "meats": {
+        "pepperoni": ["pepperoni"],
+        "genoa salami": ["genoa salami"],
+        "turkey": ["turkey breast"],
+        "ham": ["black forest ham"],
+        "roast beef": ["roast beef"]
+      },
+      "cheeses": {
+        "provolone": ["provolone"]
+      },
       "vegetables": {},
-      "condiments": {},
+      "condiments": {
+        "vinaigrette dressing": ["mvp vinaigrette"]
+      },
       "spices": {}
     },
     "cost": 11.19,
     "calories": 740,
     "rating": 3,
-    "dietary_tags": ["vegan"],
+    "dietary_tags": [],
     "review_count": 1,
     "reviews": []
   },
@@ -4511,16 +4537,25 @@
     "name": "The Outlaw",
     "ingredients": {
       "breads": {},
-      "meats": {},
-      "cheeses": {},
-      "vegetables": {},
-      "condiments": {},
+      "meats": {
+        "steak": ["steak"]
+      },
+      "cheeses": {
+        "pepper jack": ["pepper jack"]
+      },
+      "vegetables": {
+        "green pepper": ["green peppers"],
+        "onion": ["red onions"]
+      },
+      "condiments": {
+        "chipotle southwest sauce": ["baja chipotle"]
+      },
       "spices": {}
     },
     "cost": 9.49,
     "calories": 590,
     "rating": 3,
-    "dietary_tags": ["vegan"],
+    "dietary_tags": [],
     "review_count": 1,
     "reviews": []
   },
@@ -4530,17 +4565,29 @@
     "restaurant": "subway",
     "name": "The Monster",
     "ingredients": {
-      "breads": {},
-      "meats": {},
-      "cheeses": {},
-      "vegetables": {},
-      "condiments": {},
+      "breads": {
+        "artisan italian bread": ["artisan italian bread"]
+      },
+      "meats": {
+        "steak": ["steak"],
+        "bacon": ["bacon"]
+      },
+      "cheeses": {
+        "monterey jack": ["monterey cheddar cheese"]
+      },
+      "vegetables": {
+        "green pepper": ["green peppers"],
+        "onion": ["red onions"]
+      },
+      "condiments": {
+        "creamy peppercorn ranch": ["creamy peppercorn ranch"]
+      },
       "spices": {}
     },
     "cost": 10.99,
     "calories": 590,
     "rating": 1,
-    "dietary_tags": ["vegan"],
+    "dietary_tags": [],
     "review_count": 1,
     "reviews": []
   },
@@ -4574,17 +4621,28 @@
     "restaurant": "subway",
     "name": "Pickleball Club",
     "ingredients": {
-      "breads": {},
-      "meats": {},
-      "cheeses": {},
-      "vegetables": {},
+      "breads": {
+        "artisan italian bread": ["artisan italian bread"]
+      },
+      "meats": {
+        "ham": ["black forest ham"],
+        "bacon": ["bacon"]
+      },
+      "cheeses": {
+        "american": ["american cheese"]
+      },
+      "vegetables": {
+        "lettuce": ["lettuce"],
+        "tomato": ["tomatoes"],
+        "onion": ["red onions"]
+      },
       "condiments": {},
       "spices": {}
     },
     "cost": 6.99,
     "calories": 500,
     "rating": 5,
-    "dietary_tags": ["vegan"],
+    "dietary_tags": [],
     "review_count": 1,
     "reviews": []
   },
@@ -4827,16 +4885,28 @@
     "name": "Steak & Cheese",
     "ingredients": {
       "breads": {},
-      "meats": {},
-      "cheeses": {},
-      "vegetables": {},
-      "condiments": {},
+      "meats": {
+        "steak": ["steak"]
+      },
+      "cheeses": {
+        "cheddar": ["cheese"]
+      },
+      "vegetables": {
+        "lettuce": ["lettuce"],
+        "onion": ["onions"],
+        "tomato": ["tomatoes"],
+        "pickle": ["pickles"],
+        "green pepper": ["peppers"]
+      },
+      "condiments": {
+        "honey mustard": ["honey mustard"]
+      },
       "spices": {}
     },
     "cost": 6.99,
     "calories": 370,
     "rating": 1,
-    "dietary_tags": ["vegan"],
+    "dietary_tags": [],
     "review_count": 1,
     "reviews": []
   },
