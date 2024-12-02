@@ -93,10 +93,13 @@ export function loginUser(req, res) {
               const userDetails = {
                 _id: retrievedUser._id,
                 favoriteSando: retrievedUser.favoriteSando,
-                bookmarkedSandos: retrievedUser.bookmarkedSandos,
+                bookmarkedSandos:
+                  retrievedUser.bookmarkedSandos,
                 reviews: retrievedUser.reviews
               };
-              res.status(200).send({ token: token, user: userDetails });
+              res
+                .status(200)
+                .send({ token: token, user: userDetails });
             });
           } else {
             res.status(401).send("Unauthorized");

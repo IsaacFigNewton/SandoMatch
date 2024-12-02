@@ -1,13 +1,13 @@
 //UserPage.jsx
 // import React from "react";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 function UserPage() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     const currUser = JSON.parse(localStorage.getItem("user"));
-    if (currUser){
+    if (currUser) {
       setUser(currUser);
     }
   }, []);
@@ -15,12 +15,22 @@ function UserPage() {
   return (
     <div>
       <h1>Profile Page</h1>
-      {user? (
+      {user ? (
         <div>
-          <p><strong>Username:</strong> {user._id}</p>
-          <p><strong>Favorite Sando:</strong> {user.favoriteSandwich}</p>
-          <p><strong>Bookmarked Sandwiches:</strong> {user.bookmarkedSandos}</p>
-          <p><strong>Reviews:</strong> {user.reviews}</p>
+          <p>
+            <strong>Username:</strong> {user._id}
+          </p>
+          <p>
+            <strong>Favorite Sando:</strong>{" "}
+            {user.favoriteSandwich}
+          </p>
+          <p>
+            <strong>Bookmarked Sandwiches:</strong>{" "}
+            {user.bookmarkedSandos}
+          </p>
+          <p>
+            <strong>Reviews:</strong> {user.reviews}
+          </p>
         </div>
       ) : (
         <p>Log In To See User Details</p>

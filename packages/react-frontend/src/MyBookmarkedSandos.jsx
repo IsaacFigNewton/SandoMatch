@@ -1,30 +1,31 @@
 //MyBookmarkedSandos.jsx
 //import React from "react";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 function MyBookmarkedSandos() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     const currUser = JSON.parse(localStorage.getItem("user"));
-    if (currUser){
+    if (currUser) {
       setUser(currUser);
     }
   }, []);
 
-    return (
+  return (
     <div>
       <h1>My Bookmarked Sandos</h1>
-      {user? (
+      {user ? (
         <div>
-          <p><strong>Bookmarked:</strong> {user.bookmarkedSandos}</p>
+          <p>
+            <strong>Bookmarked:</strong> {user.bookmarkedSandos}
+          </p>
         </div>
       ) : (
         <p>Log In To See User Details</p>
       )}
     </div>
   );
-  }
-  
-  export default MyBookmarkedSandos;
-  
+}
+
+export default MyBookmarkedSandos;

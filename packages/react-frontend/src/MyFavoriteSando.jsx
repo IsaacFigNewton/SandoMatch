@@ -1,13 +1,13 @@
 //MyFavoriteSandos.jsx
 //import React from "react";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 function MyFavoriteSandos() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     const currUser = JSON.parse(localStorage.getItem("user"));
-    if (currUser){
+    if (currUser) {
       setUser(currUser);
     }
   }, []);
@@ -15,16 +15,17 @@ function MyFavoriteSandos() {
   return (
     <div>
       <h1>My Favorite Sando</h1>
-      {user? (
+      {user ? (
         <div>
-          <p><strong>Favorite:</strong> {user.favoriteSando}</p>
+          <p>
+            <strong>Favorite:</strong> {user.favoriteSando}
+          </p>
         </div>
       ) : (
         <p>Log In To See User Details</p>
       )}
     </div>
   );
-  }
-  
-  export default MyFavoriteSandos;
+}
 
+export default MyFavoriteSandos;
