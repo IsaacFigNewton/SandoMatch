@@ -1,10 +1,7 @@
 //MyTriedSandos.jsx
 //import React from "react";
-import { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function MyTriedSandos() {
   const [user, setUser] = useState(null);
