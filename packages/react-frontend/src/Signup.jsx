@@ -44,7 +44,7 @@ function Login({ handleSubmit, buttonLabel = "Log In" }) {
       <form className="signup-form" onSubmit={handleFormSubmit}>
         <div className="user-form">
           <label className="username-label">
-            Username: {" "}
+            Username:{" "}
             <input
               className="user-input"
               type="text"
@@ -57,7 +57,7 @@ function Login({ handleSubmit, buttonLabel = "Log In" }) {
         </div>
         <div className="pwd-form">
           <label className="pwd-label">
-            Password: {" "}
+            Password:{" "}
             <input
               className="pwd-input"
               type="password"
@@ -68,11 +68,15 @@ function Login({ handleSubmit, buttonLabel = "Log In" }) {
             />
           </label>
         </div>
-        <button type="submit" className="submit-button">{buttonLabel}</button>
+        <button type="submit" className="submit-button">
+          {buttonLabel}
+        </button>
       </form>
       <p className="login-text">
-        Already have an account? {" "}
-        <Link className="login-link" to="/login">Log in here.</Link>
+        Already have an account?{" "}
+        <Link className="login-link" to="/login">
+          Log in here.
+        </Link>
       </p>
     </div>
   );

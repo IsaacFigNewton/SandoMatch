@@ -1,6 +1,6 @@
 //MyTriedSandos.jsx
 //import React from "react";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Link
@@ -11,29 +11,33 @@ function MyTriedSandos() {
 
   useEffect(() => {
     const currUser = JSON.parse(localStorage.getItem("user"));
-    if (currUser){
+    if (currUser) {
       setUser(currUser);
     }
   }, []);
 
-    return (
+  return (
     <div>
       <h1>My Tried Sandos</h1>
-      {user? (
+      {user ? (
         <div>
-          <p><strong>Tried Sandos:</strong> {user.triedSandos}</p>
+          <p>
+            <strong>Tried Sandos:</strong> {user.triedSandos}
+          </p>
         </div>
       ) : (
         <div className="login-notice">
           <p className="login-notice-text">
-            Login <Link className="login-notice-link" to="/login">here</Link> to see user details.
+            Login{" "}
+            <Link className="login-notice-link" to="/login">
+              here
+            </Link>{" "}
+            to see user details.
           </p>
-
         </div>
       )}
     </div>
   );
-  }
-  
-  export default MyTriedSandos;
-  
+}
+
+export default MyTriedSandos;

@@ -1,6 +1,6 @@
 //MyBookmarkedSandos.jsx
 //import React from "react";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Link
@@ -11,29 +11,33 @@ function MyBookmarkedSandos() {
 
   useEffect(() => {
     const currUser = JSON.parse(localStorage.getItem("user"));
-    if (currUser){
+    if (currUser) {
       setUser(currUser);
     }
   }, []);
 
-    return (
+  return (
     <div>
       <h1>My Bookmarked Sandos</h1>
-      {user? (
+      {user ? (
         <div>
-          <p><strong>Bookmarked:</strong> {user.bookmarkedSandos}</p>
+          <p>
+            <strong>Bookmarked:</strong> {user.bookmarkedSandos}
+          </p>
         </div>
       ) : (
         <div className="login-notice">
           <p className="login-notice-text">
-            Login <Link className="login-notice-link" to="/login">here</Link> to see user details.
+            Login{" "}
+            <Link className="login-notice-link" to="/login">
+              here
+            </Link>{" "}
+            to see user details.
           </p>
-
         </div>
       )}
     </div>
   );
-  }
-  
-  export default MyBookmarkedSandos;
-  
+}
+
+export default MyBookmarkedSandos;

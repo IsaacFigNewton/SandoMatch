@@ -89,7 +89,7 @@ function App() {
   useEffect(() => {
     const currUser = JSON.parse(localStorage.getItem("user"));
     const token = localStorage.getItem("token");
-    if (currUser && token){
+    if (currUser && token) {
       setUser(currUser);
       setIsLoggedIn(true);
     }
@@ -114,7 +114,10 @@ function App() {
       })
       .then((payload) => {
         localStorage.setItem("token", payload.token);
-        localStorage.setItem("user", JSON.stringify(payload.user));
+        localStorage.setItem(
+          "user",
+          JSON.stringify(payload.user)
+        );
         setUser(payload.user);
         setIsLoggedIn(true);
         setMessage("Login Successful");
@@ -168,7 +171,7 @@ function App() {
     return promise;
   }
 
-  function logoutUser(){
+  function logoutUser() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     setUser(null);
@@ -305,7 +308,8 @@ function App() {
               <button className="user-prof-button">
                 <img
                   src="src/assets/user-icon-img.png"
-                  className="button-image" />
+                  className="button-image"
+                />
               </button>
             </Link>
           </div>

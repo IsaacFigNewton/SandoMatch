@@ -1,6 +1,6 @@
 //MyReviews.jsx
 // import React from "react";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Link
@@ -11,7 +11,7 @@ function MyReviews() {
 
   useEffect(() => {
     const currUser = JSON.parse(localStorage.getItem("user"));
-    if (currUser){
+    if (currUser) {
       setUser(currUser);
     }
   }, []);
@@ -19,18 +19,22 @@ function MyReviews() {
   return (
     <div>
       <h1>My Reviews</h1>
-      {user? (
+      {user ? (
         <div>
-          <p><strong>Reviews:</strong> {user.reviews}</p>
+          <p>
+            <strong>Reviews:</strong> {user.reviews}
+          </p>
         </div>
       ) : (
         <div className="login-notice">
           <p className="login-notice-text">
-            Login <Link className="login-notice-link" to="/login">here</Link> to see user details.
+            Login{" "}
+            <Link className="login-notice-link" to="/login">
+              here
+            </Link>{" "}
+            to see user details.
           </p>
-
         </div>
-        
       )}
     </div>
   );
