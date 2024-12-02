@@ -37,10 +37,6 @@ let sandwichesList = [];
 let generatedSandwiches = [];
 
 // Get file paths
-const costCalEstimatePath = path.resolve(
-  __dirname,
-  "../react-frontend/public/sandwich-dataset/db_entry_requirements/cost_cal_estimates.json"
-);
 const restaurantIngredientsPath = path.resolve(
   __dirname,
   "../../sandwich-dataset/db-tables/restaurant_ingredients.json"
