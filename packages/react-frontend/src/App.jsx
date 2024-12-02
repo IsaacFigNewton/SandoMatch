@@ -18,8 +18,8 @@ import MyTriedSandos from "./MyTriedSandos";
 
 import "./App.css";
 
-//const API_PREFIX = "http://sandomatch.azurewebsites.net";
-const API_PREFIX = "http://localhost:8000";
+const API_PREFIX = "http://sandomatch.azurewebsites.net";
+// const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -37,7 +37,7 @@ function App() {
     exclude: []
   });
 
-  const [user, setUser] = useState(null);
+  const [, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Fetch all sandwiches from the backend
