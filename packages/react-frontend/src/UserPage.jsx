@@ -1,6 +1,10 @@
 //UserPage.jsx
 // import React from "react";
 import React, {useEffect, useState} from "react";
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
 
 function UserPage() {
   const [user, setUser] = useState(null);
@@ -23,7 +27,12 @@ function UserPage() {
           <p><strong>Reviews:</strong> {user.reviews}</p>
         </div>
       ) : (
-        <p>Log In To See User Details</p>
+        <div className="login-notice">
+          <p className="login-notice-text">
+            Login <Link className="login-notice-link" to="/login">here</Link> to see user details.
+          </p>
+
+        </div>
       )}
     </div>
   );
