@@ -1,6 +1,6 @@
 //MyTriedSandos.jsx
 //import React from "react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function MyTriedSandos() {
   const [user, setUser] = useState(null);

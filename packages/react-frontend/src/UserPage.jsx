@@ -1,6 +1,6 @@
 //UserPage.jsx
 // import React from "react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function UserPage() {
   const [user, setUser] = useState(null);

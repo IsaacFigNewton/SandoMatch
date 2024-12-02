@@ -37,7 +37,7 @@ function App() {
     exclude: []
   });
 
-  const [user, setUser] = useState(null);
+  const [ , setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Fetch all sandwiches from the backend
@@ -263,7 +263,7 @@ function App() {
                     </Link>
                   </li>
                   <li role="menuitem">
-                    <Link to="/tried">Sandos I've Tried</Link>
+                    <Link to="/tried">Sandos I\'ve Tried</Link>
                   </li>
                 </ul>
               </div>
