@@ -53,7 +53,7 @@ const SandwichSchema = new mongoose.Schema(
       }
     },
     cost: {
-      type: Schema.Types.Decimal128,
+      type: mongoose.Schema.Types.Decimal128,
       required: true,
       trim: true
     },
@@ -78,12 +78,12 @@ const SandwichSchema = new mongoose.Schema(
       required: true,
       trim: true
     },
-    reviews: {
-      type: Map,
-      of: [String],
-      required: false,
-      trim: true
-    },
+    reviews: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Review"
+      }
+    ],
     name: {
       type: String,
       required: true,
@@ -95,7 +95,7 @@ const SandwichSchema = new mongoose.Schema(
 
 const SandwichModel = mongoose.model(
   "Sandwich",
-  sandwichSchema
+  SandwichSchema
 );
 
 export default SandwichModel;

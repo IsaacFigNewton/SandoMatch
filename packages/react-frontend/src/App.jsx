@@ -37,6 +37,9 @@ function App() {
     exclude: []
   });
 
+  const [user, setUser] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   // Fetch all sandwiches from the backend
   useEffect(() => {
     fetch(`${API_PREFIX}/sandwiches`)
@@ -81,6 +84,15 @@ function App() {
       );
   };
 
+  useEffect(() => {
+    const currUser = JSON.parse(localStorage.getItem("user"));
+    const token = localStorage.getItem("token");
+    if (currUser && token){
+      setUser(currUser);
+      setIsLoggedIn(true);
+    }
+  }, []);
+
   function loginUser(creds) {
     const promise = fetch(`${API_PREFIX}/login`, {
       method: "POST",
@@ -91,15 +103,19 @@ function App() {
     })
       .then((response) => {
         if (response.status === 200) {
-          response
-            .json()
-            .then((payload) => setToken(payload.token));
-          setMessage(`Login successful; auth token saved`);
+          return response.json();
         } else {
           setMessage(
             `Login Error ${response.status}: ${response.data}`
           );
         }
+      })
+      .then((payload) => {
+        localStorage.setItem("token", payload.token);
+        localStorage.setItem("user", JSON.stringify(payload.user));
+        setUser(payload.user);
+        setIsLoggedIn(true);
+        setMessage("Login Successful");
       })
       .catch((error) => {
         setMessage(`Login Error: ${error}`);
@@ -147,6 +163,13 @@ function App() {
       });
 
     return promise;
+  }
+
+  function logoutUser(){
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUser(null);
+    setIsLoggedIn(false);
   }
 
   useEffect(() => {
@@ -252,26 +275,34 @@ function App() {
             Filter
           </Link>
 
-          {/* user buttons */}
-          <div className="auth-buttons">
-            <Link to="/login">
-              <button className="auth-button login">
-                Login
-              </button>
-            </Link>
-            <Link to="/signup">
-              <button className="auth-button signup">
-                Signup
-              </button>
-            </Link>
-          </div>
+          {isLoggedIn ? (
+            <div className="logout-button">
+              <Link to="/">
+                <button onClick={logoutUser}>Logout</button>
+              </Link>
+            </div>
+          ) : (
+            <>
+              <div className="auth-buttons">
+                <Link to="/login">
+                  <button className="auth-button login">
+                    Login
+                  </button>
+                </Link>
+                <Link to="/signup">
+                  <button className="auth-button signup">
+                    Signup
+                  </button>
+                </Link>
+              </div>
+            </>
+          )}
           <div className="user-button">
             <Link to="/user">
               <button className="user-prof-button">
                 <img
                   src="src/assets/user-icon-img.png"
-                  className="button-image"
-                />
+                  className="button-image" />
               </button>
             </Link>
           </div>
