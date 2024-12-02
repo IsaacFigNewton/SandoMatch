@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
+  useLocation
 } from "react-router-dom";
 import sandwichData from "./sandwiches.json";
 import FilterPage from "./FilterPage";
@@ -18,8 +19,8 @@ import MyTriedSandos from "./MyTriedSandos";
 
 import "./App.css";
 
-const API_PREFIX = "http://sandomatch.azurewebsites.net";
-//const API_PREFIX = "http://localhost:8000";
+//const API_PREFIX = "http://sandomatch.azurewebsites.net";
+const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -39,6 +40,7 @@ function App() {
 
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  //const location = useLocation();
 
   // Fetch all sandwiches from the backend
   useEffect(() => {
@@ -122,6 +124,7 @@ function App() {
       })
       .catch((error) => {
         setMessage(`Login Error: ${error}`);
+        return Promise.reject(error);
       });
 
     return promise;
