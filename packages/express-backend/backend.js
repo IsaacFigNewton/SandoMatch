@@ -14,6 +14,7 @@ import { MongoTopologyClosedError } from "mongodb";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import sandoFilters from "./modules/filters.js"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -159,128 +160,46 @@ app.get("/sandwiches/vegan", (req, res) => {
 
 app.get("/sandwiches/filter", (req, res) => {
   const {
-    ingredient,
-    maxCost,
-    minCalories,
-    maxCalories,
-    rating
+  ingredient,
+  maxCost,
+  minCalories,
+  maxCalories,
+  rating
   } = req.query;
   let filteredSandwiches = sandwichesList;
 
   // filter  by ingredient
   if (ingredient) {
-    filteredSandwiches = filteredSandwiches.filter((sandwich) =>
+  filteredSandwiches = filteredSandwiches.filter((sandwich) =>
       Object.values(sandwich.ingredients).some((category) =>
-        Object.keys(category).includes(ingredient)
+      Object.keys(category).includes(ingredient)
       )
-    );
+  );
   }
   // filter by cost
   if (maxCost) {
-    filteredSandwiches = filteredSandwiches.filter(
+  filteredSandwiches = filteredSandwiches.filter(
       (sandwich) => sandwich.cost <= Number(maxCost)
-    );
+  );
   }
   // filter by calories
   if (minCalories || maxCalories) {
-    filteredSandwiches = filteredSandwiches.filter(
+  filteredSandwiches = filteredSandwiches.filter(
       (sandwich) =>
-        (!minCalories ||
+      (!minCalories ||
           sandwich.calories >= Number(minCalories)) &&
-        (!maxCalories ||
+      (!maxCalories ||
           sandwich.calories <= Number(maxCalories))
-    );
+  );
   }
   // filter by rating
   if (rating) {
-    filteredSandwiches = filteredSandwiches.filter(
+  filteredSandwiches = filteredSandwiches.filter(
       (sandwich) => sandwich.rating >= Number(rating)
-    );
+  );
   }
   res.send(filteredSandwiches);
 });
-
-//Find by
-const findSandwichByRating = (rating) => {
-  let filteredSandwiches = sandwichesList;
-  return filteredSandwiches.filter(
-    (sandwich) => sandwich["rating"] >= rating
-  );
-};
-
-const findSandwichByCalories = (minCalories, maxCalories) => {
-  let filteredSandwiches = sandwichesList;
-  return filteredSandwiches.filter(
-    (sandwich) =>
-      (!minCalories || sandwich["calories"] >= minCalories) &&
-      (!maxCalories || sandwich["calories"] <= maxCalories)
-  );
-};
-
-const findSandwichByCost = (maxCost) => {
-  let filteredSandwiches = sandwichesList;
-  return filteredSandwiches.filter(
-    (sandwich) => sandwich["cost"] <= maxCost
-  );
-};
-
-const findSandwichByRatingCalories = (
-  rating,
-  minCalories,
-  maxCalories
-) => {
-  let filteredSandwiches = sandwichesList;
-  return filteredSandwiches.filter(
-    (sandwich) =>
-      sandwich["rating"] >= rating &&
-      (!minCalories || sandwich["calories"] >= minCalories) &&
-      (!maxCalories || sandwich["calories"] <= maxCalories)
-  );
-};
-
-const findSandwichByCaloriesCost = (
-  minCalories,
-  maxCalories,
-  maxCost
-) => {
-  let filteredSandwiches = sandwichesList;
-  return filteredSandwiches.filter(
-    (sandwich) =>
-      (!minCalories || sandwich["calories"] >= minCalories) &&
-      (!maxCalories || sandwich["calories"] <= maxCalories) &&
-      sandwich["cost"] <= maxCost
-  );
-};
-
-const findSandwichByRatingCost = (rating, maxCost) => {
-  let filteredSandwiches = sandwichesList;
-  return filteredSandwiches.filter(
-    (sandwich) =>
-      sandwich["rating"] >= rating &&
-      sandwich["cost"] <= maxCost
-  );
-};
-
-const findSandwichByRatingCaloriesCost = (
-  rating,
-  minCalories,
-  maxCalories,
-  maxCost
-) => {
-  let filteredSandwiches = sandwichesList;
-  return filteredSandwiches.filter(
-    (sandwich) =>
-      sandwich["rating"] >= rating &&
-      (!minCalories || sandwich["calories"] >= minCalories) &&
-      (!maxCalories || sandwich["calories"] <= maxCalories) &&
-      sandwich["cost"] <= maxCost
-  );
-};
-
-const findSandwichById = (id) =>
-  sandwichesList.find(
-    (sandwich) => sandwich["id_"] === Number(id)
-  );
 
 //Random
 app.get("/sandwiches/random", (req, res) => {
@@ -315,11 +234,12 @@ app.get("/sandwiches/filter", (req, res) => {
     (minCalories != undefined || maxCalories != undefined) &&
     maxCost != undefined
   ) {
-    let result = findSandwichByRatingCaloriesCost(
+    let result = sandoFilters.findSandwichByRatingCaloriesCost(
       parseInt(rating),
       parseInt(minCalories),
       parseInt(maxCalories),
-      parseFloat(maxCost)
+      parseFloat(maxCost),
+      sandwichesList
     );
     result = { sandwiches_list: result };
     res.send(result);
@@ -328,10 +248,11 @@ app.get("/sandwiches/filter", (req, res) => {
     (minCalories != undefined || maxCalories != undefined) &&
     maxCost == undefined
   ) {
-    let result = findSandwichByRatingCalories(
+    let result = sandoFilters.findSandwichByRatingCalories(
       parseInt(rating),
       parseInt(minCalories),
-      parseInt(maxCalories)
+      parseInt(maxCalories),
+      sandwichesList
     );
     result = { sandwiches_list: result };
     res.send(result);
@@ -340,10 +261,11 @@ app.get("/sandwiches/filter", (req, res) => {
     (minCalories != undefined || maxCalories != undefined) &&
     maxCost != undefined
   ) {
-    let result = findSandwichByCaloriesCost(
+    let result = sandoFilters.findSandwichByCaloriesCost(
       parseInt(minCalories),
       parseInt(maxCalories),
-      parseFloat(maxCost)
+      parseFloat(maxCost),
+      sandwichesList
     );
     result = { sandwiches_list: result };
     res.send(result);
@@ -353,9 +275,10 @@ app.get("/sandwiches/filter", (req, res) => {
     maxCalories != undefined &&
     maxCost != undefined
   ) {
-    let result = findSandwichByRatingCost(
+    let result = sandoFilters.findSandwichByRatingCost(
       parseInt(rating),
-      parseFloat(maxCost)
+      parseFloat(maxCost),
+      sandwichesList
     );
     result = { sandwiches_list: result };
     res.send(result);
@@ -365,7 +288,7 @@ app.get("/sandwiches/filter", (req, res) => {
     maxCalories != undefined &&
     maxCost == undefined
   ) {
-    let result = findSandwichByRating(parseInt(rating));
+    let result = sandoFilters.findSandwichByRating(parseInt(rating));
     result = { sandwiches_list: result };
     res.send(result);
   } else if (
@@ -373,9 +296,10 @@ app.get("/sandwiches/filter", (req, res) => {
     (minCalories != undefined || maxCalories != undefined) &&
     maxCost == undefined
   ) {
-    let result = findSandwichByCalories(
+    let result = sandoFilters.findSandwichByCalories(
       parseInt(minCalories),
-      parseInt(maxCalories)
+      parseInt(maxCalories),
+      sandwichesList
     );
     result = { sandwiches_list: result };
     res.send(result);
@@ -385,7 +309,10 @@ app.get("/sandwiches/filter", (req, res) => {
     maxCalories == undefined &&
     maxCost != undefined
   ) {
-    let result = findSandwichByCost(parseFloat(maxCost));
+    let result = sandoFilters.findSandwichByCost(
+      parseFloat(maxCost),
+      sandwichesList
+    );
     result = { sandwiches_list: result };
     res.send(result);
   } else {
@@ -488,7 +415,10 @@ app.get("/sandwiches/:id", (req, res) => {
       .json({ error: "Invalid sandwich ID." });
   }
 
-  const result = findSandwichById(id);
+  const result = sandoFilters.findSandwichById(
+    id,
+    sandwichesList
+  );
 
   if (result === undefined) {
     res.status(404).send("Sandwich not found.");
