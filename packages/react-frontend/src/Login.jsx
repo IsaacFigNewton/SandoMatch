@@ -1,5 +1,12 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useNavigate
+} from "react-router-dom";
 
 function Login({ handleSubmit, buttonLabel = "Log In" }) {
   // property validation
@@ -10,6 +17,7 @@ function Login({ handleSubmit, buttonLabel = "Log In" }) {
   }
 
   const [creds, setCreds] = useState({ username: "", pwd: "" });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,35 +26,57 @@ function Login({ handleSubmit, buttonLabel = "Log In" }) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    handleSubmit(creds);
+    handleSubmit(creds)
+      .then(() => {
+        navigate("/user");
+      })
+      .catch((error) => {
+        console.error("Login Failed", error);
+        alert("Invalid username or password.");
+      });
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label>
-        Username:
-        <input
-          type="text"
-          name="username"
-          value={creds.username}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input
-          type="password"
-          name="pwd"
-          value={creds.pwd}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <br />
-      <button type="submit">{buttonLabel}</button>
-    </form>
+    <div className="login-page">
+      <form className="login-form" onSubmit={handleFormSubmit}>
+        <div className="user-form">
+          <label className="username-label">
+            Username:{" "}
+            <input
+              className="user-input"
+              type="text"
+              name="username"
+              value={creds.username}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+        <div className="pwd-form">
+          <label className="pwd-label">
+            Password:{" "}
+            <input
+              className="pwd-input"
+              type="password"
+              name="pwd"
+              value={creds.pwd}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+        <button type="submit" className="submit-button">
+          {buttonLabel}
+        </button>
+      </form>
+      <p className="signup-text">
+        Don't have an account?{" "}
+        <Link className="signup-link" to="/signup">
+          {" "}
+          Sign up here.
+        </Link>
+      </p>
+    </div>
   );
 }
 
