@@ -95,7 +95,7 @@ const SandwichSchema = new mongoose.Schema(
 
 const SandwichModel = mongoose.model(
   "Sandwich",
-  sandwichSchema
+  SandwichSchema
 );
 
 export default SandwichModel;
