@@ -186,12 +186,7 @@ function App() {
     localStorage.setItem("ratings", JSON.stringify(ratings));
   }, [ratings]);
 
-  const handleRatingChange = (id, rating) => {
-    setRatings((prevRatings) => ({
-      ...prevRatings,
-      [id]: rating
-    }));
-  };
+  
 
   const getRandomSandwich = () => {
     fetch(`${API_PREFIX}/sandwiches/random`)
@@ -210,6 +205,7 @@ function App() {
         setError("Error fetching random sandwich");
       });
   };
+
 
   // const handleSearch = (term) => {
   //   setSearchTerm(term.toLowerCase());
@@ -321,7 +317,7 @@ function App() {
               <main className="main-content">
                 <input
                   type="text"
-                  placeholder="Search for a sandwich..."
+                  placeholder="Search for your perfect sandwich..."
                   className="search-bar"
                   onChange={(e) =>
                     setSearchTerm(e.target.value)
@@ -337,13 +333,11 @@ function App() {
                   <SandwichList
                     sandwiches={[randomSandwich]}
                     ratings={ratings}
-                    handleRatingChange={handleRatingChange}
                   />
                 ) : (
                   <SandwichList
                     sandwiches={filteredSandwiches}
                     ratings={ratings}
-                    handleRatingChange={handleRatingChange}
                   />
                 )}
               </main>

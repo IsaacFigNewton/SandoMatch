@@ -34,6 +34,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  top: 0%;
 }
 
 .app-header h1 {
@@ -400,14 +401,14 @@ h1 {
 /* NEW */
 .dietary-tags {
   display: flex;
-  gap: 8px; /* Space between icons */
-  margin: 8px 0; /* Add spacing above and below the tags */
+  gap: 8px; 
+  margin: 8px 0; 
 }
 
 .dietary-tag-icon {
-  width: 36px; /* Icon size */
+  width: 36px; 
   height: 36px;
-  object-fit: contain; /* Ensure proper scaling */
+  object-fit: contain; 
 }
 
 .cost-range {
@@ -416,26 +417,21 @@ h1 {
   margin: 8px 0;
 }
 
-.rating {
-  margin-top: 8px;
-}
-
-/* Static Rating */
 .rating.static {
   display: flex;
-  flex-direction: row-reverse;
+  gap: 4px; 
   justify-content: center;
 }
 
-.rating.static .star {
+.rating .star {
   font-size: 1.5rem;
-  color: #ddd; /* Default color for empty stars */
-  transition: none; /* No hover or transition effects */
+  color: #ddd; 
 }
 
-.rating.static .star.filled {
-  color: #ffd700; /* Gold color for filled stars */
+.rating .star.filled {
+  color: #ffd700; 
 }
+/* DONE */
 
 .filter-page {
   margin: 20px;

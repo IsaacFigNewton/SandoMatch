@@ -95,8 +95,6 @@ const SandwichList = ({ sandwiches, ratings }) => {
           {/* Ingredients */}
           {renderIngredients(sandwich.ingredients)}
 
-         
-
           {/* Cost Range */}
           <p><strong>Cost:</strong> {renderCostRange(sandwich.costs[0])}</p>
 
@@ -104,7 +102,7 @@ const SandwichList = ({ sandwiches, ratings }) => {
           {renderDietaryTags(sandwich.dietary_tags || [])}
 
           {/* Static Rating */}
-          <Rating rating={ratings[sandwich._id]} />
+          <Rating rating={sandwich.rating || 0} />
         </div>
       ))}
     </div>
@@ -113,8 +111,16 @@ const SandwichList = ({ sandwiches, ratings }) => {
 
 // Validate Sandwich card props
 SandwichList.propTypes = {
-  sandwiches: PropTypes.arrayOf(PropTypes.object).isRequired,
-  ratings: PropTypes.object.isRequired, // Changed to object for better mapping by sandwich ID
+  sandwiches: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      name: PropTypes.string.isRequired,
+      ingredients: PropTypes.object.isRequired,
+      dietary_tags: PropTypes.arrayOf(PropTypes.string),
+      costs: PropTypes.arrayOf(PropTypes.number).isRequired,
+      rating: PropTypes.number, // Optional defaults to 0 if missing
+    })
+  ).isRequired,
 };
 
 export default SandwichList;

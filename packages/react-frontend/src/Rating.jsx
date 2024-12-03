@@ -1,11 +1,10 @@
-// import React from "react";
-
+import React from "react";
 import PropTypes from "prop-types";
 
 const Rating = ({ rating = 0 }) => {
   return (
     <div className="rating static">
-      {[5, 4, 3, 2, 1].map((star) => (
+      {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
           className={`star ${rating >= star ? "filled" : ""}`}
@@ -17,9 +16,8 @@ const Rating = ({ rating = 0 }) => {
   );
 };
 
-// Validate Rating function props
 Rating.propTypes = {
-  rating: PropTypes.number, // Optional but default is set to 0
+  rating: PropTypes.number.isRequired, 
 };
 
 export default Rating;
