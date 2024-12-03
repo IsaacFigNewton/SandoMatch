@@ -19,7 +19,7 @@ import MyTriedSandos from "./MyTriedSandos";
 import "./App.css";
 
 const API_PREFIX = "http://sandomatch.azurewebsites.net";
-//const API_PREFIX = "http://localhost:8000";
+// const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -37,7 +37,7 @@ function App() {
     exclude: []
   });
 
-  const [user, setUser] = useState(null);
+  const [, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Fetch all sandwiches from the backend
@@ -87,7 +87,7 @@ function App() {
   useEffect(() => {
     const currUser = JSON.parse(localStorage.getItem("user"));
     const token = localStorage.getItem("token");
-    if (currUser && token){
+    if (currUser && token) {
       setUser(currUser);
       setIsLoggedIn(true);
     }
@@ -112,13 +112,17 @@ function App() {
       })
       .then((payload) => {
         localStorage.setItem("token", payload.token);
-        localStorage.setItem("user", JSON.stringify(payload.user));
+        localStorage.setItem(
+          "user",
+          JSON.stringify(payload.user)
+        );
         setUser(payload.user);
         setIsLoggedIn(true);
         setMessage("Login Successful");
       })
       .catch((error) => {
         setMessage(`Login Error: ${error}`);
+        return Promise.reject(error);
       });
 
     return promise;
@@ -165,7 +169,7 @@ function App() {
     return promise;
   }
 
-  function logoutUser(){
+  function logoutUser() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     setUser(null);
@@ -260,7 +264,7 @@ function App() {
                     </Link>
                   </li>
                   <li role="menuitem">
-                    <Link to="/tried">Sandos I've Tried</Link>
+                    <Link to="/tried">Sandos I Have Tried</Link>
                   </li>
                 </ul>
               </div>
@@ -302,7 +306,8 @@ function App() {
               <button className="user-prof-button">
                 <img
                   src="src/assets/user-icon-img.png"
-                  className="button-image" />
+                  className="button-image"
+                />
               </button>
             </Link>
           </div>

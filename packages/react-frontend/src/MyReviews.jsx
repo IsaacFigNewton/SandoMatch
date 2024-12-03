@@ -1,13 +1,14 @@
 //MyReviews.jsx
 // import React from "react";
-import React, {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function MyReviews() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     const currUser = JSON.parse(localStorage.getItem("user"));
-    if (currUser){
+    if (currUser) {
       setUser(currUser);
     }
   }, []);
@@ -15,12 +16,22 @@ function MyReviews() {
   return (
     <div>
       <h1>My Reviews</h1>
-      {user? (
+      {user ? (
         <div>
-          <p><strong>Reviews:</strong> {user.reviews}</p>
+          <p>
+            <strong>Reviews:</strong> {user.reviews}
+          </p>
         </div>
       ) : (
-        <p>Log In To See User Details</p>
+        <div className="login-notice">
+          <p className="login-notice-text">
+            Login{" "}
+            <Link className="login-notice-link" to="/login">
+              here
+            </Link>{" "}
+            to see user details.
+          </p>
+        </div>
       )}
     </div>
   );
