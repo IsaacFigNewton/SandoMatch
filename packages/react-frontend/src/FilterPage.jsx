@@ -47,13 +47,9 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
                       onChange={() =>
                         handleCheckboxChange("include", item)
                       }
-                      checked={
-                        filters
-                        .ingredients
-                        .include
-                        .category
-                        .includes(item)
-                      }
+                      checked={filters.ingredients.include.category
+                        // TODO: Fix bug here
+                        .includes(item)}
                     />
                   </td>
                   <td>
@@ -62,13 +58,9 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
                       onChange={() =>
                         handleCheckboxChange("exclude", item)
                       }
-                      checked={
-                        filters
-                        .ingredients
-                        .exclude
-                        .category
-                        .includes(item)
-                      }
+                      checked={filters.ingredients.exclude.category
+                        // TODO: Fix bug here
+                        .includes(item)}
                     />
                   </td>
                 </tr>
@@ -90,6 +82,7 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
 // Validate FilterPage props
 FilterPage.propTypes = {
   filters: PropTypes.shape({
+    dietary_tags: PropTypes.array.isRequired,
     ingredients: PropTypes.shape({
       include: PropTypes.shape({
         breads: PropTypes.array.isRequired,
@@ -97,7 +90,7 @@ FilterPage.propTypes = {
         cheeses: PropTypes.array.isRequired,
         vegetables: PropTypes.array.isRequired,
         condiments: PropTypes.array.isRequired,
-        spices: PropTypes.array.isRequired,
+        spices: PropTypes.array.isRequired
       }).isRequired,
       exclude: PropTypes.shape({
         breads: PropTypes.array.isRequired,
@@ -105,13 +98,13 @@ FilterPage.propTypes = {
         cheeses: PropTypes.array.isRequired,
         vegetables: PropTypes.array.isRequired,
         condiments: PropTypes.array.isRequired,
-        spices: PropTypes.array.isRequired,
-      }).isRequired,
+        spices: PropTypes.array.isRequired
+      }).isRequired
     }).isRequired,
     maxCost: PropTypes.number.isRequired,
     minCalories: PropTypes.number.isRequired,
     maxCalories: PropTypes.number.isRequired,
-    rating: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired
   }).isRequired,
   setFilters: PropTypes.func.isRequired,
   applyFilters: PropTypes.func.isRequired

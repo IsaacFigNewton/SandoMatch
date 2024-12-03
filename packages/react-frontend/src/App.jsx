@@ -11,11 +11,11 @@ import FilterPage from "./FilterPage";
 import SandwichList from "./SandwichList";
 import Login from "./Login";
 import Signup from "./Signup";
-import UserPage from "./UserPage";
-import MyBookmarkedSandos from "./MyBookmarkedSandos";
-import MyFavoriteSandos from "./MyFavoriteSando";
-import MyReviews from "./MyReviews";
-import MyTriedSandos from "./MyTriedSandos";
+import UserPage from "./user-pages/UserPage";
+import MyBookmarkedSandos from "./user-pages/MyBookmarkedSandos";
+import MyFavoriteSandos from "./user-pages/MyFavoriteSando";
+import MyReviews from "./user-pages/MyReviews";
+import MyTriedSandos from "./user-pages/MyTriedSandos";
 
 import "./App.css";
 
@@ -34,6 +34,7 @@ function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [, setMessage] = useState("");
   const [filters, setFilters] = useState({
+    dietary_tags: [],
     ingredients: {
       include: {
         breads: [],
