@@ -2,11 +2,11 @@
 import PropTypes from "prop-types";
 import Rating from "./Rating";
 
-import veganImg from "./assets/vegan.png";
+import veganImg from "./assets/vegan2.png";
 import vegetarianImg from "./assets/vegetarian.png";
 import glutenFreeImg from "./assets/gluten-free.png";
 
-const SandwichList = ({ sandwiches, ratings }) => {
+const SandwichList = ({ sandwiches }) => {
   // Updated renderDietaryTags to display PNG icons
   const renderDietaryTags = (tags) => {
     const tagIcons = {
