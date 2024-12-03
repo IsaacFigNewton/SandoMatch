@@ -405,8 +405,8 @@ h1 {
 }
 
 .dietary-tag-icon {
-  width: 24px; /* Icon size */
-  height: 24px;
+  width: 36px; /* Icon size */
+  height: 36px;
   object-fit: contain; /* Ensure proper scaling */
 }
 

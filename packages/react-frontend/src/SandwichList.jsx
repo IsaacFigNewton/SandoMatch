@@ -54,7 +54,7 @@ const SandwichList = ({ sandwiches, ratings }) => {
     const displayedIngredients = allIngredients.slice(0, 3);
     return (
       <p>
-        Ingredients: {displayedIngredients.join(", ")}{" "}
+        <strong>Ingredients:</strong> {displayedIngredients.join(", ")}{" "}
         {allIngredients.length > 3 && "..."}
       </p>
     );
@@ -92,17 +92,16 @@ const SandwichList = ({ sandwiches, ratings }) => {
 
           {/* end header */}
 
-          {/* Dietary Tags */}
-          {renderDietaryTags(sandwich.dietary_tags || [])}
-
-          {/* Cost Range */}
-          <p>Cost: {renderCostRange(sandwich.costs[0])}</p>
-
           {/* Ingredients */}
           {renderIngredients(sandwich.ingredients)}
 
-          {/* Cuisine */}
-          <p>{sandwich.cuisine ? sandwich.cuisine : "Cuisine not specified"}</p>
+         
+
+          {/* Cost Range */}
+          <p><strong>Cost:</strong> {renderCostRange(sandwich.costs[0])}</p>
+
+          {/* Dietary Tags */}
+          {renderDietaryTags(sandwich.dietary_tags || [])}
 
           {/* Static Rating */}
           <Rating rating={ratings[sandwich._id]} />
