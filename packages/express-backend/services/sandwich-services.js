@@ -19,9 +19,8 @@ function addReview(id, review, rating) {
   const ratings = [db.sandwiches.findSandwichById(id).rating, rating];
   const reviewToAdd = db.sandwiches.updateOne({ _id: id }, 
     { 
-      $push: { reviews: review }, 
-      $inc: { review_count: 1 }, 
-      $set: { rating: ratings }
+      $push: { reviews: review },  
+      $set: { rating: $avg: { ratings } }
     }
   );
   const promise = reviewToAdd.save();
@@ -37,6 +36,10 @@ function getSandwichObject(id) {
     promise = SandwichModel.find();
   }
   return promise;
+}
+
+function getSandwiches() {
+  return SandwichModel.find();
 }
 
 
