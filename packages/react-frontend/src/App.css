@@ -397,31 +397,44 @@ h1 {
   transform: translateY(-2px);
 }
 
+/* NEW */
+.dietary-tags {
+  display: flex;
+  gap: 8px; /* Space between icons */
+  margin: 8px 0; /* Add spacing above and below the tags */
+}
+
+.dietary-tag-icon {
+  width: 24px; /* Icon size */
+  height: 24px;
+  object-fit: contain; /* Ensure proper scaling */
+}
+
+.cost-range {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 8px 0;
+}
+
 .rating {
+  margin-top: 8px;
+}
+
+/* Static Rating */
+.rating.static {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  cursor: pointer;
 }
 
-.rating input[type="radio"] {
-  display: none;
-}
-
-.star {
+.rating.static .star {
   font-size: 1.5rem;
-  color: #ddd;
-  transition: color 0.2s;
+  color: #ddd; /* Default color for empty stars */
+  transition: none; /* No hover or transition effects */
 }
 
-.rating input[type="radio"]:checked ~ .star,
-.rating input[type="radio"]:checked ~ label .star {
-  color: #ffd700;
-}
-
-.rating label:hover ~ label .star,
-.rating label:hover .star {
-  color: #ffc107;
+.rating.static .star.filled {
+  color: #ffd700; /* Gold color for filled stars */
 }
 
 .filter-page {

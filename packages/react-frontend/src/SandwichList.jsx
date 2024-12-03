@@ -2,11 +2,64 @@
 import PropTypes from "prop-types";
 import Rating from "./Rating";
 
-const SandwichList = ({
-  sandwiches,
-  ratings,
-  handleRatingChange
-}) => {
+import veganImg from "./assets/vegan.png";
+import vegetarianImg from "./assets/vegetarian.png";
+import glutenFreeImg from "./assets/gluten-free.png";
+
+const SandwichList = ({ sandwiches, ratings }) => {
+  // Updated renderDietaryTags to display PNG icons
+  const renderDietaryTags = (tags) => {
+    const tagIcons = {
+      vegan: veganImg,
+      vegetarian: vegetarianImg,
+      "gluten-free": glutenFreeImg,
+    };
+
+    return (
+      <div className="dietary-tags">
+        {tags.includes("vegan") && (
+          <img
+            src={tagIcons.vegan}
+            alt="Vegan"
+            className="dietary-tag-icon"
+          />
+        )}
+        {tags.includes("vegetarian") && (
+          <img
+            src={tagIcons.vegetarian}
+            alt="Vegetarian"
+            className="dietary-tag-icon"
+          />
+        )}
+        {tags.includes("gluten-free") && (
+          <img
+            src={tagIcons["gluten-free"]}
+            alt="Gluten-Free"
+            className="dietary-tag-icon"
+          />
+        )}
+      </div>
+    );
+  };
+
+  const renderCostRange = (cost) => {
+    if (cost < 5) return "$";
+    if (cost < 10) return "$$";
+    return "$$$";
+  };
+
+  const renderIngredients = (ingredients) => {
+    const allIngredients = Object.values(ingredients || {})
+      .flatMap((category) => Object.values(category).flat());
+    const displayedIngredients = allIngredients.slice(0, 3);
+    return (
+      <p>
+        Ingredients: {displayedIngredients.join(", ")}{" "}
+        {allIngredients.length > 3 && "..."}
+      </p>
+    );
+  };
+
   return (
     <div className="sandwich-list">
       {sandwiches.map((sandwich) => (
@@ -39,26 +92,20 @@ const SandwichList = ({
 
           {/* end header */}
 
-          <ul>
-            {Object.values(sandwich.ingredients || {})
-              .flatMap((category) =>
-                Object.values(category).flat()
-              )
-              .map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
-              ))}
-          </ul>
-          <p>
-            {sandwich.cuisine
-              ? sandwich.cuisine
-              : "Cuisine not specified"}
-          </p>
+          {/* Dietary Tags */}
+          {renderDietaryTags(sandwich.dietary_tags || [])}
 
-          <Rating
-            sandwichId={sandwich.id_}
-            rating={ratings[sandwich.id_]}
-            handleRatingChange={handleRatingChange}
-          />
+          {/* Cost Range */}
+          <p>Cost: {renderCostRange(sandwich.costs[0])}</p>
+
+          {/* Ingredients */}
+          {renderIngredients(sandwich.ingredients)}
+
+          {/* Cuisine */}
+          <p>{sandwich.cuisine ? sandwich.cuisine : "Cuisine not specified"}</p>
+
+          {/* Static Rating */}
+          <Rating rating={ratings[sandwich._id]} />
         </div>
       ))}
     </div>
@@ -68,8 +115,7 @@ const SandwichList = ({
 // Validate Sandwich card props
 SandwichList.propTypes = {
   sandwiches: PropTypes.arrayOf(PropTypes.object).isRequired,
-  ratings: PropTypes.arrayOf(PropTypes.object).isRequired,
-  handleRatingChange: PropTypes.func.isRequired
+  ratings: PropTypes.object.isRequired, // Changed to object for better mapping by sandwich ID
 };
 
 export default SandwichList;
