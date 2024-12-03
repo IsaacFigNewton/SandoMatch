@@ -9,7 +9,7 @@ import {
   registerUser,
   authenticateUser,
   loginUser
-} from "./auth.js";
+} from "./modules/auth.js";
 import { MongoTopologyClosedError } from "mongodb";
 import fs from "fs";
 import path from "path";
@@ -55,6 +55,7 @@ try {
     "utf8"
   );
   costCalEstimates = JSON.parse(data);
+
 } catch (err) {
   console.error(
     "Error reading cost and calorie estimates file:",
@@ -65,7 +66,8 @@ try {
 try {
   const fileData = fs.readFileSync(sandwichesPath, "utf8");
   sandwichesList = JSON.parse(fileData);
-  console.log("Loaded Sandwiches list:", sandwichesList);
+  console.log("Loaded sandwiches table");
+
 } catch (err) {
   console.error("Error reading sandwiches list file:", err);
 }
@@ -77,10 +79,8 @@ try {
     "utf8"
   );
   restaurantIngredientsList = JSON.parse(fileData);
-  console.log(
-    "Loaded Restaurant Ingredients:",
-    restaurantIngredientsList
-  );
+  console.log("Loaded restaurant-ingredients table");
+
 } catch (err) {
   console.error(
     "Error reading restaurant ingredients file:",
@@ -158,49 +158,6 @@ app.get("/sandwiches/vegan", (req, res) => {
   res.send(veganSandwich);
 });
 
-app.get("/sandwiches/filter", (req, res) => {
-  const {
-  ingredient,
-  maxCost,
-  minCalories,
-  maxCalories,
-  rating
-  } = req.query;
-  let filteredSandwiches = sandwichesList;
-
-  // filter  by ingredient
-  if (ingredient) {
-  filteredSandwiches = filteredSandwiches.filter((sandwich) =>
-      Object.values(sandwich.ingredients).some((category) =>
-      Object.keys(category).includes(ingredient)
-      )
-  );
-  }
-  // filter by cost
-  if (maxCost) {
-  filteredSandwiches = filteredSandwiches.filter(
-      (sandwich) => sandwich.cost <= Number(maxCost)
-  );
-  }
-  // filter by calories
-  if (minCalories || maxCalories) {
-  filteredSandwiches = filteredSandwiches.filter(
-      (sandwich) =>
-      (!minCalories ||
-          sandwich.calories >= Number(minCalories)) &&
-      (!maxCalories ||
-          sandwich.calories <= Number(maxCalories))
-  );
-  }
-  // filter by rating
-  if (rating) {
-  filteredSandwiches = filteredSandwiches.filter(
-      (sandwich) => sandwich.rating >= Number(rating)
-  );
-  }
-  res.send(filteredSandwiches);
-});
-
 //Random
 app.get("/sandwiches/random", (req, res) => {
   const randomIndex = Math.floor(
@@ -212,7 +169,7 @@ app.get("/sandwiches/random", (req, res) => {
     console.log(randomSandwich);
     res.send(randomSandwich);
   } else {
-    console.log("ERROR: Couldn't find random sandwich");
+    console.error("Couldn't find random sandwich");
     res.status(404).send("No sandwich found.");
   }
 });
@@ -225,98 +182,65 @@ app.get("/sandwiches", (req, res) => {
 });
 
 //Filter by rating, cost, and calories on Filtering Page
-app.get("/sandwiches/filter", (req, res) => {
-  const { rating, minCalories, maxCalories, maxCost } =
-    req.query;
+app.post("/sandwiches/filter", (req, res) => {
+  
+  try {
+    console.log("Reading in filter query: ", req.query);
+    const {
+      ingredients,
+      maxCost,
+      minCalories,
+      maxCalories,
+      rating
+    } = req.query;
+    
+  } catch (err) {
+    console.error("Error while reading the filter query: ", err)
+    return sandwichesList
+  }
 
-  if (
-    rating != undefined &&
-    (minCalories != undefined || maxCalories != undefined) &&
-    maxCost != undefined
-  ) {
-    let result = sandoFilters.findSandwichByRatingCaloriesCost(
-      parseInt(rating),
-      parseInt(minCalories),
-      parseInt(maxCalories),
-      parseFloat(maxCost),
-      sandwichesList
-    );
-    result = { sandwiches_list: result };
-    res.send(result);
-  } else if (
-    rating != undefined &&
-    (minCalories != undefined || maxCalories != undefined) &&
-    maxCost == undefined
-  ) {
-    let result = sandoFilters.findSandwichByRatingCalories(
-      parseInt(rating),
-      parseInt(minCalories),
-      parseInt(maxCalories),
-      sandwichesList
-    );
-    result = { sandwiches_list: result };
-    res.send(result);
-  } else if (
-    rating == undefined &&
-    (minCalories != undefined || maxCalories != undefined) &&
-    maxCost != undefined
-  ) {
-    let result = sandoFilters.findSandwichByCaloriesCost(
-      parseInt(minCalories),
-      parseInt(maxCalories),
-      parseFloat(maxCost),
-      sandwichesList
-    );
-    result = { sandwiches_list: result };
-    res.send(result);
-  } else if (
-    rating != undefined &&
-    minCalories == undefined &&
-    maxCalories != undefined &&
-    maxCost != undefined
-  ) {
-    let result = sandoFilters.findSandwichByRatingCost(
-      parseInt(rating),
-      parseFloat(maxCost),
-      sandwichesList
-    );
-    result = { sandwiches_list: result };
-    res.send(result);
-  } else if (
-    rating != undefined &&
-    minCalories == undefined &&
-    maxCalories != undefined &&
-    maxCost == undefined
-  ) {
-    let result = sandoFilters.findSandwichByRating(parseInt(rating));
-    result = { sandwiches_list: result };
-    res.send(result);
-  } else if (
-    rating == undefined &&
-    (minCalories != undefined || maxCalories != undefined) &&
-    maxCost == undefined
-  ) {
-    let result = sandoFilters.findSandwichByCalories(
-      parseInt(minCalories),
-      parseInt(maxCalories),
-      sandwichesList
-    );
-    result = { sandwiches_list: result };
-    res.send(result);
-  } else if (
-    rating == undefined &&
-    minCalories == undefined &&
-    maxCalories == undefined &&
-    maxCost != undefined
-  ) {
-    let result = sandoFilters.findSandwichByCost(
-      parseFloat(maxCost),
-      sandwichesList
-    );
-    result = { sandwiches_list: result };
-    res.send(result);
+  // parse the filters' values
+  try {
+    console.log("Parsing the filter query values: \n", {
+      ingredients,
+      maxCost,
+      minCalories,
+      maxCalories,
+      rating
+    });
+
+    maxCost = parseFloat(maxCost);
+    minCalories = parseInt(minCalories);
+    maxCalories = parseInt(maxCalories);
+    rating = parseInt(rating);
+  
+  } catch (err) {
+    console.error("Error while parsing the filter query: ", err)
+    return sandwichesList
+  }
+
+  try {
+    console.log("Filtering the sandwiches...");
+    const filteredSandwiches = sandoFilters.filterSandwiches(
+      sandwichesList,
+      ingredients.include,
+      ingredients.exclude,
+      maxCost,
+      minCalories,
+      maxCalories,
+      rating
+    )
+
+  } catch (err) {
+    console.error("Error while parsing the filter query: ", err)
+    return sandwichesList
+  }
+
+  if (sandwichesList) {
+    res.send(filteredSandwiches)
+
   } else {
-    res.send(sandwiches);
+    res.status(404).send("Error while filtering sandwiches on the backend");
   }
 });
 
@@ -324,51 +248,28 @@ app.get("/sandwiches/filter", (req, res) => {
 app.get("/sandwiches/sort", (req, res) => {
   const { sortBy } = req.query;
 
-  //Ascending
-  const sortByNameAscending = sandwichesList.toSorted((a, b) =>
-    a.name.localeCompare(b.name)
-  );
-  const sortByRatingAscending = sandwichesList.toSorted(
-    (a, b) => a.rating - b.rating
-  );
-  const sortByCaloriesAscending = sandwichesList.toSorted(
-    (a, b) => a.calories - b.calories
-  );
-  const sortByCostAscending = sandwichesList.toSorted(
-    (a, b) => a.cost - b.cost
-  );
-  //Descending
-  const sortByNameDescending = sandwichesList.toSorted((a, b) =>
-    b.name.localeCompare(a.name)
-  );
-  const sortByRatingDescending = sandwichesList.toSorted(
-    (a, b) => b.rating - a.rating
-  );
-  const sortByCaloriesDescending = sandwichesList.toSorted(
-    (a, b) => b.calories - a.calories
-  );
-  const sortByCostDescending = sandwichesList.toSorted(
-    (a, b) => b.cost - a.cost
-  );
+  // hashmap mapping different sorts to sorting functions
+  const sortingFunctions = {
+    nameAscending: (a, b) => a.name.localeCompare(b.name),
+    ratingAscending: (a, b) => a.rating - b.rating,
+    caloriesAscending: (a, b) => a.calories - b.calories,
+    costAscending: (a, b) => a.cost - b.cost,
+    nameDescending: (a, b) => b.name.localeCompare(a.name),
+    ratingDescending: (a, b) => b.rating - a.rating,
+    caloriesDescending: (a, b) => b.calories - a.calories,
+    costDescending: (a, b) => b.cost - a.cost,
+  };
 
-  if (sortBy === "nameAscending") {
-    res.send({ sandwiches_list: sortByNameAscending });
-  } else if (sortBy === "ratingAscending") {
-    res.send({ sandwiches_list: sortByRatingAscending });
-  } else if (sortBy === "caloriesAscending") {
-    res.send({ sandwiches_list: sortByCaloriesAscending });
-  } else if (sortBy === "costAscending") {
-    res.send({ sandwiches_list: sortByCostAscending });
-  } else if (sortBy === "nameDescending") {
-    res.send({ sandwiches_list: sortByNameDescending });
-  } else if (sortBy === "ratingDescending") {
-    res.send({ sandwiches_list: sortByRatingDescending });
-  } else if (sortBy === "caloriesDescending") {
-    res.send({ sandwiches_list: sortByCaloriesDescending });
-  } else if (sortBy === "costDescending") {
-    res.send({ sandwiches_list: sortByCostDescending });
+  // if a sorting function exists with the sorting query name
+  const sortingFunc = sortingFunctions[sortBy]
+  if (sortingFunc) {
+    
+    // do the sorting based on the sortBy query
+    const sortedList = sandwichesList.toSorted(sortingFunc);
+    res.send({ sandwiches_list: sortedList });
+  
   } else {
-    res.send(sandwiches);
+    res.send(sandwichesList);
   }
 });
 

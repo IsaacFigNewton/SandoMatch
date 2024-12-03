@@ -1,97 +1,3 @@
-//Find by
-const findSandwichByRating = (
-    rating,
-    sandwichesList
-) => {
-    let filteredSandwiches = sandwichesList;
-    return filteredSandwiches.filter(
-    (sandwich) => sandwich["rating"] >= rating
-    );
-};
-
-const findSandwichByCalories = (
-    minCalories,
-    maxCalories,
-    sandwichesList
-) => {
-    let filteredSandwiches = sandwichesList;
-    return filteredSandwiches.filter(
-    (sandwich) =>
-        (!minCalories || sandwich["calories"] >= minCalories) &&
-        (!maxCalories || sandwich["calories"] <= maxCalories)
-    );
-};
-
-const findSandwichByCost = (
-    maxCost,
-    sandwichesList
-) => {
-    let filteredSandwiches = sandwichesList;
-    return filteredSandwiches.filter(
-    (sandwich) => sandwich["cost"] <= maxCost
-    );
-};
-
-const findSandwichByRatingCalories = (
-    rating,
-    minCalories,
-    maxCalories,
-    sandwichesList
-) => {
-    let filteredSandwiches = sandwichesList;
-    return filteredSandwiches.filter(
-    (sandwich) =>
-        sandwich["rating"] >= rating &&
-        (!minCalories || sandwich["calories"] >= minCalories) &&
-        (!maxCalories || sandwich["calories"] <= maxCalories)
-    );
-};
-
-const findSandwichByCaloriesCost = (
-    minCalories,
-    maxCalories,
-    maxCost,
-    sandwichesList
-) => {
-    let filteredSandwiches = sandwichesList;
-    return filteredSandwiches.filter(
-    (sandwich) =>
-        (!minCalories || sandwich["calories"] >= minCalories) &&
-        (!maxCalories || sandwich["calories"] <= maxCalories) &&
-        sandwich["cost"] <= maxCost
-    );
-};
-
-const findSandwichByRatingCost = (
-    rating,
-    maxCost,
-    sandwichesList
-) => {
-    let filteredSandwiches = sandwichesList;
-    return filteredSandwiches.filter(
-    (sandwich) =>
-        sandwich["rating"] >= rating &&
-        sandwich["cost"] <= maxCost
-    );
-};
-
-const findSandwichByRatingCaloriesCost = (
-    rating,
-    minCalories,
-    maxCalories,
-    maxCost,
-    sandwichesList
-) => {
-    let filteredSandwiches = sandwichesList;
-    return filteredSandwiches.filter(
-    (sandwich) =>
-        sandwich["rating"] >= rating &&
-        (!minCalories || sandwich["calories"] >= minCalories) &&
-        (!maxCalories || sandwich["calories"] <= maxCalories) &&
-        sandwich["cost"] <= maxCost
-    );
-};
-
 const findSandwichById = (
     id,
     sandwichesList
@@ -101,13 +7,56 @@ const findSandwichById = (
     );
 }
 
+const filterSandwiches = (
+    sandwichesList,
+    ingredientsToInclude,
+    ingredientsToExclude,
+    maxCost,
+    minCalories,
+    maxCalories,
+    rating
+) => {
+    // TODO: Finish this
+    // filter  by ingredients to include
+    // sandwichesList = sandwichesList.filter((sandwich) =>
+    //     Object.values(sandwich.ingredients).some((category) =>
+    //     Object.keys(category).includes(ingredientsToInclude)
+    //     )
+    // );
+
+    // TODO: Finish this
+    // filter  by ingredients to exclude
+    // sandwichesList = sandwichesList.filter((sandwich) =>
+    //     Object.values(sandwich.ingredients).some((category) =>
+    //     Object.keys(category).includes(ingredientsToExclude)
+    //     )
+    // );
+
+    // filter by cost
+    if (maxCost) {
+    sandwichesList = sandwichesList.filter(
+        (sandwich) => sandwich.cost <= Number(maxCost)
+    );
+    }
+
+    // filter by calories
+    sandwichesList = sandwichesList.filter(
+        (sandwich) =>
+        (!minCalories ||
+            sandwich.calories >= Number(minCalories)) &&
+        (!maxCalories ||
+            sandwich.calories <= Number(maxCalories))
+    );
+
+    // filter by rating
+    sandwichesList = sandwichesList.filter(
+        (sandwich) => sandwich.rating >= Number(rating)
+    );
+
+    return { sandwiches_list: sandwichesList }
+}
+
 export default {
-    findSandwichByRating,
-    findSandwichByCalories,
-    findSandwichByCost,
-    findSandwichByRatingCost,
-    findSandwichByRatingCalories,
-    findSandwichByCaloriesCost,
-    findSandwichByRatingCaloriesCost,
-    findSandwichById
+    findSandwichById,
+    filterSandwiches
 };

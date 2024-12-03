@@ -34,8 +34,28 @@ function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [, setMessage] = useState("");
   const [filters, setFilters] = useState({
-    include: [],
-    exclude: []
+    ingredients: {
+      include: {
+        breads: [],
+        meats: [],
+        cheeses: [],
+        vegetables: [],
+        condiments: [],
+        spices: []
+      },
+      exclude: {
+        breads: [],
+        meats: [],
+        cheeses: [],
+        vegetables: [],
+        condiments: [],
+        spices: []
+      }
+    },
+    maxCost: 1000,
+    minCalories: 0,
+    maxCalories: 1000,
+    rating: 0
   });
 
   const [, setUser] = useState(null);
