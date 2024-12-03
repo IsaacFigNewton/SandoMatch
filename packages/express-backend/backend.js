@@ -37,6 +37,10 @@ let costCalEstimates = {};
 let restaurantIngredientsList = [];
 let sandwichesList = [];
 
+
+// Load Files
+// TODO: Replace this with sandwich and restaurant table CRUD operations
+// ----------------------------------------------------------------------------------------
 // Get file paths
 const restaurantIngredientsPath = path.resolve(
   __dirname,
@@ -85,6 +89,18 @@ try {
   );
 }
 console.log("Restaurants file is being read");
+// ----------------------------------------------------------------------------------------
+
+
+
+// Home page
+// ----------------------------------------------------------------------------------------
+//Sandwiches full list
+app.get("/sandwiches", (req, res) => {
+  res.send({
+    sandwiches_list: sandwichesList
+  });
+});
 
 //Random
 app.get("/sandwiches/random", (req, res) => {
@@ -101,12 +117,51 @@ app.get("/sandwiches/random", (req, res) => {
     res.status(404).send("No sandwich found.");
   }
 });
+// ----------------------------------------------------------------------------------------
 
-//Sandwiches full list
-app.get("/sandwiches", (req, res) => {
-  res.send({
-    sandwiches_list: sandwichesList
-  });
+
+
+// Authentication routes
+// ----------------------------------------------------------------------------------------
+//Sign Up
+app.post("/signup", registerUser);
+
+//Authenticate
+app.post("/users", authenticateUser, (req, res) => {
+  const userToAdd = req.body;
+  Users.addUser(userToAdd).then((result) =>
+    res.status(201).send(result)
+  );
+});
+
+//Login
+app.post("/login", loginUser);
+// ----------------------------------------------------------------------------------------
+
+
+
+// Filtering, sorting
+// ----------------------------------------------------------------------------------------
+//ID
+app.get("/sandwiches/:id", (req, res) => {
+  const id = req.params["id"];
+
+  if (isNaN(id)) {
+    return res
+      .status(400)
+      .json({ error: "Invalid sandwich ID." });
+  }
+
+  const result = sandoFilters.findSandwichById(
+    id,
+    sandwichesList
+  );
+
+  if (result === undefined) {
+    res.status(404).send("Sandwich not found.");
+  } else {
+    res.send(result);
+  }
 });
 
 //Filter by rating, cost, and calories on Filtering Page
@@ -205,48 +260,12 @@ app.get("/sandwiches/sort", (req, res) => {
     res.send(sandwichesList);
   }
 });
+// ----------------------------------------------------------------------------------------
 
-//ID
-app.get("/sandwiches/:id", (req, res) => {
-  const id = req.params["id"];
 
-  if (isNaN(id)) {
-    return res
-      .status(400)
-      .json({ error: "Invalid sandwich ID." });
-  }
-
-  const result = sandoFilters.findSandwichById(
-    id,
-    sandwichesList
-  );
-
-  if (result === undefined) {
-    res.status(404).send("Sandwich not found.");
-  } else {
-    res.send(result);
-  }
-});
-
-// Authentication routes
-// -------------------------------
-//Sign Up
-app.post("/signup", registerUser);
-
-//Authenticate
-app.post("/users", authenticateUser, (req, res) => {
-  const userToAdd = req.body;
-  Users.addUser(userToAdd).then((result) =>
-    res.status(201).send(result)
-  );
-});
-
-//Login
-app.post("/login", loginUser);
-// -------------------------------
 
 // Sandwich Generation
-// -------------------------------
+// ----------------------------------------------------------------------------------------
 // generate sandwich logic based on provided ingredients and associated restaurant data
 // route implementation
 app.post("/sandwiches/generate", (req, res) => {
@@ -276,7 +295,9 @@ app.post("/sandwiches/generate", (req, res) => {
   }
   res.json(sandwiches);
 });
-// -------------------------------
+// ----------------------------------------------------------------------------------------
+
+
 
 // Start the server
 app.listen(process.env.PORT || port, () => {
