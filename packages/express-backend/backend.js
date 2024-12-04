@@ -10,10 +10,10 @@ import {
   authenticateUser,
   loginUser
 } from "./auth.js";
-import { MongoTopologyClosedError } from "mongodb";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import UserModel from "./models/users.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -448,6 +448,124 @@ app.get("/sandwiches/sort", (req, res) => {
     res.send(sandwiches);
   }
 });
+
+
+//adding a sando to the users bookmark field
+app.post("/users/bookmark", authenticateUser, (req, res) => {
+  console.log("req.user:", req.user);
+  const { sandwichId } = req.body;
+  const userId = req.user._id;
+
+  if (sandwichId === undefined || sandwichId === null) {
+    return res.status(400).json({error: "No sandwich Id"});
+  }
+
+  let validSandoId;
+  try {
+    validSandoId = new mongoose.Types.ObjectId(sandwichId);
+  } catch (error) {
+    return res.status(400).json({ error: "Invalid sando id"});
+  }
+
+  UserModel.findById(userId)
+    .then((user) => {
+      console.log("User found:", user);
+      if (!user) {
+        return res.status(404).json({error: "user not found"});
+      }
+
+      if (!user.bookmarkedSandos.includes(validSandoId)) {
+        user.bookmarkedSandos.push(validSandoId);
+        return user.save().then(() => {
+          res.status(200).json({ message: "Sando bokmarked:"});
+        });
+      } else {
+        return res.status(200).json({ message: "Sando allready bookmarked"});
+      }
+
+    })
+    .catch((error) => {
+      console.error("Error bookmarking sando", error);
+    });
+});
+
+//adding sando to user's tried field
+
+app.post("/users/try", authenticateUser, (req, res) => {
+  console.log("req.user:", req.user);
+  const { sandwichId } = req.body;
+  const userId = req.user._id;
+
+  console.log("Request Body:", req.body);
+  console.log("User ID:", req.user._id);
+
+
+  if (sandwichId === undefined || sandwichId === null) {
+    return res.status(400).json({error: "No sandwich Id"});
+  }
+
+  let validSandoId;
+  try {
+    validSandoId = new mongoose.Types.ObjectId(sandwichId);
+  } catch (error) {
+    return res.status(400).json({ error: "Invalid sando id"});
+  }
+
+  UserModel.findById(userId)
+    .then((user) => {
+      console.log("User found:", user);
+      if (!user) {
+        return res.status(404).json({error: "user not found"});
+      }
+
+      if (!user.triedSandos.includes(validSandoId)) {
+        user.triedSandos.push(validSandoId);
+        return user.save().then(() => {
+          res.status(200).json({ message: "Sando tried:"});
+        });
+      } else {
+        return res.status(200).json({ message: "Sando allready tried"});
+      }
+
+    })
+    .catch((error) => {
+      console.error("Error trying sando", error);
+    });
+});
+
+app.post("/users/favorite", authenticateUser, (req, res) => {
+  console.log("req.user: ", req.user);
+  const { sandwichId } = req.body;
+  const userId = req.user._id;
+
+  if (sandwichId === undefined || sandwichId === null) {
+    return res.status(400).json({ error: "No sandwich Id"});
+  }
+
+  let validSandoId;
+  try {
+    validSandoId = new mongoose.Types.ObjectId(sandwichId);
+  } catch (error) {
+    return res.status(400).json({ error: "Invalid sando id"});
+  }
+
+  UserModel.findById(userId)
+    .then((user) => {
+      console.log("User found:", user);
+      if (!user) {
+        return res.status(404).json({ error: "user not foound"});
+      }
+
+      user.favoriteSando = validSandoId;
+      return user.save().then(() => {
+        res.status(200).json({ message: "favorite sando set"});
+      });
+    })
+    .catch((error) => {
+      console.error("Error setting favorite sandwich", error);
+    });
+});
+
 
 //Filtering by ingredients on Preference Page
 app.post("/sandwiches/preferences", (req, res) => {

@@ -190,6 +190,24 @@ h1 {
   transform: scale(1.1);
 }
 
+.user-link-buttons {
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  gap: 1rem;
+}
+
+.fav-user-link:hover {
+  transform: scale(1.1);
+}
+
+.book-user-link:hover {
+  transform: scale(1.1);
+}
+
+.tried-user-link:hover {
+  transform: scale(1.1);
+}
+
 .auth-buttons {
   position: absolute;
   top: 1rem;
@@ -371,6 +389,33 @@ h1 {
   text-align: left;
   transition: all 0.3s;
   position: relative;
+}
+
+.fav-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.sandwich-card-fav {
+  padding: 1rem;
+  border: 10px solid #d89607;
+  border-radius: 8px;
+  max-width: 280px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(146, 132, 132, 0.1);
+  text-align: left;
+  transition: all 0.3s;
+}
+
+.sandwich-card-fav:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 .card-header {
