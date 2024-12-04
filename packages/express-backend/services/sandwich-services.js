@@ -15,16 +15,19 @@ function addSandwich(sandwich) {
   return promise;
 }
 
-function addReview(id, review, rating) {
-  const ratings = [db.sandwiches.findSandwichById(id).rating, rating];
-  const reviewToAdd = db.sandwiches.updateOne({ _id: id }, 
+function addReview(id, review, newRating) {
+  return findSandwichById(id)
+    .then((s) => {
+      const { reviews, rating } = s;
+      const n = reviews.count;
+      const avg = (rating * n + newRating)/(n + 1);
+      return SandwichModel.updateOne({ _id: id }, 
     { 
       $push: { reviews: review },  
-      $set: { rating: $avg: { ratings } }
+      $set: { rating: avg }
     }
-  );
-  const promise = reviewToAdd.save();
-  return promise;
+      );
+    });
 }
 
 
