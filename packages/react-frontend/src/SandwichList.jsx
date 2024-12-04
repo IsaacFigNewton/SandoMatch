@@ -11,7 +11,34 @@ const SandwichList = ({
     <div className="sandwich-list">
       {sandwiches.map((sandwich) => (
         <div key={sandwich.id_} className="sandwich-card">
-          <h3>{sandwich.name}</h3>
+          {/* header for sandwich cards holding name and buttons */}
+
+          <div className="card-header">
+            <h3>{sandwich.name}</h3>
+            <div className="sando-buttons">
+              <button
+                className="favorite-button"
+                aria-label="Favorite"
+              >
+                {String.fromCodePoint(0x2764)}
+              </button>
+              <button
+                className="bookmark-button"
+                aria-label="Bookmark"
+              >
+                {String.fromCodePoint(0x1f516)}
+              </button>
+              <button
+                className="tried-button"
+                aria-label="Tried"
+              >
+                {String.fromCodePoint(0x2705)}
+              </button>
+            </div>
+          </div>
+
+          {/* end header */}
+
           <ul>
             {Object.values(sandwich.ingredients || {})
               .flatMap((category) =>
@@ -26,6 +53,7 @@ const SandwichList = ({
               ? sandwich.cuisine
               : "Cuisine not specified"}
           </p>
+
           <Rating
             sandwichId={sandwich.id_}
             rating={ratings[sandwich.id_]}

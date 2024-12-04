@@ -53,12 +53,14 @@ const SandwichSchema = new mongoose.Schema(
       }
     },
     cost: {
-      type: Schema.Types.Decimal128,
+      type: Map,
+      of: [mongoose.Schema.Types.Decimal128],
       required: true,
       trim: true
     },
     calories: {
-      type: Number,
+      type: Map,
+      of: [Number],
       required: true,
       trim: true
     },
@@ -73,17 +75,12 @@ const SandwichSchema = new mongoose.Schema(
       required: false,
       trim: true
     },
-    review_count: {
-      type: Number,
-      required: true,
-      trim: true
-    },
-    reviews: {
-      type: Map,
-      of: [String],
-      required: false,
-      trim: true
-    },
+    reviews: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Review"
+      }
+    ],
     name: {
       type: String,
       required: true,

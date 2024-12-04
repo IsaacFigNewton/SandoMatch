@@ -11,9 +11,15 @@ import SandwichList from "./SandwichList";
 import Login from "./Login";
 import Signup from "./Signup";
 import UserPage from "./UserPage";
+import MyBookmarkedSandos from "./MyBookmarkedSandos";
+import MyFavoriteSandos from "./MyFavoriteSando";
+import MyReviews from "./MyReviews";
+import MyTriedSandos from "./MyTriedSandos";
+
 import "./App.css";
 
 const API_PREFIX = "http://sandomatch.azurewebsites.net";
+// const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -24,11 +30,15 @@ function App() {
 
   const INVALID_TOKEN = "INVALID_TOKEN";
   const [, setToken] = useState(INVALID_TOKEN);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [, setMessage] = useState("");
   const [filters, setFilters] = useState({
     include: [],
     exclude: []
   });
+
+  const [, setUser] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Fetch all sandwiches from the backend
   useEffect(() => {
@@ -45,6 +55,10 @@ function App() {
         console.error(error);
       });
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuVisible((prev) => !prev);
+  };
 
   const applyFilters = (filters) => {
     fetch(`${API_PREFIX}/sandwiches/filter`, {
@@ -70,6 +84,15 @@ function App() {
       );
   };
 
+  useEffect(() => {
+    const currUser = JSON.parse(localStorage.getItem("user"));
+    const token = localStorage.getItem("token");
+    if (currUser && token) {
+      setUser(currUser);
+      setIsLoggedIn(true);
+    }
+  }, []);
+
   function loginUser(creds) {
     const promise = fetch(`${API_PREFIX}/login`, {
       method: "POST",
@@ -80,18 +103,26 @@ function App() {
     })
       .then((response) => {
         if (response.status === 200) {
-          response
-            .json()
-            .then((payload) => setToken(payload.token));
-          setMessage(`Login successful; auth token saved`);
+          return response.json();
         } else {
           setMessage(
             `Login Error ${response.status}: ${response.data}`
           );
         }
       })
+      .then((payload) => {
+        localStorage.setItem("token", payload.token);
+        localStorage.setItem(
+          "user",
+          JSON.stringify(payload.user)
+        );
+        setUser(payload.user);
+        setIsLoggedIn(true);
+        setMessage("Login Successful");
+      })
       .catch((error) => {
         setMessage(`Login Error: ${error}`);
+        return Promise.reject(error);
       });
 
     return promise;
@@ -136,6 +167,13 @@ function App() {
       });
 
     return promise;
+  }
+
+  function logoutUser() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUser(null);
+    setIsLoggedIn(false);
   }
 
   useEffect(() => {
@@ -196,6 +234,42 @@ function App() {
     <Router>
       <div>
         <header className="app-header">
+          <div className="menuPopoutButton">
+            <button
+              className="menu-button"
+              onClick={toggleMenu}
+              aria-haspopup="true"
+              aria-expanded={isMenuVisible}
+            >
+              Menu
+            </button>
+
+            {isMenuVisible && (
+              <div className="menuPopout" role="menu">
+                <ul className="menu-list">
+                  <li role="menuitem">
+                    <Link to="/user">Profile</Link>
+                  </li>
+                  <li role="menuitem">
+                    <Link to="/reviews">My Reviews</Link>
+                  </li>
+                  <li role="menuitem">
+                    <Link to="/favorites">
+                      My Favorite Sando
+                    </Link>
+                  </li>
+                  <li role="menuitem">
+                    <Link to="/myBookmarked">
+                      Bookmarked Sandos
+                    </Link>
+                  </li>
+                  <li role="menuitem">
+                    <Link to="/tried">Sandos I Have Tried</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
           <Link to="/" className="logo-link">
             <h1 className="app-logo">SandoMatch</h1>
           </Link>
@@ -205,19 +279,28 @@ function App() {
             Filter
           </Link>
 
-          {/* user buttons */}
-          <div className="auth-buttons">
-            <Link to="/login">
-              <button className="auth-button login">
-                Login
-              </button>
-            </Link>
-            <Link to="/signup">
-              <button className="auth-button signup">
-                Signup
-              </button>
-            </Link>
-          </div>
+          {isLoggedIn ? (
+            <div className="logout-button">
+              <Link to="/">
+                <button onClick={logoutUser}>Logout</button>
+              </Link>
+            </div>
+          ) : (
+            <>
+              <div className="auth-buttons">
+                <Link to="/login">
+                  <button className="auth-button login">
+                    Login
+                  </button>
+                </Link>
+                <Link to="/signup">
+                  <button className="auth-button signup">
+                    Signup
+                  </button>
+                </Link>
+              </div>
+            </>
+          )}
           <div className="user-button">
             <Link to="/user">
               <button className="user-prof-button">
@@ -297,6 +380,16 @@ function App() {
             }
           />
           <Route path="/user" element={<UserPage />} />
+          <Route
+            path="/myBookmarked"
+            element={<MyBookmarkedSandos />}
+          />
+          <Route
+            path="/favorites"
+            element={<MyFavoriteSandos />}
+          />
+          <Route path="/reviews" element={<MyReviews />} />
+          <Route path="/tried" element={<MyTriedSandos />} />
         </Routes>
       </div>
     </Router>

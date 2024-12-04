@@ -26,9 +26,8 @@ export function registerUser(req, res) {
               favoriteSando: null,
               bookmarkedSandos: []
             });
-
             return newUser.save().then(() => {
-              generateAccessToken(username).then((token) => {
+              generateAccessToken(newUser).then((token) => {
                 console.log("Token:", token);
                 res.status(201).send({ token: token });
               });
@@ -90,8 +89,17 @@ export function loginUser(req, res) {
         .compare(pwd, retrievedUser.password)
         .then((matched) => {
           if (matched) {
-            generateAccessToken(username).then((token) => {
-              res.status(200).send({ token: token });
+            generateAccessToken(retrievedUser).then((token) => {
+              const userDetails = {
+                _id: retrievedUser._id,
+                favoriteSando: retrievedUser.favoriteSando,
+                bookmarkedSandos:
+                  retrievedUser.bookmarkedSandos,
+                reviews: retrievedUser.reviews
+              };
+              res
+                .status(200)
+                .send({ token: token, user: userDetails });
             });
           } else {
             res.status(401).send("Unauthorized");

@@ -19,9 +19,8 @@
     },
     "cost": 15.28,
     "calories": 580,
-    "rating": 3,
+    "rating": 2,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -39,9 +38,8 @@
     },
     "cost": 13.78,
     "calories": 505,
-    "rating": 3,
+    "rating": 1,
     "dietary_tags": ["vegan"],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -65,7 +63,6 @@
     "calories": 500,
     "rating": 1,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -87,9 +84,8 @@
     },
     "cost": 14.28,
     "calories": 540,
-    "rating": 1,
+    "rating": 2,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -111,9 +107,8 @@
     },
     "cost": 12.28,
     "calories": 630,
-    "rating": 2,
+    "rating": 3,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -137,7 +132,6 @@
     "calories": 560,
     "rating": 3,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -157,9 +151,8 @@
     },
     "cost": 12.68,
     "calories": 490,
-    "rating": 3,
+    "rating": 5,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -181,7 +174,6 @@
     "calories": 510,
     "rating": 5,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -203,9 +195,8 @@
     },
     "cost": 13.78,
     "calories": 510,
-    "rating": 2,
+    "rating": 4,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -225,7 +216,6 @@
     "calories": 690,
     "rating": 2,
     "dietary_tags": ["vegan"],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -245,9 +235,8 @@
     },
     "cost": 13.78,
     "calories": 440,
-    "rating": 1,
+    "rating": 4,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -267,9 +256,8 @@
     },
     "cost": 13.78,
     "calories": 510,
-    "rating": 3,
+    "rating": 1,
     "dietary_tags": ["vegan"],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -293,7 +281,6 @@
     "calories": 490,
     "rating": 3,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -311,9 +298,8 @@
     },
     "cost": 11.19,
     "calories": 740,
-    "rating": 3,
+    "rating": 4,
     "dietary_tags": ["vegan"],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -333,9 +319,8 @@
     },
     "cost": 9.49,
     "calories": 460,
-    "rating": 2,
+    "rating": 1,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -353,9 +338,8 @@
     },
     "cost": 9.49,
     "calories": 590,
-    "rating": 3,
+    "rating": 1,
     "dietary_tags": ["vegan"],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -373,9 +357,8 @@
     },
     "cost": 10.99,
     "calories": 590,
-    "rating": 1,
+    "rating": 3,
     "dietary_tags": ["vegan"],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -389,7 +372,9 @@
         "chicken": ["chicken teriyaki"]
       },
       "cheeses": {},
-      "vegetables": {},
+      "vegetables": {
+        "onion": ["sweet onion sauce"]
+      },
       "condiments": {
         "sauce": ["sweet onion sauce"]
       },
@@ -397,9 +382,8 @@
     },
     "cost": 6.99,
     "calories": 430,
-    "rating": 5,
+    "rating": 1,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -417,9 +401,8 @@
     },
     "cost": 6.99,
     "calories": 500,
-    "rating": 5,
+    "rating": 2,
     "dietary_tags": ["vegan"],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -439,9 +422,8 @@
     },
     "cost": 5.99,
     "calories": 320,
-    "rating": 4,
+    "rating": 5,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -464,9 +446,8 @@
     },
     "cost": 5.99,
     "calories": 370,
-    "rating": 5,
+    "rating": 3,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -492,7 +473,6 @@
     "calories": 370,
     "rating": 3,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -512,9 +492,8 @@
     },
     "cost": 6.99,
     "calories": 330,
-    "rating": 2,
+    "rating": 4,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -524,9 +503,7 @@
     "name": "Meatball Marinara",
     "ingredients": {
       "breads": {},
-      "meats": {
-        "meatball": ["italian meatball"]
-      },
+      "meats": {},
       "cheeses": {},
       "vegetables": {},
       "condiments": {
@@ -536,9 +513,8 @@
     },
     "cost": 6.99,
     "calories": 520,
-    "rating": 5,
-    "dietary_tags": [],
-    "review_count": 1,
+    "rating": 2,
+    "dietary_tags": ["vegan"],
     "reviews": []
   },
   {
@@ -558,9 +534,8 @@
     },
     "cost": 5.99,
     "calories": 310,
-    "rating": 4,
+    "rating": 3,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -582,9 +557,8 @@
     },
     "cost": 4.99,
     "calories": 490,
-    "rating": 2,
+    "rating": 5,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -605,9 +579,8 @@
     },
     "cost": 5.99,
     "calories": 310,
-    "rating": 1,
+    "rating": 2,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -627,9 +600,8 @@
     },
     "cost": 6.99,
     "calories": 350,
-    "rating": 3,
+    "rating": 1,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -651,7 +623,6 @@
     "calories": 350,
     "rating": 3,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -669,9 +640,8 @@
     },
     "cost": 6.99,
     "calories": 370,
-    "rating": 1,
+    "rating": 5,
     "dietary_tags": ["vegan"],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -691,9 +661,8 @@
     },
     "cost": 5.99,
     "calories": 510,
-    "rating": 5,
+    "rating": 1,
     "dietary_tags": [],
-    "review_count": 1,
     "reviews": []
   },
   {
@@ -717,9 +686,8 @@
     },
     "cost": 5.99,
     "calories": 220,
-    "rating": 1,
+    "rating": 2,
     "dietary_tags": ["vegan"],
-    "review_count": 1,
     "reviews": []
   }
 ]

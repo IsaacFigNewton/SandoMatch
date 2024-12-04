@@ -1,9 +1,9 @@
-//UserPage.jsx
-// import React from "react";
+//MyTriedSandos.jsx
+//import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function UserPage() {
+function MyTriedSandos() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -15,22 +15,11 @@ function UserPage() {
 
   return (
     <div>
-      <h1>Profile Page</h1>
+      <h1>My Tried Sandos</h1>
       {user ? (
         <div>
           <p>
-            <strong>Username:</strong> {user._id}
-          </p>
-          <p>
-            <strong>Favorite Sando:</strong>{" "}
-            {user.favoriteSandwich}
-          </p>
-          <p>
-            <strong>Bookmarked Sandwiches:</strong>{" "}
-            {user.bookmarkedSandos}
-          </p>
-          <p>
-            <strong>Reviews:</strong> {user.reviews}
+            <strong>Tried Sandos:</strong> {user.triedSandos}
           </p>
         </div>
       ) : (
@@ -48,4 +37,4 @@ function UserPage() {
   );
 }
 
-export default UserPage;
+export default MyTriedSandos;

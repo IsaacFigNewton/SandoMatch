@@ -60,7 +60,6 @@ try {
     err
   );
 }
-
 // load sandwiches list from JSON file
 try {
   const fileData = fs.readFileSync(sandwichesPath, "utf8");
@@ -482,7 +481,15 @@ app.post("/sandwiches/preferences", (req, res) => {
 //ID
 app.get("/sandwiches/:id", (req, res) => {
   const id = req.params["id"];
+
+  if (isNaN(id)) {
+    return res
+      .status(400)
+      .json({ error: "Invalid sandwich ID." });
+  }
+
   const result = findSandwichById(id);
+
   if (result === undefined) {
     res.status(404).send("Sandwich not found.");
   } else {
@@ -504,6 +511,7 @@ app.post("/users", authenticateUser, (req, res) => {
 //Login
 app.post("/login", loginUser);
 
+// -------------------------------
 // get ingredients from Specific Restaurant
 const getIngredientsForRestaurant = (restaurantId) => {
   console.log("Parsed Data:", restaurantIngredientsList); // log the parse object
@@ -605,6 +613,7 @@ app.post("/sandwiches/generate", (req, res) => {
       continue; // skip if ingredients don't match restaurant ingredients
     }
 
+    // check if sandwich with same ingredients already exists
     const existingSandwich = findExistingSandwich(
       ingredients,
       restaurant
@@ -661,14 +670,26 @@ const determineDietaryTags = (ingredients) => {
 
   if (allItems.every((item) => !nonVegan.includes(item))) {
     tags.push("vegan");
-  }
-
-  if (allItems.every((item) => !nonVegetarian.includes(item))) {
+  } else if (
+    allItems.every((item) => !nonVegetarian.includes(item))
+  ) {
     tags.push("vegetarian");
   }
 
   return tags;
 };
+
+//--------------------------------------------
+app.post("/signup", registerUser);
+
+app.post("/users", authenticateUser, (req, res) => {
+  const userToAdd = req.body;
+  Users.addUser(userToAdd).then((result) =>
+    res.status(201).send(result)
+  );
+});
+
+app.post("/login", loginUser);
 
 // Start the server
 app.listen(process.env.PORT || port, () => {
