@@ -24,7 +24,8 @@ export function registerUser(req, res) {
               password: hashedPassword,
               reviews: [],
               favoriteSando: null,
-              bookmarkedSandos: []
+              bookmarkedSandos: [],
+              triedSandos: []
             });
             return newUser.save().then(() => {
               generateAccessToken(newUser).then((token) => {
@@ -68,6 +69,8 @@ export function authenticateUser(req, res, next) {
       process.env.TOKEN_SECRET,
       (error, decoded) => {
         if (decoded) {
+          req.user = decoded.username;
+          console.log("Decoded user ID:", req.user);
           next();
         } else {
           console.log("JWT error:", error);
@@ -95,7 +98,8 @@ export function loginUser(req, res) {
                 favoriteSando: retrievedUser.favoriteSando,
                 bookmarkedSandos:
                   retrievedUser.bookmarkedSandos,
-                reviews: retrievedUser.reviews
+                reviews: retrievedUser.reviews,
+                triedSandos: retrievedUser.triedSandos
               };
               res
                 .status(200)

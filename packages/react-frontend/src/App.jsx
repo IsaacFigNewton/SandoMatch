@@ -19,8 +19,8 @@ import MyTriedSandos from "./user-pages/MyTriedSandos";
 import "./App.css";
 import filterIcon from "./assets/filter2.png";
 
-// const API_PREFIX = "http://sandomatch.azurewebsites.net";
-const API_PREFIX = "http://localhost:8000";
+const API_PREFIX = "http://sandomatch.azurewebsites.net";
+//const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -150,17 +150,6 @@ function App() {
     return promise;
   }
 
-  // function addAuthHeader(otherHeaders = {}) {
-  //   if (token === INVALID_TOKEN) {
-  //     return otherHeaders;
-  //   } else {
-  //     return {
-  //       ...otherHeaders,
-  //       Authorization: `Bearer ${token}`
-  //     };
-  //   }
-  // }
-
   function signupUser(creds) {
     const promise = fetch(`${API_PREFIX}/signup`, {
       method: "POST",
@@ -198,6 +187,13 @@ function App() {
     setIsLoggedIn(false);
   }
 
+  const handleRatingChange = (id, rating) => {
+    setRatings((prevRatings) => ({
+      ...prevRatings,
+      [id]: rating
+    }));
+  };
+
   useEffect(() => {
     const savedRatings =
       JSON.parse(localStorage.getItem("ratings")) || {};
@@ -219,7 +215,6 @@ function App() {
       exclude: []
     });
   };
-  
 
   const getRandomSandwich = () => {
     fetch(`${API_PREFIX}/sandwiches/random`)
@@ -238,6 +233,140 @@ function App() {
         setError("Error fetching random sandwich");
       });
   };
+
+  function bookmarkSandwich(sandwichId) {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Sign in to bookmark a sando");
+      return;
+    }
+
+    console.log("Sending sandwichId:", sandwichId);
+
+    fetch(`${API_PREFIX}/users/bookmark`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify({ sandwichId })
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to bookmark sandwich`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setUser((prevUser) => {
+          const updatedUser = {
+            ...prevUser,
+            bookmarkedSandos: [
+              ...prevUser.bookmarkedSandos,
+              sandwichId
+            ]
+          };
+          localStorage.setItem(
+            "user",
+            JSON.stringify(updatedUser)
+          );
+          return updatedUser;
+        });
+      })
+      .catch((error) => {
+        console.error("Error bookmarking sandwich:", error);
+        alert("Failed to bookmark the sandwich.");
+      });
+  }
+
+  function trySandwich(sandwichId) {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Sign in to try a sando");
+      return;
+    }
+
+    console.log("Sending sandwichId:", sandwichId);
+
+    fetch(`${API_PREFIX}/users/try`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify({ sandwichId })
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to try sandwich`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setUser((prevUser) => {
+          console.log("prevUser:", prevUser);
+          const updatedUser = {
+            ...prevUser,
+            triedSandos: [
+              ...(prevUser.triedSandos || []),
+              sandwichId
+            ]
+          };
+          console.log("updatedUser:", updatedUser);
+          localStorage.setItem(
+            "user",
+            JSON.stringify(updatedUser)
+          );
+          return updatedUser;
+        });
+      })
+      .catch((error) => {
+        console.error("Error trying sandwich:", error);
+        alert("Failed to try the sandwich.");
+      });
+  }
+
+  function favoriteSandwich(sandwichId) {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Sign in to favorite a sando");
+      return;
+    }
+
+    console.log("Sending sandwichId:", sandwichId);
+
+    fetch(`${API_PREFIX}/users/favorite`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify({ sandwichId })
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to set favorite sandwich");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setUser((prevUser) => {
+          const updatedUser = {
+            ...prevUser,
+            favoriteSando: sandwichId
+          };
+          localStorage.setItem(
+            "user",
+            JSON.stringify(updatedUser)
+          );
+          return updatedUser;
+        });
+      })
+      .catch((error) => {
+        console.error("Error favoriting sandwich:", error);
+        alert("Failed to set favorite sandwich.");
+      });
+  }
 
   // const handleSearch = (term) => {
   //   setSearchTerm(term.toLowerCase());
@@ -262,7 +391,11 @@ function App() {
     <Router>
       <div>
         <header className="app-header">
-        <Link to="/" className="logo-link" onClick={resetRandomSandwich}>
+          <Link
+            to="/"
+            className="logo-link"
+            onClick={resetRandomSandwich}
+          >
             <h1 className="app-logo">SandoMatch</h1>
           </Link>
           <div className="menuPopoutButton">
@@ -282,9 +415,6 @@ function App() {
                     <Link to="/user">Profile</Link>
                   </li>
                   <li role="menuitem">
-                    <Link to="/reviews">My Reviews</Link>
-                  </li>
-                  <li role="menuitem">
                     <Link to="/favorites">
                       My Favorite Sando
                     </Link>
@@ -301,11 +431,8 @@ function App() {
               </div>
             )}
           </div>
-          
+
           {/* generating a new sandwich */}
-          <Link to="/sandwiches/generate" className="generate-button">
-            Generate New Sandwich
-          </Link>
 
           {isLoggedIn ? (
             <div className="logout-button">
@@ -347,19 +474,26 @@ function App() {
             path="/"
             element={
               <main className="main-content">
-               {/* Search bar with filter icon */}
-              <div className="search-filter-wrapper">
-               <Link to="/filter" className="filter-icon-link">
-                <img src={filterIcon} alt="Filter" className="filter-icon" />
-               </Link>
-                <input
-                  type="text"
-                  placeholder="Search for your perfect sandwich..."
-                  className="search-bar"
-                  onChange={(e) =>
-                    setSearchTerm(e.target.value)
-                  }
-                />
+                {/* Search bar with filter icon */}
+                <div className="search-filter-wrapper">
+                  <Link
+                    to="/filter"
+                    className="filter-icon-link"
+                  >
+                    <img
+                      src={filterIcon}
+                      alt="Filter"
+                      className="filter-icon"
+                    />
+                  </Link>
+                  <input
+                    type="text"
+                    placeholder="Search for your perfect sandwich..."
+                    className="search-bar"
+                    onChange={(e) =>
+                      setSearchTerm(e.target.value)
+                    }
+                  />
                 </div>
                 <button
                   className="random-button"
@@ -371,11 +505,19 @@ function App() {
                   <SandwichList
                     sandwiches={[randomSandwich]}
                     ratings={ratings}
+                    handleRatingChange={handleRatingChange}
+                    bookmarkSandwich={bookmarkSandwich}
+                    trySandwich={trySandwich}
+                    favoriteSandwich={favoriteSandwich}
                   />
                 ) : (
                   <SandwichList
                     sandwiches={filteredSandwiches}
                     ratings={ratings}
+                    handleRatingChange={handleRatingChange}
+                    bookmarkSandwich={bookmarkSandwich}
+                    trySandwich={trySandwich}
+                    favoriteSandwich={favoriteSandwich}
                   />
                 )}
               </main>
@@ -430,6 +572,3 @@ function App() {
 }
 
 export default App;
-
-
-

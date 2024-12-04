@@ -2,7 +2,12 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const FilterPage = ({ filters, setFilters, applyFilters, clearFilters }) => {
+const FilterPage = ({
+  filters,
+  setFilters,
+  applyFilters,
+  clearFilters
+}) => {
   const ingredients = {
     breads: ["White", "Sourdough", "Tortilla Wrap"],
     cheeses: ["Mozzarella", "Cheddar", "Provolone"],
@@ -43,42 +48,43 @@ const FilterPage = ({ filters, setFilters, applyFilters, clearFilters }) => {
                   <td>{item}</td>
                   <td>
                     {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
-                    {filters.ingredients.include.category ?
+                    {filters.ingredients.include.category ? (
                       <input
                         type="checkbox"
                         onChange={() =>
                           handleCheckboxChange("include", item)
                         }
-                          checked={filters.ingredients.include.category
+                        checked={filters.ingredients.include.category
                           // TODO: Fix bug here
                           .includes(item)}
                       />
-                    :
+                    ) : (
                       <input
                         type="checkbox"
                         onChange={() => true}
-                          checked={false}
+                        checked={false}
                       />
-                    }
+                    )}
                   </td>
                   <td>
                     {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
-                    {filters.ingredients.include.category ?
+                    {filters.ingredients.include.category ? (
                       <input
                         type="checkbox"
                         onChange={() =>
                           handleCheckboxChange("exclude", item)
                         }
-                          checked={filters.ingredients.exclude.category
-                          .excludes(item)}
+                        checked={filters.ingredients.exclude.category.excludes(
+                          item
+                        )}
                       />
-                    :
+                    ) : (
                       <input
                         type="checkbox"
                         onChange={() => true}
-                          checked={false}
+                        checked={false}
                       />
-                    }
+                    )}
                   </td>
                 </tr>
               ))
@@ -102,30 +108,16 @@ const FilterPage = ({ filters, setFilters, applyFilters, clearFilters }) => {
       </div>
     </div>
   );
-}
+};
 
 // Validate FilterPage props
+/*
+  rating, minCalories, maxCalories, maxCost, ingredient
+*/
 FilterPage.propTypes = {
   filters: PropTypes.shape({
     dietary_tags: PropTypes.array.isRequired,
-    ingredients: PropTypes.shape({
-      include: PropTypes.shape({
-        breads: PropTypes.array.isRequired,
-        meats: PropTypes.array.isRequired,
-        cheeses: PropTypes.array.isRequired,
-        vegetables: PropTypes.array.isRequired,
-        condiments: PropTypes.array.isRequired,
-        spices: PropTypes.array.isRequired
-      }).isRequired,
-      exclude: PropTypes.shape({
-        breads: PropTypes.array.isRequired,
-        meats: PropTypes.array.isRequired,
-        cheeses: PropTypes.array.isRequired,
-        vegetables: PropTypes.array.isRequired,
-        condiments: PropTypes.array.isRequired,
-        spices: PropTypes.array.isRequired
-      }).isRequired
-    }).isRequired,
+    ingredient: PropTypes.string.isRequired,
     maxCost: PropTypes.number.isRequired,
     minCalories: PropTypes.number.isRequired,
     maxCalories: PropTypes.number.isRequired,

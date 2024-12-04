@@ -4,7 +4,6 @@ import SandwichModel from "../models/sandwiches.js";
 
 mongoose.set("debug", true);
 
-
 function findSandwichById(id) {
   return SandwichModel.findById(id);
 }
@@ -16,20 +15,19 @@ function addSandwich(sandwich) {
 }
 
 function addReview(id, review, newRating) {
-  return findSandwichById(id)
-    .then((s) => {
-      const { reviews, rating } = s;
-      const n = reviews.count;
-      const avg = (rating * n + newRating)/(n + 1);
-      return SandwichModel.updateOne({ _id: id }, 
-    { 
-      $push: { reviews: review },  
-      $set: { rating: avg }
-    }
-      );
-    });
+  return findSandwichById(id).then((s) => {
+    const { reviews, rating } = s;
+    const n = reviews.count;
+    const avg = (rating * n + newRating) / (n + 1);
+    return SandwichModel.updateOne(
+      { _id: id },
+      {
+        $push: { reviews: review },
+        $set: { rating: avg }
+      }
+    );
+  });
 }
-
 
 function getSandwichObject(id) {
   let promise;
@@ -44,7 +42,6 @@ function getSandwichObject(id) {
 function getSandwiches() {
   return SandwichModel.find();
 }
-
 
 export default {
   findSandwichById,
