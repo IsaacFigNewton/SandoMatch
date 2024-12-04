@@ -297,11 +297,13 @@ function App() {
 
           {/* filtering */}
           <Link to="/filter" className="filter-button">
-            Filter
+            Filter Sandwiches
           </Link>
+
+
           {/* generating a new sandwich */}
           <Link to="/sandwiches/generate" className="generate-button">
-            Filter
+            Generate New Sandwich
           </Link>
 
           {isLoggedIn ? (
