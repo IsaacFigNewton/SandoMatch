@@ -490,6 +490,7 @@ h2 {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .apply-button:hover {
@@ -520,6 +521,21 @@ h2 {
   filter: brightness(1.2); 
 }
 
+.clear-filters-button {
+  background-color: #ff6f61; 
+  color: white;
+  border: none;
+  padding: 9px 9px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  
+}
+
+.clear-filters-button:hover {
+  background-color: #ff4f41; 
+}
 
 /* Shrink for tablets or smaller screens */
 @media (max-width: 768px) {

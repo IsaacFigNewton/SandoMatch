@@ -193,6 +193,14 @@ function App() {
     setSearchTerm(""); // Optional: Clear the search bar
   };
 
+  const clearFilters = () => {
+    setFilters({
+      include: [],
+      exclude: []
+    });
+  };
+  
+
   const getRandomSandwich = () => {
     fetch(`${API_PREFIX}/sandwiches/random`)
       .then((response) => {
@@ -210,7 +218,6 @@ function App() {
         setError("Error fetching random sandwich");
       });
   };
-
 
   // const handleSearch = (term) => {
   //   setSearchTerm(term.toLowerCase());
@@ -357,6 +364,7 @@ function App() {
                 filters={filters}
                 setFilters={setFilters}
                 applyFilters={applyFilters}
+                clearFilters={clearFilters}
               />
             }
           />

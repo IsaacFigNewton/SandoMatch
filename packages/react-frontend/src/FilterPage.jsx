@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const FilterPage = ({ filters, setFilters, applyFilters }) => {
+const FilterPage = ({ filters, setFilters, applyFilters, clearFilters }) => {
   const ingredients = {
     Bread: ["White", "Sourdough", "Tortilla Wrap"],
     Cheese: ["Mozzarella", "Cheddar", "Provolone"],
@@ -34,46 +34,53 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
           </tr>
         </thead>
         <tbody>
-          {Object.entries(ingredients).map(
-            ([category, items]) =>
-              items.map((item, index) => (
-                <tr key={item}>
-                  {/* Show the category name only for the first row of each category */}
-                  <td>{index === 0 ? category : ""}</td>
-                  <td>{item}</td>
-                  <td>
-                    <input
-                      type="checkbox"
-                      onChange={() =>
-                        handleCheckboxChange("include", item)
-                      }
-                      checked={filters.include.includes(item)}
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="checkbox"
-                      onChange={() =>
-                        handleCheckboxChange("exclude", item)
-                      }
-                      checked={filters.exclude.includes(item)}
-                    />
-                  </td>
-                </tr>
-              ))
+          {Object.entries(ingredients).map(([category, items]) =>
+            items.map((item, index) => (
+              <tr key={item}>
+                {/* Show the category name only for the first row of each category */}
+                <td>{index === 0 ? category : ""}</td>
+                <td>{item}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    onChange={() =>
+                      handleCheckboxChange("include", item)
+                    }
+                    checked={filters.include.includes(item)}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="checkbox"
+                    onChange={() =>
+                      handleCheckboxChange("exclude", item)
+                    }
+                    checked={filters.exclude.includes(item)}
+                  />
+                </td>
+              </tr>
+            ))
           )}
         </tbody>
       </table>
-      <Link
-        to="/"
-        className="apply-button"
-        onClick={() => applyFilters(filters)}
-      >
-        Apply Filters
-      </Link>
+      <div className="filter-actions">
+        <Link
+          to="/"
+          className="apply-button"
+          onClick={() => applyFilters(filters)}
+        >
+          Apply Filters
+        </Link>
+        <button
+          onClick={clearFilters}
+          className="clear-filters-button"
+        >
+          Clear
+        </button>
+      </div>
     </div>
   );
-};
+}
 
 // Validate FilterPage props
 FilterPage.propTypes = {
