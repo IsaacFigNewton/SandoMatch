@@ -42,26 +42,43 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
                   <td>{index === 0 ? category : ""}</td>
                   <td>{item}</td>
                   <td>
-                    <input
-                      type="checkbox"
-                      onChange={() =>
-                        handleCheckboxChange("include", item)
-                      }
-                      checked={filters.ingredients.include.category
-                        // TODO: Fix bug here
-                        .includes(item)}
-                    />
+                    {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
+                    {filters.ingredients.include.category ?
+                      <input
+                        type="checkbox"
+                        onChange={() =>
+                          handleCheckboxChange("include", item)
+                        }
+                          checked={filters.ingredients.include.category
+                          // TODO: Fix bug here
+                          .includes(item)}
+                      />
+                    :
+                      <input
+                        type="checkbox"
+                        onChange={() => true}
+                          checked={false}
+                      />
+                    }
                   </td>
                   <td>
-                    <input
-                      type="checkbox"
-                      onChange={() =>
-                        handleCheckboxChange("exclude", item)
-                      }
-                      checked={filters.ingredients.exclude.category
-                        // TODO: Fix bug here
-                        .includes(item)}
-                    />
+                    {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
+                    {filters.ingredients.include.category ?
+                      <input
+                        type="checkbox"
+                        onChange={() =>
+                          handleCheckboxChange("exclude", item)
+                        }
+                          checked={filters.ingredients.exclude.category
+                          .excludes(item)}
+                      />
+                    :
+                      <input
+                        type="checkbox"
+                        onChange={() => true}
+                          checked={false}
+                      />
+                    }
                   </td>
                 </tr>
               ))
