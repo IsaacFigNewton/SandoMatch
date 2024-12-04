@@ -188,7 +188,10 @@ function App() {
     localStorage.setItem("ratings", JSON.stringify(ratings));
   }, [ratings]);
 
-  
+  const resetRandomSandwich = () => {
+    setRandomSandwich(null);
+    setSearchTerm(""); // Optional: Clear the search bar
+  };
 
   const getRandomSandwich = () => {
     fetch(`${API_PREFIX}/sandwiches/random`)
@@ -232,6 +235,9 @@ function App() {
     <Router>
       <div>
         <header className="app-header">
+        <Link to="/" className="logo-link" onClick={resetRandomSandwich}>
+            <h1 className="app-logo">SandoMatch</h1>
+          </Link>
           <div className="menuPopoutButton">
             <button
               className="menu-button"
@@ -268,9 +274,7 @@ function App() {
               </div>
             )}
           </div>
-          <Link to="/" className="logo-link">
-            <h1 className="app-logo">SandoMatch</h1>
-          </Link>
+          
 
           {isLoggedIn ? (
             <div className="logout-button">
@@ -394,3 +398,6 @@ function App() {
 }
 
 export default App;
+
+
+
