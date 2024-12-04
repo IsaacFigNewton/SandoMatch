@@ -44,6 +44,7 @@ const getVeganIngredients = () => {
   return veganIngredients;
 };
 
+// TODO: Integrate this with the db-tables/sandwiches.json entries until Madi finishes sando CRUD
 // make a function that selects from the list of ingredients ex: vegetables and check for duplicates
 const selectRandomIngredients = (veganIngredients) => {
   return {
