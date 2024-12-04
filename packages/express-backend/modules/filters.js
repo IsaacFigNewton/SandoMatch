@@ -3,14 +3,16 @@ const findSandwichById = (
     sandwichesList,
     id
 ) => {
-    return sandwichesList.find(
+    return sandwichesList.filter((
+    ) => {
       (sandwich) => sandwich["id_"] === Number(id)
-    );
+    });
 }
 
 
 const filterSandwiches = (sandwichesList, filters) => {
     const { rating, minCalories, maxCalories, maxCost, ingredient } = filters;
+    console.log("Filters: ", filters);
 
     let filteredSandwiches = sandwichesList;
 

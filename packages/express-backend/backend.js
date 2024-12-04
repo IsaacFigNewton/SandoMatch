@@ -5,18 +5,16 @@ dotenv.config();
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import {
-  registerUser,
-  authenticateUser,
-  loginUser
-} from "./auth.js";
-import sandoFilters from "./modules/filters.js"
 import { MongoTopologyClosedError } from "mongodb";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+
+// Modules
 import sandoFilters from "./modules/filters.js";
 import sandoGeneration from "./modules/generation.js";
+
+// Services
 import {
   registerUser,
   authenticateUser,
@@ -61,7 +59,7 @@ const sandwichesPath = path.resolve(
 // load the default cost and calorie estimates from the JSON file
 try {
   const data = fs.readFileSync(
-    restaurantIngredientsPath[0],
+    restaurantIngredientsPath,
     "utf8"
   );
   costCalEstimates = JSON.parse(data);
@@ -202,6 +200,7 @@ app.get("/sandwiches/:id", (req, res) => {
 });
 
 app.get("/sandwiches/filter", (req, res) => {
+  console.log("egg ", req)
   const filteredSandwiches = sandoFilters.filterSandwiches(sandwichesList, req.query);
   res.json({ sandwiches_list: filteredSandwiches });
 });
