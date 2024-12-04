@@ -26,10 +26,7 @@ const SandwichProfile = ({
           >
             {String.fromCodePoint(0x1f516)}
           </button>
-          <button
-            className="tried-button"
-            aria-label="Tried"
-          >
+          <button className="tried-button" aria-label="Tried">
             {String.fromCodePoint(0x2705)}
           </button>
         </div>
@@ -39,9 +36,7 @@ const SandwichProfile = ({
 
       <ul>
         {Object.values(sandwich.ingredients || {})
-          .flatMap((category) =>
-            Object.values(category).flat()
-          )
+          .flatMap((category) => Object.values(category).flat())
           .map((ingredient, index) => (
             <li key={index}>{ingredient}</li>
           ))}
@@ -64,8 +59,7 @@ const SandwichProfile = ({
 // Validate Sandwich card props
 SandwichProfile.propTypes = {
   sandwich: PropTypes.shape({
-    "name": PropTypes.string.isRequired,
-    
+    name: PropTypes.string.isRequired
   }).isRequired,
   handleRatingChange: PropTypes.func.isRequired
 };

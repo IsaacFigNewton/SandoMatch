@@ -99,8 +99,7 @@ export function loginUser(req, res) {
                 bookmarkedSandos:
                   retrievedUser.bookmarkedSandos,
                 reviews: retrievedUser.reviews,
-                triedSandos: 
-                  retrievedUser.triedSandos
+                triedSandos: retrievedUser.triedSandos
               };
               res
                 .status(200)

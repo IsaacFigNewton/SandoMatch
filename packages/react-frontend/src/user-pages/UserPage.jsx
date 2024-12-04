@@ -1,6 +1,11 @@
 //UserPage.jsx
 // import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
 import MyFavoriteSando from "./MyFavoriteSando";
 import { useEffect, useState } from "react";
 import MyBookmarkedSandos from "./MyBookmarkedSandos";
@@ -20,7 +25,7 @@ function UserPage() {
   return (
     <div>
       <div>
-      <h1>{user ? user._id : "Profile Page"}</h1>
+        <h1>{user ? user._id : "Profile Page"}</h1>
         {user ? (
           <div className="user-link-buttons">
             <Link to="/favorites">
@@ -32,12 +37,16 @@ function UserPage() {
             </Link>
             <Link to="/myBookmarked">
               <button className="book-user-link">
-                <p><strong>Bookmarked Sandwiches</strong>{" "}</p>
+                <p>
+                  <strong>Bookmarked Sandwiches</strong>{" "}
+                </p>
               </button>
             </Link>
             <Link to="/tried">
               <button className="tried-user-link">
-                <p><strong>Tried Sandos</strong></p>
+                <p>
+                  <strong>Tried Sandos</strong>
+                </p>
               </button>
             </Link>
           </div>
@@ -63,12 +72,9 @@ function UserPage() {
           path="/myBookmarked"
           element={<MyBookmarkedSandos />}
         />
-        <Route
-          path="/tried"
-          element={<MyTriedSandos />}
-        />
+        <Route path="/tried" element={<MyTriedSandos />} />
       </Routes>
-      </div>
+    </div>
   );
 }
 

@@ -2,8 +2,14 @@
 //import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Rating from "../Rating";
 
-const API_PREFIX = "http://localhost:8000";
+import veganImg from "../assets/vegan2.png";
+import vegetarianImg from "../assets/vegetarian.png";
+import glutenFreeImg from "../assets/gluten-free.png";
+
+//const API_PREFIX = "http://localhost:8000";
+const API_PREFIX = "http://sandomatch.azurewebsites.net";
 
 function MyFavoriteSandos() {
   const [user, setUser] = useState(null);
@@ -18,13 +24,13 @@ function MyFavoriteSandos() {
       if (token) {
         fetch(`${API_PREFIX}/sandwiches`, {
           headers: {
-            Authorization: `Bearer ${token}`,
-          },
+            Authorization: `Bearer ${token}`
+          }
         })
           .then((response) => {
             if (!response.ok) {
-              throw new Error("Fail to get bookmarked sandos")
-            } 
+              throw new Error("Fail to get bookmarked sandos");
+            }
             return response.json();
           })
           .then((data) => {
@@ -36,7 +42,9 @@ function MyFavoriteSandos() {
               console.log("Favorite sando", favoriteSando);
               setFavoriteSando(favorite);
             } else {
-              console.error("No sandwiches_list found in response.");
+              console.error(
+                "No sandwiches_list found in response."
+              );
             }
           })
           .catch((error) => {
@@ -46,33 +54,83 @@ function MyFavoriteSandos() {
     }
   }, []);
 
+  const renderDietaryTags = (tags) => {
+    const tagIcons = {
+      vegan: veganImg,
+      vegetarian: vegetarianImg,
+      "gluten-free": glutenFreeImg
+    };
+
+    return (
+      <div className="dietary-tags">
+        {tags.includes("vegan") && (
+          <img
+            src={tagIcons.vegan}
+            alt="Vegan"
+            className="dietary-tag-icon"
+          />
+        )}
+        {tags.includes("vegetarian") && (
+          <img
+            src={tagIcons.vegetarian}
+            alt="Vegetarian"
+            className="dietary-tag-icon"
+          />
+        )}
+        {tags.includes("gluten-free") && (
+          <img
+            src={tagIcons["gluten-free"]}
+            alt="Gluten-Free"
+            className="dietary-tag-icon"
+          />
+        )}
+      </div>
+    );
+  };
+
+  const renderCostRange = (cost) => {
+    if (cost < 5) return "$";
+    if (cost < 10) return "$$";
+    return "$$$";
+  };
+
+  const renderIngredients = (ingredients) => {
+    const allIngredients = Object.values(
+      ingredients || {}
+    ).flatMap((category) => Object.values(category).flat());
+    const displayedIngredients = allIngredients.slice(0, 3);
+    return (
+      <p>
+        <strong>Ingredients:</strong>{" "}
+        {displayedIngredients.join(", ")}{" "}
+        {allIngredients.length > 3 && "..."}
+      </p>
+    );
+  };
+
   return (
     <div className="fav-card">
       <h1 className="title-fav">My Favorite Sando</h1>
       {user ? (
         favoriteSando ? (
-          <div key={favoriteSando.id_} className="sandwich-card-fav">
+          <div
+            key={favoriteSando.id_}
+            className="sandwich-card-fav"
+          >
             {/* header for sandwich cards holding name and buttons */}
             <div className="card-header">
               <h3>{favoriteSando.name}</h3>
             </div>
             {/* end header */}
-            <ul>
-              {Object.values(favoriteSando.ingredients || {})
-                .flatMap((category) =>
-                  Object.values(category).flat()
-                )
-                .map((ingredient, index) => (
-                  <li key={index}>{ingredient}</li>
-                ))}
-            </ul>
+            {renderIngredients(favoriteSando.ingredients)}
             <p>
-              Cuisine: {" "}
-              {favoriteSando.cuisine
-                ? favoriteSando.cuisine
-                : "Cuisine not specified"}
+              <strong>Cost:</strong>{" "}
+              {renderCostRange(favoriteSando.costs)}
             </p>
-
+            {renderDietaryTags(
+              favoriteSando.dietary_tags || []
+            )}
+            <Rating rating={favoriteSando.rating || 0} />
           </div>
         ) : (
           <p>No favorite sando selected</p>
