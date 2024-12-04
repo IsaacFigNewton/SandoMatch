@@ -8,60 +8,76 @@ const SandwichList = ({
   handleRatingChange
 }) => {
   return (
-    <div className="sandwich-list">
-      {sandwiches.map((sandwich) => (
-        <div key={sandwich.id_} className="sandwich-card">
-          {/* header for sandwich cards holding name and buttons */}
+    <Router>
+      <div className="sandwich-list">
+        {sandwiches.map((sandwich) => (
+          <Link to="/sandwich/?id=123" className>
+            <div key={sandwich.id_} className="sandwich-card">
+              {/* header for sandwich cards holding name and buttons */}
 
-          <div className="card-header">
-            <h3>{sandwich.name}</h3>
-            <div className="sando-buttons">
-              <button
-                className="favorite-button"
-                aria-label="Favorite"
-              >
-                {String.fromCodePoint(0x2764)}
-              </button>
-              <button
-                className="bookmark-button"
-                aria-label="Bookmark"
-              >
-                {String.fromCodePoint(0x1f516)}
-              </button>
-              <button
-                className="tried-button"
-                aria-label="Tried"
-              >
-                {String.fromCodePoint(0x2705)}
-              </button>
+              <div className="card-header">
+                <h3>{sandwich.name}</h3>
+                <div className="sando-buttons">
+                  <button
+                    className="favorite-button"
+                    aria-label="Favorite"
+                  >
+                    {String.fromCodePoint(0x2764)}
+                  </button>
+                  <button
+                    className="bookmark-button"
+                    aria-label="Bookmark"
+                  >
+                    {String.fromCodePoint(0x1f516)}
+                  </button>
+                  <button
+                    className="tried-button"
+                    aria-label="Tried"
+                  >
+                    {String.fromCodePoint(0x2705)}
+                  </button>
+                </div>
+              </div>
+              {/* end header */}
+
+              <ul>
+                {Object.values(sandwich.ingredients || {})
+                  .flatMap((category) =>
+                    Object.values(category).flat()
+                  )
+                  .map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                  ))}
+              </ul>
+              <p>
+                {sandwich.cuisine
+                  ? sandwich.cuisine
+                  : "Cuisine not specified"}
+              </p>
+
+              <Rating
+                sandwichId={sandwich.id_}
+                rating={ratings[sandwich.id_]}
+                handleRatingChange={handleRatingChange}
+              />
             </div>
-          </div>
+          </Link>
+        ))}
+      </div>
 
-          {/* end header */}
-
-          <ul>
-            {Object.values(sandwich.ingredients || {})
-              .flatMap((category) =>
-                Object.values(category).flat()
-              )
-              .map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
-              ))}
-          </ul>
-          <p>
-            {sandwich.cuisine
-              ? sandwich.cuisine
-              : "Cuisine not specified"}
-          </p>
-
-          <Rating
-            sandwichId={sandwich.id_}
-            rating={ratings[sandwich.id_]}
-            handleRatingChange={handleRatingChange}
+      <Routes>
+          <Route
+            path="/filter"
+            element={
+              <FilterPage
+                filters={filters}
+                setFilters={setFilters}
+                applyFilters={applyFilters}
+              />
+            }
           />
-        </div>
-      ))}
-    </div>
+      </Routes>
+    </Router>
   );
 };
 
