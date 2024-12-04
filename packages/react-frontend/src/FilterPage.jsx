@@ -48,13 +48,14 @@ const FilterPage = ({
                   <td>{item}</td>
                   <td>
                     {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
-                    {filters.ingredients.include.category ? (
+                    {filters.ingredients ? (
                       <input
                         type="checkbox"
                         onChange={() =>
                           handleCheckboxChange("include", item)
                         }
-                        checked={filters.ingredients.include.category
+                        checked={filters.ingredients
+                          .split(",")
                           // TODO: Fix bug here
                           .includes(item)}
                       />
@@ -68,15 +69,15 @@ const FilterPage = ({
                   </td>
                   <td>
                     {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
-                    {filters.ingredients.include.category ? (
+                    {filters.ingredients ? (
                       <input
                         type="checkbox"
                         onChange={() =>
                           handleCheckboxChange("exclude", item)
                         }
-                        checked={filters.ingredients.exclude.category.excludes(
-                          item
-                        )}
+                        checked={filters.ingredients
+                          .split(",")
+                          .excludes(item)}
                       />
                     ) : (
                       <input
@@ -117,14 +118,15 @@ const FilterPage = ({
 FilterPage.propTypes = {
   filters: PropTypes.shape({
     dietary_tags: PropTypes.array.isRequired,
-    ingredient: PropTypes.string.isRequired,
+    ingredients: PropTypes.string.isRequired,
     maxCost: PropTypes.number.isRequired,
     minCalories: PropTypes.number.isRequired,
     maxCalories: PropTypes.number.isRequired,
     rating: PropTypes.number.isRequired
   }).isRequired,
   setFilters: PropTypes.func.isRequired,
-  applyFilters: PropTypes.func.isRequired
+  applyFilters: PropTypes.func.isRequired,
+  clearFilters: PropTypes.func.isRequired
 };
 
 export default FilterPage;

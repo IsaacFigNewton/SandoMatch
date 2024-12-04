@@ -19,8 +19,8 @@ import MyTriedSandos from "./user-pages/MyTriedSandos";
 import "./App.css";
 import filterIcon from "./assets/filter2.png";
 
-const API_PREFIX = "http://sandomatch.azurewebsites.net";
-//const API_PREFIX = "http://localhost:8000";
+//const API_PREFIX = "http://sandomatch.azurewebsites.net";
+const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -257,7 +257,7 @@ function App() {
         }
         return response.json();
       })
-      .then((data) => {
+      .then(() => {
         setUser((prevUser) => {
           const updatedUser = {
             ...prevUser,
@@ -302,7 +302,7 @@ function App() {
         }
         return response.json();
       })
-      .then((data) => {
+      .then(() => {
         setUser((prevUser) => {
           console.log("prevUser:", prevUser);
           const updatedUser = {
@@ -349,7 +349,7 @@ function App() {
         }
         return response.json();
       })
-      .then((data) => {
+      .then(() => {
         setUser((prevUser) => {
           const updatedUser = {
             ...prevUser,
