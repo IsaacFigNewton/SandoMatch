@@ -65,8 +65,9 @@ h1 {
 
 .search-bar {
   display: block;
-  width: 100%;
+  min-width: 200%;
   max-width: 600px;
+  flex: 1;
   margin: 0rem auto 1rem auto;
   padding: 0.75rem 1rem;
   font-size: 1rem;
@@ -89,7 +90,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: calc(100vh - 80px); /* Ensure content fits the viewport */
+  min-height: calc(100vh - 80px); 
   padding-top: 80px;
 }
 
@@ -416,7 +417,6 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* NEW */
 .dietary-tags {
   display: flex;
   gap: 8px; 
@@ -449,7 +449,6 @@ h1 {
 .rating .star.filled {
   color: #ffd000; 
 }
-/* DONE */
 
 .filter-page {
   margin: 20px;
@@ -465,6 +464,7 @@ h2 {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
+  background-color: #ffffff96;
 }
 
 .preference-table th,
@@ -475,7 +475,7 @@ h2 {
 }
 
 .preference-table th {
-  background-color: #f9f9f9;
+  background-color: #ffffffc3;
   font-weight: bold;
 }
 
@@ -495,6 +495,31 @@ h2 {
 .apply-button:hover {
   background-color: #0056b3;
 }
+
+.search-filter-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8px; 
+  margin-bottom: 16px; 
+  padding: 0.4rem 0.6rem; 
+}
+
+.filter-icon-link {
+  display: inline-block;
+  
+}
+
+.filter-icon {
+  width: 42px; 
+  height: 42px;
+  cursor: pointer;
+}
+
+.filter-icon:hover {
+  opacity: 0.7; 
+  filter: brightness(1.2); 
+}
+
 
 /* Shrink for tablets or smaller screens */
 @media (max-width: 768px) {

@@ -17,6 +17,8 @@ import MyReviews from "./MyReviews";
 import MyTriedSandos from "./MyTriedSandos";
 
 import "./App.css";
+import filterIcon from "./assets/filter2.png";
+
 
 //const API_PREFIX = "http://sandomatch.azurewebsites.net";
 const API_PREFIX = "http://localhost:8000";
@@ -270,11 +272,6 @@ function App() {
             <h1 className="app-logo">SandoMatch</h1>
           </Link>
 
-          {/* filtering */}
-          <Link to="/filter" className="filter-button">
-            Filter
-          </Link>
-
           {isLoggedIn ? (
             <div className="logout-button">
               <Link to="/">
@@ -315,6 +312,11 @@ function App() {
             path="/"
             element={
               <main className="main-content">
+               {/* Search bar with filter icon */}
+              <div className="search-filter-wrapper">
+               <Link to="/filter" className="filter-icon-link">
+                <img src={filterIcon} alt="Filter" className="filter-icon" />
+               </Link>
                 <input
                   type="text"
                   placeholder="Search for your perfect sandwich..."
@@ -323,6 +325,7 @@ function App() {
                     setSearchTerm(e.target.value)
                   }
                 />
+                </div>
                 <button
                   className="random-button"
                   onClick={getRandomSandwich}
