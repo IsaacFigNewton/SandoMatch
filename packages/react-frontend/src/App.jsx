@@ -3,8 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  useLocation
+  Link
 } from "react-router-dom";
 import sandwichData from "./sandwiches.json";
 import FilterPage from "./FilterPage";
@@ -61,7 +60,6 @@ function App() {
 
   const [, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  //const location = useLocation();
 
   // Fetch all sandwiches from the backend
   useEffect(() => {
@@ -287,7 +285,7 @@ function App() {
                     </Link>
                   </li>
                   <li role="menuitem">
-                    <Link to="/tried">Sandos I\'ve Tried</Link>
+                    <Link to="/tried">Sandos I Have Tried</Link>
                   </li>
                 </ul>
               </div>

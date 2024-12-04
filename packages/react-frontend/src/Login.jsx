@@ -1,12 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useNavigate
-} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login({ handleSubmit, buttonLabel = "Log In" }) {
   // property validation
@@ -70,7 +64,7 @@ function Login({ handleSubmit, buttonLabel = "Log In" }) {
         </button>
       </form>
       <p className="signup-text">
-        Don't have an account?{" "}
+        Don&apos;t have an account?{" "}
         <Link className="signup-link" to="/signup">
           {" "}
           Sign up here.

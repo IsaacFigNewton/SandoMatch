@@ -1,10 +1,7 @@
 //UserPage.jsx
 // import React from "react";
 import { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function UserPage() {
   const [user, setUser] = useState(null);
