@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 
 const FilterPage = ({ filters, setFilters, applyFilters }) => {
   const ingredients = {
-    Bread: ["White", "Sourdough", "Tortilla Wrap"],
-    Cheese: ["Mozzarella", "Cheddar", "Provolone"],
-    Vegetables: ["Tomato", "Onion", "Lettuce"],
-    Proteins: ["Salami", "Ham", "Turkey"],
-    Condiments: ["Mustard", "Mayonnaise", "Oil"]
+    breads: ["White", "Sourdough", "Tortilla Wrap"],
+    cheeses: ["Mozzarella", "Cheddar", "Provolone"],
+    vegetables: ["Tomato", "Onion", "Lettuce"],
+    proteins: ["Salami", "Ham", "Turkey"],
+    condiments: ["Mustard", "Mayonnaise", "Oil"]
   };
 
   const handleCheckboxChange = (action, value) => {
@@ -42,22 +42,43 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
                   <td>{index === 0 ? category : ""}</td>
                   <td>{item}</td>
                   <td>
-                    <input
-                      type="checkbox"
-                      onChange={() =>
-                        handleCheckboxChange("include", item)
-                      }
-                      checked={filters.include.includes(item)}
-                    />
+                    {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
+                    {filters.ingredients.include.category ?
+                      <input
+                        type="checkbox"
+                        onChange={() =>
+                          handleCheckboxChange("include", item)
+                        }
+                          checked={filters.ingredients.include.category
+                          // TODO: Fix bug here
+                          .includes(item)}
+                      />
+                    :
+                      <input
+                        type="checkbox"
+                        onChange={() => true}
+                          checked={false}
+                      />
+                    }
                   </td>
                   <td>
-                    <input
-                      type="checkbox"
-                      onChange={() =>
-                        handleCheckboxChange("exclude", item)
-                      }
-                      checked={filters.exclude.includes(item)}
-                    />
+                    {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
+                    {filters.ingredients.include.category ?
+                      <input
+                        type="checkbox"
+                        onChange={() =>
+                          handleCheckboxChange("exclude", item)
+                        }
+                          checked={filters.ingredients.exclude.category
+                          .excludes(item)}
+                      />
+                    :
+                      <input
+                        type="checkbox"
+                        onChange={() => true}
+                          checked={false}
+                      />
+                    }
                   </td>
                 </tr>
               ))
@@ -78,8 +99,29 @@ const FilterPage = ({ filters, setFilters, applyFilters }) => {
 // Validate FilterPage props
 FilterPage.propTypes = {
   filters: PropTypes.shape({
-    include: PropTypes.array.isRequired,
-    exclude: PropTypes.array.isRequired
+    dietary_tags: PropTypes.array.isRequired,
+    ingredients: PropTypes.shape({
+      include: PropTypes.shape({
+        breads: PropTypes.array.isRequired,
+        meats: PropTypes.array.isRequired,
+        cheeses: PropTypes.array.isRequired,
+        vegetables: PropTypes.array.isRequired,
+        condiments: PropTypes.array.isRequired,
+        spices: PropTypes.array.isRequired
+      }).isRequired,
+      exclude: PropTypes.shape({
+        breads: PropTypes.array.isRequired,
+        meats: PropTypes.array.isRequired,
+        cheeses: PropTypes.array.isRequired,
+        vegetables: PropTypes.array.isRequired,
+        condiments: PropTypes.array.isRequired,
+        spices: PropTypes.array.isRequired
+      }).isRequired
+    }).isRequired,
+    maxCost: PropTypes.number.isRequired,
+    minCalories: PropTypes.number.isRequired,
+    maxCalories: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired
   }).isRequired,
   setFilters: PropTypes.func.isRequired,
   applyFilters: PropTypes.func.isRequired
