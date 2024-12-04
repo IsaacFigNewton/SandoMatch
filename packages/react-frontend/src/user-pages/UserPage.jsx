@@ -1,10 +1,6 @@
 //UserPage.jsx
 // import React from "react";
-import {
-  Route,
-  Routes,
-  Link
-} from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import MyFavoriteSando from "./MyFavoriteSando";
 import { useEffect, useState } from "react";
 import MyBookmarkedSandos from "./MyBookmarkedSandos";
