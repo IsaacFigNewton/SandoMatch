@@ -46,7 +46,7 @@ const getVeganIngredients = () => {
 
 // TODO: Integrate this with the db-tables/sandwiches.json entries until Madi finishes sando CRUD
 // make a function that selects from the list of ingredients ex: vegetables and check for duplicates
-const selectRandomIngredients = (veganIngredients) => {
+const getRandomIngredients = (veganIngredients) => {
   return {
     vegetables: veganIngredients.vegetables
       ? veganIngredients.vegetables.slice(0, 2)
@@ -95,10 +95,10 @@ const getCostAndCalories = (ingredients, restaurantData) => {
 // TODO: Merge this function with the one below
 // vegan route is still in a work in progress
 // route to generate vegan sandwich
-const generateVeganSandwich = (veganIngredients) => {
+const generateVeganSandwich = () => {
   const veganIngredients = getVeganIngredients();
   const selectedIngredients =
-    selectRandomIngredients(veganIngredients);
+    getRandomIngredients(veganIngredients);
 
   // calculate total cost and calories
   const cost = Object.values(selectedIngredients)
@@ -177,7 +177,9 @@ const [filters, setFilters] = useState({
 
 // generate a new sandwich
 // TODO: Integrate this with filters (once the other stuff is fixed)
-const generateSandwich = (sandoIngredients) => {
+const generateSandwich = () => {
+  const sandoIngredients = getRandomIngredients();
+
   // list of restaurants IDs to check
   const restaurants = ["default", "mr_pickles", "subway"];
 
