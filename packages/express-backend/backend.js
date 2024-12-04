@@ -168,26 +168,6 @@ app.get("/sandwiches/filter", (req, res) => {
 });
 
 
-// app.get("/sandwiches/filter", (req, res) => {
-//   const {
-//     rating,
-//     minCalories,
-//     maxCalories,
-//     maxCost,
-//     ingredient
-//   } = req.query;
-
-//   const filteredSandwiches = sandoFilters.filterSandwiches(
-//     sandwichesList,
-//     rating,
-//     minCalories,
-//     maxCalories,
-//     maxCost,
-//     ingredient
-//   )
-//   res.send({ sandwiches_list: filteredSandwiches });
-// });
-
 //Random
 app.get("/sandwiches/random", (req, res) => {
   const randomIndex = Math.floor(
