@@ -249,74 +249,74 @@ app.get("/sandwiches/:id", (req, res) => {
 });
 
 //Filter by rating, cost, and calories on Filtering Page
-app.post("/sandwiches/filter", (req, res) => {
-  try {
-    console.log("Reading in filter query: ", req.query);
-    const {
-      ingredients,
-      maxCost,
-      minCalories,
-      maxCalories,
-      rating
-    } = req.query;
-  } catch (err) {
-    console.error(
-      "Error while reading the filter query: ",
-      err
-    );
-    res.send(sandwichesList);
-  }
+// app.post("/sandwiches/filter", (req, res) => {
+//   try {
+//     console.log("Reading in filter query: ", req.query);
+//     const {
+//       ingredients,
+//       maxCost,
+//       minCalories,
+//       maxCalories,
+//       rating
+//     } = req.query;
+//   } catch (err) {
+//     console.error(
+//       "Error while reading the filter query: ",
+//       err
+//     );
+//     res.send(sandwichesList);
+//   }
 
-  // parse the filters' values
-  try {
-    console.log("Parsing the filter query values:\n", {
-      ingredients,
-      maxCost,
-      minCalories,
-      maxCalories,
-      rating
-    });
+//   // parse the filters' values
+//   try {
+//     console.log("Parsing the filter query values:\n", {
+//       ingredients,
+//       maxCost,
+//       minCalories,
+//       maxCalories,
+//       rating
+//     });
 
-    maxCost = parseFloat(maxCost);
-    minCalories = parseInt(minCalories);
-    maxCalories = parseInt(maxCalories);
-    rating = parseInt(rating);
-  } catch (err) {
-    console.error(
-      "Error while parsing the filter query: ",
-      err
-    );
-    res.send(sandwichesList);
-  }
+//     maxCost = parseFloat(maxCost);
+//     minCalories = parseInt(minCalories);
+//     maxCalories = parseInt(maxCalories);
+//     rating = parseInt(rating);
+//   } catch (err) {
+//     console.error(
+//       "Error while parsing the filter query: ",
+//       err
+//     );
+//     res.send(sandwichesList);
+//   }
 
-  try {
-    console.log("Filtering the sandwiches...");
-    const filteredSandwiches = sandoFilters.filterSandwiches(
-      sandwichesList,
-      ingredients.include,
-      ingredients.exclude,
-      maxCost,
-      minCalories,
-      maxCalories,
-      rating
-    );
-  } catch (err) {
-    console.error(
-      "Error while parsing the filter query: ",
-      err
-    );
-    res.send(sandwichesList);
-  }
+//   try {
+//     console.log("Filtering the sandwiches...");
+//     const filteredSandwiches = sandoFilters.filterSandwiches(
+//       sandwichesList,
+//       ingredients.include,
+//       ingredients.exclude,
+//       maxCost,
+//       minCalories,
+//       maxCalories,
+//       rating
+//     );
+//   } catch (err) {
+//     console.error(
+//       "Error while parsing the filter query: ",
+//       err
+//     );
+//     res.send(sandwichesList);
+//   }
 
-  console.log("Filtered sandwiches:\n", filteredSandwiches);
-  if (filteredSandwiches) {
-    res.send(filteredSandwiches);
-  } else {
-    res
-      .status(404)
-      .send("Error while filtering sandwiches on the backend");
-  }
-});
+//   console.log("Filtered sandwiches:\n", filteredSandwiches);
+//   if (filteredSandwiches) {
+//     res.send(filteredSandwiches);
+//   } else {
+//     res
+//       .status(404)
+//       .send("Error while filtering sandwiches on the backend");
+//   }
+// });
 
 //Sorting by name, rating, calories, and cost (ascending/descending)
 app.get("/sandwiches/sort", (req, res) => {

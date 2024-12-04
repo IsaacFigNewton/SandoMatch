@@ -56,7 +56,7 @@ const filterSandwiches = (sandwichesList, filters) => {
     return filteredSandwiches;
 };
 
-//export default filterSandwiches;
+export default filterSandwiches;
 
 
-export default { findSandwichById, filterSandwiches };
+//export default { findSandwichById, filterSandwiches };
