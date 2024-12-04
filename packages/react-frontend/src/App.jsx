@@ -299,6 +299,10 @@ function App() {
           <Link to="/filter" className="filter-button">
             Filter
           </Link>
+          {/* generating a new sandwich */}
+          <Link to="/sandwiches/generate" className="generate-button">
+            Filter
+          </Link>
 
           {isLoggedIn ? (
             <div className="logout-button">
