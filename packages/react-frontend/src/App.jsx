@@ -10,16 +10,17 @@ import FilterPage from "./FilterPage";
 import SandwichList from "./SandwichList";
 import Login from "./Login";
 import Signup from "./Signup";
-import UserPage from "./UserPage";
-import MyBookmarkedSandos from "./MyBookmarkedSandos";
-import MyFavoriteSandos from "./MyFavoriteSando";
-import MyReviews from "./MyReviews";
-import MyTriedSandos from "./MyTriedSandos";
+import UserPage from "./user-pages/UserPage";
+import MyBookmarkedSandos from "./user-pages/MyBookmarkedSandos";
+import MyFavoriteSandos from "./user-pages/MyFavoriteSando";
+import MyReviews from "./user-pages/MyReviews";
+import MyTriedSandos from "./user-pages/MyTriedSandos";
 
 import "./App.css";
+import filterIcon from "./assets/filter2.png";
 
-const API_PREFIX = "http://sandomatch.azurewebsites.net";
-// const API_PREFIX = "http://localhost:8000";
+// const API_PREFIX = "http://sandomatch.azurewebsites.net";
+const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -33,8 +34,29 @@ function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [, setMessage] = useState("");
   const [filters, setFilters] = useState({
-    include: [],
-    exclude: []
+    dietary_tags: [],
+    ingredients: {
+      include: {
+        breads: [],
+        meats: [],
+        cheeses: [],
+        vegetables: [],
+        condiments: [],
+        spices: []
+      },
+      exclude: {
+        breads: [],
+        meats: [],
+        cheeses: [],
+        vegetables: [],
+        condiments: [],
+        spices: []
+      }
+    },
+    maxCost: 1000,
+    minCalories: 0,
+    maxCalories: 1000,
+    rating: 0
   });
 
   const [, setUser] = useState(null);
@@ -186,12 +208,18 @@ function App() {
     localStorage.setItem("ratings", JSON.stringify(ratings));
   }, [ratings]);
 
-  const handleRatingChange = (id, rating) => {
-    setRatings((prevRatings) => ({
-      ...prevRatings,
-      [id]: rating
-    }));
+  const resetRandomSandwich = () => {
+    setRandomSandwich(null);
+    setSearchTerm(""); // Optional: Clear the search bar
   };
+
+  const clearFilters = () => {
+    setFilters({
+      include: [],
+      exclude: []
+    });
+  };
+  
 
   const getRandomSandwich = () => {
     fetch(`${API_PREFIX}/sandwiches/random`)
@@ -234,6 +262,9 @@ function App() {
     <Router>
       <div>
         <header className="app-header">
+        <Link to="/" className="logo-link" onClick={resetRandomSandwich}>
+            <h1 className="app-logo">SandoMatch</h1>
+          </Link>
           <div className="menuPopoutButton">
             <button
               className="menu-button"
@@ -270,13 +301,10 @@ function App() {
               </div>
             )}
           </div>
-          <Link to="/" className="logo-link">
-            <h1 className="app-logo">SandoMatch</h1>
-          </Link>
-
-          {/* filtering */}
-          <Link to="/filter" className="filter-button">
-            Filter
+          
+          {/* generating a new sandwich */}
+          <Link to="/sandwiches/generate" className="generate-button">
+            Generate New Sandwich
           </Link>
 
           {isLoggedIn ? (
@@ -319,14 +347,20 @@ function App() {
             path="/"
             element={
               <main className="main-content">
+               {/* Search bar with filter icon */}
+              <div className="search-filter-wrapper">
+               <Link to="/filter" className="filter-icon-link">
+                <img src={filterIcon} alt="Filter" className="filter-icon" />
+               </Link>
                 <input
                   type="text"
-                  placeholder="Search for a sandwich..."
+                  placeholder="Search for your perfect sandwich..."
                   className="search-bar"
                   onChange={(e) =>
                     setSearchTerm(e.target.value)
                   }
                 />
+                </div>
                 <button
                   className="random-button"
                   onClick={getRandomSandwich}
@@ -337,13 +371,11 @@ function App() {
                   <SandwichList
                     sandwiches={[randomSandwich]}
                     ratings={ratings}
-                    handleRatingChange={handleRatingChange}
                   />
                 ) : (
                   <SandwichList
                     sandwiches={filteredSandwiches}
                     ratings={ratings}
-                    handleRatingChange={handleRatingChange}
                   />
                 )}
               </main>
@@ -356,6 +388,7 @@ function App() {
                 filters={filters}
                 setFilters={setFilters}
                 applyFilters={applyFilters}
+                clearFilters={clearFilters}
               />
             }
           />
@@ -397,3 +430,6 @@ function App() {
 }
 
 export default App;
+
+
+

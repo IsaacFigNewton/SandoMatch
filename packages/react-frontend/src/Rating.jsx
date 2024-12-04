@@ -1,34 +1,23 @@
-// import React from "react";
-
+import React from "react";
 import PropTypes from "prop-types";
 
-const Rating = ({ sandwichId, rating, handleRatingChange }) => {
+const Rating = ({ rating = 0 }) => {
   return (
-    <div className="rating">
-      {[5, 4, 3, 2, 1].map((star) => (
-        <label key={star}>
-          <input
-            type="radio"
-            name={`rating-${sandwichId}`}
-            value={star}
-            checked={rating === star}
-            onChange={() =>
-              handleRatingChange(sandwichId, star)
-            }
-          />
-          <span className="star">&#9733;</span>
-        </label>
+    <div className="rating static">
+      {[1, 2, 3, 4, 5].map((star) => (
+        <span
+          key={star}
+          className={`star ${rating >= star ? "filled" : ""}`}
+        >
+          &#9733;
+        </span>
       ))}
-      <p>Your rating: {rating || "No rating yet"}</p>
     </div>
   );
 };
 
-// Validate Rating function props
 Rating.propTypes = {
-  sandwichId: PropTypes.number.isRequired,
-  rating: PropTypes.number.isRequired,
-  handleRatingChange: PropTypes.func.isRequired
+  rating: PropTypes.number.isRequired, 
 };
 
 export default Rating;
