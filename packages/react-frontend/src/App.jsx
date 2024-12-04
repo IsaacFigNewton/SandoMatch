@@ -187,6 +187,13 @@ function App() {
     setIsLoggedIn(false);
   }
 
+  const handleRatingChange = (id, rating) => {
+    setRatings((prevRatings) => ({
+      ...prevRatings,
+      [id]: rating
+    }));
+  };
+
   useEffect(() => {
     const savedRatings =
       JSON.parse(localStorage.getItem("ratings")) || {};
