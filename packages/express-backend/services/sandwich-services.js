@@ -50,5 +50,6 @@ export default {
   findSandwichById,
   addSandwich,
   addReview,
-  getSandwichObject
+  getSandwichObject,
+  getSandwiches
 };
