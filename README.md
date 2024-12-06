@@ -82,6 +82,8 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
 
 <hr>
 
+##Architecture
+
 ## Sources
 
 <ul>
