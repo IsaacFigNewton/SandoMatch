@@ -23,7 +23,7 @@
 
 ![Sign Up Flow (1)](https://github.com/user-attachments/assets/6e817bb0-1504-4972-ba22-53ce04685c0b)
 
-### Login Flow
+### Sign-In Flow
 
 ![Sign In Flow (1)](https://github.com/user-attachments/assets/185a49fc-6077-40f2-8bae-a51736075960)
 
@@ -82,7 +82,9 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
 
 <hr>
 
-##Architecture
+## Architecture
+
+Add service architecture diagram here
 
 ## Sources
 
