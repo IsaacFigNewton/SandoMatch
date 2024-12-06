@@ -16,7 +16,7 @@
 
 ## Diagrams
 
-<h2><a href= "https://www.figma.com/proto/fRAbSVGwIAc95xU4o6zg3u/SandoMatch-Wireframe?node-id=4-16&node-type=canvas&t=kHfc9f0rpzotQUT9-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A16">UI Prototype</a></h2>
+### <a href= "https://www.figma.com/proto/fRAbSVGwIAc95xU4o6zg3u/SandoMatch-Wireframe?node-id=4-16&node-type=canvas&t=kHfc9f0rpzotQUT9-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A16">UI Prototype</a>
 <p>Last updated November 4, 2024</p>
 
 ### Signup Flow
