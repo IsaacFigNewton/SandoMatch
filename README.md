@@ -16,6 +16,9 @@
 
 ## Diagrams
 
+<h2><a href= "https://www.figma.com/proto/fRAbSVGwIAc95xU4o6zg3u/SandoMatch-Wireframe?node-id=4-16&node-type=canvas&t=kHfc9f0rpzotQUT9-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A16">UI Prototype</a></h2>
+<p>Last updated November 4, 2024</p>
+
 ### Signup Flow
 
 ![Sign Up Flow (1)](https://github.com/user-attachments/assets/6e817bb0-1504-4972-ba22-53ce04685c0b)
