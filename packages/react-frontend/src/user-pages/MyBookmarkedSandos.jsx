@@ -8,8 +8,8 @@ import veganImg from "../assets/vegan2.png";
 import vegetarianImg from "../assets/vegetarian.png";
 import glutenFreeImg from "../assets/gluten-free.png";
 
-//const API_PREFIX = "http://localhost:8000";
-const API_PREFIX = "https://sandomatch.azurewebsites.net";
+const API_PREFIX = "http://localhost:8000";
+//const API_PREFIX = "https://sandomatch.azurewebsites.net";
 
 function MyBookmarkedSandos() {
   const [user, setUser] = useState(null);

@@ -45,12 +45,12 @@ let sandwichesList = [];
 // Get file paths
 const restaurantIngredientsPath = path.resolve(
   __dirname,
-  "../../sandwich-dataset/db-tables/restaurant_ingredients.json"
+  "./sandwich-dataset/db-tables/restaurant_ingredients.json"
 );
 
 const sandwichesPath = path.resolve(
   __dirname,
-  "../../sandwich-dataset/db-tables/sandwiches.json"
+  "./sandwich-dataset/db-tables/sandwiches.json"
 );
 
 // load the default cost and calorie estimates from the JSON file
