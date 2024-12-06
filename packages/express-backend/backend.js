@@ -26,7 +26,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 //const port = 8000;
-const port = process.env.PORT || 8000;
+const port = 8000;
 
 const { MONGO_CONNECTION_STRING } = process.env;
 

@@ -19,7 +19,7 @@ import MyTriedSandos from "./user-pages/MyTriedSandos";
 import "./App.css";
 import filterIcon from "./assets/filter2.png";
 
-const API_PREFIX = "http://sandomatch.azurewebsites.net";
+const API_PREFIX = "https://sandomatch.azurewebsites.net";
 //const API_PREFIX = "http://localhost:8000";
 
 function App() {
