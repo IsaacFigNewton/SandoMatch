@@ -7,9 +7,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 
 // Modules
-import sandoFilters from "./modules/filters.js";
+import sandoFilters from "./modules/filters.js"
 import sandoGeneration from "./modules/generation.js";
-import { MongoTopologyClosedError } from "mongodb";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -26,7 +25,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 8000;
+//const port = 8000;
+const port = process.env.PORT || 8000;
+
 
 const { MONGO_CONNECTION_STRING } = process.env;
 
@@ -38,6 +39,7 @@ mongoose
 app.use(cors());
 app.use(express.json());
 let sandwichesList = [];
+
 
 // Load Files
 // TODO: Replace this with sandwich and restaurant table CRUD operations
@@ -92,6 +94,8 @@ try {
 console.log("Restaurants file is being read");
 // ----------------------------------------------------------------------------------------
 
+
+
 // Home page
 // ----------------------------------------------------------------------------------------
 //Sandwiches full list
@@ -121,10 +125,7 @@ app.get("/sandwiches/random", (req, res) => {
 // Sorting and filtering
 // ----------------------------------------------------------------------------------------
 app.get("/sandwiches/filter", (req, res) => {
-  const filteredSandwiches = sandoFilters.filterSandwiches(
-    sandwichesList,
-    req.query
-  );
+  const filteredSandwiches = sandoFilters.filterSandwiches(sandwichesList, req.query);
   res.json({ sandwiches_list: filteredSandwiches });
 });
 
@@ -187,35 +188,32 @@ app.post("/users/bookmark", authenticateUser, (req, res) => {
   const userId = req.user._id;
 
   if (sandwichId === undefined || sandwichId === null) {
-    return res.status(400).json({ error: "No sandwich Id" });
+    return res.status(400).json({error: "No sandwich Id"});
   }
 
   let validSandoId;
   try {
     validSandoId = new mongoose.Types.ObjectId(sandwichId);
   } catch (error) {
-    return res.status(400).json({ error: "Invalid sando id" });
+    return res.status(400).json({ error: "Invalid sando id"});
   }
 
   UserModel.findById(userId)
     .then((user) => {
       console.log("User found:", user);
       if (!user) {
-        return res
-          .status(404)
-          .json({ error: "user not found" });
+        return res.status(404).json({error: "user not found"});
       }
 
       if (!user.bookmarkedSandos.includes(validSandoId)) {
         user.bookmarkedSandos.push(validSandoId);
         return user.save().then(() => {
-          res.status(200).json({ message: "Sando bokmarked:" });
+          res.status(200).json({ message: "Sando bokmarked:"});
         });
       } else {
-        return res
-          .status(200)
-          .json({ message: "Sando allready bookmarked" });
+        return res.status(200).json({ message: "Sando allready bookmarked"});
       }
+
     })
     .catch((error) => {
       console.error("Error bookmarking sando", error);
@@ -232,36 +230,34 @@ app.post("/users/try", authenticateUser, (req, res) => {
   console.log("Request Body:", req.body);
   console.log("User ID:", req.user._id);
 
+
   if (sandwichId === undefined || sandwichId === null) {
-    return res.status(400).json({ error: "No sandwich Id" });
+    return res.status(400).json({error: "No sandwich Id"});
   }
 
   let validSandoId;
   try {
     validSandoId = new mongoose.Types.ObjectId(sandwichId);
   } catch (error) {
-    return res.status(400).json({ error: "Invalid sando id" });
+    return res.status(400).json({ error: "Invalid sando id"});
   }
 
   UserModel.findById(userId)
     .then((user) => {
       console.log("User found:", user);
       if (!user) {
-        return res
-          .status(404)
-          .json({ error: "user not found" });
+        return res.status(404).json({error: "user not found"});
       }
 
       if (!user.triedSandos.includes(validSandoId)) {
         user.triedSandos.push(validSandoId);
         return user.save().then(() => {
-          res.status(200).json({ message: "Sando tried:" });
+          res.status(200).json({ message: "Sando tried:"});
         });
       } else {
-        return res
-          .status(200)
-          .json({ message: "Sando allready tried" });
+        return res.status(200).json({ message: "Sando allready tried"});
       }
+
     })
     .catch((error) => {
       console.error("Error trying sando", error);
@@ -274,34 +270,33 @@ app.post("/users/favorite", authenticateUser, (req, res) => {
   const userId = req.user._id;
 
   if (sandwichId === undefined || sandwichId === null) {
-    return res.status(400).json({ error: "No sandwich Id" });
+    return res.status(400).json({ error: "No sandwich Id"});
   }
 
   let validSandoId;
   try {
     validSandoId = new mongoose.Types.ObjectId(sandwichId);
   } catch (error) {
-    return res.status(400).json({ error: "Invalid sando id" });
+    return res.status(400).json({ error: "Invalid sando id"});
   }
 
   UserModel.findById(userId)
     .then((user) => {
       console.log("User found:", user);
       if (!user) {
-        return res
-          .status(404)
-          .json({ error: "user not foound" });
+        return res.status(404).json({ error: "user not foound"});
       }
 
       user.favoriteSando = validSandoId;
       return user.save().then(() => {
-        res.status(200).json({ message: "favorite sando set" });
+        res.status(200).json({ message: "favorite sando set"});
       });
     })
     .catch((error) => {
       console.error("Error setting favorite sandwich", error);
     });
 });
+
 
 //Filtering by ingredients on Preference Page
 app.post("/sandwiches/preferences", (req, res) => {
@@ -347,6 +342,7 @@ app.get("/sandwiches/:id", (req, res) => {
   }
 
   const result = sandoFilters.findSandwichById(id);
+  
 
   if (result === undefined) {
     res.status(404).send("Sandwich not found.");
@@ -372,6 +368,7 @@ app.post("/users", authenticateUser, (req, res) => {
 //Login
 app.post("/login", loginUser);
 // ----------------------------------------------------------------------------------------
+
 
 // Sandwich Generation
 // ----------------------------------------------------------------------------------------
@@ -424,6 +421,8 @@ app.post("/sandwiches/generate", (req, res) => {
   res.json(sandwiches);
 });
 // ----------------------------------------------------------------------------------------
+
+
 
 // Start the server
 app.listen(process.env.PORT || port, () => {
