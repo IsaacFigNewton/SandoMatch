@@ -1,13 +1,4 @@
-
-const findSandwichById = (
-    sandwichesList,
-    id
-) => {
-    return sandwichesList.filter((
-    ) => {
-      (sandwich) => sandwich["id_"] === Number(id)
-    });
-}
+import sandwichService from "../services/sandwich-services.js";
 
 
 const filterSandwiches = (sandwichesList, filters) => {
@@ -59,4 +50,4 @@ const filterSandwiches = (sandwichesList, filters) => {
 //export default filterSandwiches;
 
 
-export default { findSandwichById, filterSandwiches };
+export default { filterSandwiches };

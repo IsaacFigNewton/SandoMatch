@@ -1,6 +1,5 @@
 // backend.js
 import dotenv from "dotenv";
-dotenv.config();
 
 import express from "express";
 import cors from "cors";
@@ -20,12 +19,9 @@ import {
   authenticateUser,
   loginUser
 } from "./services/auth.js";
+import sandwichService from "./services/sandwich-services.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const app = express();
-const port = 8000;
+dotenv.config();
 
 const { MONGO_CONNECTION_STRING } = process.env;
 
@@ -34,73 +30,29 @@ mongoose
   .connect(MONGO_CONNECTION_STRING)
   .catch((error) => console.log(error));
 
+const app = express();
+const port = 8000;
+
 app.use(cors());
 app.use(express.json());
 let sandwichesList = [];
-
-
-// Load Files
-// TODO: Replace this with sandwich and restaurant table CRUD operations
-// ----------------------------------------------------------------------------------------
-// Get file paths
-const restaurantIngredientsPath = path.resolve(
-  __dirname,
-  "../../sandwich-dataset/db-tables/restaurant_ingredients.json"
-);
-
-const sandwichesPath = path.resolve(
-  __dirname,
-  "../../sandwich-dataset/db-tables/sandwiches.json"
-);
-
-// load the default cost and calorie estimates from the JSON file
-try {
-  const data = fs.readFileSync(
-    restaurantIngredientsPath,
-    "utf8"
-  );
-  costCalEstimates = JSON.parse(data);
-} catch (err) {
-  console.error(
-    "Error reading cost and calorie estimates file:",
-    err
-  );
-}
-// load sandwiches list from JSON file
-try {
-  const fileData = fs.readFileSync(sandwichesPath, "utf8");
-  sandwichesList = JSON.parse(fileData);
-  console.log("Loaded sandwiches table");
-} catch (err) {
-  console.error("Error reading sandwiches list file:", err);
-}
-
-// load restaurant cost and calorie estimates from JSON file
-try {
-  const fileData = fs.readFileSync(
-    restaurantIngredientsPath,
-    "utf8"
-  );
-  restaurantIngredientsList = JSON.parse(fileData);
-  console.log("Loaded restaurant-ingredients table");
-} catch (err) {
-  console.error(
-    "Error reading restaurant ingredients file:",
-    err
-  );
-}
-console.log("Restaurants file is being read");
-// ----------------------------------------------------------------------------------------
-
 
 
 // Home page
 // ----------------------------------------------------------------------------------------
 //Sandwiches full list
 app.get("/sandwiches", (req, res) => {
-  res.send({
-    sandwiches_list: sandwichesList
-  });
+  sandwichService.getSandwiches()
+    .then((result) => {
+      if (result) {
+        res.send(result);
+      } else {
+        res.status(404).send("Resource not found.");
+      }
+    })
+    .catch((error) => {
+      res.status(500).send(error.name);
+    });
 });
 
 //Random
@@ -182,21 +134,18 @@ app.get("/sandwiches/sort", (req, res) => {
 //ID
 app.get("/sandwiches/:id", (req, res) => {
   const id = req.params["id"];
-
-  if (isNaN(id)) {
-    return res
-      .status(400)
-      .json({ error: "Invalid sandwich ID." });
-  }
-
-  const result = sandoFilters.findSandwichById(id);
   
-
-  if (result === undefined) {
-    res.status(404).send("Sandwich not found.");
-  } else {
-    res.send(result);
-  }
+  sandwichService.findSandwichById(id)
+    .then((result) => {
+      if (result === undefined || result === null) {
+        res.status(404).send("Sandwich not found.");
+      } else {
+        res.send(result);
+      }
+    })
+    .catch((error) => {
+      res.status(500).send(error.name);
+    });
 });
 // ----------------------------------------------------------------------------------------
 
