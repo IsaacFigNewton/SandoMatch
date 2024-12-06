@@ -19,8 +19,8 @@ import MyTriedSandos from "./user-pages/MyTriedSandos";
 import "./App.css";
 import filterIcon from "./assets/filter2.png";
 
-const API_PREFIX = "http://sandomatch.azurewebsites.net";
-//const API_PREFIX = "http://localhost:8000";
+//const API_PREFIX = "http://sandomatch.azurewebsites.net";
+const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -35,24 +35,7 @@ function App() {
   const [, setMessage] = useState("");
   const [filters, setFilters] = useState({
     dietary_tags: [],
-    ingredients: {
-      include: {
-        breads: [],
-        meats: [],
-        cheeses: [],
-        vegetables: [],
-        condiments: [],
-        spices: []
-      },
-      exclude: {
-        breads: [],
-        meats: [],
-        cheeses: [],
-        vegetables: [],
-        condiments: [],
-        spices: []
-      }
-    },
+    ingredients: "", // Initialize as an empty string
     maxCost: 1000,
     minCalories: 0,
     maxCalories: 1000,
@@ -92,18 +75,14 @@ function App() {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error(
-            "Failed to fetch filtered sandwiches"
-          );
+          throw new Error("Failed to fetch filtered sandwiches");
         }
         return response.json();
       })
       .then((filteredSandwiches) => {
         setSandwiches(filteredSandwiches);
       })
-      .catch((error) =>
-        console.error("Error applying filters:", error)
-      );
+      .catch((error) => console.error("Error applying filters:", error));
   };
 
   useEffect(() => {
@@ -210,10 +189,10 @@ function App() {
   };
 
   const clearFilters = () => {
-    setFilters({
-      include: [],
-      exclude: []
-    });
+    setFilters((prev) => ({
+      ...prev,
+      ingredients: "" // Reset ingredients to an empty string
+    }));
   };
 
   const getRandomSandwich = () => {
