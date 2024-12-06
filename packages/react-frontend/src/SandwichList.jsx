@@ -7,6 +7,7 @@ const SandwichList = ({
   ratings,
   handleRatingChange
 }) => {
+  console.log(sandwiches);
   return (
     <div className="sandwich-list">
       {sandwiches.map((sandwich) => (

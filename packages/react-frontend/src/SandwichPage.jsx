@@ -64,8 +64,10 @@ const SandwichProfile = ({
 // Validate Sandwich card props
 SandwichProfile.propTypes = {
   sandwich: PropTypes.shape({
-    "name": PropTypes.string.isRequired,
-    
+    "name": PropTypes.string.isRequired, 
+    "ingredients": PropTypes.shape.isRequired, 
+    "cuisine": PropTypes.string.isRequired, 
+    "id_": PropTypes.string.isRequired
   }).isRequired,
   handleRatingChange: PropTypes.func.isRequired
 };
