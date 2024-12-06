@@ -1,5 +1,16 @@
 <h1><a href="https://delightful-mushroom-05d6e7b1e.5.azurestaticapps.net/"> SandoMatch </a></h1>
 <h3> Find your perfect sandwich </h3>
+  <p>
+    Sandwiches are tasty, but there are an infinite number of combinations and we have a finite amount of time to try them.
+  </p>
+  <p>
+    With our app, users can:
+  </p>
+  <ul>
+    <li>Find and try new, unique sandwiches</li>
+    <li>Indicate their favorite sandwich, bookmark ones they'd like to eat again, and mark the sandwiches they've tried when logged in</li>
+    <li>Search for sandwiches or select one at random</li>
+  </ul>
 <br>
 <br>
 
