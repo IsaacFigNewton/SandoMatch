@@ -1,1 +1,54 @@
 # Dataset Architecture
+
+<ul>
+  <li>db-entry-requirements<ul>
+    <li>cost_cal_estimates.json</li>
+    <li>valid_ingredient_types.json</li>
+    </ul>
+  </li>
+  <li>db-tables<ul>
+    <li>restaurant_ingredients.json</li>
+    <li>sandwiches.json</li>
+    </ul>
+  </li>
+  <li>notebooks<ul>
+    <li>Filtering_Sandwich_Objects.ipynb</li>
+    <li>Restructure_Menus_and_Ingredients.ipynb</li>
+    <li>Restructure_Table_Data.ipynb</li>
+    </ul>
+  </li>
+  <li>original-dataset<ul>
+    <li>derivatives<ul>
+      <li>filtered_data.json</li>
+      <li>generated_sandwiches.json</li>
+      <li>restructured_generated_sandwiches.json</li>
+      </ul>
+    </li>
+    <li>recipe-ingredients.json</li>
+    </ul>
+  </li>
+  <li>restaurant-sandos<ul>
+    <li>mr-pickles<ul>
+      <li>mr_pickles_ingredients.csv</li>
+      <li>mr_pickles_menu.json</li>
+      <li>restructured_mr_pickles_ingredients.json</li>
+      <li>restructured_mr_pickles_menu.json</li>
+      </ul>
+    </li>
+    <li>subway<ul>
+      <li>restructured_subway_ingredients.json</li>
+      <li>restructured_subway_menu.json</li>
+      <li>subway_ingredients.csv</li>
+      <li>subway_menu.json</li>
+      </ul>
+    </li>
+    <li>urbane-cafe<ul>
+      <li>restructured_urbane_cafe_menu.json</li>
+      <li>urbane_cafe_menu.json</li>
+      </ul>
+    </li>
+    <li>originating_restaurants.csv</li>
+    <li>parsing-new-restaurant-data.md</li>
+    </ul>
+  </li>
+</ul>
