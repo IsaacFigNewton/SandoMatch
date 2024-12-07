@@ -1,13 +1,8 @@
-// import React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const FilterPage = ({
-  filters,
-  setFilters,
-  applyFilters,
-  clearFilters
-}) => {
+const FilterPage = ({ filters, setFilters, applyFilters, clearFilters }) => {
   const ingredients = {
     breads: ["White", "Sourdough", "Tortilla Wrap"],
     cheeses: ["Mozzarella", "Cheddar", "Provolone"],
@@ -16,14 +11,20 @@ const FilterPage = ({
     condiments: ["Mustard", "Mayonnaise", "Oil"]
   };
 
-  const handleCheckboxChange = (action, value) => {
-    setFilters((prev) => {
-      const updated = { ...prev };
-      updated[action] = updated[action].includes(value)
-        ? updated[action].filter((item) => item !== value)
-        : [...updated[action], value];
-      return updated;
-    });
+  const parseIngredients = (ingredientsString) =>
+    ingredientsString ? ingredientsString.split(",") : [];
+
+  const handleCheckboxChange = (value, isChecked) => {
+    const currentIngredients = parseIngredients(filters.ingredients);
+
+    const updatedIngredients = isChecked
+      ? [...currentIngredients, value] 
+      : currentIngredients.filter((item) => item !== value); 
+
+    setFilters((prev) => ({
+      ...prev,
+      ingredients: updatedIngredients.join(",")
+    }));
   };
 
   return (
@@ -35,60 +36,31 @@ const FilterPage = ({
             <th>Category</th>
             <th>Ingredient</th>
             <th>Include</th>
-            <th>Exclude</th>
           </tr>
         </thead>
         <tbody>
-          {Object.entries(ingredients).map(
-            ([category, items]) =>
-              items.map((item, index) => (
-                <tr key={item}>
-                  {/* Show the category name only for the first row of each category */}
-                  <td>{index === 0 ? category : ""}</td>
-                  <td>{item}</td>
-                  <td>
-                    {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
-                    {filters.ingredients ? (
-                      <input
-                        type="checkbox"
-                        onChange={() =>
-                          handleCheckboxChange("include", item)
-                        }
-                        checked={filters.ingredients
-                          .split(",")
-                          // TODO: Fix bug here
-                          .includes(item)}
-                      />
-                    ) : (
-                      <input
-                        type="checkbox"
-                        onChange={() => true}
-                        checked={false}
-                      />
+          {Object.entries(ingredients).map(([category, items]) =>
+            items.map((item, index) => (
+              <tr key={`${category}-${item}`}>
+                {/* Show the category name only for the first row of each category */}
+                <td>{index === 0 ? category : ""}</td>
+                <td>{item}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    onChange={(e) =>
+                      handleCheckboxChange(
+                        item.toLowerCase(),
+                        e.target.checked
+                      )
+                    }
+                    checked={parseIngredients(filters.ingredients).includes(
+                      item.toLowerCase()
                     )}
-                  </td>
-                  <td>
-                    {/* TODO: Fix the bug here; filters.ingredients.include.category is unknown */}
-                    {filters.ingredients ? (
-                      <input
-                        type="checkbox"
-                        onChange={() =>
-                          handleCheckboxChange("exclude", item)
-                        }
-                        checked={filters.ingredients
-                          .split(",")
-                          .excludes(item)}
-                      />
-                    ) : (
-                      <input
-                        type="checkbox"
-                        onChange={() => true}
-                        checked={false}
-                      />
-                    )}
-                  </td>
-                </tr>
-              ))
+                  />
+                </td>
+              </tr>
+            ))
           )}
         </tbody>
       </table>
@@ -100,10 +72,7 @@ const FilterPage = ({
         >
           Apply Filters
         </Link>
-        <button
-          onClick={clearFilters}
-          className="clear-filters-button"
-        >
+        <button onClick={clearFilters} className="clear-filters-button">
           Clear
         </button>
       </div>
@@ -111,14 +80,10 @@ const FilterPage = ({
   );
 };
 
-// Validate FilterPage props
-/*
-  rating, minCalories, maxCalories, maxCost, ingredient
-*/
 FilterPage.propTypes = {
   filters: PropTypes.shape({
     dietary_tags: PropTypes.array.isRequired,
-    ingredients: PropTypes.string.isRequired,
+    ingredients: PropTypes.string.isRequired, // Ingredients stored as a string
     maxCost: PropTypes.number.isRequired,
     minCalories: PropTypes.number.isRequired,
     maxCalories: PropTypes.number.isRequired,
