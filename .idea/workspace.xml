@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5de62fb7-31f0-42d6-a9fb-5a1b6bf985b6" name="Changes" comment="Edited Sandwich Schema">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/frontend.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/frontend.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/express-backend/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/express-backend/backend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/express-backend/modules/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/express-backend/modules/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/express-backend/modules/generation.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/express-backend/modules/generation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/express-backend/services/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/express-backend/services/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/Rating.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/Rating.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/SandwichList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/SandwichList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/FilterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/FilterPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/SandwichPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/SandwichPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/MyBookmarkedSandos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/MyBookmarkedSandos.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/MyFavoriteSando.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/MyFavoriteSando.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/MyReviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/MyReviews.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/MyTriedSandos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/MyTriedSandos.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/UserPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-frontend/src/user-pages/UserPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733177648096</updated>
       <workItem from="1733553238373" duration="37000" />
-      <workItem from="1733553311503" duration="2797000" />
+      <workItem from="1733553311503" duration="3561000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Sandwich Schema">
       <option name="closed" value="true" />
