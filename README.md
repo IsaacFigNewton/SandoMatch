@@ -102,8 +102,8 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
     </ul>
   </li>
   <li>packages<ul>
-    <li>express-backend</li>
-    <li>react-frontend</li>
+    <li>[express-backend](./docs/backend.md)</li>
+    <li>[react-frontend](./docs/frontend.md)</li>
     </ul>
   </li>
   <li>.gitignore</li>
