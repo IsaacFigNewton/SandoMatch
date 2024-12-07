@@ -1,4 +1,3 @@
-// import React from "react";
 import PropTypes from "prop-types";
 import Rating from "./Rating";
 
@@ -64,5 +63,3 @@ SandwichProfile.propTypes = {
   handleRatingChange: PropTypes.func.isRequired,
   ratings: PropTypes
 };
-
-export default SandwichProfile;

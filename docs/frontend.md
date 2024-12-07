@@ -62,11 +62,10 @@
   <li><strong>Login.jsx:</strong> Imports PropTypes, useState, Link, and useNavigate, exports Login.</li>
   <li><strong>Rating.jsx:</strong> Imports PropTypes, exports Rating.</li>
   <li><strong>SandwichList.jsx:</strong> Imports PropTypes, Rating, veganImg, vegetarianImg, and glutenFreeImg, exports SandwichList.</li>
-  <li><strong>SandwichPage.jsx:</strong> Imports PropTypes and Rating, exports SandwichProfile.</li>
+  <li><strong>SandwichPage.jsx:</strong> Imports PropTypes and Rating.</li>
   <li><strong>Signup.jsx:</strong> Imports PropTypes, useState, Link, and &quot;./App.css&quot;, exports Signup.</li>
   <li><strong>main.jsx:</strong> Imports StrictMode, createRoot, &quot;./index.css&quot;, and &quot;./App.jsx&quot;.</li>
 </ul>
-
 
 ## [Frontend deployment](https://delightful-mushroom-05d6e7b1e.5.azurestaticapps.net/)
 

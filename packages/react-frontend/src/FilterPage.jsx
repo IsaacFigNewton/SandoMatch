@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const FilterPage = ({ filters, setFilters, applyFilters, clearFilters }) => {
+const FilterPage = ({
+  filters,
+  setFilters,
+  applyFilters,
+  clearFilters
+}) => {
   const ingredients = {
     breads: ["White", "Sourdough", "Tortilla Wrap"],
     cheeses: ["Mozzarella", "Cheddar", "Provolone"],
@@ -15,11 +20,13 @@ const FilterPage = ({ filters, setFilters, applyFilters, clearFilters }) => {
     ingredientsString ? ingredientsString.split(",") : [];
 
   const handleCheckboxChange = (value, isChecked) => {
-    const currentIngredients = parseIngredients(filters.ingredients);
+    const currentIngredients = parseIngredients(
+      filters.ingredients
+    );
 
     const updatedIngredients = isChecked
-      ? [...currentIngredients, value] 
-      : currentIngredients.filter((item) => item !== value); 
+      ? [...currentIngredients, value]
+      : currentIngredients.filter((item) => item !== value);
 
     setFilters((prev) => ({
       ...prev,
@@ -39,28 +46,29 @@ const FilterPage = ({ filters, setFilters, applyFilters, clearFilters }) => {
           </tr>
         </thead>
         <tbody>
-          {Object.entries(ingredients).map(([category, items]) =>
-            items.map((item, index) => (
-              <tr key={`${category}-${item}`}>
-                {/* Show the category name only for the first row of each category */}
-                <td>{index === 0 ? category : ""}</td>
-                <td>{item}</td>
-                <td>
-                  <input
-                    type="checkbox"
-                    onChange={(e) =>
-                      handleCheckboxChange(
-                        item.toLowerCase(),
-                        e.target.checked
-                      )
-                    }
-                    checked={parseIngredients(filters.ingredients).includes(
-                      item.toLowerCase()
-                    )}
-                  />
-                </td>
-              </tr>
-            ))
+          {Object.entries(ingredients).map(
+            ([category, items]) =>
+              items.map((item, index) => (
+                <tr key={`${category}-${item}`}>
+                  {/* Show the category name only for the first row of each category */}
+                  <td>{index === 0 ? category : ""}</td>
+                  <td>{item}</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        handleCheckboxChange(
+                          item.toLowerCase(),
+                          e.target.checked
+                        )
+                      }
+                      checked={parseIngredients(
+                        filters.ingredients
+                      ).includes(item.toLowerCase())}
+                    />
+                  </td>
+                </tr>
+              ))
           )}
         </tbody>
       </table>
@@ -72,7 +80,10 @@ const FilterPage = ({ filters, setFilters, applyFilters, clearFilters }) => {
         >
           Apply Filters
         </Link>
-        <button onClick={clearFilters} className="clear-filters-button">
+        <button
+          onClick={clearFilters}
+          className="clear-filters-button"
+        >
           Clear
         </button>
       </div>

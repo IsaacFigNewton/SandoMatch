@@ -25,7 +25,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-//const port = 8000;
 const port = 8000;
 
 const { MONGO_CONNECTION_STRING } = process.env;
@@ -40,8 +39,6 @@ app.use(express.json());
 let sandwichesList = [];
 
 // Load Files
-// TODO: Replace this with sandwich and restaurant table CRUD operations
-// ----------------------------------------------------------------------------------------
 // Get file paths
 const restaurantIngredientsPath = path.resolve(
   __dirname,

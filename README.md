@@ -17,6 +17,7 @@
 ## Diagrams
 
 ### <a href= "https://www.figma.com/proto/fRAbSVGwIAc95xU4o6zg3u/SandoMatch-Wireframe?node-id=4-16&node-type=canvas&t=kHfc9f0rpzotQUT9-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A16">UI Prototype</a>
+
 <p>Last updated November 4, 2024</p>
 
 ### Signup Flow
@@ -85,7 +86,7 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
 ## Architecture
 
 <ul>
-` <li>.github/workflows<ul>
+  <li>.github/workflows<ul>
     <li>azure-static-web-apps-delightful-mushroom-05d6e7b1e.yml</li>
     <li>ci-testing.yml</li>
     <li>main_sandomatch</li>
@@ -99,6 +100,13 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
     <li>modules.xml</li>
     <li>vcs.xml</li>
     <li>workspace.xml</li>
+    </ul>
+  </li>
+  <li>docs<ul>
+    <li>backend.md</li>
+    <li>dataset.md</li>
+    <li>frontend.md</li>
+    <li>uml.md</li>
     </ul>
   </li>
   <li>packages<ul>

@@ -20,7 +20,6 @@ import "./App.css";
 import filterIcon from "./assets/filter2.png";
 
 const API_PREFIX = "https://sandomatch.azurewebsites.net";
-//const API_PREFIX = "http://localhost:8000";
 
 function App() {
   const [sandwiches, setSandwiches] = useState(sandwichData);
@@ -75,14 +74,18 @@ function App() {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Failed to fetch filtered sandwiches");
+          throw new Error(
+            "Failed to fetch filtered sandwiches"
+          );
         }
         return response.json();
       })
       .then((filteredSandwiches) => {
         setSandwiches(filteredSandwiches);
       })
-      .catch((error) => console.error("Error applying filters:", error));
+      .catch((error) =>
+        console.error("Error applying filters:", error)
+      );
   };
 
   useEffect(() => {
@@ -346,11 +349,6 @@ function App() {
         alert("Failed to set favorite sandwich.");
       });
   }
-
-  // const handleSearch = (term) => {
-  //   setSearchTerm(term.toLowerCase());
-  //   setRandomSandwich(null); // Reset random sandwich
-  // };
 
   const filteredSandwiches = searchTerm
     ? sandwiches.filter((sandwich) =>

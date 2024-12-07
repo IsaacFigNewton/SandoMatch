@@ -29,7 +29,6 @@ const getDietaryTags = (ingredients) => {
   return tags;
 };
 
-// TODO: Integrate this in the random ingredient selection function, using the filter schema
 const getVeganIngredients = () => {
   // list of non-vegan ingredients for checking
   const nonVeganIngredients = ["eggs", "cheese", "meat"];
@@ -44,7 +43,6 @@ const getVeganIngredients = () => {
   return veganIngredients;
 };
 
-// TODO: Integrate this with the db-tables/sandwiches.json entries until Madi finishes sando CRUD
 // make a function that selects from the list of ingredients ex: vegetables and check for duplicates
 const getRandomIngredients = (veganIngredients) => {
   return {
@@ -92,7 +90,6 @@ const getCostAndCalories = (ingredients, restaurantData) => {
   return { cost, calories };
 };
 
-// TODO: Merge this function with the one below
 // vegan route is still in a work in progress
 // route to generate vegan sandwich
 const generateVeganSandwich = () => {
@@ -132,58 +129,13 @@ const generateVeganSandwich = () => {
   };
 };
 
-/*
-// Default filter values for reference; the ingredient category fields will contain strings that can be used to filter the 1st ingredients
-const [filters, setFilters] = useState({
-    dietary_tags: [],
-    ingredients: {
-      include: {
-        breads: [],
-        meats: [],
-        cheeses: [],
-        vegetables: [],
-        condiments: [],
-        spices: []
-      },
-      exclude: {
-        breads: [],
-        meats: [],
-        cheeses: [],
-        vegetables: [],
-        condiments: [],
-        spices: []
-      }
-    },
-    maxCost: 1000,
-    minCalories: 0,
-    maxCalories: 1000,
-    rating: 0
-  });
-
-// Note that the sandwich objects' ingredients fields will look something like the following:
-"breads": {
-        "baguette": ["baguette"]
-      },
-      "meats": {
-        "beef": ["beef bourguignon"]
-      },
-      "cheeses": {},
-      "vegetables": {},
-      "condiments": {
-        "mustard": ["dijon mustard"]
-      },
-      "spices": {}
-*/
-
 // generate a new sandwich
-// TODO: Integrate this with filters (once the other stuff is fixed)
 const generateSandwich = () => {
   const sandoIngredients = getRandomIngredients();
 
   // list of restaurants IDs to check
   const restaurants = ["default", "mr_pickles", "subway"];
 
-  // TODO: Implement this
   // if the sandwich is available at the restaurant, add it to the list below
   const availableAtRestaurants = [];
 
