@@ -9,7 +9,6 @@ import mongoose from "mongoose";
 // Modules
 import sandoFilters from "./modules/filters.js";
 import sandoGeneration from "./modules/generation.js";
-import { MongoTopologyClosedError } from "mongodb";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -26,6 +25,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+//const port = 8000;
 const port = 8000;
 
 const { MONGO_CONNECTION_STRING } = process.env;
@@ -45,12 +45,12 @@ let sandwichesList = [];
 // Get file paths
 const restaurantIngredientsPath = path.resolve(
   __dirname,
-  "../../sandwich-dataset/db-tables/restaurant_ingredients.json"
+  "./sandwich-dataset/db-tables/restaurant_ingredients.json"
 );
 
 const sandwichesPath = path.resolve(
   __dirname,
-  "../../sandwich-dataset/db-tables/sandwiches.json"
+  "./sandwich-dataset/db-tables/sandwiches.json"
 );
 
 // load the default cost and calorie estimates from the JSON file

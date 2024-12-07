@@ -1,15 +1,29 @@
 <h1><a href="https://delightful-mushroom-05d6e7b1e.5.azurestaticapps.net/"> SandoMatch </a></h1>
 <h3> Find your perfect sandwich </h3>
+  <p>
+    Sandwiches are tasty, but there are an infinite number of combinations and we have a finite amount of time to try them.
+  </p>
+  <p>
+    With our app, users can:
+  </p>
+  <ul>
+    <li>Find and try new, unique sandwiches</li>
+    <li>Indicate their favorite sandwich, bookmark ones they'd like to eat again, and mark the sandwiches they've tried when logged in</li>
+    <li>Search for sandwiches or select one at random</li>
+  </ul>
 <br>
 <br>
 
 ## Diagrams
 
+### <a href= "https://www.figma.com/proto/fRAbSVGwIAc95xU4o6zg3u/SandoMatch-Wireframe?node-id=4-16&node-type=canvas&t=kHfc9f0rpzotQUT9-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A16">UI Prototype</a>
+<p>Last updated November 4, 2024</p>
+
 ### Signup Flow
 
 ![Sign Up Flow (1)](https://github.com/user-attachments/assets/6e817bb0-1504-4972-ba22-53ce04685c0b)
 
-### Login Flow
+### Sign-In Flow
 
 ![Sign In Flow (1)](https://github.com/user-attachments/assets/185a49fc-6077-40f2-8bae-a51736075960)
 
@@ -67,6 +81,10 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
 </ol>
 
 <hr>
+
+## Architecture
+
+Add service architecture diagram here
 
 ## Sources
 

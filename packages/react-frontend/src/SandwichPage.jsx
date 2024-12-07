@@ -61,7 +61,8 @@ SandwichProfile.propTypes = {
   sandwich: PropTypes.shape({
     name: PropTypes.string.isRequired
   }).isRequired,
-  handleRatingChange: PropTypes.func.isRequired
+  handleRatingChange: PropTypes.func.isRequired,
+  ratings: PropTypes
 };
 
 export default SandwichProfile;
