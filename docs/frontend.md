@@ -55,7 +55,7 @@
   <li><strong>MyFavoriteSando.jsx:</strong> Imports useEffect, useState, Link, Rating, veganImg, vegetarianImg, and glutenFreeImg, exports MyFavoriteSandos.</li>
   <li><strong>MyReviews.jsx:</strong> Imports useEffect, useState, and Link, exports MyReviews.</li>
   <li><strong>MyTriedSandos.jsx</strong><strong>:</strong> Imports useEffect, useState, Link, Rating, veganImg, vegetarianImg, and glutenFreeImg, exports MyTriedSandos.</li>
-  <li><strong>UserPage.jsx:</strong> Route, Routes, Link, useEffect, useState, MyBookmarkedSandos, MyFavoriteSandos, MyTriedSandos, and &quot;../App.cs&quot;, exports UserPage.</li>
+  <li><strong>UserPage.jsx:</strong> Imports Route, Routes, Link, useEffect, useState, MyBookmarkedSandos, MyFavoriteSandos, MyTriedSandos, and &quot;../App.css&quot;, exports UserPage.</li>
   <li><strong>App.css:</strong> Imports Pacifico from &quot;fonts.googleapis&quot;.</li>
   <li><strong>App.jsx:</strong> Imports useEffect, useState, BrowserRouter, Routes, Route, Link, sandwichData, FilterPage, SandwichList, Login, Signup, UserPage, MyBookmarkedSandos, MyFavoriteSandos, MyReviews, MyTriedSandos, &quot;./App.css&quot;, and filterIcon, exports App.</li>
   <li><strong>FilterPage.jsx:</strong> Imports React, Link, and PropTypes, exports FilterPage.</li>
