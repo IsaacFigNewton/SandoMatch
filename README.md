@@ -84,7 +84,34 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
 
 ## Architecture
 
-Add service architecture diagram here
+<ul>
+` <li>.github/workflows<ul>
+    <li>azure-static-web-apps-delightful-mushroom-05d6e7b1e.yml</li>
+    <li>ci-testing.yml</li>
+    <li>main_sandomatch</li>
+    </ul>
+  </li>
+  <li>.idea<ul>
+    <li>.gitignore</li>
+    <li>.name</li>
+    <li>SandoMatch.iml</li>
+    <li>misc.xml</li>
+    <li>modules.xml</li>
+    <li>vcs.xml</li>
+    <li>workspace.xml</li>
+    </ul>
+  </li>
+  <li>packages<ul>
+    <li>express-backend</li>
+    <li>react-frontend</li>
+    </ul>
+  </li>
+  <li>.gitignore</li>
+  <li>CONTRIBUTING.md</li>
+  <li>README.md</li>
+  <li>package-lock.json</li>
+  <li>package.json</li>
+</ul>
 
 ## Sources
 
