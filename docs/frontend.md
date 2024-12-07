@@ -1,4 +1,4 @@
-#Frontend Architecture
+# Frontend Architecture
 
 ## [Frontend deployment](https://delightful-mushroom-05d6e7b1e.5.azurestaticapps.net/)
 
