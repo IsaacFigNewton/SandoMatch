@@ -102,6 +102,24 @@ Note: if the above gives you an error, try removing the <b>package-lock.json</b>
     <li>workspace.xml</li>
     </ul>
   </li>
+  <li>cypress</ul>
+    <li>e2e<ul>
+      <li>bookmark.cy.js</li>
+      <li>favorite.cy.js</li>
+      <li>login.cy.js</li>
+      <li>logout.cy.js</li>
+      <li>menu.cy.js</li>
+      <li>profile.cy.js</li>
+      <li>random.cy.js</li>
+      <li>searchbar.cy.js</li>
+      <li>signup.cy.js</li>
+      <li>spec.cy.js</li>
+      <li>tried.cy.js</li>
+      </ul>
+    <li>fixtures<li>
+    <li>support</li>
+    </ul>
+  </li>  
   <li>docs<ul>
     <li>backend.md</li>
     <li>dataset.md</li>
