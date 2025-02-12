@@ -66,7 +66,7 @@
     "es-set-tostringtag": "^2.0.3",
     "es-shim-unscopables": "^1.0.2",
     "es-to-primitive": "^1.2.1",
-    "esbuild": "^0.21.5",
+    "esbuild": "^0.25.0",
     "escalade": "^3.2.0",
     "escape-string-regexp": "^4.0.0",
     "eslint-plugin-react": "^7.37.2",
